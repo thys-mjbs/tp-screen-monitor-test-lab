@@ -3,48 +3,54 @@
 /* Class-based dark mode — works with next-themes attribute="class" */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ─── Light theme ─────────────────────────────────────────────── */
+/* ─── Light theme (default) ───────────────────────────────────── */
 :root {
-  --bg:          #f8fafc;
-  --bg-surface:  #ffffff;
-  --bg-elevated: #f1f5f9;
-  --border-col:  #e2e8f0;
-  --fg:          #0f172a;
-  --fg-muted:    #64748b;
+  --bg:           #FFF5F7;
+  --bg-surface:   #FFFFFF;
+  --bg-elevated:  #FFE9EC;
+  --border-col:   #FFAEBC;
+  --fg:           #3A0013;
+  --fg-muted:     #AF0049;
+  --accent:       #FF608C;
+  --accent-hover: #EB0005;
 }
 
-/* ─── Dark theme ──────────────────────────────────────────────── */
+/* ─── Dark theme (palette flip) ──────────────────────────────── */
 .dark {
-  --bg:          #080e18;
-  --bg-surface:  #0d1525;
-  --bg-elevated: #131d30;
-  --border-col:  #1e2d45;
-  --fg:          #f1f5f9;
-  --fg-muted:    #94a3b8;
+  --bg:           #3A0013;
+  --bg-surface:   #71002D;
+  --bg-elevated:  #AF0049;
+  --border-col:   #56001F;
+  --fg:           #FFE9EC;
+  --fg-muted:     #FFAEBC;
+  --accent:       #FF608C;
+  --accent-hover: #FFAEBC;
 }
 
 /* ─── Tailwind v4 theme registration ─────────────────────────── */
 @theme inline {
-  /* Semantic surface colors */
-  --color-bg:         var(--bg);
-  --color-surface:    var(--bg-surface);
-  --color-elevated:   var(--bg-elevated);
-  --color-border:     var(--border-col);
-  --color-fg:         var(--fg);
-  --color-fg-muted:   var(--fg-muted);
+  /* Semantic tokens — these are what components use */
+  --color-bg:           var(--bg);
+  --color-surface:      var(--bg-surface);
+  --color-elevated:     var(--bg-elevated);
+  --color-border:       var(--border-col);
+  --color-fg:           var(--fg);
+  --color-fg-muted:     var(--fg-muted);
+  --color-accent:       var(--accent);
+  --color-accent-hover: var(--accent-hover);
 
-  /* Brand palette — sky blue (not default Tailwind blue-500) */
-  --color-brand-50:  #f0f9ff;
-  --color-brand-100: #e0f2fe;
-  --color-brand-200: #bae6fd;
-  --color-brand-300: #7dd3fc;
-  --color-brand-400: #38bdf8;
-  --color-brand-500: #0ea5e9;
-  --color-brand-600: #0284c7;
-  --color-brand-700: #0369a1;
-  --color-brand-800: #075985;
-  --color-brand-900: #0c4a6e;
-  --color-brand-950: #082f49;
+  /* Full brand scale — exact values from design brief */
+  --color-brand-50:  #FFE9EC;
+  --color-brand-100: #FFAEBC;
+  --color-brand-200: #FF94AC;
+  --color-brand-300: #FF7A9C;
+  --color-brand-400: #FF608C;
+  --color-brand-500: #EB0005;
+  --color-brand-600: #AF0049;
+  --color-brand-700: #900038;
+  --color-brand-800: #71002D;
+  --color-brand-900: #560020;
+  --color-brand-950: #3A0013;
 
   /* Typography */
   --font-sans: var(--font-sora);
