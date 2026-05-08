@@ -48,14 +48,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9067385801783501"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-      </head>
       <body className={`${sora.variable} ${geistMono.variable} font-sans antialiased bg-bg text-fg`}>
         <Providers>
           <Header />
@@ -65,6 +57,12 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
         <GoogleAnalytics />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9067385801783501"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
