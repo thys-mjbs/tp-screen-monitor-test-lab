@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import { Sora, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { Providers } from './providers'
@@ -21,7 +21,7 @@ const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-tes
 export const metadata: Metadata = {
   metadataBase: new URL(appUrl),
   title: {
-    default: 'Screen & Monitor Test Lab — Free Online Display Tests',
+    default: 'Screen & Monitor Test Lab: Free Online Display Tests',
     template: '%s | Screen & Monitor Test Lab',
   },
   description:

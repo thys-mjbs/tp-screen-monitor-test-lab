@@ -1,11 +1,11 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 import { tools, categoryMeta, getToolsByCategory } from '@/lib/tools'
 import { ToolCard } from '@/components/ToolCard'
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
 
 export const metadata: Metadata = {
-  title: 'Free Monitor & Screen Tests Online — Dead Pixels, Backlight Bleed & More',
+  title: 'Free Monitor & Screen Tests Online: Dead Pixels, Backlight Bleed & More',
   description:
     'Free browser-based tools to test your monitor for dead pixels, backlight bleed, refresh rate, colour accuracy, and more. No download or sign-up required.',
   alternates: { canonical: appUrl },
