@@ -15,7 +15,12 @@
       "PowerShell(Copy-Item *)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(grep -rn \"      [^<{]*'[^{>]*$\" app/ --include=\"*.tsx\")",
+      "Bash(grep -v \"^\\\\s*//\")",
+      "Bash(grep -v \"const \\\\|: '\\\\|: \\\\\"\\\\|import \\\\|export \\\\|href=\\\\|className=\\\\|style=\\\\|label:\\\\|q: \\\\|a: \\\\|slug:\\\\|name:\\\\|metaTitle:\\\\|metaDesc:\\\\|primaryQuery:\\\\|shortDescription:\\\\|related:\\\\|\\\\\\\\.tsx:[0-9]*:.*= \")",
+      "Bash(grep -v \"\\\\\\\\\\\\\\\\'\")",
+      "Bash(findstr /r /n \"[a-z]'[a-z]\" app\\\\white-saturation-test\\\\page.tsx app\\\\gamma-calibration-check\\\\page.tsx app\\\\moire-pattern-test\\\\page.tsx app\\\\image-retention-test\\\\page.tsx app\\\\viewing-angle-test\\\\page.tsx)"
     ]
   }
 }
