@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
+import { RefreshCw } from 'lucide-react'
 
 function gcd(a: number, b: number): number {
   return b === 0 ? a : gcd(b, a % b)
@@ -47,24 +48,30 @@ export function ResolutionChecker() {
     ratio: string; ratioName: string | null
   } | null>(null)
 
-  useEffect(() => {
-    const update = () => {
-      const sw = window.screen.width
-      const sh = window.screen.height
-      const dpr = window.devicePixelRatio || 1
-      const ratio = aspectRatio(sw, sh)
-      setData({
-        screenW: sw, screenH: sh,
-        physicalW: Math.round(sw * dpr), physicalH: Math.round(sh * dpr),
-        viewportW: window.innerWidth, viewportH: window.innerHeight,
-        dpr, colorDepth: window.screen.colorDepth,
-        ratio, ratioName: RATIO_NAMES[ratio] ?? null,
-      })
-    }
-    update()
-    window.addEventListener('resize', update)
-    return () => window.removeEventListener('resize', update)
+  const update = useCallback(() => {
+    const sw = window.screen.width
+    const sh = window.screen.height
+    const dpr = window.devicePixelRatio || 1
+    const ratio = aspectRatio(sw, sh)
+    setData({
+      screenW: sw, screenH: sh,
+      physicalW: Math.round(sw * dpr), physicalH: Math.round(sh * dpr),
+      viewportW: window.innerWidth, viewportH: window.innerHeight,
+      dpr, colorDepth: window.screen.colorDepth,
+      ratio, ratioName: RATIO_NAMES[ratio] ?? null,
+    })
   }, [])
+
+  useEffect(() => {
+    update()
+    // resize fires on window resize; focus fires after dragging to a different monitor
+    window.addEventListener('resize', update)
+    window.addEventListener('focus', update)
+    return () => {
+      window.removeEventListener('resize', update)
+      window.removeEventListener('focus', update)
+    }
+  }, [update])
 
   if (!data) {
     return (
@@ -75,37 +82,48 @@ export function ResolutionChecker() {
   }
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-      <StatCard
-        label="Screen Resolution"
-        value={`${data.screenW} × ${data.screenH}`}
-        note="CSS pixels"
-      />
-      <StatCard
-        label="Aspect Ratio"
-        value={data.ratio}
-        note={data.ratioName ?? undefined}
-      />
-      <StatCard
-        label="Device Pixel Ratio"
-        value={`${data.dpr}×`}
-        note={data.dpr > 1 ? 'HiDPI / Retina display' : 'Standard density'}
-      />
-      <StatCard
-        label="Physical Pixels"
-        value={`${data.physicalW} × ${data.physicalH}`}
-        note="Hardware pixel count"
-      />
-      <StatCard
-        label="Browser Viewport"
-        value={`${data.viewportW} × ${data.viewportH}`}
-        note="Current window size"
-      />
-      <StatCard
-        label="Colour Depth"
-        value={`${data.colorDepth}-bit`}
-        note={data.colorDepth >= 30 ? '10-bit / HDR capable' : 'Standard 8-bit'}
-      />
-    </div>
+    <>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <StatCard
+          label="Screen Resolution"
+          value={`${data.screenW} × ${data.screenH}`}
+          note="CSS pixels"
+        />
+        <StatCard
+          label="Aspect Ratio"
+          value={data.ratio}
+          note={data.ratioName ?? undefined}
+        />
+        <StatCard
+          label="Device Pixel Ratio"
+          value={`${data.dpr}×`}
+          note={data.dpr > 1 ? 'HiDPI / Retina display' : 'Standard density'}
+        />
+        <StatCard
+          label="Physical Pixels"
+          value={`${data.physicalW} × ${data.physicalH}`}
+          note="Hardware pixel count"
+        />
+        <StatCard
+          label="Browser Viewport"
+          value={`${data.viewportW} × ${data.viewportH}`}
+          note="Current window size"
+        />
+        <StatCard
+          label="Colour Depth"
+          value={`${data.colorDepth}-bit`}
+          note={data.colorDepth >= 30 ? '10-bit / HDR capable' : 'Standard 8-bit'}
+        />
+      </div>
+      <div className="flex items-center gap-3 pt-1">
+        <button
+          onClick={update}
+          className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-elevated border border-border text-fg text-sm font-medium hover:bg-brand-100 transition-colors"
+        >
+          <RefreshCw size={14} /> Re-check
+        </button>
+        <span className="text-xs text-fg-muted">Values auto-update on window resize and focus. Use Re-check after moving between monitors.</span>
+      </div>
+    </>
   )
 }
