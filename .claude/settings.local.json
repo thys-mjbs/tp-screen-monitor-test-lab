@@ -23,7 +23,10 @@
       "Bash(findstr /r /n \"[a-z]'[a-z]\" app\\\\white-saturation-test\\\\page.tsx app\\\\gamma-calibration-check\\\\page.tsx app\\\\moire-pattern-test\\\\page.tsx app\\\\image-retention-test\\\\page.tsx app\\\\viewing-angle-test\\\\page.tsx)",
       "WebFetch(domain:www.talentatrium.com)",
       "WebFetch(domain:yourqrtoolkit.com)",
-      "WebFetch(domain:home-hub-omega-rosy.vercel.app)"
+      "WebFetch(domain:home-hub-omega-rosy.vercel.app)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\" -Recurse -File)",
+      "Bash(Select-Object -First 30)",
+      "Bash(Format-Table FullName)"
     ]
   }
 }
