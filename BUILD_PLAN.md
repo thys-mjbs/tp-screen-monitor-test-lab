@@ -15,7 +15,7 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     [X] Milestone 1.4: Core layout components — RootLayout, Header, Footer, Breadcrumb
 
 [ ] Phase 2: Tool Infrastructure and Homepage
-    [ ] Milestone 2.1: Tool data registry — TypeScript types and all 25 tools configured
+    [X] Milestone 2.1: Tool data registry — TypeScript types and all 25 tools configured
     [ ] Milestone 2.2: Homepage — tool grid with category grouping, SEO metadata, WebSite and Organization schemas
     [ ] Milestone 2.3: Global SEO infrastructure — sitemap.ts, robots.ts, root metadata, canonical pattern
 
