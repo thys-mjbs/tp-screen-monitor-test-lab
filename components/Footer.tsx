@@ -1,0 +1,84 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
+const toolLinks = [
+  { label: 'Dead Pixel Test', href: '/dead-pixel-test' },
+  { label: 'Backlight Bleed Test', href: '/backlight-bleed-test' },
+  { label: 'Refresh Rate Checker', href: '/refresh-rate-checker' },
+  { label: 'White Screen', href: '/white-screen' },
+  { label: 'Black Screen', href: '/black-screen' },
+]
+
+const siteLinks = [
+  { label: 'All Tools', href: '/#tools' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Privacy Policy', href: '/privacy' },
+  { label: 'Terms of Service', href: '/terms' },
+]
+
+export function Footer() {
+  return (
+    <footer className="bg-brand-950 text-brand-100">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 pb-10 border-b border-brand-800">
+
+          {/* Brand */}
+          <div className="space-y-3">
+            <Link href="/" className="flex items-center gap-2.5">
+              <Image
+                src="/icon-512.png"
+                alt="Screen Test Lab icon"
+                width={28}
+                height={28}
+                className="rounded-md"
+              />
+              <span className="font-bold text-brand-50 text-base">
+                Screen <span className="text-accent">Test</span> Lab
+              </span>
+            </Link>
+            <p className="text-sm text-brand-300 leading-relaxed max-w-xs">
+              Test your monitor for dead pixels, backlight bleed, and display problems — free, no install.
+            </p>
+          </div>
+
+          {/* Popular tools */}
+          <div className="space-y-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-400">Popular Tools</p>
+            <ul className="space-y-2">
+              {toolLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm text-brand-200 hover:text-accent transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Site links */}
+          <div className="space-y-3">
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-400">Site</p>
+            <ul className="space-y-2">
+              {siteLinks.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-sm text-brand-200 hover:text-accent transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+        </div>
+
+        <p className="pt-8 text-xs text-brand-400 text-center">
+          &copy; {new Date().getFullYear()} Screen Test Lab. Free to use, no sign-up required.
+        </p>
+
+      </div>
+    </footer>
+  )
+}
