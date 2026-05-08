@@ -29,8 +29,8 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     [X] Milestone 4.2: White Saturation Test + Gamma Calibration Check + Sharpness Focus Chart + Moire Pattern Test
     [X] Milestone 4.3: Screen Uniformity Test + Viewing Angle Test + Image Retention Test
 
-[ ] Phase 5: Checker and Utility Tools
-    [ ] Milestone 5.1: Refresh Rate Checker + Resolution and Aspect Checker + Screen Clean Mode
+[X] Phase 5: Checker and Utility Tools
+    [X] Milestone 5.1: Refresh Rate Checker + Resolution and Aspect Checker + Screen Clean Mode
 
 [ ] Phase 6: Static Pages and Blog
     [ ] Milestone 6.1: About, Privacy Policy, Terms of Service, Contact pages + Custom 404
