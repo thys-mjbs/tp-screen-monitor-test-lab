@@ -1125,3 +1125,6 @@ First of all, we need a little market or something to talk about the favicon, an
 
 2. Ad Slots
 I see in some cases we have added dedicated slots in our code for ads. Please take note that we do not have to do this. AdSense or AdSterra or whatever ad platform will automatically decide. So we just build the site and the ad platform will decide where to put the things. We do not need to reserve spots for it, yeah?
+
+3. Vercel
+can we also do, or just as early as possible in the project, do the Vercel setup and connection, because it's just much easier to look at a live URL, refresh, use it there than a local host, please.
