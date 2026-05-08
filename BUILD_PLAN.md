@@ -32,10 +32,10 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
 [X] Phase 5: Checker and Utility Tools
     [X] Milestone 5.1: Refresh Rate Checker + Resolution and Aspect Checker + Screen Clean Mode
 
-[ ] Phase 6: Static Pages and Blog
-    [ ] Milestone 6.1: About, Privacy Policy, Terms of Service, Contact pages + Custom 404
-    [ ] Milestone 6.2: Blog infrastructure — layout, index page, static post system
-    [ ] Milestone 6.3: All 10 blog posts with full SEO content and internal links
+[X] Phase 6: Static Pages and Blog
+    [X] Milestone 6.1: About, Privacy Policy, Terms of Service, Contact pages + Custom 404
+    [X] Milestone 6.2: Blog infrastructure — layout, index page, static post system
+    [X] Milestone 6.3: All 10 blog posts with full SEO content and internal links
 
 [ ] Phase 7: Programmatic SEO Pages
     [ ] Milestone 7.1: Per-tool dynamic OG images (opengraph-image.tsx for every tool)
