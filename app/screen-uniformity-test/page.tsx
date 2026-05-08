@@ -71,7 +71,7 @@ const bodyContent = (
       the screen in a darkened room with your monitor at a moderate, consistent brightness setting. Use a
       camera rather than a phone if possible, as phone cameras often apply HDR processing that can alter
       how uniformity appears in the photograph. Note which zones show the most significant variation and
-      check your manufacturer's warranty documentation for the stated uniformity tolerance threshold before
+      check your manufacturer&apos;s warranty documentation for the stated uniformity tolerance threshold before
       contacting support.
     </p>
   </>

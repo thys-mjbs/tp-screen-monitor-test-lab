@@ -51,7 +51,7 @@ const bodyContent = (
 
     <h2 className="text-lg font-bold text-fg">Understanding shadow detail and why it matters</h2>
     <p>
-      Shadow detail refers to a display's ability to render subtle differences between dark tones. In
+      Shadow detail refers to a display&apos;s ability to render subtle differences between dark tones. In
       practice, this affects how well you can see detail in dark video scenes, shadow areas in photography,
       and dark game environments. A display that crushes shadow tones loses detail that was present in the
       original content. Whether this matters for your use depends on how frequently you work with or view

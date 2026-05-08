@@ -67,7 +67,7 @@ const bodyContent = (
 
     <h2 className="text-lg font-bold text-fg">Connecting at native resolution</h2>
     <p>
-      The single most important factor for display sharpness is connecting at the monitor's native
+      The single most important factor for display sharpness is connecting at the monitor&apos;s native
       resolution with no operating system scaling applied, or with integer-factor scaling on HiDPI
       displays. Fractional scaling (such as 125 percent or 150 percent) introduces softness because
       the OS must resample the rendered image to fit the display pixels. If the sharpness test reveals
