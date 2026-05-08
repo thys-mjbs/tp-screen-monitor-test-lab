@@ -24,10 +24,10 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     [X] Milestone 3.2: White Screen + Black Screen + Stuck Pixel Fixer (full tool pages with SEO and schemas)
     [X] Milestone 3.3: Red, Green, Blue, Grey, Yellow, Pink screens + Fullscreen Colour Cycle (full pages)
 
-[ ] Phase 4: Visual Calibration and Analysis Tests
-    [ ] Milestone 4.1: Gradient Banding Test + Backlight Bleed Test + IPS Glow Test + Contrast Black Level Test
-    [ ] Milestone 4.2: White Saturation Test + Gamma Calibration Check + Sharpness Focus Chart + Moire Pattern Test
-    [ ] Milestone 4.3: Screen Uniformity Test + Viewing Angle Test + Image Retention Test
+[X] Phase 4: Visual Calibration and Analysis Tests
+    [X] Milestone 4.1: Gradient Banding Test + Backlight Bleed Test + IPS Glow Test + Contrast Black Level Test
+    [X] Milestone 4.2: White Saturation Test + Gamma Calibration Check + Sharpness Focus Chart + Moire Pattern Test
+    [X] Milestone 4.3: Screen Uniformity Test + Viewing Angle Test + Image Retention Test
 
 [ ] Phase 5: Checker and Utility Tools
     [ ] Milestone 5.1: Refresh Rate Checker + Resolution and Aspect Checker + Screen Clean Mode
