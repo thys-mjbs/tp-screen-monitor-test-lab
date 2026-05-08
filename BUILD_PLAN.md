@@ -87,6 +87,7 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     [ ] /stuck-pixel-fixer/for-oled          — "fix stuck pixel oled"
     [ ] /refresh-rate-checker/144hz-test     — "144hz monitor test"
     [ ] /dead-pixel-test/for-projectors      — "dead pixel on projector" (1,600/mo; WINNABLE; keyword-driven from SERP research)
+    [ ] /dead-pixel-test/for-vr             — "oculus dead pixel" (1,900/mo; BORDERLINE; Meta Quest / VR headset angle)
     Medium priority:
     [ ] /stuck-pixel-fixer/for-laptops       — "fix stuck pixel laptop screen"
     [ ] /image-retention-test/for-laptops    — "laptop screen burn in test"
@@ -99,7 +100,24 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     [ ] /viewing-angle-test/for-laptops      — "laptop screen viewing angle test"
     [ ] /resolution-checker/for-ultrawide    — "ultrawide resolution checker"
 
-[ ] Phase 11: Language Translations
+[ ] Phase 11: Keyword-Driven Blog Content Backlog
+    Note: all keywords below are still todo in keywords_serp.csv; write as standalone blog posts targeting the cluster
+    Each post must link to the relevant tool page and follow the standard content rules (no em dashes; 400-600w; 6-8 FAQs)
+    Brand-specific dead pixel posts (group into 2-3 posts to avoid thin content):
+    [ ] "Dead pixels on [brand] monitors: AOC, Dell, ASUS, Sony, LG" — covers aoc monitor dead pixel (3600) + dell monitor dead pixel (2900) + asus monitor dead pixel (590) + lg dead pixel/lg oled dead pixel/lg oled tv dead pixel/sony tv dead pixel
+    [ ] "Dead pixels on OLED TVs and projectors" — covers oled tv dead pixel (140) + dead pixel on projector (1600)
+    Brand-specific backlight bleed posts (group by theme):
+    [ ] "Backlight bleed on gaming laptops: HP Omen, Acer Nitro, MSI, Alienware, Lenovo" — covers hp omen backlight bleed (720) + acer nitro 5 backlight bleed (590) + msi screen bleeding (110) + alienware backlight bleed (260) + lenovo backlight bleed (170)
+    [ ] "Backlight bleed on Samsung TVs and how to assess it" — covers backlight bleed samsung (1900) + samsung tv light bleed (480) + light bleed samsung tv (480) + backlight bleed samsung tv (170) + samsung tv backlight bleed fix (140) + samsung curved tv light bleed (320)
+    [ ] "Backlight bleed on LG, Sony, Philips, TCL, and BenQ displays" — covers lg backlight bleed (110) + sony backlight bleeding (320) + philips backlight bleeding (140) + tcl backlight bleed (140) + benq ex2780q backlight bleed (1300)
+    [ ] "LED TV and OLED screen bleeding explained" — covers led tv light bleed (210) + light bleed tv (210) + tv screen bleeding (260) + screen bleeding tv (170) + amoled screen bleeding (720)
+    Burn-in posts:
+    [ ] "Samsung OLED and QLED burn-in: what actually happens" — covers screen burn in samsung (6600) + burn in oled samsung (1000) + samsung tv burn in (480) + samsung burn in screen (170) + samsung qled dead pixel (170)
+    Resolution and display informational posts:
+    [ ] "Screen resolution explained: sizes, names, and what they mean for TVs and monitors" — covers tv screen resolution sizes (390) + chromebook display resolution (880) + average computer screen size (1300) + custom screen resolution (170) + 1600x1200 monitor (3600) + vga max resolution and refresh rate (110)
+    [ ] "Samsung screen resolution and display settings guide" — covers samsung display resolution (390) + samsung screen resolution (390) + samsung tv screen size adjustment (170)
+
+[ ] Phase 12: Language Translations
     Note: English source blogs and tool pages are now keyword-clean (updated in Milestone 8.5) — translations should begin from these updated files
     Priority 1 languages: Spanish (es), French (fr), Portuguese (pt), German (de)
     Priority 2 languages: Italian (it), Dutch (nl), Polish (pl)
