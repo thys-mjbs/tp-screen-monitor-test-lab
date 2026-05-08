@@ -90,7 +90,7 @@ export function ViewingAngleTest() {
               className="text-xs rounded-full px-4 py-1.5"
               style={{ backgroundColor: 'rgba(0,0,0,0.45)', color: 'rgba(255,255,255,0.6)' }}
             >
-              Lean left, right, forward, backward — watch how each quadrant changes · Esc to exit
+              Lean left, right, forward, backward. Watch how each quadrant changes · Esc to exit
             </span>
           </div>
         </div>

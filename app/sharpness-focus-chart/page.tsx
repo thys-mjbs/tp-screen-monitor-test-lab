@@ -10,7 +10,7 @@ export const metadata: Metadata = toolMetadata(tool)
 const faqs: FAQ[] = [
   {
     q: 'What does the sharpness focus chart test?',
-    a: 'The chart presents several fine line patterns including horizontal lines, vertical lines, and diagonal patterns at different pixel widths, plus a cross-hatch grid. A sharp display renders these patterns as clean, distinct lines with clear edges. A soft display shows blurred or indistinct lines. Oversharpened displays show ringing — bright halos along the edges of the lines. Each pattern type tests a different aspect of the display\'s rendering accuracy.',
+    a: 'The chart presents several fine line patterns including horizontal lines, vertical lines, and diagonal patterns at different pixel widths, plus a cross-hatch grid. A sharp display renders these patterns as clean, distinct lines with clear edges. A soft display shows blurred or indistinct lines. Oversharpened displays show ringing, visible as bright halos along the edges of the lines. Each pattern type tests a different aspect of the display\'s rendering accuracy.',
   },
   {
     q: 'What is the difference between soft and oversharpened?',
@@ -26,7 +26,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'What sharpness setting should I use on my monitor?',
-    a: 'For most monitors, the factory sharpness setting is calibrated for the native panel resolution. Setting it too high introduces edge halos (oversharpening). Setting it too low softens the image. A good starting point is the monitor\'s default factory setting. Use the 1px vertical line pattern to check — if you see distinct bright halos alongside the black lines, reduce the sharpness setting. If lines appear blurred and lack definition, try increasing it slightly.',
+    a: 'For most monitors, the factory sharpness setting is calibrated for the native panel resolution. Setting it too high introduces edge halos (oversharpening). Setting it too low softens the image. A good starting point is the monitor\'s default factory setting. Use the 1px vertical line pattern to check: if you see distinct bright halos alongside the black lines, reduce the sharpness setting. If lines appear blurred and lack definition, try increasing it slightly.',
   },
   {
     q: 'Does pixel density (PPI) affect the test results?',

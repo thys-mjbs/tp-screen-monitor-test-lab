@@ -10,7 +10,7 @@ export const metadata: Metadata = toolMetadata(tool)
 const faqs: FAQ[] = [
   {
     q: 'What does the viewing angle test check?',
-    a: 'The test displays a panel divided into reference zones: a dark quadrant, a light quadrant, a mid-grey quadrant, a gradient, and a white centre square. By viewing the panel from different angles — leaning left, right, forward, and backward — you can observe how much the brightness and colour of each zone shifts with your viewing position. Panels with wide viewing angles show little change; narrow viewing angle panels show significant colour and brightness shifts.',
+    a: 'The test displays a panel divided into reference zones: a dark quadrant, a light quadrant, a mid-grey quadrant, a gradient, and a white centre square. By viewing the panel from different angles (leaning left, right, forward, and backward) you can observe how much the brightness and colour of each zone shifts with your viewing position. Panels with wide viewing angles show little change; narrow viewing angle panels show significant colour and brightness shifts.',
   },
   {
     q: 'How do IPS, VA, and TN panels compare for viewing angles?',

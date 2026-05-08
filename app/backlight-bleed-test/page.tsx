@@ -56,7 +56,7 @@ const bodyContent = (
       corners, as these are the most common locations for backlight bleed. Work your way along each edge.
       Bleed appears as a patch of light that is noticeably brighter than the rest of the black panel.
       It often has a slightly white or warm-toned quality. Some bleed is confined to a narrow strip at
-      the very edge and is only visible at extreme angles — this is less significant than bleed that is
+      the very edge and is only visible at extreme angles, which is less significant than bleed that is
       clearly visible from a straight-on position.
     </p>
 

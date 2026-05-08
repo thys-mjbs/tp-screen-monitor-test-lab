@@ -53,7 +53,7 @@ const bodyContent = (
       accurately and will alias, producing interference artefacts. A 1px alternating black and white
       pattern is at the absolute limit of what a display can represent: one black pixel, one white pixel,
       repeating. At this extreme frequency, small variations in the rendering pipeline become visible as
-      moire. This is why the 1px patterns in this test are the most revealing — they stress-test the
+      moire. This is why the 1px patterns in this test are the most revealing: they stress-test the
       display at its resolution limit.
     </p>
 
@@ -72,7 +72,7 @@ const bodyContent = (
     <p>
       On a display running at native resolution with no fractional scaling, the 2px and 4px line patterns
       should appear as clean, evenly spaced lines with no wavy interference bands. The 1px pattern may show
-      some irregularity because it is at the fundamental resolution limit of the display — this is expected.
+      some irregularity because it is at the fundamental resolution limit of the display, and that is expected.
       If the 2px patterns show significant moire visible at normal viewing distance, check your display
       resolution and scaling settings before concluding the panel has a hardware issue.
     </p>

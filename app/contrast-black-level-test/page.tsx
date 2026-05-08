@@ -14,7 +14,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'What does it mean if I cannot see the darkest steps?',
-    a: 'If the first few steps (values 0, 4, 8) all appear as identical black, your monitor may have crushed blacks — a setting or calibration issue where dark tones below a certain threshold are all rendered as pure black. This causes a loss of shadow detail in dark scenes. Crushed blacks are often caused by an incorrect brightness setting, a limited colour range (16-235 instead of full 0-255), or a gamma setting that is too high.',
+    a: 'If the first few steps (values 0, 4, 8) all appear as identical black, your monitor may have crushed blacks: dark tones below a certain threshold are all rendered as pure black. This causes a loss of shadow detail in dark scenes. Crushed blacks are often caused by an incorrect brightness setting, a limited colour range (16-235 instead of full 0-255), or a gamma setting that is too high.',
   },
   {
     q: 'What causes crushed blacks on a monitor?',

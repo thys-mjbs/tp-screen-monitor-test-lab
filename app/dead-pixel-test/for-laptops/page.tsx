@@ -38,7 +38,7 @@ const COLORS: ColorEntry[] = [
 const faqs = [
   {
     q: 'How do I test my laptop screen for dead pixels?',
-    a: 'Use the fullscreen mode of this test on your laptop. Close all other windows, click Full Screen, and cycle through each colour using the spacebar or arrow keys. Dim the room lighting slightly to make faint pixel defects more visible. Because laptop screens are often high resolution at a small physical size, individual pixels are very small — take your time on each colour and scan the entire panel systematically.',
+    a: 'Use the fullscreen mode of this test on your laptop. Close all other windows, click Full Screen, and cycle through each colour using the spacebar or arrow keys. Dim the room lighting slightly to make faint pixel defects more visible. Because laptop screens are often high resolution at a small physical size, individual pixels are very small, so take your time on each colour and scan the entire panel systematically.',
   },
   {
     q: 'Do laptops come with a dead pixel warranty?',
@@ -53,7 +53,7 @@ const faqs = [
     a: 'Dead pixels on laptop screens are generally not fixable through software. Stuck pixels may occasionally respond to rapid colour cycling via the Stuck Pixel Fixer, but dead pixels represent a hardware failure in the pixel transistor. For a laptop within its warranty period, contact the manufacturer. For an out-of-warranty laptop, professional display replacement is the practical option if the defect is significantly bothersome.',
   },
   {
-    q: 'My laptop has HiDPI scaling — does that affect the pixel test?',
+    q: 'My laptop has HiDPI scaling. Does that affect the pixel test?',
     a: 'No. The test displays solid colours that fill the entire physical display regardless of the operating system scaling factor. HiDPI scaling affects how interface elements are sized relative to the physical pixels, but solid-colour fullscreen panels cover every physical pixel on the panel. The test is equally effective at any DPI or scaling setting.',
   },
 ]
@@ -100,7 +100,7 @@ export default function DeadPixelTestLaptopsPage() {
               Unlike desktop monitors, which sometimes carry a manufacturer tolerance for a small number
               of pixel defects, most laptop manufacturers and major retailers offer a zero dead pixel
               guarantee. This means a single confirmed dead pixel qualifies for a replacement. The catch
-              is that this guarantee typically applies within a short window after purchase — often
+              is that this guarantee typically applies within a short window after purchase, often
               14 to 30 days. Testing your laptop screen the day you receive it protects your right to
               a replacement while you are still within that window.
             </p>
@@ -109,7 +109,7 @@ export default function DeadPixelTestLaptopsPage() {
           <div className="space-y-3">
             <h2 className="text-lg font-bold text-fg">High-resolution laptop screens and pixel size</h2>
             <p>
-              Modern laptop panels often have high pixel densities — a 13-inch display at 2560x1600
+              Modern laptop panels often have high pixel densities. A 13-inch display at 2560x1600
               has over 230 pixels per inch, making each individual pixel very small. At normal laptop
               viewing distances, a single dead pixel can be surprisingly hard to spot during regular
               use. This tool&apos;s fullscreen solid-colour panels make defects immediately obvious

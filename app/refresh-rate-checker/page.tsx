@@ -18,7 +18,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'My monitor is 144 Hz but the checker shows 60 Hz. How do I fix this?',
-    a: 'First check your operating system display settings. On Windows, go to Settings > System > Display > Advanced Display and confirm the refresh rate is set to 144 Hz or your monitor\'s maximum. On macOS, go to System Settings > Displays and check the refresh rate dropdown. Also check that your cable supports the required bandwidth — HDMI 1.4 cannot carry 1080p at 144 Hz; you need HDMI 2.0 or DisplayPort. After changing settings, re-run the checker.',
+    a: 'First check your operating system display settings. On Windows, go to Settings > System > Display > Advanced Display and confirm the refresh rate is set to 144 Hz or your monitor\'s maximum. On macOS, go to System Settings > Displays and check the refresh rate dropdown. Also check that your cable supports the required bandwidth. HDMI 1.4 cannot carry 1080p at 144 Hz; you need HDMI 2.0 or DisplayPort. After changing settings, re-run the checker.',
   },
   {
     q: 'Does a higher refresh rate actually look different?',
@@ -26,7 +26,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'What is the difference between refresh rate and frame rate?',
-    a: 'Refresh rate is a hardware property of the monitor — how many times per second it is capable of updating the display. Frame rate (fps) is determined by your GPU and how many complete frames it can render per second. For smooth display, your GPU frame rate should ideally match or exceed your monitor\'s refresh rate. If your GPU renders 30 fps on a 144 Hz monitor, motion will not appear as smooth as the monitor is capable of showing.',
+    a: 'Refresh rate is a hardware property of the monitor: how many times per second it is capable of updating the display. Frame rate (fps) is determined by your GPU and how many complete frames it can render per second. For smooth display, your GPU frame rate should ideally match or exceed your monitor\'s refresh rate. If your GPU renders 30 fps on a 144 Hz monitor, motion will not appear as smooth as the monitor is capable of showing.',
   },
   {
     q: 'What is VSync, G-Sync, or FreeSync in relation to refresh rate?',
@@ -48,7 +48,7 @@ const bodyContent = (
     <h2 className="text-lg font-bold text-fg">Why your active rate may be lower than rated</h2>
     <p>
       Several factors can cause your active refresh rate to be lower than your monitor&apos;s rated
-      maximum. The most common is an incorrect operating system display setting — many systems default
+      maximum. The most common is an incorrect operating system display setting, as many systems default
       to 60 Hz even when a higher-rated monitor is connected. Cable bandwidth limitations are another
       frequent cause; HDMI 1.4 cannot carry the signal for most high-refresh resolutions and silently
       falls back to 60 Hz. Battery-saving modes on laptops can also cap the refresh rate when the

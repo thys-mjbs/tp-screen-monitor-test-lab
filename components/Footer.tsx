@@ -40,7 +40,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-brand-300 leading-relaxed max-w-xs">
-              Test your monitor for dead pixels, backlight bleed, and display problems — free, no install.
+              Test your monitor for dead pixels, backlight bleed, and display problems. Free, no install.
             </p>
           </div>
 

@@ -18,7 +18,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'How should I clean my monitor screen?',
-    a: 'Use a dry, clean microfibre cloth for routine dust and fingerprint removal. Wipe in gentle circular or straight strokes without pressing hard on the panel. For stubborn smudges, dampen a small area of the cloth with distilled water only — never use tap water, glass cleaner, alcohol, or any solvent on a panel coating. Allow the screen to dry fully before exiting clean mode. Never spray liquid directly onto the screen.',
+    a: 'Use a dry, clean microfibre cloth for routine dust and fingerprint removal. Wipe in gentle circular or straight strokes without pressing hard on the panel. For stubborn smudges, dampen a small area of the cloth with distilled water only. Never use tap water, glass cleaner, alcohol, or any solvent on a panel coating. Allow the screen to dry fully before exiting clean mode. Never spray liquid directly onto the screen.',
   },
   {
     q: 'Can I use this on a touchscreen?',
@@ -51,7 +51,7 @@ const bodyContent = (
       than LCD panels, so use particularly light pressure and ensure your cloth is completely free of
       particles that could scratch the surface. Laptop screens and all-in-one displays often have glossy
       coatings that show fingerprints more readily but clean easily with a single dry wipe. Matte anti-glare
-      coatings can trap smudges in the textured surface — use a slightly firmer pressure with a dry cloth
+      coatings can trap smudges in the textured surface; use a slightly firmer pressure with a dry cloth
       on matte coatings.
     </p>
 
@@ -59,7 +59,7 @@ const bodyContent = (
     <p>
       Never use paper towels, tissues, or rough cloths on a monitor panel as these materials contain
       abrasive fibres that can permanently scratch anti-reflective and anti-glare coatings. Never spray
-      any liquid directly onto the screen — liquid can enter the panel edges and cause permanent damage.
+      any liquid directly onto the screen, as liquid can enter the panel edges and cause permanent damage.
       Avoid glass cleaners, alcohol, ammonia, acetone, or any cleaning product not specifically listed
       as safe for monitor panels. When in doubt, a clean dry microfibre cloth alone removes the vast
       majority of dust and fingerprints without any risk.

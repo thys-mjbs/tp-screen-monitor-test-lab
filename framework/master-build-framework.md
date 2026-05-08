@@ -1115,16 +1115,3 @@ The agent should build the complete site without returning until it is done, inc
 - Internal linking complete
 
 The site is not done until every item on the Launch Checklist (Section 12) is ticked.
-
--------------------------------------------------------------------------------
-
-This did not form part of the original build plan, but I want to add these because they're important and it feels like we've missed them out. So everything below is going to be little ad hoc things that I've found during our build that we haven't accounted for, that we should account for, so that when we build other builds using this framework, that we capture them.
-
-1. Design
-First of all, we need a little market or something to talk about the favicon, any images that may or may not need to be created, what they need to be called, where they need to be saved, ChatGPT prompts for those so that I can create them, as well as style. Like, you need to ask me about either URLs and references and pictures and whatever it is you need in order to build the design that I like. So therefore, we just need to make sure that that's incorporated in our build plan. And I would suggest earlier in the build plan rather than later. As I said, anything below this point is all just going to be little points and notes that I've come across, so please just take note of everything, please.
-
-2. Ad Slots
-I see in some cases we have added dedicated slots in our code for ads. Please take note that we do not have to do this. AdSense or AdSterra or whatever ad platform will automatically decide. So we just build the site and the ad platform will decide where to put the things. We do not need to reserve spots for it, yeah?
-
-3. Vercel
-can we also do, or just as early as possible in the project, do the Vercel setup and connection, because it's just much easier to look at a live URL, refresh, use it there than a local host, please.

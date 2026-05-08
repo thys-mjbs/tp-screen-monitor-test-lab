@@ -22,7 +22,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'Why does my browser viewport differ from my screen resolution?',
-    a: 'Your screen resolution is the full physical display area. Your browser viewport is the usable window area inside the browser — the screen resolution minus any taskbar, browser chrome (address bar, tabs, bookmarks), and OS interface elements. The viewport changes when you resize your browser window, maximise or restore it, or toggle the browser toolbar. Developers use viewport dimensions to set responsive breakpoints in web design.',
+    a: 'Your screen resolution is the full physical display area. Your browser viewport is the usable window area inside the browser: the screen resolution minus any taskbar, browser chrome (address bar, tabs, bookmarks), and OS interface elements. The viewport changes when you resize your browser window, maximise or restore it, or toggle the browser toolbar. Developers use viewport dimensions to set responsive breakpoints in web design.',
   },
   {
     q: 'What does colour depth mean in the checker?',

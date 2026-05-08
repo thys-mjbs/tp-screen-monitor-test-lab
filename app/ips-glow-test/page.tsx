@@ -15,7 +15,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'How is IPS glow different from backlight bleed?',
-    a: 'The key difference is how each behaves when you change your viewing angle. IPS glow shifts in position and changes in brightness as you move your head — it follows your viewing angle. Backlight bleed is fixed and stays at the same location on the screen regardless of where you sit or tilt your head. If the bright corners disappear or move when you shift position, it is likely IPS glow. If the bright areas remain fixed regardless of your position, it is likely backlight bleed.',
+    a: 'The key difference is how each behaves when you change your viewing angle. IPS glow shifts in position and changes in brightness as you move your head, following your viewing angle. Backlight bleed is fixed and stays at the same location on the screen regardless of where you sit or tilt your head. If the bright corners disappear or move when you shift position, it is likely IPS glow. If the bright areas remain fixed regardless of your position, it is likely backlight bleed.',
   },
   {
     q: 'How do I perform the IPS glow test?',
@@ -35,7 +35,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'Why do some IPS monitors have more glow than others?',
-    a: 'The amount of IPS glow varies with panel quality, anti-reflective coating, backlight type, and monitor construction. Edge-lit monitors (where LEDs are positioned along the edges) tend to have more glow than full-array local dimming (FALD) monitors. The viewing distance also matters — glow is less visible when you sit closer. Some monitor brands and models are known for lower-than-average IPS glow due to tighter panel selection during manufacturing.',
+    a: 'The amount of IPS glow varies with panel quality, anti-reflective coating, backlight type, and monitor construction. Edge-lit monitors (where LEDs are positioned along the edges) tend to have more glow than full-array local dimming (FALD) monitors. The viewing distance also matters: glow is less visible when you sit closer. Some monitor brands and models are known for lower-than-average IPS glow due to tighter panel selection during manufacturing.',
   },
 ]
 

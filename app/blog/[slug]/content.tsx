@@ -71,6 +71,26 @@ function DeadPixelPost() {
         screen, or a software artefact. Running the test periodically is also useful before
         selling a second-hand monitor, as it gives buyers confidence in the panel condition.
       </p>
+
+      <h2 className="text-lg font-bold text-fg">Dead pixels on laptops and phone screens</h2>
+      <p>
+        The same fullscreen colour test applies to laptop displays, smartphones, and tablets.
+        On laptop screens, dead pixels are worth checking immediately after purchase since most
+        manufacturers apply the same ISO defect-tolerance policies as desktop monitors. A defect
+        not reported within the return window is rarely covered later. Dead pixels on a laptop
+        screen do not spread to neighbouring pixels over time; each pixel fails independently,
+        so the count is unlikely to increase unless there is physical damage to the panel.
+      </p>
+      <p>
+        On iPhones, Android phones, and tablets, dead pixels and stuck pixels occur for the same
+        physical reasons as on desktop displays. AMOLED screens used in many Samsung Galaxy and
+        Android devices are particularly easy to test since each pixel produces its own light,
+        making a dead or stuck pixel on a mobile screen immediately visible against a bright
+        background. If you notice a dead pixel on a phone screen, confirm it across at least
+        three solid colours before concluding it is a defect, as dust or debris under a screen
+        protector can look very similar. Check your manufacturer warranty terms as soon as you
+        find a defect and document it with a straight-on photo in a dimly lit room.
+      </p>
     </>
   )
 }
@@ -145,6 +165,33 @@ function BacklightBleedPost() {
         backlight at all; each pixel produces its own light and turns off completely when
         displaying black, so backlight bleed is impossible on OLED. If backlight bleed is
         a concern for your use case, VA or OLED panels are the better choice.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Backlight bleed on laptops</h2>
+      <p>
+        Laptop backlight bleed is extremely common because laptop displays use thin edge-lit
+        panels with tight bezels that increase the chance of light leaking at the edges.
+        MacBook Pro models, gaming laptops, and budget ultrabooks all exhibit this to varying
+        degrees. The test method is identical to a desktop monitor: dim the room, display a
+        solid black fullscreen image, and scan the edges. Laptop screens can also show light
+        leakage more prominently when the lid is opened to certain angles, since the bezel
+        pressure on the panel changes with the hinge position. The term backlight clouding
+        refers to the same phenomenon where light pools in irregular patches across the panel
+        surface rather than only at the edges.
+      </p>
+      <p>
+        There is no reliable software fix for backlight bleed. Suggestions about tightening
+        bezel screws or applying pressure to the panel border carry a real risk of cracking
+        the display and voiding your warranty. If the bleed is severe enough to affect
+        real-world use, the correct route is a warranty replacement. Mild bleed that only
+        appears in a darkened test environment is not typically covered under manufacturer
+        policies.
+      </p>
+      <p>
+        A common misconception is that OLED screens can develop backlight bleed. They cannot.
+        What people sometimes describe as OLED screen bleeding is usually uneven pixel ageing
+        or a misidentification of a different defect entirely. Because OLED pixels emit their
+        own light individually, there is no backlight to leak.
       </p>
     </>
   )
@@ -223,6 +270,32 @@ function RefreshRatePost() {
         GPU&apos;s output within a supported range, eliminating both tearing and the input latency
         of traditional VSync. If you are buying a high-refresh monitor for gaming, adaptive
         sync support is worth prioritising.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">CRT monitors and high refresh rates</h2>
+      <p>
+        Before LCD panels became standard, CRT monitors routinely ran at refresh rates well above
+        60 Hz. Because CRT displays redrew the image by physically scanning an electron beam across
+        a phosphor surface, flicker was noticeable at low refresh rates. This pushed CRT monitor Hz
+        targets to 85 Hz, 100 Hz, and beyond for comfortable use. Some high-end CRT gaming monitors
+        supported 144 Hz at reduced resolutions, which is why certain competitive gaming communities
+        used CRT hardware long after LCD panels became mainstream. The CRT monitor resolution at
+        high refresh rates was typically capped at 1024x768 or 1280x1024 due to the bandwidth
+        limits of the analogue signal. The first 120 Hz monitors after CRT were early LCD panels
+        aimed at the gaming market, which is when the high-refresh-rate LCD era began.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Refresh rate on consoles</h2>
+      <p>
+        Console refresh rate depends on both the console hardware and the display it is connected
+        to. The PlayStation 4 outputs at 60 Hz for most titles and does not support 120 Hz output.
+        The PlayStation 5 supports up to 120 Hz for compatible titles, but the PS5 refresh rate
+        Hz setting must be enabled in the console system settings and the display must accept
+        HDMI 2.1. The Xbox Series X hertz rate operates the same way: 120 Hz requires HDMI 2.1
+        on both the console output and the display input. Most gaming monitors and TVs sold since
+        2021 include HDMI 2.1, but older displays are limited to 60 Hz regardless of console settings.
+        Use the Refresh Rate Checker on this site to confirm what rate your display is actually
+        running at after connecting a console.
       </p>
     </>
   )
@@ -303,6 +376,24 @@ function StuckPixelsPost() {
         burn-in on OLED displays. The Image Retention Test on this site helps identify
         whether ghost images are present on your panel.
       </p>
+
+      <h2 className="text-lg font-bold text-fg">Stuck pixels on phones and tablets</h2>
+      <p>
+        Stuck pixels occur on phone and tablet screens for the same reasons as on desktop
+        monitors. An iPhone stuck pixel appears as a persistent bright dot that does not
+        change colour with the background. Stuck pixels on an iPad, Android phone, or
+        AMOLED display behave identically. The rapid colour cycling approach used by stuck
+        pixel fixers may help on mobile screens, though it is harder to position a cycling
+        region precisely on a phone display compared to a desktop monitor.
+      </p>
+      <p>
+        OLED phone displays present one specific difference: because each pixel produces its
+        own light, a stuck pixel is visible even at low brightness, making it easier to confirm.
+        If cycling does not resolve a stuck pixel on a MacBook Pro screen, an iPhone, or an
+        Android device after several hours, the appropriate next step is a warranty claim.
+        Most manufacturers treat persistent bright pixel defects as hardware faults eligible
+        for repair or replacement within the warranty period.
+      </p>
     </>
   )
 }
@@ -364,6 +455,31 @@ function PanelTypesPost() {
         and, in monitor sizes, relatively new to the market. Because OLED pixels emit their own
         light, the backlight bleed and IPS glow tests that apply to LCD panels are not relevant
         to OLED.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">OLED burn-in: what causes it and how to reduce the risk</h2>
+      <p>
+        OLED burn-in occurs when specific pixels are driven at high brightness for extended
+        periods, causing the organic light-emitting material to degrade faster than surrounding
+        pixels. This produces a faint permanent ghost of the static element. Several specific
+        patterns cause this in real-world use. Subtitle burn-in appears on OLED TVs and monitors
+        after thousands of hours of subtitled content. Letterbox burn-in comes from black bars
+        on non-widescreen content, where the OLED pixels inside the bars are off while the
+        bars are on, creating an uneven ageing pattern. Logo burn-in is caused by persistent
+        channel logos or static HUD elements in games. OLED gaming monitors carry a higher
+        burn-in risk than general desktop monitors because many games display static health bars,
+        maps, and timers in fixed screen positions.
+      </p>
+      <p>
+        Preventing OLED burn-in involves managing how static content is displayed. Enable pixel
+        shift and logo luminance reduction in your display settings if these features are
+        available. Keep peak brightness below maximum for everyday use, since lower brightness
+        slows organic material degradation. Avoid leaving static images on screen when the
+        display is unattended. QLED displays, which are LCD panels with quantum dot colour
+        enhancement rather than true OLED, do not carry the same burn-in risk. Confusion between
+        QLED burn-in risk and OLED burn-in risk is common in buying discussions. The Image
+        Retention Test on this site can help identify early-stage image retention before it
+        progresses to permanent burn-in.
       </p>
 
       <h2 className="text-lg font-bold text-fg">Which panel type to choose</h2>
@@ -444,6 +560,27 @@ function ResolutionPost() {
         interpolation that can reduce sharpness. For the best image quality, always run your
         monitor at its native resolution and use operating system scaling for interface size
         rather than running at a non-native resolution.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Common resolution names and what they mean</h2>
+      <p>
+        Screen resolution names are used inconsistently across marketing materials. Full HD (FHD)
+        refers to 1920x1080 and is the most common resolution for monitors, laptops, and televisions
+        worldwide. Quad HD (QHD), also labelled 2K in many product listings, refers to 2560x1440,
+        which provides noticeably sharper detail at 27 inches without requiring the heavy GPU load
+        of 4K. 4K UHD refers to 3840x2160. WUXGA refers to 1920x1200, a 16:10 ratio that provides
+        more vertical screen space than FHD and is common in business laptops and professional
+        monitors. Standard screen resolution sizes across these categories correspond to specific
+        aspect ratios, which the Resolution and Aspect Checker on this site identifies automatically.
+      </p>
+      <p>
+        Gaming monitor resolution involves a trade-off between visual detail and achievable frame
+        rate. At 1080p, a mid-range GPU can sustain 144 Hz or above far more easily than at 1440p
+        or 4K. Many competitive players prefer 1080p at high refresh rates over higher-resolution
+        panels at lower frame rates, since motion clarity matters more than pixel density in fast
+        games. If you run two displays with different resolutions, your operating system handles
+        each independently, though applications spanning both screens may appear scaled differently
+        depending on the DPI settings for each display.
       </p>
     </>
   )
@@ -669,7 +806,7 @@ function AspectRatiosPost() {
         as choosing the right resolution.
       </p>
 
-      <h2 className="text-lg font-bold text-fg">16:9 — the standard widescreen ratio</h2>
+      <h2 className="text-lg font-bold text-fg">16:9: the standard widescreen ratio</h2>
       <p>
         The 16:9 aspect ratio is the current global standard for monitors, televisions, and
         video content. It was adopted as the standard for HDTV broadcasting and has remained
@@ -683,7 +820,7 @@ function AspectRatiosPost() {
         with 16:9 as the primary ratio.
       </p>
 
-      <h2 className="text-lg font-bold text-fg">16:10 — the taller widescreen</h2>
+      <h2 className="text-lg font-bold text-fg">16:10: the taller widescreen</h2>
       <p>
         The 16:10 ratio provides more vertical screen space than 16:9 for the same width.
         This makes it popular for business laptops and productivity monitors. Common resolutions
@@ -692,7 +829,7 @@ function AspectRatiosPost() {
         to scroll and fits more content on screen simultaneously.
       </p>
 
-      <h2 className="text-lg font-bold text-fg">21:9 — ultrawide</h2>
+      <h2 className="text-lg font-bold text-fg">21:9: ultrawide</h2>
       <p>
         The 21:9 aspect ratio is the standard for ultrawide monitors. Common resolutions are
         2560x1080 and 3440x1440. Ultrawide screens provide horizontal space that allows two
@@ -702,7 +839,7 @@ function AspectRatiosPost() {
         the black bars visible on 16:9 displays.
       </p>
 
-      <h2 className="text-lg font-bold text-fg">32:9 — super ultrawide</h2>
+      <h2 className="text-lg font-bold text-fg">32:9: super ultrawide</h2>
       <p>
         The 32:9 ratio, with resolutions like 5120x1440 and 3840x1080, effectively replaces
         two 16:9 monitors in a single panel with no bezel gap between them. This format suits

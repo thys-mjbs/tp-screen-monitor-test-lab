@@ -45,12 +45,12 @@ const faqs = [
     a: 'Not proportionally. Higher resolution panels use manufacturing processes designed for finer pixel densities, and defect rates are controlled to similar levels per panel rather than per pixel. However, with 4 times as many pixels as a 1080p display, a random defect rate produces more total pixel faults on a 4K panel. Premium 4K monitors typically carry a higher manufacturing standard and often include a zero dead pixel guarantee.',
   },
   {
-    q: 'My 4K monitor uses DPI scaling — will this test still cover all pixels?',
+    q: 'My 4K monitor uses DPI scaling. Will this test still cover all pixels?',
     a: 'Yes. This test uses the browser Fullscreen API to cover the full physical display area. Operating system DPI scaling (for example, 150% or 200% scaling on Windows) affects how interface elements are sized, but it does not prevent fullscreen web content from covering the entire physical pixel grid. The solid-colour panel covers every hardware pixel on your 4K panel.',
   },
   {
     q: 'How close should I sit to a 4K monitor when testing for dead pixels?',
-    a: 'For testing purposes, sit closer than your normal viewing distance — approximately 40 to 50 cm from the screen. At a 4K resolution on a 27-inch monitor, individual pixels are only about 0.16 mm in size, and they are difficult to see at a typical arm\'s length viewing distance of 70 to 80 cm. Testing closer ensures you can actually detect a defect if one is present.',
+    a: 'For testing purposes, sit closer than your normal viewing distance, approximately 40 to 50 cm from the screen. At a 4K resolution on a 27-inch monitor, individual pixels are only about 0.16 mm in size, and they are difficult to see at a typical arm\'s length viewing distance of 70 to 80 cm. Testing closer ensures you can actually detect a defect if one is present.',
   },
   {
     q: 'Should I test a 4K monitor at native resolution?',
@@ -113,7 +113,7 @@ export default function DeadPixelTest4kPage() {
               For a complete pixel test, your monitor should be running at its native 4K resolution.
               Check Windows Display Settings or macOS System Settings to confirm the resolution is set
               to 3840x2160. Many systems apply DPI scaling at this resolution to make interface elements
-              a comfortable size, which is fine — DPI scaling does not prevent this test from covering
+              a comfortable size, which is fine: DPI scaling does not prevent this test from covering
               the full physical pixel grid. What matters is that the resolution output from your GPU
               matches the panel&apos;s native resolution rather than a lower-resolution signal being
               upscaled by the monitor.
@@ -126,7 +126,7 @@ export default function DeadPixelTest4kPage() {
               Premium 4K monitors from major manufacturers typically advertise zero dead pixel guarantees,
               though the exact terms vary. Budget 4K monitors may ship under ISO class standards that
               permit a small number of defects. If you find a defect on a new monitor, check your
-              purchase receipt date and the warranty policy immediately — most retailers and manufacturers
+              purchase receipt date and the warranty policy immediately, as most retailers and manufacturers
               require the claim to be made within 14 to 30 days of purchase. Document the defect with
               a photograph taken on a white screen from directly in front of the panel before contacting
               support.

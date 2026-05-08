@@ -4,7 +4,7 @@ import { Breadcrumb } from '@/components/Breadcrumb'
 
 export const metadata: Metadata = {
   title: 'About Screen Test Lab',
-  description: 'Screen Test Lab is a free, browser-based collection of monitor testing tools. No sign-up, no download, no cost — just open a tool and test your display.',
+  description: 'Screen Test Lab is a free, browser-based collection of monitor testing tools. No sign-up, no download, no cost. Just open a tool and test your display.',
   alternates: { canonical: '/about' },
 }
 

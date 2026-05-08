@@ -14,7 +14,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'What does it mean if I cannot see the lightest steps?',
-    a: 'If the first several swatches all look identical to the white background, your display may be clipping highlights — compressing near-white tones to pure white and losing detail in bright areas. This is called blown highlights and is the opposite of crushed blacks. Highlight clipping is often caused by contrast or brightness settings that are too high, or by limited colour range settings that compress the upper end of the tonal scale.',
+    a: 'If the first several swatches all look identical to the white background, your display may be clipping highlights, compressing near-white tones to pure white and losing detail in bright areas. This is called blown highlights and is the opposite of crushed blacks. Highlight clipping is often caused by contrast or brightness settings that are too high, or by limited colour range settings that compress the upper end of the tonal scale.',
   },
   {
     q: 'What causes highlight clipping on a monitor?',
@@ -26,7 +26,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'Does monitor brightness affect the white saturation test?',
-    a: 'Yes. Increasing brightness raises the overall light output of the panel. While this makes the panel look brighter overall, it does not necessarily affect whether near-white tones are distinguishable — that is more of a contrast and gamma setting issue. However, some monitors apply different tone curves at different brightness settings, which can affect how well near-white tones are separated. Testing at your normal brightness setting gives the most representative result.',
+    a: 'Yes. Increasing brightness raises the overall light output of the panel. While this makes the panel look brighter overall, it does not necessarily affect whether near-white tones are distinguishable; that is more a contrast and gamma setting issue. However, some monitors apply different tone curves at different brightness settings, which can affect how well near-white tones are separated. Testing at your normal brightness setting gives the most representative result.',
   },
   {
     q: 'How many steps should I be able to see on a good monitor?',
@@ -71,7 +71,7 @@ const bodyContent = (
       If your display supports HDR, note that HDR content uses a different tone mapping curve (typically
       PQ or HLG) that extends the highlight range well beyond the 0-255 range used in SDR content. This
       test uses the standard SDR 0-255 range and is designed for checking SDR calibration. HDR monitors
-      with local dimming may also display differently in HDR mode compared to SDR mode — run the test
+      with local dimming may also display differently in HDR mode compared to SDR mode; run the test
       with your monitor in SDR mode for the most accurate baseline calibration check.
     </p>
   </>
