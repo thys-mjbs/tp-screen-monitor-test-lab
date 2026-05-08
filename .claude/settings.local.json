@@ -10,7 +10,9 @@
       "WebFetch(domain:www.myradiq.com)",
       "WebFetch(domain:noteweave.io)",
       "WebFetch(domain:espa.ai)",
-      "WebFetch(domain:donely.ai)"
+      "WebFetch(domain:donely.ai)",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\public\" -Force | ForEach-Object { $_.Name }; Write-Host \"---app folder---\"; Get-ChildItem \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\" -Force | Where-Object { $_.Name -match \"favicon|icon|apple\" } | ForEach-Object { $_.Name })",
+      "PowerShell(Copy-Item *)"
     ]
   }
 }
