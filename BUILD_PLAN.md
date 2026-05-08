@@ -19,10 +19,10 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     [X] Milestone 2.2: Homepage — tool grid with category grouping, SEO metadata, WebSite and Organization schemas
     [X] Milestone 2.3: Global SEO infrastructure — sitemap.ts, robots.ts, root metadata, canonical pattern
 
-[ ] Phase 3: Fullscreen Panel Tools
+[X] Phase 3: Fullscreen Panel Tools
     [X] Milestone 3.1: Fullscreen engine component + Dead Pixel Test (full tool page, SEO content, schemas)
-    [ ] Milestone 3.2: White Screen + Black Screen + Stuck Pixel Fixer (full tool pages with SEO and schemas)
-    [ ] Milestone 3.3: Red, Green, Blue, Grey, Yellow, Pink screens + Fullscreen Colour Cycle (full pages)
+    [X] Milestone 3.2: White Screen + Black Screen + Stuck Pixel Fixer (full tool pages with SEO and schemas)
+    [X] Milestone 3.3: Red, Green, Blue, Grey, Yellow, Pink screens + Fullscreen Colour Cycle (full pages)
 
 [ ] Phase 4: Visual Calibration and Analysis Tests
     [ ] Milestone 4.1: Gradient Banding Test + Backlight Bleed Test + IPS Glow Test + Contrast Black Level Test
