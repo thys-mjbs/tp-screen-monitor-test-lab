@@ -1,9 +1,13 @@
 ﻿import type { Metadata } from 'next'
 import { Sora, Geist_Mono } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 import { Providers } from './providers'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
+import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 
 const sora = Sora({
   variable: '--font-sora',
@@ -44,12 +48,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9067385801783501"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={`${sora.variable} ${geistMono.variable} font-sans antialiased bg-bg text-fg`}>
         <Providers>
           <Header />
           <main>{children}</main>
           <Footer />
         </Providers>
+        <Analytics />
+        <SpeedInsights />
+        <GoogleAnalytics />
       </body>
     </html>
   )
