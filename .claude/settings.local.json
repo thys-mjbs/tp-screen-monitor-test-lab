@@ -20,7 +20,10 @@
       "Bash(grep -v \"^\\\\s*//\")",
       "Bash(grep -v \"const \\\\|: '\\\\|: \\\\\"\\\\|import \\\\|export \\\\|href=\\\\|className=\\\\|style=\\\\|label:\\\\|q: \\\\|a: \\\\|slug:\\\\|name:\\\\|metaTitle:\\\\|metaDesc:\\\\|primaryQuery:\\\\|shortDescription:\\\\|related:\\\\|\\\\\\\\.tsx:[0-9]*:.*= \")",
       "Bash(grep -v \"\\\\\\\\\\\\\\\\'\")",
-      "Bash(findstr /r /n \"[a-z]'[a-z]\" app\\\\white-saturation-test\\\\page.tsx app\\\\gamma-calibration-check\\\\page.tsx app\\\\moire-pattern-test\\\\page.tsx app\\\\image-retention-test\\\\page.tsx app\\\\viewing-angle-test\\\\page.tsx)"
+      "Bash(findstr /r /n \"[a-z]'[a-z]\" app\\\\white-saturation-test\\\\page.tsx app\\\\gamma-calibration-check\\\\page.tsx app\\\\moire-pattern-test\\\\page.tsx app\\\\image-retention-test\\\\page.tsx app\\\\viewing-angle-test\\\\page.tsx)",
+      "WebFetch(domain:www.talentatrium.com)",
+      "WebFetch(domain:yourqrtoolkit.com)",
+      "WebFetch(domain:home-hub-omega-rosy.vercel.app)"
     ]
   }
 }
