@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Play, Square, RotateCcw, Maximize2 } from 'lucide-react'
+import { Play, Square, RotateCcw, Maximize2, TriangleAlert } from 'lucide-react'
 
 const FLASH_COLORS = ['#FF0000', '#00FF00', '#0000FF', '#FFFFFF', '#000000', '#FFFF00', '#00FFFF', '#FF00FF']
 
@@ -63,6 +63,14 @@ export function StuckPixelFixer() {
 
   return (
     <>
+      {/* Photosensitivity warning */}
+      <div className="flex gap-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-amber-900">
+        <TriangleAlert size={16} className="mt-0.5 shrink-0 text-amber-600" />
+        <p className="text-xs leading-relaxed">
+          <span className="font-semibold">Flashing imagery warning.</span> This tool displays rapidly cycling colours at high frequency. Do not use it if you have photosensitive epilepsy, are sensitive to flashing or flickering light, or have been advised to avoid such content. If you experience any discomfort, stop immediately by pressing Esc or the Stop button.
+        </p>
+      </div>
+
       {/* Flash panel */}
       <div
         className="relative w-full rounded-xl overflow-hidden transition-colors select-none"
