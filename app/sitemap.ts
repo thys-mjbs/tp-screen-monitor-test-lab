@@ -21,6 +21,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: appUrl, priority: 1.0, changeFrequency: 'weekly' as const },
     ...toolEntries,
+    { url: `${appUrl}/dead-pixel-test/for-oled`, priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: `${appUrl}/dead-pixel-test/for-laptops`, priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: `${appUrl}/dead-pixel-test/for-4k`, priority: 0.8, changeFrequency: 'monthly' as const },
     { url: `${appUrl}/blog`, priority: 0.7, changeFrequency: 'weekly' as const },
     ...postEntries,
     { url: `${appUrl}/about`, priority: 0.5, changeFrequency: 'yearly' as const },

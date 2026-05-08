@@ -4,6 +4,7 @@ import type { Tool } from './tools'
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
 
 export function toolMetadata(tool: Tool): Metadata {
+  const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(tool.metaTitle)}&desc=${encodeURIComponent(tool.metaDesc)}`
   return {
     title: tool.metaTitle,
     description: tool.metaDesc,
@@ -13,7 +14,9 @@ export function toolMetadata(tool: Tool): Metadata {
       description: tool.metaDesc,
       url: `${appUrl}/${tool.slug}`,
       type: 'website',
+      images: [{ url: ogImage, width: 1200, height: 630, alt: tool.metaTitle }],
     },
+    twitter: { card: 'summary_large_image', images: [ogImage] },
   }
 }
 

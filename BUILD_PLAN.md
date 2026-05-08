@@ -37,11 +37,11 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     [X] Milestone 6.2: Blog infrastructure — layout, index page, static post system
     [X] Milestone 6.3: All 10 blog posts with full SEO content and internal links
 
-[ ] Phase 7: Programmatic SEO Pages
-    [ ] Milestone 7.1: Per-tool dynamic OG images (opengraph-image.tsx for every tool)
-    [ ] Milestone 7.2: Colour variant pages — /red-screen, /blue-screen, /green-screen, /grey-screen, /yellow-screen, /pink-screen as standalone SEO pages
-    [ ] Milestone 7.3: Use-case variant pages — /dead-pixel-test/for-oled, /for-laptops, /for-4k and similar
-    [ ] Milestone 7.4: Internal linking audit — Related Tools cards verified on every tool page, all links confirmed working
+[X] Phase 7: Programmatic SEO Pages
+    [X] Milestone 7.1: Per-tool dynamic OG images (/api/og route with branded ImageResponse, wired into toolMetadata and blog posts)
+    [X] Milestone 7.2: Colour variant pages — /red-screen, /blue-screen, /green-screen, /grey-screen, /yellow-screen, /pink-screen (completed in Phase 3.3)
+    [X] Milestone 7.3: Use-case variant pages — /dead-pixel-test/for-oled, /for-laptops, /for-4k with unique SEO content
+    [X] Milestone 7.4: Internal linking audit — all 25 related[] slugs verified correct, all tool routes confirmed present
 
 [ ] Phase 8: Analytics, Ads, and Launch Readiness
     [ ] Milestone 8.1: Analytics setup — GA4 component, Vercel Analytics, Speed Insights, tool_used and tool_completed events

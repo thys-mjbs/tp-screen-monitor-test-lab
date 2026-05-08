@@ -8,6 +8,8 @@ import { ToolCard } from '@/components/ToolCard'
 import { Clock } from 'lucide-react'
 import { POST_CONTENT } from './content'
 
+const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
+
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }))
 }
@@ -16,14 +18,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params
   const post = getPostBySlug(slug)
   if (!post) return {}
+  const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(post.title)}&desc=${encodeURIComponent(post.description)}`
   return {
     title: post.title,
     description: post.description,
-    alternates: { canonical: `/blog/${post.slug}` },
+    alternates: { canonical: `${appUrl}/blog/${post.slug}` },
     openGraph: {
       type: 'article',
       publishedTime: post.publishedAt,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: post.title }],
     },
+    twitter: { card: 'summary_large_image', images: [ogImage] },
   }
 }
 
