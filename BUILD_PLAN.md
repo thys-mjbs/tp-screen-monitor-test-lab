@@ -10,8 +10,8 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
 
 [ ] Phase 1: Project Foundation
     [X] Milestone 1.1: Initialize Next.js project and confirm environment
-    [ ] Milestone 1.2: Design system — Tailwind config, brand palette, typography, dark mode
-    [ ] Milestone 1.3: Visual assets brief — favicon and OG image instructions for ChatGPT
+    [X] Milestone 1.2: Design system — Tailwind config, brand palette, typography, dark mode
+    [X] Milestone 1.3: Visual assets brief — favicon and OG image instructions for ChatGPT
     [ ] Milestone 1.4: Core layout components — RootLayout, Header, Footer, Breadcrumb
 
 [ ] Phase 2: Tool Infrastructure and Homepage
