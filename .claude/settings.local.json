@@ -4,7 +4,13 @@
       "PowerShell(npm *)",
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\nextapp\" -Force | ForEach-Object { $_.FullName })",
       "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\" -Force | Where-Object { $_.Name -ne \"node_modules\" } | ForEach-Object { $_.Name })",
-      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\" -Recurse | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\\", \"\"\\) })"
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\" -Recurse | ForEach-Object { $_.FullName.Replace\\(\"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\\", \"\"\\) })",
+      "WebFetch(domain:monid.ai)",
+      "WebFetch(domain:kusho.ai)",
+      "WebFetch(domain:www.myradiq.com)",
+      "WebFetch(domain:noteweave.io)",
+      "WebFetch(domain:espa.ai)",
+      "WebFetch(domain:donely.ai)"
     ]
   }
 }
