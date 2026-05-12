@@ -297,6 +297,16 @@ export const tools: Tool[] = [
     primaryQuery: 'input lag test online',
     related: ['refresh-rate-checker', 'motion-blur-test', 'resolution-checker', 'gamma-calibration-check'],
   },
+  {
+    slug: 'pwm-flicker-test',
+    name: 'PWM Flicker Test',
+    shortDescription: 'Visualise backlight PWM flicker and compare flickering vs steady light panels.',
+    metaTitle: 'PWM Flicker Test: Backlight Flicker Check Online',
+    metaDesc: 'Test for PWM backlight flicker on your monitor. Visualise flickering vs steady reference panels and learn how to detect PWM with a camera. Free online tool.',
+    category: 'visual-test',
+    primaryQuery: 'PWM flicker test monitor',
+    related: ['refresh-rate-checker', 'motion-blur-test', 'contrast-black-level-test', 'image-retention-test'],
+  },
 ]
 
 export function getToolBySlug(slug: string): Tool | undefined {
