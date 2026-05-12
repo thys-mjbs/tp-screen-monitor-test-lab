@@ -56,7 +56,7 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
 
 [ ] Phase 9: Additional Tools
     Note: add each tool to lib/tools.ts registry, build component, build page with FAQs and body copy, update sitemap
-    [ ] Milestone 9.1: Motion Blur Test (slug: motion-blur-test)
+    [X] Milestone 9.1: Motion Blur Test (slug: motion-blur-test)
         Moving bar across screen to reveal ghosting, smearing, and pixel response issues
         Target query: "motion blur test monitor"
     [ ] Milestone 9.2: Input Lag Test (slug: input-lag-test)
