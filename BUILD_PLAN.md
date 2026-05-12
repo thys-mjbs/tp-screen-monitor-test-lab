@@ -62,7 +62,7 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     [X] Milestone 9.2: Input Lag Test (slug: input-lag-test)
         Visual reaction time test measuring click response to a colour change stimulus
         Target query: "input lag test online"
-    [ ] Milestone 9.3: PWM Flicker Test (slug: pwm-flicker-test)
+    [X] Milestone 9.3: PWM Flicker Test (slug: pwm-flicker-test)
         Rapid brightness alternation pattern to detect backlight PWM flicker causing eye strain
         Target query: "PWM flicker test monitor"
     [ ] Milestone 9.4: Colour Temperature Test (slug: colour-temperature-test)

@@ -307,6 +307,16 @@ export const tools: Tool[] = [
     primaryQuery: 'PWM flicker test monitor',
     related: ['refresh-rate-checker', 'motion-blur-test', 'contrast-black-level-test', 'image-retention-test'],
   },
+  {
+    slug: 'colour-temperature-test',
+    name: 'Colour Temperature Test',
+    shortDescription: 'Identify colour tinting on your display by finding which white looks neutral to you.',
+    metaTitle: 'Colour Temperature Test: Monitor White Balance Check',
+    metaDesc: 'Check your monitor colour temperature and white balance by selecting which white tone looks most neutral. Compare against the D65 standard. Free online tool.',
+    category: 'visual-test',
+    primaryQuery: 'monitor colour temperature test',
+    related: ['gamma-calibration-check', 'white-saturation-test', 'gradient-banding-test', 'screen-uniformity-test'],
+  },
 ]
 
 export function getToolBySlug(slug: string): Tool | undefined {
