@@ -1021,6 +1021,311 @@ function DeadPixelsOledTvProjectorsPost() {
   )
 }
 
+// ─── 13. Backlight Bleed: Gaming Laptops ─────────────────────────────────────
+
+function BacklightBleedGamingLaptopsPost() {
+  return (
+    <>
+      <p>
+        Gaming laptops are among the most common sources of backlight bleed complaints because
+        their thin panels and tight bezels create conditions where light leaks at the edges.
+        HP Omen, Acer Nitro, MSI, Alienware, and Lenovo gaming laptops all attract significant
+        search volume around this issue. Here is what to expect from each brand and how to
+        assess whether the bleed you see is within normal tolerance.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">HP Omen backlight bleed</h2>
+      <p>
+        HP Omen laptops use IPS panels across various screen sizes, and backlight bleed along
+        the lower edge and corners is a frequently reported issue on the Omen 15 and Omen 16
+        series. HP&apos;s warranty policy for display defects on laptops requires the defect to
+        represent a hardware failure rather than a within-tolerance panel characteristic. Bleed
+        visible during regular dark-scene gaming in a normally lit room is a stronger warranty
+        case than bleed only visible in a pitch-dark test. Contact HP Support with video or
+        photographs before the warranty period expires.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Acer Nitro 5 backlight bleed</h2>
+      <p>
+        The Acer Nitro 5 is a budget gaming laptop and backlight bleed along the bottom bezel
+        is commonly reported across multiple generations of the model. At this price tier,
+        Acer&apos;s display tolerance policy typically permits a moderate level of edge bleed before
+        a warranty claim is accepted. Use the Backlight Bleed Test on this site to document
+        the severity from your normal seated distance. Bleed that is clearly distracting during
+        gameplay in a normally lit room is worth raising with Acer support within the warranty
+        period.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">MSI gaming laptops and screen bleeding</h2>
+      <p>
+        MSI gaming laptops, including the Raider, Stealth, and Katana series, use IPS or
+        IPS-level panels from various suppliers, which means bleed characteristics vary between
+        production batches. MSI screen bleeding reports tend to cluster around the lower-left
+        and lower-right corners. If bleed appeared from new, document it early. MSI&apos;s regional
+        support handles warranty claims for display defects and generally requires a service
+        centre visit for laptop screen assessments.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Alienware backlight bleed</h2>
+      <p>
+        Alienware gaming laptops are sold under the Dell brand and carry Dell&apos;s general
+        warranty framework. Unlike the Dell UltraSharp desktop monitor range, Alienware laptops
+        do not include a Premium Panel Guarantee. Backlight bleed reports on Alienware laptops
+        are most common on the m15 and m17 series. Dell&apos;s support team assesses laptop display
+        defects on a case-by-case basis. If bleed affects your experience on dark-environment
+        content, document it with clear photographs and contact Dell support.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Lenovo gaming laptops and backlight bleed</h2>
+      <p>
+        Lenovo Legion laptops and IdeaPad Gaming models report backlight bleed primarily along
+        the bottom and side edges. Lenovo&apos;s warranty covers panel defects but applies standard
+        display quality thresholds. Lenovo&apos;s support process for laptop display issues typically
+        starts with an online diagnostic and may result in a mail-in repair or on-site technician
+        visit depending on the warranty tier purchased with the laptop.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">How to test your gaming laptop for backlight bleed</h2>
+      <p>
+        Open the Backlight Bleed Test on this site and display the solid black fullscreen panel
+        in a completely darkened room. Allow a minute for your eyes to adjust. View the screen
+        from your normal gaming position. Bright patches at the corners or edges are backlight
+        bleed. A glow that shifts in intensity as you change your viewing angle is more likely
+        IPS glow, which is a normal characteristic of IPS technology rather than a defect.
+        Photograph the screen straight-on in the dark room to use as evidence when contacting
+        manufacturer support.
+      </p>
+    </>
+  )
+}
+
+// ─── 14. Backlight Bleed: Samsung TVs ────────────────────────────────────────
+
+function BacklightBleedSamsungTvPost() {
+  return (
+    <>
+      <p>
+        Backlight bleed is one of the most common complaints raised about Samsung LED and QLED
+        TVs, particularly on larger screen sizes where the backlight must illuminate a greater
+        surface area. Understanding what is a genuine defect versus normal panel behaviour helps
+        you decide whether a warranty claim is worth pursuing.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Why Samsung LED TVs can show backlight bleed</h2>
+      <p>
+        Most Samsung TVs use edge-lit or direct-lit LED backlighting rather than OLED. In an
+        edge-lit design, LED strips along the panel borders project light across the panel
+        surface. Light that escapes at the edges rather than passing through the LCD layer
+        evenly produces visible bright areas in dark scenes. Samsung QLED TVs use the same
+        underlying LCD technology with a quantum dot colour enhancement layer, so they can
+        exhibit the same backlight bleed characteristics as standard LED TVs.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Samsung curved TV light bleed</h2>
+      <p>
+        Curved Samsung TVs, including models from the 2015 to 2019 range, are particularly
+        associated with backlight bleed due to the way the panel curvature interacts with the
+        edge-lit backlight. The curve changes the angle at which LED light enters the panel
+        edges, which can increase the visibility of bleed at certain viewing positions. On a
+        curved Samsung TV, bleed is often reported as more severe on the left and right edges
+        than on equivalent flat panel models.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">How to test your Samsung TV for backlight bleed</h2>
+      <p>
+        Use the Backlight Bleed Test on this site from a device connected to your Samsung TV
+        via HDMI. Display the solid black panel in fullscreen in a completely darkened room.
+        View from your normal seating distance and look for bright patches at the edges or
+        corners. Give your eyes one to two minutes to adjust to the darkness before assessing.
+        Disable any dynamic brightness or ambient light compensation setting in the TV&apos;s
+        picture menu during the test, as these can mask bleed by reducing overall brightness
+        automatically.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Samsung TV backlight bleed fix options</h2>
+      <p>
+        There is no reliable software fix for backlight bleed on a Samsung TV. Reducing the
+        backlight setting in the picture menu reduces the intensity of both the content and
+        the bleed, making it less visible at the cost of overall image brightness. Some users
+        report slight improvement after extended use as the panel and chassis settle at
+        operating temperature. Physical remedies such as applying pressure to the bezel carry
+        a high risk of cracking the panel and voiding the warranty.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">When to contact Samsung support</h2>
+      <p>
+        If backlight bleed is visible during normal viewing in a reasonably lit room, particularly
+        during dark film scenes or console gaming, it warrants a warranty claim. Document it
+        with video or photographs taken in a darkened room from your normal viewing distance.
+        Samsung&apos;s support line can arrange a technician visit for large-screen TVs. For TVs
+        purchased from a retailer, the retailer&apos;s return policy may be the faster route if
+        you are still within the return window.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Samsung OLED and QD-OLED TVs</h2>
+      <p>
+        Samsung&apos;s QD-OLED TV range (S90C and later models) does not exhibit backlight bleed
+        because OLED panels have no backlight. Each pixel produces its own light and turns
+        off completely when displaying black. If you have a Samsung QD-OLED TV and see a
+        persistent bright spot against dark content, it is a stuck or hot pixel rather than
+        backlight bleed. Use the Dead Pixel Test tool to confirm the type of defect and
+        document it for a warranty claim.
+      </p>
+    </>
+  )
+}
+
+// ─── 15. Backlight Bleed: LG, Sony, Philips, TCL, BenQ ──────────────────────
+
+function BacklightBleedBrandsPost() {
+  return (
+    <>
+      <p>
+        Backlight bleed affects LCD monitors and TVs from all manufacturers, but the severity
+        and warranty response vary significantly by brand and product tier. This guide covers
+        what to expect from LG, Sony, Philips, TCL, and BenQ displays, and how to make a
+        successful warranty case if the bleed is severe enough to affect everyday use.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">LG backlight bleed</h2>
+      <p>
+        LG produces a wide range of LCD monitors and TVs, and backlight bleed characteristics
+        vary across the product range. LG UltraWide and UltraGear gaming monitors have been
+        reported to show bleed at corners and along the bottom edge. LG&apos;s warranty for monitors
+        and TVs assesses display defects against acceptable manufacturing tolerances. For LG
+        OLED TVs, backlight bleed is not applicable as OLED produces true black per pixel.
+        Any persistent bright spot on an LG OLED TV is a pixel defect, not backlight bleed.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sony backlight bleeding</h2>
+      <p>
+        Sony Bravia LCD TVs and Sony monitors are subject to backlight bleed like any other
+        edge-lit or direct-lit LCD panel. Sony&apos;s premium Bravia XR range uses full-array
+        local dimming to reduce bleed visibility, but bleed can still occur at the boundaries
+        of dimming zones. Sony&apos;s warranty covers panel defects outside acceptable tolerance.
+        For Sony TVs, warranty claims typically require a service technician visit. Document
+        bleed severity with photographs and video before contacting Sony support.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Philips backlight bleeding</h2>
+      <p>
+        Philips monitors, particularly the Momentum gaming range, have attracted backlight
+        bleed reports in the corners of their IPS panels. Philips applies a pixel defect and
+        display quality policy aligned with ISO standards. For Philips monitors sold in Europe,
+        warranty claims are handled through the Philips support portal with photographic
+        evidence. Note that Philips&apos; Ambiglow feature, which projects decorative light from the
+        back of the monitor to the wall, is sometimes confused with backlight bleed but is an
+        intentional design feature.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">TCL backlight bleed</h2>
+      <p>
+        TCL TVs are manufactured to a competitive price point, which can result in greater
+        backlight uniformity variation compared to premium brands. TCL uses both edge-lit and
+        direct-lit backlighting across its TV ranges. Bleed on TCL TVs is more commonly
+        reported on larger and lower-priced models. For new TCL TVs showing significant bleed,
+        a retailer return within the return window is generally faster than the manufacturer
+        warranty process.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">BenQ EX2780Q backlight bleed</h2>
+      <p>
+        The BenQ EX2780Q is a 27-inch QHD IPS gaming monitor that has generated notable
+        search volume around backlight bleed. Reports vary considerably between units,
+        suggesting batch-to-batch manufacturing variation rather than a systemic design issue.
+        BenQ&apos;s warranty includes a pixel and display quality policy. If your BenQ EX2780Q
+        shows significant edge bleed that is visible during gameplay, contact BenQ support
+        with the Backlight Bleed Test results documented in a darkened room.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Testing any of these displays for backlight bleed</h2>
+      <p>
+        Use the Backlight Bleed Test on this site to display a fullscreen black panel. Darken
+        your room completely, wait for your eyes to adjust, and view the display from your
+        normal working or viewing distance. Photograph the screen straight-on to document the
+        severity. Bleed visible from your normal viewing distance in a moderately lit room is
+        a reasonable warranty case. Bleed only visible in a pitch-dark room from close range
+        is typically within normal manufacturing tolerance for LCD displays.
+      </p>
+    </>
+  )
+}
+
+// ─── 16. LED TV and OLED Screen Bleeding ─────────────────────────────────────
+
+function LedTvOledScreenBleedingPost() {
+  return (
+    <>
+      <p>
+        When people search for "TV screen bleeding" or "LED TV light bleed," they are almost
+        always describing backlight bleed on an LCD television. AMOLED screen bleeding refers
+        to something entirely different. Understanding which phenomenon applies to your display
+        determines the correct course of action.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">LED TV light bleed explained</h2>
+      <p>
+        LED TVs use an LED backlight array behind an LCD panel. The backlight is a continuous
+        light source, and the LCD layer acts as a gate that opens and closes per pixel to
+        control the brightness of the image. Where the backlight chassis meets the panel edges,
+        light escapes through physical gaps and produces visible bright patches in dark scenes.
+        This is backlight bleed: light that bypasses the intended blocking and appears as
+        glowing areas at the corners or edges of the screen when displaying dark content.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Screen bleeding on TVs: edge-lit vs direct-lit</h2>
+      <p>
+        The severity of backlight bleed depends partly on the backlight configuration.
+        Edge-lit TVs position LED strips along the panel borders, meaning all light travels
+        across the panel from the edges. This increases the chance of edge bleed. Direct-lit
+        and full-array backlit TVs distribute LEDs across the entire back panel surface, which
+        generally produces better uniformity and less edge bleed. Mini-LED TVs take this
+        further with hundreds of smaller LEDs enabling more precise local dimming and
+        significantly less bleed around bright objects on dark backgrounds.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">AMOLED screen bleeding: what it actually is</h2>
+      <p>
+        AMOLED displays, used in Samsung Galaxy phones and tablets, have no backlight and
+        therefore cannot develop backlight bleed. When people describe AMOLED screen bleeding,
+        they are typically referring to one of two things: physical damage where a cracked
+        screen has caused dark ink-like spreading (this is liquid crystal leakage from a
+        damaged LCD panel, not AMOLED), or uneven OLED pixel ageing that makes some areas
+        appear dimmer than others after extended use. Neither is backlight bleed.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">How to test your TV for backlight bleed</h2>
+      <p>
+        Use the Backlight Bleed Test on this site from a device connected to your TV via HDMI.
+        Display the fullscreen black panel in a completely darkened room and give your eyes
+        two minutes to adjust. Bright areas at the edges or corners visible from your normal
+        seating distance are backlight bleed. Patches that shift when you change your viewing
+        position are more likely reflections or IPS glow. A consistent bright area in the
+        same position regardless of viewing angle is genuine backlight bleed.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Light bleed on TV: when to take action</h2>
+      <p>
+        Mild backlight bleed visible only in a completely dark test environment and not during
+        normal viewing is within normal manufacturing tolerance for most LED TVs. Bleed that
+        is noticeable during dark film scenes or gaming in normal room lighting is worth
+        documenting and reporting to the manufacturer or retailer. Act within the return window
+        where possible, as this is generally faster than a warranty service claim.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">OLED TVs and screen bleeding</h2>
+      <p>
+        True OLED TVs cannot develop backlight bleed because there is no backlight. Each pixel
+        in an OLED TV generates and independently extinguishes its own light. If you see a
+        persistent glow on an OLED TV during dark content, it is most likely a hot pixel (a
+        stuck bright emitter) or an environmental light source reflecting from the panel
+        surface. Use the Dead Pixel Test to confirm whether a persistent bright spot is a
+        pixel defect, and document it with photographs for a warranty claim.
+      </p>
+    </>
+  )
+}
+
 // ─── Content map ─────────────────────────────────────────────────────────────
 
 export const POST_CONTENT: Record<string, PostContent> = {
@@ -1036,4 +1341,8 @@ export const POST_CONTENT: Record<string, PostContent> = {
   'monitor-aspect-ratios-explained': AspectRatiosPost,
   'dead-pixels-brand-monitors': DeadPixelsBrandPost,
   'dead-pixels-oled-tv-projectors': DeadPixelsOledTvProjectorsPost,
+  'backlight-bleed-gaming-laptops': BacklightBleedGamingLaptopsPost,
+  'backlight-bleed-samsung-tv': BacklightBleedSamsungTvPost,
+  'backlight-bleed-lg-sony-philips-tcl-benq': BacklightBleedBrandsPost,
+  'led-tv-oled-screen-bleeding': LedTvOledScreenBleedingPost,
 }

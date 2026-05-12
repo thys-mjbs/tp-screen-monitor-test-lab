@@ -104,6 +104,38 @@ export const posts: Post[] = [
     readingMinutes: 5,
     relatedTools: ['dead-pixel-test', 'stuck-pixel-fixer', 'backlight-bleed-test'],
   },
+  {
+    slug: 'backlight-bleed-gaming-laptops',
+    title: 'Backlight Bleed on Gaming Laptops: HP Omen, Acer Nitro, MSI, Alienware, and Lenovo',
+    description: 'Gaming laptops are among the most common sources of backlight bleed complaints. Here is what to expect from each major brand and how to assess your own display.',
+    publishedAt: '2026-05-14',
+    readingMinutes: 5,
+    relatedTools: ['backlight-bleed-test', 'black-screen', 'ips-glow-test'],
+  },
+  {
+    slug: 'backlight-bleed-samsung-tv',
+    title: 'Backlight Bleed on Samsung TVs: How to Test and What to Do',
+    description: 'Backlight bleed is one of the most common complaints on Samsung LED and QLED TVs. Learn how to assess the severity, what fixes exist, and when to contact Samsung support.',
+    publishedAt: '2026-05-15',
+    readingMinutes: 5,
+    relatedTools: ['backlight-bleed-test', 'black-screen', 'dead-pixel-test'],
+  },
+  {
+    slug: 'backlight-bleed-lg-sony-philips-tcl-benq',
+    title: 'Backlight Bleed on LG, Sony, Philips, TCL, and BenQ Displays',
+    description: 'Backlight bleed affects LCD monitors and TVs from every manufacturer. This guide covers LG, Sony, Philips, TCL, and BenQ displays including the BenQ EX2780Q.',
+    publishedAt: '2026-05-16',
+    readingMinutes: 5,
+    relatedTools: ['backlight-bleed-test', 'black-screen', 'ips-glow-test'],
+  },
+  {
+    slug: 'led-tv-oled-screen-bleeding',
+    title: 'LED TV and OLED Screen Bleeding Explained',
+    description: 'TV screen bleeding, LED TV light bleed, and AMOLED screen bleeding all mean different things. This guide explains each phenomenon and what you can do about it.',
+    publishedAt: '2026-05-17',
+    readingMinutes: 5,
+    relatedTools: ['backlight-bleed-test', 'black-screen', 'image-retention-test'],
+  },
 ]
 
 export function getPostBySlug(slug: string): Post | undefined {
