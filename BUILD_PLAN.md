@@ -65,7 +65,7 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     [X] Milestone 9.3: PWM Flicker Test (slug: pwm-flicker-test)
         Rapid brightness alternation pattern to detect backlight PWM flicker causing eye strain
         Target query: "PWM flicker test monitor"
-    [ ] Milestone 9.4: Colour Temperature Test (slug: colour-temperature-test)
+    [X] Milestone 9.4: Colour Temperature Test (slug: colour-temperature-test)
         White balance scale from warm to cool to identify and correct monitor colour tint
         Target query: "monitor colour temperature test"
     [ ] Milestone 9.5: Black Smear Test (slug: black-smear-test)

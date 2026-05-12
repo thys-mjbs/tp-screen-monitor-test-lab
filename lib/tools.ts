@@ -317,6 +317,16 @@ export const tools: Tool[] = [
     primaryQuery: 'monitor colour temperature test',
     related: ['gamma-calibration-check', 'white-saturation-test', 'gradient-banding-test', 'screen-uniformity-test'],
   },
+  {
+    slug: 'black-smear-test',
+    name: 'Black Smear Test',
+    shortDescription: 'Slow dark objects on a dark background to reveal VA panel dark-to-dark ghosting.',
+    metaTitle: 'Black Smear Test: VA Panel Ghosting Check Online',
+    metaDesc: 'Test your VA monitor for black smear and dark-to-dark ghosting using slow dark objects on a dark background. Adjustable speed and contrast. Free online tool.',
+    category: 'visual-test',
+    primaryQuery: 'VA panel black smear test',
+    related: ['motion-blur-test', 'contrast-black-level-test', 'backlight-bleed-test', 'image-retention-test'],
+  },
 ]
 
 export function getToolBySlug(slug: string): Tool | undefined {
