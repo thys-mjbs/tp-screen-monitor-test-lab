@@ -287,6 +287,16 @@ export const tools: Tool[] = [
     primaryQuery: 'motion blur test monitor',
     related: ['refresh-rate-checker', 'image-retention-test', 'contrast-black-level-test', 'viewing-angle-test'],
   },
+  {
+    slug: 'input-lag-test',
+    name: 'Input Lag Test',
+    shortDescription: 'Measure your visual reaction time and estimate display input lag with a click test.',
+    metaTitle: 'Input Lag Test: Reaction Time Check Online',
+    metaDesc: 'Test display input lag and reaction time by clicking as fast as possible after a colour change stimulus. Free online tool, no download required.',
+    category: 'checker',
+    primaryQuery: 'input lag test online',
+    related: ['refresh-rate-checker', 'motion-blur-test', 'resolution-checker', 'gamma-calibration-check'],
+  },
 ]
 
 export function getToolBySlug(slug: string): Tool | undefined {
