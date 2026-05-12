@@ -68,7 +68,7 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     [X] Milestone 9.4: Colour Temperature Test (slug: colour-temperature-test)
         White balance scale from warm to cool to identify and correct monitor colour tint
         Target query: "monitor colour temperature test"
-    [ ] Milestone 9.5: Black Smear Test (slug: black-smear-test)
+    [X] Milestone 9.5: Black Smear Test (slug: black-smear-test)
         Slow dark objects on dark backgrounds to reveal VA panel dark-to-dark ghosting
         Target query: "VA panel black smear test"
     [ ] Milestone 9.6: Overdrive Test (slug: overdrive-test)

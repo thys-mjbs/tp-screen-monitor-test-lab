@@ -327,6 +327,16 @@ export const tools: Tool[] = [
     primaryQuery: 'VA panel black smear test',
     related: ['motion-blur-test', 'contrast-black-level-test', 'backlight-bleed-test', 'image-retention-test'],
   },
+  {
+    slug: 'overdrive-test',
+    name: 'Overdrive Test',
+    shortDescription: 'High-speed moving bars to reveal inverse ghosting and haloing from monitor overdrive.',
+    metaTitle: 'Overdrive Test: Inverse Ghosting Check Online',
+    metaDesc: 'Test your monitor overdrive for inverse ghosting, coronas, and haloing using fast-moving high-contrast bars. Free online tool, no download required.',
+    category: 'visual-test',
+    primaryQuery: 'monitor overdrive test inverse ghosting',
+    related: ['motion-blur-test', 'black-smear-test', 'refresh-rate-checker', 'contrast-black-level-test'],
+  },
 ]
 
 export function getToolBySlug(slug: string): Tool | undefined {
