@@ -1326,6 +1326,239 @@ function LedTvOledScreenBleedingPost() {
   )
 }
 
+// ─── 17. Samsung OLED and QLED Burn-In ───────────────────────────────────────
+
+function SamsungBurnInPost() {
+  return (
+    <>
+      <p>
+        Samsung TV burn-in is one of the most searched display topics, driven largely by
+        confusion between two very different panel technologies: OLED and QLED. Which Samsung
+        TVs are actually at risk, what causes burn-in, and what you can do about it are all
+        questions with clear answers once you understand the distinction.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Samsung QLED TVs and burn-in risk</h2>
+      <p>
+        Samsung QLED TVs are LCD televisions with a quantum dot colour enhancement layer.
+        They use an LED backlight and contain no organic light-emitting materials. Because
+        LCD pixels do not generate their own light and do not degrade from sustained content
+        display, Samsung QLED TVs have no meaningful burn-in risk under normal usage.
+        Permanent image retention on a Samsung QLED TV is extremely rare and would indicate
+        a manufacturing defect rather than normal panel ageing. Confusion about QLED burn-in
+        typically arises from conflating it with OLED burn-in.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Samsung QD-OLED TVs and genuine burn-in risk</h2>
+      <p>
+        Samsung&apos;s OLED TV range, sold under QD-OLED branding starting with the S90C series,
+        uses organic light-emitting panels and carries a genuine burn-in risk. QD-OLED pixels
+        degrade faster when driven at high brightness for extended periods. Static on-screen
+        elements such as channel logos, news tickers, sports score overlays, and navigation
+        bars displayed for many hours can cause uneven pixel ageing, leaving a faint permanent
+        ghost of those elements on the panel. This is true burn-in, distinct from temporary
+        image retention.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Screen burn-in vs image retention on Samsung TVs</h2>
+      <p>
+        Image retention is a temporary ghost image that fades after the display shows varied
+        content or is switched off for a period. It can occur on both QLED and OLED Samsung
+        TVs after prolonged static content and is not permanent. True burn-in is permanent
+        pixel degradation that does not fade. Use the Image Retention Test on this site to
+        display a conditioning pattern, then switch to a solid grey panel. A ghost that fades
+        within 30 minutes is image retention. A ghost that persists after an hour is likely
+        permanent burn-in.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">What causes burn-in on Samsung screens</h2>
+      <p>
+        On Samsung QD-OLED TVs, the highest-risk usage patterns are watching a news channel
+        with a persistent ticker and logo for more than four to six hours per day, playing
+        games with a fixed heads-up display at high brightness for extended daily sessions,
+        and displaying a static desktop or screensaver at peak brightness for long periods.
+        Sports broadcasts with persistent score overlays and channel branding are also a
+        documented risk factor after thousands of cumulative hours of viewing.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Samsung QLED dead pixels vs burn-in</h2>
+      <p>
+        Searches for "samsung qled dead pixel" often refer to a separate issue from burn-in.
+        Dead or stuck pixels on a Samsung QLED TV are hardware pixel failures, not burn-in.
+        A stuck pixel appears as a fixed bright or dark dot in one location. Use the Dead
+        Pixel Test on this site to confirm whether what you see is a pixel defect (a single
+        fixed dot that does not match the surrounding content) or burn-in (a faint pattern
+        matching previously displayed static content spread across an area of the screen).
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Preventing and reducing Samsung TV burn-in</h2>
+      <p>
+        For Samsung QD-OLED TVs, keep the peak brightness setting below maximum for everyday
+        viewing. Lower brightness significantly slows organic material degradation. Enable any
+        pixel shift, screen saver, or logo luminance reduction features in the TV&apos;s settings.
+        Vary content regularly and avoid leaving static images on screen when the TV is
+        unattended. Samsung QD-OLED TVs include a panel care or pixel refresh feature that
+        should be run periodically as described in the user manual.
+      </p>
+    </>
+  )
+}
+
+// ─── 18. Screen Resolution: TV and Monitor Sizes ─────────────────────────────
+
+function ScreenResolutionSizesPost() {
+  return (
+    <>
+      <p>
+        Screen resolution names are used inconsistently across product listings, and the
+        relationship between resolution, screen size, and actual sharpness is rarely explained
+        clearly. This guide covers common TV and monitor resolution sizes, the meaning behind
+        the names, and specific formats that generate frequent questions.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Common TV and monitor resolution names explained</h2>
+      <p>
+        Full HD (1920x1080) remains the most widely used resolution globally across TVs,
+        monitors, and laptops. Quad HD (2560x1440) is the standard for 27-inch monitors and
+        is often incorrectly labelled 2K in product listings; true 2K is a cinema standard of
+        2048x1080. 4K UHD (3840x2160) is the premium standard for large TVs and high-end
+        monitors. TV screen resolution sizes are typically described by their vertical pixel
+        count: 720p, 1080p, and 4K. Use the Resolution Checker on this site to confirm the
+        exact resolution your display is running at.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">1600x1200 monitors: a legacy 4:3 format</h2>
+      <p>
+        The 1600x1200 resolution is a 4:3 aspect ratio format from the pre-widescreen era of
+        desktop computing, used in high-end CRT and early LCD monitors. Despite being replaced
+        by widescreen formats in most consumer contexts, 1600x1200 monitors continue to attract
+        searches because some professional and industrial applications require 4:3 displays,
+        and because certain CRT monitors in this resolution are still used for specific
+        technical and retro computing purposes. New 1600x1200 LCD panels remain available
+        from specialist suppliers for medical and industrial use.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Chromebook display resolution</h2>
+      <p>
+        Chromebook display resolution varies significantly by model and price tier. Budget
+        Chromebooks commonly use 1366x768 panels. Mid-range models typically use 1920x1080.
+        Premium Chromebooks from Google, ASUS, and HP use 2560x1600 or higher resolution
+        displays. ChromeOS applies a device pixel ratio that scales the interface, so the
+        CSS resolution reported by the browser may differ from the physical panel resolution.
+        The Resolution Checker on this site displays both values, helping you confirm whether
+        your Chromebook is using its full native resolution.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Average computer screen size and resolution</h2>
+      <p>
+        The average desktop monitor sold globally is approximately 24 to 27 inches, most
+        commonly at 1920x1080. Laptop screens cluster around 13 to 15 inches, with 1920x1080
+        the most common resolution across the mid-market. For TVs used as secondary computer
+        displays, 40 to 55 inches at 4K UHD is a common combination. As remote and hybrid
+        work has expanded, 27-inch and 32-inch monitors at 2560x1440 have become significantly
+        more common in home office setups compared to a few years ago.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Custom screen resolution: how to create one</h2>
+      <p>
+        Windows allows custom screen resolutions through the Nvidia Control Panel (under
+        Display, then Change Resolution, then Customize) or AMD Radeon Software (under
+        Display). Custom resolutions are used for unusual display configurations, certain
+        professional applications, or legacy devices not detected at their correct native
+        resolution automatically. The GPU must support the target bandwidth for the chosen
+        resolution and refresh rate, and the display must accept the signal. Unsupported
+        custom resolutions produce no image or a distorted output.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">VGA max resolution and refresh rate</h2>
+      <p>
+        The VGA analogue connector supports a theoretical maximum of 2048x1536 at 85Hz,
+        though practical limits depend on cable quality and monitor electronics. At 1920x1080,
+        VGA can deliver a usable signal on short cable runs, but image quality is noticeably
+        softer than digital connections due to analogue-to-digital conversion at both ends.
+        Most modern monitors have removed VGA inputs entirely. For any display connected via
+        VGA showing a soft or unstable image, switching to HDMI or DisplayPort at the same
+        resolution produces a sharper result.
+      </p>
+    </>
+  )
+}
+
+// ─── 19. Samsung Screen Resolution Guide ─────────────────────────────────────
+
+function SamsungResolutionGuidePost() {
+  return (
+    <>
+      <p>
+        Samsung produces monitors, TVs, and mobile devices across a wide range of resolutions
+        and display configurations. This guide covers how to find, check, and adjust the
+        resolution on Samsung monitors and TVs, and what to do when the displayed resolution
+        does not match the panel&apos;s native specification.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Samsung monitor display resolution options</h2>
+      <p>
+        Samsung monitors range from 1920x1080 FHD on entry-level models to 3840x2160 4K on
+        professional and gaming displays. The Odyssey gaming range includes ultrawide models
+        at 2560x1080 and 3440x1440, plus the 49-inch super-ultrawide at 5120x1440. Samsung
+        ViewFinity monitors for professional use reach 5120x2880 and 7680x4320. To confirm
+        your Samsung monitor is running at its native resolution, use the Resolution Checker
+        on this site, which reads the operating resolution as reported by your browser.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Setting the correct resolution in Windows for Samsung monitors</h2>
+      <p>
+        If your Samsung monitor is not displaying at its native resolution, right-click the
+        Windows desktop and select Display Settings. In the Resolution dropdown, select the
+        highest listed resolution, which is typically the native resolution for your panel.
+        If the native resolution is not listed, check your cable. HDMI 2.0 or DisplayPort 1.2
+        is required for Samsung 4K monitors at 60Hz. For Samsung Odyssey ultrawide monitors,
+        DisplayPort 1.4 is recommended for refresh rates above 120Hz.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Samsung TV screen resolution settings</h2>
+      <p>
+        Samsung TVs automatically detect and display at the highest resolution supported by
+        the connected source. If your Samsung TV connected to a PC shows a lower resolution
+        than expected, the HDMI port may be set to a limited input mode. In the Samsung TV
+        settings, navigate to Connection, then External Device Manager (or HDMI Device Manager
+        on some models), and enable HDMI UHD Color for the relevant port. This unlocks the
+        port&apos;s full bandwidth for 4K at 60Hz or higher.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Samsung TV screen size adjustment</h2>
+      <p>
+        Samsung TVs occasionally display an incorrect picture size, with black bars around
+        the image or stretched content. This is controlled by the Picture Size setting in
+        Settings, then Picture, then Picture Size Settings. Set Picture Size to 16:9 for
+        standard widescreen content or Auto for automatic detection. If the image is oversized
+        and edges are cut off, the Screen Fit or 1:1 option corrects overscan. For PC input,
+        set Picture Size to Screen Fit to ensure the full desktop is displayed without cropping.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Samsung Galaxy phone and tablet screen resolution</h2>
+      <p>
+        Samsung Galaxy phones use AMOLED panels with resolutions from 2400x1080 FHD+ on
+        mid-range models to 3088x1440 QHD+ on flagship devices. Many Samsung Galaxy phones
+        default to FHD+ to conserve battery, even if the panel supports QHD+. To enable the
+        full resolution, open Settings, then Display, then Screen Resolution, and select the
+        highest available option. Note that higher resolution increases battery consumption.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Checking Samsung display resolution with the Resolution Checker</h2>
+      <p>
+        The Resolution Checker on this site reads the CSS pixel resolution and device pixel
+        ratio reported by your browser, reflecting the effective operating resolution including
+        any OS scaling applied. On Samsung monitors, compare the reported value to the native
+        specification in your monitor&apos;s documentation. On Samsung TVs connected to a PC, the
+        checker confirms whether the full 4K signal is reaching the display. On Samsung Galaxy
+        devices, it confirms whether the phone is running at its full native panel resolution
+        or the battery-saving default.
+      </p>
+    </>
+  )
+}
+
 // ─── Content map ─────────────────────────────────────────────────────────────
 
 export const POST_CONTENT: Record<string, PostContent> = {
@@ -1345,4 +1578,7 @@ export const POST_CONTENT: Record<string, PostContent> = {
   'backlight-bleed-samsung-tv': BacklightBleedSamsungTvPost,
   'backlight-bleed-lg-sony-philips-tcl-benq': BacklightBleedBrandsPost,
   'led-tv-oled-screen-bleeding': LedTvOledScreenBleedingPost,
+  'samsung-oled-qled-burn-in': SamsungBurnInPost,
+  'screen-resolution-tv-monitor-sizes': ScreenResolutionSizesPost,
+  'samsung-screen-resolution-guide': SamsungResolutionGuidePost,
 }

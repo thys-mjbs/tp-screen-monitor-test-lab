@@ -125,12 +125,12 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     — Milestone 11.1: Dead pixel brand posts [DONE]
     [X] Post A: "Dead pixels on AOC, Dell, ASUS, Sony, and LG monitors" — aoc monitor dead pixel (3600) + dell monitor dead pixel (2900) + asus monitor dead pixel (590) + lg dead pixel/lg oled dead pixel/lg oled tv dead pixel/sony tv dead pixel
     [X] Post B: "Dead pixels on OLED TVs and projectors" — oled tv dead pixel (140) + dead pixel on projector (1600)
-    — Milestone 11.2: Backlight bleed brand posts [DONE — awaiting user confirmation]
+    — Milestone 11.2: Backlight bleed brand posts [DONE]
     [X] Post C: "Backlight bleed on gaming laptops: HP Omen, Acer Nitro, MSI, Alienware, Lenovo" — hp omen backlight bleed (720) + acer nitro 5 backlight bleed (590) + msi screen bleeding (110) + alienware backlight bleed (260) + lenovo backlight bleed (170)
     [X] Post D: "Backlight bleed on Samsung TVs and how to assess it" — backlight bleed samsung (1900) + samsung tv light bleed (480) + light bleed samsung tv (480) + backlight bleed samsung tv (170) + samsung tv backlight bleed fix (140) + samsung curved tv light bleed (320)
     [X] Post E: "Backlight bleed on LG, Sony, Philips, TCL, and BenQ displays" — lg backlight bleed (110) + sony backlight bleeding (320) + philips backlight bleeding (140) + tcl backlight bleed (140) + benq ex2780q backlight bleed (1300)
     [X] Post F: "LED TV and OLED screen bleeding explained" — led tv light bleed (210) + light bleed tv (210) + tv screen bleeding (260) + screen bleeding tv (170) + amoled screen bleeding (720)
-    — Milestone 11.3: Burn-in + resolution posts
-    [ ] Post G: "Samsung OLED and QLED burn-in: what actually happens" — screen burn in samsung (6600) + burn in oled samsung (1000) + samsung tv burn in (480) + samsung burn in screen (170) + samsung qled dead pixel (170)
-    [ ] Post H: "Screen resolution explained: sizes, names, and what they mean for TVs and monitors" — tv screen resolution sizes (390) + chromebook display resolution (880) + average computer screen size (1300) + custom screen resolution (170) + 1600x1200 monitor (3600) + vga max resolution and refresh rate (110)
-    [ ] Post I: "Samsung screen resolution and display settings guide" — samsung display resolution (390) + samsung screen resolution (390) + samsung tv screen size adjustment (170)
+    — Milestone 11.3: Burn-in + resolution posts [DONE — awaiting user confirmation]
+    [X] Post G: "Samsung OLED and QLED burn-in: what actually happens" — screen burn in samsung (6600) + burn in oled samsung (1000) + samsung tv burn in (480) + samsung burn in screen (170) + samsung qled dead pixel (170)
+    [X] Post H: "Screen resolution explained: sizes, names, and what they mean for TVs and monitors" — tv screen resolution sizes (390) + chromebook display resolution (880) + average computer screen size (1300) + custom screen resolution (170) + 1600x1200 monitor (3600) + vga max resolution and refresh rate (110)
+    [X] Post I: "Samsung screen resolution and display settings guide" — samsung display resolution (390) + samsung screen resolution (390) + samsung tv screen size adjustment (170)

@@ -136,6 +136,30 @@ export const posts: Post[] = [
     readingMinutes: 5,
     relatedTools: ['backlight-bleed-test', 'black-screen', 'image-retention-test'],
   },
+  {
+    slug: 'samsung-oled-qled-burn-in',
+    title: 'Samsung OLED and QLED Burn-In: What Actually Happens',
+    description: 'Samsung QLED TVs have no real burn-in risk. Samsung QD-OLED TVs do. This guide explains the difference, what causes burn-in on Samsung screens, and how to prevent it.',
+    publishedAt: '2026-05-18',
+    readingMinutes: 5,
+    relatedTools: ['image-retention-test', 'black-screen', 'dead-pixel-test'],
+  },
+  {
+    slug: 'screen-resolution-tv-monitor-sizes',
+    title: 'Screen Resolution Explained: Sizes, Names, and What They Mean for TVs and Monitors',
+    description: 'A plain-language guide to resolution names, TV screen resolution sizes, 1600x1200 monitors, Chromebook display resolution, custom resolutions, and VGA limits.',
+    publishedAt: '2026-05-19',
+    readingMinutes: 6,
+    relatedTools: ['resolution-checker', 'refresh-rate-checker'],
+  },
+  {
+    slug: 'samsung-screen-resolution-guide',
+    title: 'Samsung Screen Resolution and Display Settings Guide',
+    description: 'How to find, check, and adjust the resolution on Samsung monitors, TVs, and Galaxy phones. Covers HDMI UHD Color, Picture Size settings, and OS scaling.',
+    publishedAt: '2026-05-20',
+    readingMinutes: 5,
+    relatedTools: ['resolution-checker', 'refresh-rate-checker'],
+  },
 ]
 
 export function getPostBySlug(slug: string): Post | undefined {
