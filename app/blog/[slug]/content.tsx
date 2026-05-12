@@ -1257,7 +1257,7 @@ function LedTvOledScreenBleedingPost() {
   return (
     <>
       <p>
-        When people search for "TV screen bleeding" or "LED TV light bleed," they are almost
+        When people search for &ldquo;TV screen bleeding&rdquo; or &ldquo;LED TV light bleed,&rdquo; they are almost
         always describing backlight bleed on an LCD television. AMOLED screen bleeding refers
         to something entirely different. Understanding which phenomenon applies to your display
         determines the correct course of action.
@@ -1383,7 +1383,7 @@ function SamsungBurnInPost() {
 
       <h2 className="text-lg font-bold text-fg">Samsung QLED dead pixels vs burn-in</h2>
       <p>
-        Searches for "samsung qled dead pixel" often refer to a separate issue from burn-in.
+        Searches for &ldquo;samsung qled dead pixel&rdquo; often refer to a separate issue from burn-in.
         Dead or stuck pixels on a Samsung QLED TV are hardware pixel failures, not burn-in.
         A stuck pixel appears as a fixed bright or dark dot in one location. Use the Dead
         Pixel Test on this site to confirm whether what you see is a pixel defect (a single
