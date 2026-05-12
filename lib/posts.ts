@@ -88,6 +88,22 @@ export const posts: Post[] = [
     readingMinutes: 6,
     relatedTools: ['resolution-checker', 'screen-uniformity-test'],
   },
+  {
+    slug: 'dead-pixels-brand-monitors',
+    title: 'Dead Pixels on AOC, Dell, ASUS, Sony, and LG Monitors',
+    description: 'Warranty policies for pixel defects vary significantly by manufacturer. Here is what AOC, Dell, ASUS, Sony, and LG each cover and how to make a successful claim.',
+    publishedAt: '2026-05-12',
+    readingMinutes: 5,
+    relatedTools: ['dead-pixel-test', 'stuck-pixel-fixer'],
+  },
+  {
+    slug: 'dead-pixels-oled-tv-projectors',
+    title: 'Dead Pixels on OLED TVs and Projectors: What They Look Like and What to Do',
+    description: 'Dead pixels on OLED TVs and DLP or LCD projectors behave differently from monitor defects. Learn how to test for them and what the warranty options are.',
+    publishedAt: '2026-05-13',
+    readingMinutes: 5,
+    relatedTools: ['dead-pixel-test', 'stuck-pixel-fixer', 'backlight-bleed-test'],
+  },
 ]
 
 export function getPostBySlug(slug: string): Post | undefined {

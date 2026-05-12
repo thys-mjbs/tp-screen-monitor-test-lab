@@ -860,6 +860,167 @@ function AspectRatiosPost() {
   )
 }
 
+// ─── 11. Dead Pixels: Brand Monitors ────────────────────────────────────────
+
+function DeadPixelsBrandPost() {
+  return (
+    <>
+      <p>
+        Monitor manufacturers handle dead pixel warranty claims very differently. Some require
+        multiple defective pixels before offering a replacement; others guarantee zero visible
+        defects on premium products. If you have found a dead pixel on your AOC, Dell, ASUS,
+        Sony, or LG monitor or TV, knowing the specific policy for your device determines
+        what your next step should be.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">AOC monitors and dead pixel policy</h2>
+      <p>
+        AOC applies a bright pixel and dark pixel threshold that varies by product line.
+        Budget and mid-range AOC monitors typically follow a class 2 pixel defect standard,
+        which permits a small number of defective pixels before a warranty claim is accepted.
+        Gaming monitors in the AOC AGON range may carry stricter policies. When reporting
+        a dead pixel on an AOC monitor, use the Dead Pixel Test tool to confirm the defect
+        type, photograph it against both white and black backgrounds, and contact AOC support
+        within the warranty period. AOC&apos;s support portal accepts claims online with photo evidence.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Dell monitor dead pixel policy</h2>
+      <p>
+        Dell operates one of the most transparent pixel defect policies in the industry.
+        Dell&apos;s <strong className="text-fg">Premium Panel Guarantee</strong> covers UltraSharp
+        monitors and guarantees a replacement for a single visible bright pixel defect, with
+        no minimum count requirement. Standard Dell monitors apply the ISO 13406-2 class II
+        threshold. If you have a Dell UltraSharp and find a dead pixel, the premium panel
+        guarantee means a single defect qualifies for replacement regardless of its location
+        on the panel.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">ASUS monitors and dead pixels</h2>
+      <p>
+        ASUS applies different policies across its product lines. ASUS ProArt monitors
+        target content creation users and carry a zero bright pixel guarantee, meaning a
+        single bright stuck pixel warrants replacement. Standard ASUS monitors and ROG gaming
+        monitors apply a conventional defect threshold. A dead pixel on an ASUS monitor in
+        the standard range typically requires either multiple defects or a centrally located
+        single defect before most warranty replacement decisions are made.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">LG monitors and OLED TVs</h2>
+      <p>
+        LG OLED TVs carry a pixel policy that is generally more generous than standard LCD
+        monitor policies, reflecting the higher price of OLED panels. A clearly visible
+        single dead pixel on a new LG OLED TV is typically grounds for a service visit.
+        LG UltraGear OLED gaming monitors carry a zero bright pixel guarantee. For LG
+        IPS monitors outside the OLED range, a minimum defect count applies before a
+        warranty replacement is offered. Contact LG support with your model number and
+        purchase date as early as possible after finding a defect.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sony TV dead pixel claims</h2>
+      <p>
+        Sony Bravia TVs, including OLED models, are covered under Sony&apos;s standard
+        warranty. Sony assesses pixel defect claims on a case-by-case basis. A single
+        dead pixel on a Sony OLED TV is worth reporting, particularly on a recently
+        purchased unit. Sony support typically requires a service technician visit for
+        TV warranty claims, so document the defect clearly with photographs before
+        contacting support.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">How to test and document a dead pixel for any brand</h2>
+      <p>
+        Use the Dead Pixel Test on this site to cycle through black, white, and each primary
+        colour. A dead pixel appears as a fixed dark dot on white and light backgrounds.
+        A stuck or hot pixel appears as a fixed bright dot visible against black. Note the
+        approximate screen position of the defect, confirm it is not dust under a screen
+        protector, and photograph it straight-on in a dimly lit room. Contact your
+        manufacturer&apos;s support with the photos and proof of purchase as soon as possible
+        after finding the defect, as most pixel defect policies have a reporting window.
+      </p>
+    </>
+  )
+}
+
+// ─── 12. Dead Pixels: OLED TVs and Projectors ────────────────────────────────
+
+function DeadPixelsOledTvProjectorsPost() {
+  return (
+    <>
+      <p>
+        Dead pixels on OLED TVs and projectors behave differently from defects on standard
+        LCD monitors, and the process of testing for and addressing them requires a different
+        approach. Both device types are expensive enough that a visible pixel defect warrants
+        immediate attention while still within the return or warranty window.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Dead pixels on OLED TVs</h2>
+      <p>
+        OLED TVs use per-pixel light emission rather than a backlight. A dead pixel on an
+        OLED TV is one whose organic emitter has failed and no longer produces light. This
+        appears as a permanently dark spot visible on bright or coloured content but invisible
+        against a pure black background. The more common defect is a hot pixel: a stuck emitter
+        that produces a fixed bright dot. Because OLED renders black as true zero-light, a
+        single hot pixel stands out sharply against dark content in a way that would be masked
+        by the backlight glow on an LCD TV.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Testing an OLED TV for dead pixels</h2>
+      <p>
+        Connect a laptop or PC to your OLED TV via HDMI and open the Dead Pixel Test in
+        a full-screen browser. Cycle through each colour: black to reveal hot or stuck
+        pixels, white and grey to reveal dark dead pixels, and the primary colour panels
+        to catch subpixel defects. Test in a dimly lit room from your normal seated viewing
+        distance. On large OLED TVs of 55 inches and above, a single defective pixel is
+        very small relative to the screen area; close inspection within 60 cm may be needed
+        to confirm a suspected defect spotted at normal distance.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Dead pixels on projectors: DLP vs LCD</h2>
+      <p>
+        Projectors develop pixel-level defects that depend on their internal technology.
+        DLP projectors use a Digital Micromirror Device (DMD) chip where each micromirror
+        corresponds to one pixel. A mirror stuck in the on-position produces a persistently
+        bright dot in the projected image; a mirror stuck off produces a dark dot. Three-LCD
+        projectors use three separate imaging panels, one per colour channel. A failed pixel
+        in the red panel produces a persistent red dot; a failed pixel in the blue panel
+        produces a persistent blue dot.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">How to test a projector for dead pixels</h2>
+      <p>
+        Use the Dead Pixel Test from the device connected to your projector and project onto
+        a clean flat surface in a completely darkened room. Display each solid colour in
+        fullscreen and scan the projected image systematically. If you find a suspicious spot,
+        shift the projector slightly to confirm the spot moves with the projected image (a
+        projector defect) rather than remaining in the same position on the wall (a mark on
+        the projection surface). A white panel most clearly reveals dark stuck-off defects;
+        a black panel reveals stuck-on bright defects.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Warranty coverage for OLED TVs and projectors</h2>
+      <p>
+        Most OLED TV manufacturers including LG, Sony, and Panasonic assess dead pixel
+        claims individually. A single visible dead pixel on a new OLED TV is generally
+        worth reporting to manufacturer support. For projectors, warranty coverage varies
+        widely by brand and price tier. Many projector manufacturers define an acceptable
+        defect count above which a warranty replacement is offered. A clearly visible bright
+        DLP micromirror defect or failed LCD imaging pixel on a new projector should be
+        reported with photographic documentation while still within the return window.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Can projector pixel defects be repaired?</h2>
+      <p>
+        A stuck DLP micromirror is a hardware failure that cannot be resolved by software
+        methods. Similarly, a failed pixel in an LCD projector imaging panel requires
+        physical panel replacement. The rapid colour cycling approach used by the Stuck
+        Pixel Fixer has no effect on DLP micromirror defects. On consumer-grade projectors,
+        the cost of replacing the DMD chip or an LCD imaging panel typically exceeds the
+        residual value of the unit, making warranty service or replacement the only
+        practical option for a visible defect.
+      </p>
+    </>
+  )
+}
+
 // ─── Content map ─────────────────────────────────────────────────────────────
 
 export const POST_CONTENT: Record<string, PostContent> = {
@@ -873,4 +1034,6 @@ export const POST_CONTENT: Record<string, PostContent> = {
   'screen-uniformity-test-guide': UniformityPost,
   'how-to-clean-monitor-screen': CleaningPost,
   'monitor-aspect-ratios-explained': AspectRatiosPost,
+  'dead-pixels-brand-monitors': DeadPixelsBrandPost,
+  'dead-pixels-oled-tv-projectors': DeadPixelsOledTvProjectorsPost,
 }
