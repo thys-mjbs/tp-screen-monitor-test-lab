@@ -337,6 +337,16 @@ export const tools: Tool[] = [
     primaryQuery: 'monitor overdrive test inverse ghosting',
     related: ['motion-blur-test', 'black-smear-test', 'refresh-rate-checker', 'contrast-black-level-test'],
   },
+  {
+    slug: 'hdr-test',
+    name: 'HDR Test',
+    shortDescription: 'Detect browser HDR and wide colour gamut support and evaluate peak brightness range.',
+    metaTitle: 'HDR Monitor Test: Check HDR Support Online',
+    metaDesc: 'Test whether your monitor and browser support HDR. Detects dynamic range and colour gamut capability, and displays brightness step ramps for evaluation. Free online tool.',
+    category: 'checker',
+    primaryQuery: 'HDR monitor test online',
+    related: ['contrast-black-level-test', 'white-saturation-test', 'gamma-calibration-check', 'refresh-rate-checker'],
+  },
 ]
 
 export function getToolBySlug(slug: string): Tool | undefined {
