@@ -59,7 +59,7 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     [X] Milestone 9.1: Motion Blur Test (slug: motion-blur-test)
         Moving bar across screen to reveal ghosting, smearing, and pixel response issues
         Target query: "motion blur test monitor"
-    [ ] Milestone 9.2: Input Lag Test (slug: input-lag-test)
+    [X] Milestone 9.2: Input Lag Test (slug: input-lag-test)
         Visual reaction time test measuring click response to a colour change stimulus
         Target query: "input lag test online"
     [ ] Milestone 9.3: PWM Flicker Test (slug: pwm-flicker-test)
