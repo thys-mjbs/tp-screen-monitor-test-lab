@@ -28,7 +28,19 @@
       "Bash(Select-Object -First 30)",
       "Bash(Format-Table FullName)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\" -Directory)",
-      "Bash(Select-Object Name)"
+      "Bash(Select-Object Name)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\stuck-pixel-fixer\\\\for-laptops\")",
+      "Bash(Out-Null)",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\image-retention-test\\\\for-laptops\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\screen-uniformity-test\\\\for-ultrawide\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\dead-pixel-test\\\\for-gaming-monitors\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\backlight-bleed-test\\\\for-curved-monitors\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\gamma-calibration-check\\\\for-photography\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\refresh-rate-checker\\\\240hz-test\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\contrast-black-level-test\\\\for-oled\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\viewing-angle-test\\\\for-laptops\")",
+      "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\resolution-checker\\\\for-ultrawide\")",
+      "Bash(Write-Host \"All directories created\")"
     ]
   }
 }
