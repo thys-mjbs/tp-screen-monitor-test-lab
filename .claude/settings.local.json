@@ -26,7 +26,9 @@
       "WebFetch(domain:home-hub-omega-rosy.vercel.app)",
       "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\" -Recurse -File)",
       "Bash(Select-Object -First 30)",
-      "Bash(Format-Table FullName)"
+      "Bash(Format-Table FullName)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\" -Directory)",
+      "Bash(Select-Object Name)"
     ]
   }
 }
