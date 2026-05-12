@@ -277,6 +277,16 @@ export const tools: Tool[] = [
     primaryQuery: 'clean screen mode',
     related: ['white-screen', 'black-screen', 'backlight-bleed-test', 'screen-uniformity-test'],
   },
+  {
+    slug: 'motion-blur-test',
+    name: 'Motion Blur Test',
+    shortDescription: 'A moving bar that reveals ghosting, smearing, and pixel response on your display.',
+    metaTitle: 'Motion Blur Test: Check Monitor Ghosting Online',
+    metaDesc: 'Test your monitor for motion blur, ghosting, and pixel response time using a moving bar at adjustable speed. Free online tool, no download required.',
+    category: 'visual-test',
+    primaryQuery: 'motion blur test monitor',
+    related: ['refresh-rate-checker', 'image-retention-test', 'contrast-black-level-test', 'viewing-angle-test'],
+  },
 ]
 
 export function getToolBySlug(slug: string): Tool | undefined {
