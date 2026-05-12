@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Why do laptop screens look different from the side?',
-    a: 'Laptop screens use LCD or OLED panel technologies that have different optical characteristics depending on the angle at which they are viewed. IPS LCD panels offer wide viewing angles with relatively consistent colour, but show a characteristic silver or golden glow (IPS glow) at extreme angles. TN (Twisted Nematic) panels have the most severe viewing angle issues — colour and brightness shift noticeably even at moderate off-axis angles. OLED panels generally offer excellent viewing angles with minimal colour shift, though some models show slight cool or warm tints at very steep angles.',
+    a: 'Laptop screens use LCD or OLED panel technologies that have different optical characteristics depending on the angle at which they are viewed. IPS LCD panels offer wide viewing angles with relatively consistent colour, but show a characteristic silver or golden glow (IPS glow) at extreme angles. TN (Twisted Nematic) panels have the most severe viewing angle issues, with colour and brightness shifting noticeably even at moderate off-axis angles. OLED panels generally offer excellent viewing angles with minimal colour shift, though some models show slight cool or warm tints at very steep angles.',
   },
   {
     q: 'What panel type is my laptop screen likely to be?',
@@ -37,12 +37,12 @@ const faqs = [
     a: 'Open this test in your browser on the laptop you want to assess. Step through the solid colour and gradient panels, then slowly tilt the screen backward and forward from its default angle. Look for how colour, brightness, and contrast change as the viewing angle changes. Move to the side of the laptop and observe the screen from a 45-degree off-axis position. A good IPS panel should show only minimal colour shift from these angles; a TN panel will show significant colour and brightness inversion from extreme angles.',
   },
   {
-    q: 'My laptop screen looks washed out from the side — is that normal?',
+    q: 'My laptop screen looks washed out from the side. Is that normal?',
     a: 'Some degree of colour shift at extreme side angles is normal for all LCD-based laptop panels. IPS panels show relatively little shift up to around 45 degrees off-axis, then shift more noticeably toward 70-80 degrees. If the screen appears washed out or colour-shifted at a typical seated viewing angle rather than only at extreme angles, it may indicate either a TN panel (which is inherently limited) or an IPS panel that is not correctly calibrated. An OLED laptop screen should not appear washed out at any normal seated viewing angle.',
   },
   {
     q: 'Can poor viewing angles on a laptop screen be fixed?',
-    a: 'The viewing angle performance of a laptop screen is determined by its panel technology, which cannot be changed in software. If you have a TN panel, the limited viewing angles are a fundamental characteristic of that technology. Colour calibration adjustments can improve how the panel looks straight-on but do not affect the viewing angle characteristic. If viewing angles are important for your use — presenting to others, working at unusual screen positions, or group viewing — upgrading to a laptop with an IPS or OLED panel is the only effective remedy.',
+    a: 'The viewing angle performance of a laptop screen is determined by its panel technology, which cannot be changed in software. If you have a TN panel, the limited viewing angles are a fundamental characteristic of that technology. Colour calibration adjustments can improve how the panel looks straight-on but do not affect the viewing angle characteristic. If viewing angles are important for your use (presenting to others, working at unusual screen positions, or group viewing), upgrading to a laptop with an IPS or OLED panel is the only effective remedy.',
   },
 ]
 
@@ -83,7 +83,7 @@ export default function ViewingAngleLaptopsPage() {
           <div className="space-y-3">
             <h2 className="text-lg font-bold text-fg">IPS, TN, and OLED viewing angles explained</h2>
             <p>
-              TN panels have the most limited viewing angles — viewing from above typically causes the
+              TN panels have the most limited viewing angles: viewing from above typically causes the
               image to appear brighter and washed out, while viewing from below inverts the colours.
               Horizontal viewing angles on TN are somewhat better but still restricted. IPS panels
               use a different liquid crystal orientation that allows light to pass consistently at wider
@@ -113,7 +113,7 @@ export default function ViewingAngleLaptopsPage() {
               positions. A grey panel that shifts toward blue, yellow, or pink as you move off-axis
               indicates colour shift from viewing angle. A panel that darkens significantly as you tilt
               it backward indicates limited vertical viewing angle performance. Note the angles at which
-              you first notice a significant change — on a good IPS panel, this should be beyond 30-40
+              you first notice a significant change. On a good IPS panel, this should be beyond 30-40
               degrees off-centre. On a TN panel, noticeable shift often begins within 15-20 degrees of
               the optimal viewing position.
             </p>

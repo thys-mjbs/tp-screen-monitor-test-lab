@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: 'What does poor uniformity look like on an ultrawide monitor?',
-    a: 'Poor uniformity on an ultrawide monitor typically appears as a visible brightness gradient — one side or corner of the screen appearing brighter or dimmer than the opposite side. Colour uniformity issues appear as a slight colour tint shift, such as one half of the screen appearing slightly cooler (blue) and the other slightly warmer (yellow). Both types are most visible on grey or near-white solid-colour panels. Severe uniformity issues can also cause visible bands or blotches across the panel.',
+    a: 'Poor uniformity on an ultrawide monitor typically appears as a visible brightness gradient, with one side or corner of the screen appearing brighter or dimmer than the opposite side. Colour uniformity issues appear as a slight colour tint shift, such as one half of the screen appearing slightly cooler (blue) and the other slightly warmer (yellow). Both types are most visible on grey or near-white solid-colour panels. Severe uniformity issues can also cause visible bands or blotches across the panel.',
   },
   {
     q: 'How do I use the uniformity test with my ultrawide monitor?',
@@ -96,7 +96,7 @@ export default function ScreenUniformityUltrawidePage() {
             <h2 className="text-lg font-bold text-fg">Setting up the test for accurate results</h2>
             <p>
               For the most accurate assessment, allow your ultrawide monitor to warm up for at least 30
-              minutes before testing — backlight uniformity often changes as the display reaches its
+              minutes before testing, as backlight uniformity often changes as the display reaches its
               operating temperature. Set your monitor brightness to around 50 to 70 percent of maximum,
               as uniformity issues are typically most visible at mid-range brightness levels. View the
               test in fullscreen from your normal seated distance, not from close up, to get a

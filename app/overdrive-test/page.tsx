@@ -19,7 +19,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'How do I use this overdrive test?',
-    a: 'Watch the moving bar carefully, focusing on the leading edge — the front of the bar in the direction it is moving. A faint ghost or halo just ahead of that edge indicates excessive overdrive. Smearing or a blurred wake trailing behind the bar indicates insufficient overdrive. At the correct overdrive level, the bar appears sharp on both edges with no visible artifacts. Test at Fast or Very Fast speed, as overdrive artifacts are more pronounced at higher pixel velocities.',
+    a: 'Watch the moving bar carefully, focusing on the leading edge (the front of the bar in the direction it is moving). A faint ghost or halo just ahead of that edge indicates excessive overdrive. Smearing or a blurred wake trailing behind the bar indicates insufficient overdrive. At the correct overdrive level, the bar appears sharp on both edges with no visible artifacts. Test at Fast or Very Fast speed, as overdrive artifacts are more pronounced at higher pixel velocities.',
   },
   {
     q: 'What does overdrive artifact look like exactly?',
@@ -35,7 +35,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'Does variable refresh rate affect overdrive?',
-    a: 'Yes, significantly. G-Sync and FreeSync vary the frame interval dynamically based on GPU frame rate. A fixed overdrive level calibrated for 144 Hz will apply too much voltage when the frame rate drops to 60 Hz, because the longer frame window gives pixels more time to transition naturally — making the overdrive overshoot visible. Some monitors include variable overdrive that scales the compensation with the current frame rate. Without it, enabling VRR may introduce overdrive coronas at low frame rates even when the fixed-rate setting looked clean.',
+    a: 'Yes, significantly. G-Sync and FreeSync vary the frame interval dynamically based on GPU frame rate. A fixed overdrive level calibrated for 144 Hz will apply too much voltage when the frame rate drops to 60 Hz, because the longer frame window gives pixels more time to transition naturally, making the overdrive overshoot visible. Some monitors include variable overdrive that scales the compensation with the current frame rate. Without it, enabling VRR may introduce overdrive coronas at low frame rates even when the fixed-rate setting looked clean.',
   },
   {
     q: 'Can overdrive cause permanent damage?',
@@ -58,7 +58,7 @@ const bodyContent = (
 
     <h2 className="text-lg font-bold text-fg">What to look for in this test</h2>
     <p>
-      Focus on the leading edge of the bar — the side facing the direction of travel. A monitor with
+      Focus on the leading edge of the bar, the side facing the direction of travel. A monitor with
       excessive overdrive shows a faint inverse-coloured band just ahead of that edge. For a white bar
       on black, this appears as a slightly darker band ahead of the white. For a black bar on white,
       it appears as a slightly brighter band ahead of the black. The trailing edge may show normal

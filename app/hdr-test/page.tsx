@@ -18,12 +18,12 @@ const faqs: FAQ[] = [
     a: 'The HDR result reflects whether your browser detects a high dynamic range display environment. The P3 result shows whether your display covers the wider Display P3 colour space used in HDR content. The Rec. 2020 result shows whether your display covers the broadcast HDR colour space, which is rare on consumer hardware. A display that reports HDR but not P3 may have certification only for brightness without a true wide gamut.',
   },
   {
-    q: 'My display says HDR but the test shows no HDR support — why?',
+    q: 'My display says HDR but the test shows no HDR support. Why?',
     a: 'Several things can prevent browser HDR detection. Your operating system HDR mode may not be enabled: on Windows 10 and 11, HDR must be turned on in Settings > System > Display > HDR. On macOS, some displays require HDR to be enabled in System Settings > Displays. Additionally, not all browsers pass the HDR signal correctly even when the OS has HDR active. Chrome and Edge generally handle this better than Firefox on Windows.',
   },
   {
     q: 'What is the difference between HDR400, HDR600, and HDR1000?',
-    a: 'These are VESA DisplayHDR certification levels that define minimum requirements for peak brightness, black level, colour gamut, and bit depth. HDR400 requires 400 nits peak brightness and is considered entry-level — it may not produce a visibly better result than a good SDR monitor. HDR600 and HDR1000 require 600 and 1000 nits respectively, along with wider gamut and local dimming, which produce a meaningfully different viewing experience for supported content.',
+    a: 'These are VESA DisplayHDR certification levels that define minimum requirements for peak brightness, black level, colour gamut, and bit depth. HDR400 requires 400 nits peak brightness and is considered entry-level, and may not produce a visibly better result than a good SDR monitor. HDR600 and HDR1000 require 600 and 1000 nits respectively, along with wider gamut and local dimming, which produce a meaningfully different viewing experience for supported content.',
   },
   {
     q: 'What is Wide Colour Gamut and why does it matter for HDR?',

@@ -86,7 +86,7 @@ export function InputLagTest() {
           {phase === 'waiting' && (
             <>
               <p className="text-3xl font-extrabold text-fg">Wait...</p>
-              <p className="text-sm text-fg-muted">Do not click yet — wait for green</p>
+              <p className="text-sm text-fg-muted">Do not click yet, wait for green</p>
             </>
           )}
 
@@ -97,7 +97,7 @@ export function InputLagTest() {
           {phase === 'tooearly' && (
             <>
               <p className="text-3xl font-extrabold text-white">Too Early</p>
-              <p className="text-white/80 text-sm">Wait for the screen to turn green — click to try again</p>
+              <p className="text-white/80 text-sm">Wait for the screen to turn green, then click to try again</p>
             </>
           )}
 

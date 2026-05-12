@@ -29,14 +29,14 @@ export function HdrTest() {
         supported: hdr,
       },
       {
-        label: 'Wide Colour Gamut — Display P3',
+        label: 'Wide Colour Gamut: Display P3',
         detail: p3
           ? 'Your display can render colours beyond the sRGB gamut. P3 covers about 25% more colour than sRGB.'
           : 'Your display is reporting standard sRGB gamut. Most non-HDR monitors are sRGB only.',
         supported: p3,
       },
       {
-        label: 'Wide Colour Gamut — Rec. 2020',
+        label: 'Wide Colour Gamut: Rec. 2020',
         detail: r2020
           ? 'Your display reports Rec. 2020 colour gamut, the broadcast HDR standard. This is rare on consumer monitors.'
           : 'Rec. 2020 not detected. This is expected on nearly all consumer monitors including most HDR displays.',
@@ -78,13 +78,13 @@ export function HdrTest() {
 
       {/* Step ramps */}
       <div className="space-y-2">
-        <p className="text-xs font-medium text-fg-muted">Shadow steps — near-black detail</p>
+        <p className="text-xs font-medium text-fg-muted">Shadow steps: near-black detail</p>
         <div className="flex rounded-lg overflow-hidden border border-border" style={{ height: '44px' }}>
           {SHADOW_STEPS.map(v => (
             <div key={v} className="flex-1" style={{ backgroundColor: `rgb(${v},${v},${v})` }} />
           ))}
         </div>
-        <p className="text-xs font-medium text-fg-muted">Highlight steps — near-white detail</p>
+        <p className="text-xs font-medium text-fg-muted">Highlight steps: near-white detail</p>
         <div className="flex rounded-lg overflow-hidden border border-border" style={{ height: '44px' }}>
           {HIGHLIGHT_STEPS.map(v => (
             <div key={v} className="flex-1" style={{ backgroundColor: `rgb(${v},${v},${v})` }} />

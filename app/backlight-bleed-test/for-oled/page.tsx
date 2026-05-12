@@ -72,7 +72,7 @@ export default function BacklightBleedOledPage() {
             Backlight Bleed on OLED Screens
           </h1>
           <p className="text-fg-muted">
-            OLED displays cannot have backlight bleed — but they have their own dark-panel issues worth checking. Use a pure black panel to evaluate your OLED in a dark room.
+            OLED displays cannot have backlight bleed, but they have their own dark-panel issues worth checking. Use a pure black panel to evaluate your OLED in a dark room.
           </p>
           <div className="pt-1">
             <ScreenPanel color={{ hex: '#000000', label: 'Black' }} />
@@ -102,7 +102,7 @@ export default function BacklightBleedOledPage() {
               bleed in that it tends to be more evenly distributed rather than concentrated at edges.
             </p>
             <p>
-              Hot pixels — individual pixels that are stuck emitting light — appear as bright dots
+              Hot pixels (individual pixels that are stuck emitting light) appear as bright dots
               against the true black that OLED produces. These are the OLED equivalent of stuck pixels
               on LCD and are more visible on OLED precisely because the surrounding black is genuinely
               dark. Panel aging non-uniformity can also cause faint bright patches over time in areas

@@ -19,7 +19,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'How do I use this PWM flicker test?',
-    a: 'The panel is split into a flickering left side and a steady grey reference on the right. Both sides are matched in average brightness. Use the controls to adjust the flicker rate and the brightness of the off-phase. This visualises what PWM dimming looks like at lower, visible frequencies. For detecting your own monitor\'s PWM, use a smartphone camera pointed at the screen and reduce brightness — scrolling dark bands in the camera feed indicate PWM.',
+    a: 'The panel is split into a flickering left side and a steady grey reference on the right. Both sides are matched in average brightness. Use the controls to adjust the flicker rate and the brightness of the off-phase. This visualises what PWM dimming looks like at lower, visible frequencies. For detecting your own monitor\'s PWM, use a smartphone camera pointed at the screen and reduce brightness. Scrolling dark bands in the camera feed indicate PWM.',
   },
   {
     q: 'How do I test my monitor for PWM using a camera?',

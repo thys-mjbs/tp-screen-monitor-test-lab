@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Can you fix a stuck pixel on a laptop screen?',
-    a: 'Sometimes. A stuck pixel on a laptop screen behaves the same as on a desktop monitor — it is a pixel whose liquid crystal layer or organic emitter has become fixed in a particular state. The rapid colour cycling technique works by repeatedly driving the pixel through all colour states, which can occasionally resolve a temporarily stuck crystal or driver circuit. Success rates vary and are higher for recently stuck pixels than for defects that have been present for months.',
+    a: 'Sometimes. A stuck pixel on a laptop screen behaves the same as on a desktop monitor, as it is a pixel whose liquid crystal layer or organic emitter has become fixed in a particular state. The rapid colour cycling technique works by repeatedly driving the pixel through all colour states, which can occasionally resolve a temporarily stuck crystal or driver circuit. Success rates vary and are higher for recently stuck pixels than for defects that have been present for months.',
   },
   {
     q: 'How do I position the fixer over the stuck pixel on my laptop?',
@@ -42,7 +42,7 @@ const faqs = [
   },
   {
     q: 'What is the difference between a stuck pixel and a dead pixel on a laptop?',
-    a: 'A stuck pixel displays a fixed colour — red, green, blue, or white — regardless of what the screen is showing. A dead pixel displays no colour at all, appearing as a permanently black dot. The stuck pixel fixer may help with stuck pixels but cannot fix dead pixels, as dead pixels have no functioning light source or emitter to stimulate. On a laptop, both types are more noticeable than on a large desktop monitor because the screen is typically viewed at close range.',
+    a: 'A stuck pixel displays a fixed colour (red, green, blue, or white) regardless of what the screen is showing. A dead pixel displays no colour at all, appearing as a permanently black dot. The stuck pixel fixer may help with stuck pixels but cannot fix dead pixels, as dead pixels have no functioning light source or emitter to stimulate. On a laptop, both types are more noticeable than on a large desktop monitor because the screen is typically viewed at close range.',
   },
 ]
 
@@ -87,8 +87,8 @@ export default function StuckPixelFixerLaptopsPage() {
               weight and thickness. The combination of high pixel density and compact panel construction
               means quality control tolerances can allow a small number of pixel defects to pass
               inspection on lower-cost units. Laptop panels also experience more physical stress than
-              desktop monitors — repeated opening and closing, flexion, temperature changes from
-              portable use — all of which can cause a pixel that was borderline at manufacture to
+              desktop monitors, including repeated opening and closing, flexion, and temperature changes from
+              portable use, all of which can cause a pixel that was borderline at manufacture to
               become visibly defective over time.
             </p>
           </div>
@@ -97,7 +97,7 @@ export default function StuckPixelFixerLaptopsPage() {
             <h2 className="text-lg font-bold text-fg">Using this tool on a laptop effectively</h2>
             <p>
               Run the fixer in a browser window and size it so the flashing box is positioned over the
-              stuck pixel. A moderately lit environment is preferable — the stuck pixel will be easier
+              stuck pixel. A moderately lit environment is preferable, as the stuck pixel will be easier
               to see in normal lighting than in a very bright room. Check the pixel every few minutes
               while the tool is running. On IPS panels, stuck pixels are most visible against a
               white or grey background. On OLED laptop panels, hot pixels are most visible against

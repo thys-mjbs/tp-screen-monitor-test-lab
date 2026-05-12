@@ -106,7 +106,7 @@ export default function DeadPixelProjectorPage() {
             <h2 className="text-lg font-bold text-fg">Running the test effectively with a projector</h2>
             <p>
               Set up in a completely darkened room for the most revealing test. Project onto a clean,
-              flat white surface — a projector screen or white wall — and allow the projector to warm
+              flat white surface (a projector screen or white wall) and allow the projector to warm
               up fully before testing. Use the fullscreen button and cycle through each colour slowly,
               scanning the entire projected image. A white panel most clearly shows dark dead pixels
               from a stuck-off DLP mirror or a failed LCD pixel. The black panel reveals stuck-on

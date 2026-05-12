@@ -35,15 +35,15 @@ const COLORS: ColorEntry[] = [
 const faqs = [
   {
     q: 'Do gaming monitors get dead pixels more often than regular monitors?',
-    a: 'Gaming monitors are not inherently more susceptible to dead pixels than standard monitors — both are manufactured using the same display panel technologies. However, because gaming monitors often push higher specifications (higher refresh rates, faster response times, OLED technology), the panel manufacturing process can have slightly higher defect rates. High-refresh-rate IPS and TN panels and OLED gaming displays all carry the same potential for pixel defects as their equivalent consumer panel types.',
+    a: 'Gaming monitors are not inherently more susceptible to dead pixels than standard monitors, as both are manufactured using the same display panel technologies. However, because gaming monitors often push higher specifications (higher refresh rates, faster response times, OLED technology), the panel manufacturing process can have slightly higher defect rates. High-refresh-rate IPS and TN panels and OLED gaming displays all carry the same potential for pixel defects as their equivalent consumer panel types.',
   },
   {
     q: 'Can a dead pixel affect gaming performance?',
-    a: 'A dead pixel does not affect the technical performance of a gaming monitor — frame rate, response time, and input lag are unaffected. The impact is purely visual. In fast-paced gaming where your focus is on moving content, a single dead pixel in the peripheral area of the screen may be barely noticeable. A dead pixel near the centre of the display, however, can be persistently distracting during gameplay, particularly in games with dark environments where a black dead pixel becomes more visible.',
+    a: 'A dead pixel does not affect the technical performance of a gaming monitor: frame rate, response time, and input lag are unaffected. The impact is purely visual. In fast-paced gaming where your focus is on moving content, a single dead pixel in the peripheral area of the screen may be barely noticeable. A dead pixel near the centre of the display, however, can be persistently distracting during gameplay, particularly in games with dark environments where a black dead pixel becomes more visible.',
   },
   {
     q: 'How do I check my new gaming monitor for dead pixels?',
-    a: 'Connect your gaming monitor and run this test immediately after unboxing, before setting up your gaming system. Cycle through each solid colour in fullscreen mode and look for any dot that stays the same colour regardless of the background. Black and white panels reveal the most defects. Allow your eyes a few seconds to scan the full panel on each colour — a single pass is enough. If you find a defect, document it with a photo before the return window closes.',
+    a: 'Connect your gaming monitor and run this test immediately after unboxing, before setting up your gaming system. Cycle through each solid colour in fullscreen mode and look for any dot that stays the same colour regardless of the background. Black and white panels reveal the most defects. Allow your eyes a few seconds to scan the full panel on each colour. A single pass is enough. If you find a defect, document it with a photo before the return window closes.',
   },
   {
     q: 'Do gaming monitor manufacturers cover dead pixels under warranty?',
@@ -51,7 +51,7 @@ const faqs = [
   },
   {
     q: 'Can dead pixels be fixed on a gaming monitor?',
-    a: 'Dead pixels — permanently dark pixels — cannot be repaired by software methods. They represent a hardware failure of the pixel\'s transistor or backlight. Stuck pixels that display a fixed colour may sometimes respond to the Stuck Pixel Fixer tool, which cycles rapid colour changes over the affected area. The technique works more reliably on LCD gaming monitors than on OLED panels. If within the warranty or return period, replacement is the most reliable solution for a visible dead pixel on a gaming monitor.',
+    a: 'Dead pixels (permanently dark pixels) cannot be repaired by software methods. They represent a hardware failure of the pixel\'s transistor or backlight. Stuck pixels that display a fixed colour may sometimes respond to the Stuck Pixel Fixer tool, which cycles rapid colour changes over the affected area. The technique works more reliably on LCD gaming monitors than on OLED panels. If within the warranty or return period, replacement is the most reliable solution for a visible dead pixel on a gaming monitor.',
   },
 ]
 
@@ -93,7 +93,7 @@ export default function DeadPixelGamingPage() {
             <h2 className="text-lg font-bold text-fg">When to run a dead pixel test on a gaming monitor</h2>
             <p>
               The best time to run a dead pixel test on a new gaming monitor is immediately after
-              unboxing — before you route cables, mount the monitor, or install drivers. This ensures
+              unboxing, before you route cables, mount the monitor, or install drivers. This ensures
               that any defect found is clearly pre-existing and not caused by handling. Most retailers
               have a 14 to 30 day return window, and many gaming monitor warranties require the defect
               to be reported within 30 days of purchase. Running the test on day one gives you maximum
@@ -106,7 +106,7 @@ export default function DeadPixelGamingPage() {
             <p>
               OLED gaming monitors such as the LG UltraGear OLED series, ASUS ROG Swift OLED, and
               Alienware OLED displays use different panel technology from IPS or TN LCD monitors.
-              On OLED panels, dead pixels are permanently dark — the organic emitter has failed to
+              On OLED panels, dead pixels are permanently dark because the organic emitter has failed to
               produce light. Hot pixels, which are stuck in an on-state, appear as a small bright dot
               and are most visible against the true black that OLED produces. OLED gaming monitor
               manufacturers are more likely to offer zero-bright-pixel policies given the premium price
@@ -118,7 +118,7 @@ export default function DeadPixelGamingPage() {
             <h2 className="text-lg font-bold text-fg">How to document a dead pixel for a warranty claim</h2>
             <p>
               Photograph the defect in a dim room against the background that makes the pixel most
-              visible — usually black for a hot/stuck pixel or white for a dead pixel. Use a macro
+              visible (usually black for a hot/stuck pixel or white for a dead pixel). Use a macro
               or close-up setting on your phone camera to capture a clear image of the defect. Note
               the approximate position on the panel (for example, centre-left, top-right quadrant)
               and the colour displayed. Include photos and a description when contacting the

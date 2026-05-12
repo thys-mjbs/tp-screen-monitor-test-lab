@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'What is OLED burn-in?',
-    a: 'OLED burn-in is the permanent degradation of organic light-emitting pixels in areas that have displayed bright, static content for extended periods. The organic compounds that produce light in each pixel have a finite lifespan, and pixels used more intensively age faster than surrounding pixels. Over time, this differential aging creates a visible ghost image of the previously displayed static element — such as a taskbar, navigation bar, or game HUD — that remains faintly visible regardless of what is being shown.',
+    a: 'OLED burn-in is the permanent degradation of organic light-emitting pixels in areas that have displayed bright, static content for extended periods. The organic compounds that produce light in each pixel have a finite lifespan, and pixels used more intensively age faster than surrounding pixels. Over time, this differential aging creates a visible ghost image of the previously displayed static element (such as a taskbar, navigation bar, or game HUD) that remains faintly visible regardless of what is being shown.',
   },
   {
     q: 'Is OLED burn-in permanent?',
@@ -84,8 +84,8 @@ export default function ImageRetentionOledPage() {
             <h2 className="text-lg font-bold text-fg">How OLED burn-in occurs</h2>
             <p>
               Each pixel in an OLED display is made of organic light-emitting compounds that gradually
-              lose efficiency with use. Pixels that are used more intensively — displaying bright content
-              for long periods — age faster than surrounding pixels. Over time this creates measurable
+              lose efficiency with use. Pixels that are used more intensively, displaying bright content
+              for long periods, age faster than surrounding pixels. Over time this creates measurable
               brightness differences across the panel. When the differential aging is large enough, it
               becomes visible as a ghost image in the shape of whatever static content was displayed most.
               The most common sources are desktop taskbars, game HUDs, streaming service logos, and

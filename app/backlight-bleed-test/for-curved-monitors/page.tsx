@@ -26,11 +26,11 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Do curved monitors have worse backlight bleed than flat monitors?',
-    a: 'Curved monitors can exhibit different patterns of backlight bleed compared to flat panels, but the severity depends far more on the panel technology and manufacturing quality than on the curvature itself. VA-panel curved monitors often have excellent black levels and relatively low backlight bleed compared to IPS curved monitors, which are more prone to IPS glow — a characteristic brightening toward the corners when viewed straight-on. The curvature can redirect light toward the viewer from certain angles, which may make edge bleed slightly more visible on curved displays.',
+    a: 'Curved monitors can exhibit different patterns of backlight bleed compared to flat panels, but the severity depends far more on the panel technology and manufacturing quality than on the curvature itself. VA-panel curved monitors often have excellent black levels and relatively low backlight bleed compared to IPS curved monitors, which are more prone to IPS glow, a characteristic brightening toward the corners when viewed straight-on. The curvature can redirect light toward the viewer from certain angles, which may make edge bleed slightly more visible on curved displays.',
   },
   {
     q: 'What is the difference between backlight bleed and IPS glow on a curved monitor?',
-    a: 'Backlight bleed is light leaking through the LCD panel layers from the edges or corners of the display, appearing as bright patches in those areas regardless of viewing angle. IPS glow is a characteristic of IPS panel technology where off-axis light from the backlight scatters through the liquid crystal layer, creating a silvery or golden glow visible in the corners when viewed straight-on. IPS glow is inherent to the technology; backlight bleed is a manufacturing variable that ranges from absent to severe. Both are most visible on a black screen in a dark room.',
+    a: 'Backlight bleed is light leaking through the LCD panel layers from the edges or corners of the display, appearing as bright patches in those areas regardless of viewing angle. IPS glow is a characteristic of IPS panel technology where off-axis light from the backlight scatters through the liquid crystal layer, creating a silvery or golden glow visible in the corners when viewed straight-on. IPS glow is inherent to the technology, while backlight bleed is a manufacturing variable that ranges from absent to severe. Both are most visible on a black screen in a dark room.',
   },
   {
     q: 'How do I test for backlight bleed on my curved monitor?',
@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     q: 'Is some backlight bleed acceptable on a curved monitor?',
-    a: 'A small amount of backlight bleed that is visible only in a completely dark room and only in extreme corner areas is considered within normal manufacturing tolerance by most monitor manufacturers. Backlight bleed that is visible in a moderately lit room, or that forms large bright patches across significant portions of the edge, is generally considered outside acceptable quality for a new display. If the bleed is clearly noticeable during everyday use — watching dark movies, gaming in dark environments — it warrants a warranty claim or return.',
+    a: 'A small amount of backlight bleed that is visible only in a completely dark room and only in extreme corner areas is considered within normal manufacturing tolerance by most monitor manufacturers. Backlight bleed that is visible in a moderately lit room, or that forms large bright patches across significant portions of the edge, is generally considered outside acceptable quality for a new display. If the bleed is clearly noticeable during everyday use (watching dark movies, gaming in dark environments), it warrants a warranty claim or return.',
   },
   {
     q: 'Can backlight bleed on a curved monitor be reduced?',
@@ -100,7 +100,7 @@ export default function BacklightBleedCurvedPage() {
               displays, typically have better native contrast ratios and lower backlight bleed than
               curved IPS monitors. VA panels block the backlight more effectively when displaying dark
               content. IPS curved monitors offer better colour accuracy and viewing angles but are more
-              prone to IPS glow — a diffuse brightening in the corners that is visible straight-on.
+              prone to IPS glow, a diffuse brightening in the corners that is visible straight-on.
               For use cases involving dark content (movies, dark-themed gaming), a VA curved monitor
               will typically show less light leakage than an equivalent IPS curved model.
             </p>
@@ -113,7 +113,7 @@ export default function BacklightBleedCurvedPage() {
               Set the camera to a low ISO (100-200) and a longer exposure if possible, or use the
               portrait mode for steady low-light capture. The photo should clearly show any edge or
               corner glow. Take photos from your normal seated viewing distance rather than at close
-              range, as this better represents how the bleed appears in actual use — which is what
+              range, as this better represents how the bleed appears in actual use, which is what
               matters for a warranty assessment. Include these photos when contacting the
               manufacturer&apos;s support team.
             </p>

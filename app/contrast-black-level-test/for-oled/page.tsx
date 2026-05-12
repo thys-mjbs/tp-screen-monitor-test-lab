@@ -7,7 +7,7 @@ import { ContrastBlackLevelTest } from '@/components/tools/ContrastBlackLevelTes
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
 
 const title = 'OLED Black Level Test: Check Contrast and Shadow Detail on Your OLED Display'
-const description = 'Test your OLED monitor or TV for black level accuracy, shadow detail visibility, and contrast performance. OLED produces true black — check if yours is correctly calibrated. Free online tool.'
+const description = 'Test your OLED monitor or TV for black level accuracy, shadow detail visibility, and contrast performance. OLED produces true black, so check if yours is correctly calibrated. Free online tool.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
 export const metadata: Metadata = {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'What makes OLED black levels different from LCD?',
-    a: 'OLED displays produce true black by turning off individual pixels completely — when a pixel is displaying black, the organic emitter in that pixel produces no light. This gives OLED a theoretically infinite contrast ratio, as the denominator in the contrast measurement is effectively zero. LCD monitors use a backlight that remains on behind the entire panel, which means even pixels displaying black still allow some light to pass through the liquid crystal layer, resulting in a dark grey rather than true black. The difference is clearly visible when comparing the two technologies in a dark room.',
+    a: 'OLED displays produce true black by turning off individual pixels completely. When a pixel is displaying black, the organic emitter in that pixel produces no light. This gives OLED a theoretically infinite contrast ratio, as the denominator in the contrast measurement is effectively zero. LCD monitors use a backlight that remains on behind the entire panel, which means even pixels displaying black still allow some light to pass through the liquid crystal layer, resulting in a dark grey rather than true black. The difference is clearly visible when comparing the two technologies in a dark room.',
   },
   {
     q: 'What should I see on this test with an OLED display?',
@@ -38,11 +38,11 @@ const faqs = [
   },
   {
     q: 'What settings affect OLED black levels?',
-    a: 'Several settings on OLED monitors and TVs can affect black level accuracy. Black Level or HDMI Black Level should be set to match the signal range from your source — typically Normal (for full range PC output) or Low (for limited range TV signals). Gamma should be set to 2.2 for PC use. Disable any ambient light sensor, auto-brightness control, or scene-based brightness adjustment for accurate black level testing. On LG OLED TVs, the Dynamic Tone Mapping and OLED Pixel Dimmer settings can affect shadow rendering.',
+    a: 'Several settings on OLED monitors and TVs can affect black level accuracy. Black Level or HDMI Black Level should be set to match the signal range from your source, typically Normal (for full range PC output) or Low (for limited range TV signals). Gamma should be set to 2.2 for PC use. Disable any ambient light sensor, auto-brightness control, or scene-based brightness adjustment for accurate black level testing. On LG OLED TVs, the Dynamic Tone Mapping and OLED Pixel Dimmer settings can affect shadow rendering.',
   },
   {
     q: 'How does OLED local dimming compare to LCD local dimming for black levels?',
-    a: 'OLED does not require local dimming because each pixel is individually controlled — there is no backlight to dim. The per-pixel control of OLED is inherently superior to even the most advanced mini-LED local dimming LCD systems, which dim zones of many pixels together, resulting in halo artefacts around bright objects against dark backgrounds. OLED avoids this entirely because the transition between a lit pixel and an unlit pixel is at the sub-pixel level, with no light bleed between adjacent pixels. This is the defining advantage of OLED for dark content.',
+    a: 'OLED does not require local dimming because each pixel is individually controlled: there is no backlight to dim. The per-pixel control of OLED is inherently superior to even the most advanced mini-LED local dimming LCD systems, which dim zones of many pixels together, resulting in halo artefacts around bright objects against dark backgrounds. OLED avoids this entirely because the transition between a lit pixel and an unlit pixel is at the sub-pixel level, with no light bleed between adjacent pixels. This is the defining advantage of OLED for dark content.',
   },
 ]
 
@@ -72,7 +72,7 @@ export default function ContrastBlackLevelOledPage() {
             OLED Black Level Test
           </h1>
           <p className="text-fg-muted">
-            Check your OLED display&apos;s black level accuracy and shadow detail. OLED produces true black — verify your settings are not crushing or clipping near-black shadow information.
+            Check your OLED display&apos;s black level accuracy and shadow detail. OLED produces true black, so verify your settings are not crushing or clipping near-black shadow information.
           </p>
           <div className="pt-1">
             <ContrastBlackLevelTest />
@@ -88,7 +88,7 @@ export default function ContrastBlackLevelOledPage() {
               the organic emitter, resulting in no light emission at all. This is the fundamental
               physics advantage of OLED over LCD: there is no backlight to leak through dark pixels.
               A perfectly calibrated OLED displaying a black frame in a pitch-dark room is
-              indistinguishable from the panel being switched off — the contrast is not just high,
+              indistinguishable from the panel being switched off. The contrast is not just high,
               it is technically infinite.
             </p>
           </div>

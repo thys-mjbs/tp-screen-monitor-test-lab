@@ -19,7 +19,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'What is a good result?',
-    a: 'Scores below 150 ms are excellent and suggest fast reflexes and a responsive display setup. Scores between 150 and 200 ms are good for most users. Scores between 200 and 250 ms are average and typical of casual users. Scores above 300 ms may indicate slow reactions, a high-latency display, or a slower browser pipeline. Consistent scores matter more than single attempts — run five tests and look at the average.',
+    a: 'Scores below 150 ms are excellent and suggest fast reflexes and a responsive display setup. Scores between 150 and 200 ms are good for most users. Scores between 200 and 250 ms are average and typical of casual users. Scores above 300 ms may indicate slow reactions, a high-latency display, or a slower browser pipeline. Consistent scores matter more than single attempts, so run five tests and look at the average.',
   },
   {
     q: 'How do I improve my score?',
@@ -67,8 +67,8 @@ const bodyContent = (
     <h2 className="text-lg font-bold text-fg">Using this to compare display setups</h2>
     <p>
       The most useful way to use this test is comparatively. Run five attempts in your current monitor
-      setup, note the average, then change one variable — enable game mode, switch to a different
-      cable, or test on a second monitor — and run five more. A consistent improvement of 20 ms or more
+      setup, note the average, then change one variable (enable game mode, switch to a different
+      cable, or test on a second monitor) and run five more. A consistent improvement of 20 ms or more
       across attempts suggests the change had a real effect on your display pipeline&apos;s responsiveness.
       Smaller differences are likely within human reaction variance.
     </p>

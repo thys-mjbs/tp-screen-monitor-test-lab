@@ -110,7 +110,7 @@ export function OverdriveTest() {
       </div>
 
       <p className="text-xs text-fg-muted">
-        Look ahead of the bar for a faint halo or ghost — that is excessive overdrive. A smear trailing behind the bar indicates insufficient overdrive.
+        Look ahead of the bar for a faint halo or ghost: that is excessive overdrive. A smear trailing behind the bar indicates insufficient overdrive.
       </p>
     </>
   )

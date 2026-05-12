@@ -121,7 +121,7 @@ export default function DeadPixelVrPage() {
               Most retailers and manufacturers have a return window of 14 to 30 days from purchase
               within which defective units can be exchanged. If you wait beyond this window, you may
               be limited to a warranty repair process which is slower. Cycled through all test colours
-              in a few minutes in a dim room — that is all it takes to establish whether your headset
+              in a few minutes in a dim room. That is all it takes to establish whether your headset
               has any visible pixel defects before the return window closes.
             </p>
           </div>

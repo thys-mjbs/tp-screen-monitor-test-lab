@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'What is a stuck pixel on an OLED screen?',
-    a: 'On an OLED display, a stuck pixel is an organic light-emitting pixel that has become fixed at a colour or brightness level and cannot change normally. Because OLED pixels generate their own light independently, a stuck OLED pixel is typically stuck in an on-state rather than off, appearing as a bright coloured dot — most commonly red, green, blue, or white — against dark content. This differs from LCD stuck pixels, which are stuck in a partially open or closed state of the liquid crystal layer.',
+    a: 'On an OLED display, a stuck pixel is an organic light-emitting pixel that has become fixed at a colour or brightness level and cannot change normally. Because OLED pixels generate their own light independently, a stuck OLED pixel is typically stuck in an on-state rather than off, appearing as a bright coloured dot (most commonly red, green, blue, or white) against dark content. This differs from LCD stuck pixels, which are stuck in a partially open or closed state of the liquid crystal layer.',
   },
   {
     q: 'What is a hot pixel on OLED?',

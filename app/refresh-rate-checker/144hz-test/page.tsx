@@ -29,7 +29,7 @@ const faqs = [
     a: 'This checker reads the actual frame rate your browser is using and displays it as Hz. If the result shows 144Hz, your system is running at the correct rate. If it shows 60Hz or another value, your monitor is not operating at its rated speed. The checker measures real operating rate, not the hardware maximum, so it reflects your actual configuration.',
   },
   {
-    q: 'My monitor is 144Hz but the checker shows 60Hz — how do I fix this?',
+    q: 'My monitor is 144Hz but the checker shows 60Hz. How do I fix this?',
     a: 'The most common cause is an incorrect Windows display setting. Right-click the desktop, select Display Settings, then Advanced Display Settings, and change the refresh rate dropdown to 144Hz. The second most common cause is the wrong cable: HDMI 1.4 cannot carry 144Hz at 1080p. Use DisplayPort 1.2 or HDMI 2.0 or higher. Also check that you are using the correct port on your graphics card, as some integrated or secondary GPU outputs have lower bandwidth limits.',
   },
   {
@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     q: 'Is 144Hz noticeably better than 120Hz?',
-    a: 'The difference between 120Hz and 144Hz is small but present. At 120Hz, each frame is displayed for 8.3ms. At 144Hz, it is 6.9ms — a 17% reduction. In fast-paced gaming this produces marginally smoother cursor tracking and slightly lower display latency. Most users can detect the difference in direct comparison but would not notice it in everyday use. The jump from 60Hz to either 120Hz or 144Hz is far more impactful.',
+    a: 'The difference between 120Hz and 144Hz is small but present. At 120Hz, each frame is displayed for 8.3ms. At 144Hz, it is 6.9ms, a 17% reduction. In fast-paced gaming this produces marginally smoother cursor tracking and slightly lower display latency. Most users can detect the difference in direct comparison but would not notice it in everyday use. The jump from 60Hz to either 120Hz or 144Hz is far more impactful.',
   },
   {
     q: 'What resolution can I run at 144Hz on a 144Hz monitor?',
@@ -109,7 +109,7 @@ export default function RefreshRate144hzPage() {
             <p>
               Right-click the desktop and select Display Settings. Scroll down and click Advanced
               Display. In the refresh rate dropdown, select 144Hz. If 144Hz is not listed, check your
-              cable and port first — the option only appears when Windows detects a valid connection
+              cable and port first, as the option only appears when Windows detects a valid connection
               that supports the rate. On laptops, also check your GPU control panel software, as some
               laptops route external monitors through the integrated GPU at lower refresh rates unless
               configured to use the dedicated GPU output.

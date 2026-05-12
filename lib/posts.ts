@@ -51,7 +51,7 @@ export const posts: Post[] = [
   {
     slug: 'understanding-monitor-resolution-dpi',
     title: 'Monitor Resolution, DPI, and Pixel Density Explained',
-    description: 'The difference between screen resolution, physical pixels, device pixel ratio, and PPI — and why the same resolution looks different on different screens.',
+    description: 'The difference between screen resolution, physical pixels, device pixel ratio, and PPI, and why the same resolution looks different on different screens.',
     publishedAt: '2025-05-06',
     readingMinutes: 7,
     relatedTools: ['resolution-checker'],

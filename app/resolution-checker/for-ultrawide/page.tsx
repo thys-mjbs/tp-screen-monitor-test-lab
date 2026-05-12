@@ -29,12 +29,12 @@ const faqs = [
     a: 'Ultrawide monitors at 21:9 aspect ratio come in two main resolutions: 2560x1080 (Full HD ultrawide, found on budget and smaller 29-inch models) and 3440x1440 (QHD ultrawide, the most common premium ultrawide resolution found on 34-inch models). Super-ultrawide monitors at 32:9 aspect ratio use 3840x1080 (dual Full HD equivalent) or 5120x1440 (dual QHD equivalent). Some high-end 21:9 monitors reach 3840x1600 (WQHD+), offering near 4K density on a wide panel.',
   },
   {
-    q: 'My ultrawide shows the wrong resolution — how do I fix it?',
-    a: 'If your ultrawide monitor is not displaying at its native resolution, open Windows Display Settings and check the Resolution dropdown. Select the native resolution for your monitor — typically 3440x1440 for a QHD ultrawide. If the native resolution is not listed, the monitor may not be detected correctly. Try a different cable (DisplayPort is preferred over HDMI for ultrawide at high resolutions) or update your GPU drivers. HDMI 1.4 does not support 3440x1440 at 60Hz on all monitors — check your monitor&apos;s spec sheet for cable requirements.',
+    q: 'My ultrawide shows the wrong resolution. How do I fix it?',
+    a: 'If your ultrawide monitor is not displaying at its native resolution, open Windows Display Settings and check the Resolution dropdown. Select the native resolution for your monitor, typically 3440x1440 for a QHD ultrawide. If the native resolution is not listed, the monitor may not be detected correctly. Try a different cable (DisplayPort is preferred over HDMI for ultrawide at high resolutions) or update your GPU drivers. HDMI 1.4 does not support 3440x1440 at 60Hz on all monitors, so check your monitor&apos;s spec sheet for cable requirements.',
   },
   {
     q: 'Does an ultrawide monitor need more GPU power than a standard 16:9 monitor?',
-    a: 'Yes. A 3440x1440 ultrawide monitor has approximately 4.95 million pixels, compared to 3.69 million for a standard 2560x1440 QHD monitor — about 34% more pixels to render per frame. For gaming, this means a GPU that handles 2560x1440 at high frame rates may struggle to maintain the same frame rate at 3440x1440. For desktop productivity work, the additional pixels have minimal impact on GPU load. Super-ultrawide at 5120x1440 approaches 7.37 million pixels and requires a significantly more capable GPU for gaming.',
+    a: 'Yes. A 3440x1440 ultrawide monitor has approximately 4.95 million pixels, compared to 3.69 million for a standard 2560x1440 QHD monitor, about 34% more pixels to render per frame. For gaming, this means a GPU that handles 2560x1440 at high frame rates may struggle to maintain the same frame rate at 3440x1440. For desktop productivity work, the additional pixels have minimal impact on GPU load. Super-ultrawide at 5120x1440 approaches 7.37 million pixels and requires a significantly more capable GPU for gaming.',
   },
   {
     q: 'What is the pixel density of common ultrawide resolutions?',
@@ -86,7 +86,7 @@ export default function ResolutionCheckerUltrawidePage() {
               Ultrawide monitors are more susceptible to incorrect resolution detection than standard
               16:9 displays because their resolutions are less commonly supported by default driver
               configurations. When an ultrawide monitor is connected for the first time, Windows may
-              default to a lower standard resolution — 1920x1080 or 2560x1080 — rather than the
+              default to a lower standard resolution (1920x1080 or 2560x1080) rather than the
               monitor&apos;s native resolution. Some combinations of cable type, GPU port, and monitor
               model require the user to create a custom resolution profile in the GPU control panel
               before the correct native resolution appears as an option in Windows Display Settings.

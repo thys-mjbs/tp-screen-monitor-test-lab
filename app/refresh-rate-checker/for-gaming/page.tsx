@@ -33,8 +33,8 @@ const faqs = [
     a: 'Yes, but it is smaller than the jump from 60Hz to 144Hz. The difference between 144Hz and 240Hz is most noticeable when moving a mouse cursor quickly or in games with very fast motion. For competitive players in fast-paced shooters, 240Hz provides a measurable advantage from lower display latency per frame. For most gaming scenarios, 144Hz is the point of diminishing returns.',
   },
   {
-    q: 'My gaming monitor is rated 144Hz but the checker shows 60Hz — how do I fix it?',
-    a: 'First check your Windows display settings: right-click the desktop, select Display Settings, then Advanced Display and confirm the refresh rate dropdown shows 144Hz. If it shows 60Hz, change it. Also check your cable — HDMI 1.4 cannot carry 144Hz at 1080p; you need HDMI 2.0 or DisplayPort 1.2 or higher. Finally, check your monitor\'s own OSD menu for a refresh rate setting, as some monitors default to a lower rate.',
+    q: 'My gaming monitor is rated 144Hz but the checker shows 60Hz. How do I fix it?',
+    a: 'First check your Windows display settings: right-click the desktop, select Display Settings, then Advanced Display and confirm the refresh rate dropdown shows 144Hz. If it shows 60Hz, change it. Also check your cable, as HDMI 1.4 cannot carry 144Hz at 1080p; you need HDMI 2.0 or DisplayPort 1.2 or higher. Finally, check your monitor\'s own OSD menu for a refresh rate setting, as some monitors default to a lower rate.',
   },
   {
     q: 'Does a higher refresh rate reduce input lag?',

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Why does gamma matter for photography and photo editing?',
-    a: 'Gamma determines how the midtone values in an image are distributed between pure black and pure white on your monitor. If your monitor gamma is too high (above 2.2), the image will look darker and more contrasty than it really is, causing you to brighten photos during editing — which then appear too bright when viewed on other displays or sent for print. If gamma is too low, the image appears washed out, causing over-darkening during editing. The industry standard gamma of 2.2 (sRGB) ensures that photos edited on a calibrated display look correct on other calibrated displays and when printed using ICC profiles.',
+    a: 'Gamma determines how the midtone values in an image are distributed between pure black and pure white on your monitor. If your monitor gamma is too high (above 2.2), the image will look darker and more contrasty than it really is, causing you to brighten photos during editing, which then appear too bright when viewed on other displays or sent for print. If gamma is too low, the image appears washed out, causing over-darkening during editing. The industry standard gamma of 2.2 (sRGB) ensures that photos edited on a calibrated display look correct on other calibrated displays and when printed using ICC profiles.',
   },
   {
     q: 'What is the correct gamma for photo editing?',
@@ -87,7 +87,7 @@ export default function GammaCalibrationPhotographyPage() {
               monitor&apos;s error rather than editing the actual image data. A monitor with gamma set too
               high makes images appear too dark, leading editors to apply positive exposure adjustments
               that make the image overexposed when viewed on a correctly calibrated display or printed.
-              The effect compounds through an editing workflow — a small gamma error in the display
+              The effect compounds through an editing workflow, as a small gamma error in the display
               produces systematic brightness errors across an entire shoot.
             </p>
           </div>

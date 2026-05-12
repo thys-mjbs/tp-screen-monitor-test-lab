@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: 'Can laptop screens get burn-in?',
-    a: 'Yes, but it depends on the panel technology. OLED and AMOLED laptop panels (used in high-end laptops from Dell, Samsung, LG, and ASUS) can develop permanent burn-in over time, particularly from static elements like taskbars, browser toolbars, or dock icons displayed continuously at high brightness. IPS and TN LCD laptop panels can experience temporary image retention — a ghost image that fades after displaying varied content — but are generally not susceptible to permanent burn-in under normal usage.',
+    a: 'Yes, but it depends on the panel technology. OLED and AMOLED laptop panels (used in high-end laptops from Dell, Samsung, LG, and ASUS) can develop permanent burn-in over time, particularly from static elements like taskbars, browser toolbars, or dock icons displayed continuously at high brightness. IPS and TN LCD laptop panels can experience temporary image retention (a ghost image that fades after displaying varied content) but are generally not susceptible to permanent burn-in under normal usage.',
   },
   {
     q: 'How do I use this test on a laptop?',
@@ -38,7 +38,7 @@ const faqs = [
   },
   {
     q: 'What causes image retention on a laptop IPS panel?',
-    a: 'Temporary image retention on IPS panels is caused by a phenomenon called dielectric absorption — the liquid crystal alignment layer retains a memory of a static image for a period after the content changes. It is most common when a high-contrast static image such as a browser window border or a spreadsheet grid has been displayed at the same position for several hours. It typically fades after displaying varied content or after the laptop has been off for some time.',
+    a: 'Temporary image retention on IPS panels is caused by a phenomenon called dielectric absorption, where the liquid crystal alignment layer retains a memory of a static image for a period after the content changes. It is most common when a high-contrast static image such as a browser window border or a spreadsheet grid has been displayed at the same position for several hours. It typically fades after displaying varied content or after the laptop has been off for some time.',
   },
   {
     q: 'How can I reduce burn-in risk on my OLED laptop?',
@@ -86,7 +86,7 @@ export default function ImageRetentionLaptopsPage() {
               Image retention and burn-in are different phenomena, though both produce a ghost image on
               the display. Image retention is temporary and refers to a faint echo of a previous image
               that fades after displaying varied content. It can occur on any panel type and is usually
-              harmless. Burn-in is permanent degradation of the panel material — either uneven OLED
+              harmless. Burn-in is permanent degradation of the panel material, either uneven OLED
               organic emitter degradation or, rarely, permanent crystal alignment changes in LCD panels.
               This test can reveal both types: a ghost that fades over minutes indicates retention; a
               ghost that remains after 30 minutes of solid-colour display indicates likely burn-in.
