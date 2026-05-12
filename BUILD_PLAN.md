@@ -74,11 +74,11 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
     [X] Milestone 9.6: Overdrive Test (slug: overdrive-test)
         Fast-moving content to show inverse ghosting and haloing from aggressive overdrive
         Target query: "monitor overdrive test inverse ghosting"
-    [ ] Milestone 9.7: HDR Test (slug: hdr-test)
+    [X] Milestone 9.7: HDR Test (slug: hdr-test)
         Detects browser HDR capability and displays a peak brightness ramp
         Target query: "HDR monitor test online"
 
-[ ] Phase 10: Additional Use-Case Variant Pages
+[ ] Phase 10: Additional Use-Case Variant Pages  ← IN PROGRESS
     Note: each page reuses existing tool component, unique H1/meta/canonical, 5 FAQs, body copy, related tools
     High priority (high search volume):
     [ ] /backlight-bleed-test/for-oled       — "backlight bleed oled" (educational: OLED has no backlight bleed)
