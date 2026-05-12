@@ -78,27 +78,27 @@ Design direction: Dark base, sky blue accent, tech-precise, screen-centric
         Detects browser HDR capability and displays a peak brightness ramp
         Target query: "HDR monitor test online"
 
-[ ] Phase 10: Additional Use-Case Variant Pages  ← IN PROGRESS
+[X] Phase 10: Additional Use-Case Variant Pages
     Note: each page reuses existing tool component, unique H1/meta/canonical, 5 FAQs, body copy, related tools
     High priority (high search volume):
-    [ ] /backlight-bleed-test/for-oled       — "backlight bleed oled" (educational: OLED has no backlight bleed)
-    [ ] /image-retention-test/for-oled       — "oled burn in test" (very high volume)
-    [ ] /refresh-rate-checker/for-gaming     — "refresh rate test gaming monitor"
-    [ ] /stuck-pixel-fixer/for-oled          — "fix stuck pixel oled"
-    [ ] /refresh-rate-checker/144hz-test     — "144hz monitor test"
-    [ ] /dead-pixel-test/for-projectors      — "dead pixel on projector" (1,600/mo; WINNABLE; keyword-driven from SERP research)
-    [ ] /dead-pixel-test/for-vr             — "oculus dead pixel" (1,900/mo; BORDERLINE; Meta Quest / VR headset angle)
+    [X] /backlight-bleed-test/for-oled       — "backlight bleed oled" (educational: OLED has no backlight bleed)
+    [X] /image-retention-test/for-oled       — "oled burn in test" (very high volume)
+    [X] /refresh-rate-checker/for-gaming     — "refresh rate test gaming monitor"
+    [X] /stuck-pixel-fixer/for-oled          — "fix stuck pixel oled"
+    [X] /refresh-rate-checker/144hz-test     — "144hz monitor test"
+    [X] /dead-pixel-test/for-projectors      — "dead pixel on projector" (1,600/mo; WINNABLE; keyword-driven from SERP research)
+    [X] /dead-pixel-test/for-vr             — "oculus dead pixel" (1,900/mo; BORDERLINE; Meta Quest / VR headset angle)
     Medium priority:
-    [ ] /stuck-pixel-fixer/for-laptops       — "fix stuck pixel laptop screen"
-    [ ] /image-retention-test/for-laptops    — "laptop screen burn in test"
-    [ ] /screen-uniformity-test/for-ultrawide — "ultrawide monitor uniformity test"
-    [ ] /dead-pixel-test/for-gaming-monitors — "dead pixel test gaming monitor"
-    [ ] /backlight-bleed-test/for-curved-monitors — "curved monitor backlight bleed"
-    [ ] /gamma-calibration-check/for-photography — "monitor gamma calibration photography"
-    [ ] /refresh-rate-checker/240hz-test     — "240hz monitor test"
-    [ ] /contrast-black-level-test/for-oled  — "oled black level test"
-    [ ] /viewing-angle-test/for-laptops      — "laptop screen viewing angle test"
-    [ ] /resolution-checker/for-ultrawide    — "ultrawide resolution checker"
+    [X] /stuck-pixel-fixer/for-laptops       — "fix stuck pixel laptop screen"
+    [X] /image-retention-test/for-laptops    — "laptop screen burn in test"
+    [X] /screen-uniformity-test/for-ultrawide — "ultrawide monitor uniformity test"
+    [X] /dead-pixel-test/for-gaming-monitors — "dead pixel test gaming monitor"
+    [X] /backlight-bleed-test/for-curved-monitors — "curved monitor backlight bleed"
+    [X] /gamma-calibration-check/for-photography — "monitor gamma calibration photography"
+    [X] /refresh-rate-checker/240hz-test     — "240hz monitor test"
+    [X] /contrast-black-level-test/for-oled  — "oled black level test"
+    [X] /viewing-angle-test/for-laptops      — "laptop screen viewing angle test"
+    [X] /resolution-checker/for-ultrawide    — "ultrawide resolution checker"
 
 [ ] Phase 11: Keyword-Driven Blog Content Backlog
     Note: all keywords below are still todo in keywords_serp.csv; write as standalone blog posts targeting the cluster
