@@ -3,6 +3,8 @@ import { getRelatedTools } from '@/lib/tools'
 import { toolSchemas } from '@/lib/metadata'
 import { Breadcrumb } from './Breadcrumb'
 import { ToolCard } from './ToolCard'
+import { AmazonLinks } from './affiliate/AmazonLinks'
+import { TOOL_AMAZON_SEARCH_TERMS } from '@/lib/affiliate/config'
 
 export interface FAQ {
   q: string
@@ -48,6 +50,11 @@ export function ToolPageLayout({ tool, children, faqs, bodyContent }: ToolPageLa
           <p className="text-fg-muted">{tool.shortDescription}</p>
           <div className="pt-1">{children}</div>
         </section>
+
+        {/* Amazon affiliate links */}
+        {TOOL_AMAZON_SEARCH_TERMS[tool.slug]?.length > 0 && (
+          <AmazonLinks searchTerms={TOOL_AMAZON_SEARCH_TERMS[tool.slug]} />
+        )}
 
         {/* SEO body copy */}
         <section className="prose prose-sm max-w-none text-fg-muted space-y-6">

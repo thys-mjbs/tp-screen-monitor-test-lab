@@ -1,6 +1,6 @@
 # Screen & Monitor Test Lab — Site Build Framework
 
-*Phase 1 of 3 | Confidence: 9/10 | Always read master-build-framework.md alongside this document*
+*Phase 1 of 3 | Confidence: 9/10 | Always read tool-portfolio-master-build-framework.md alongside this document*
 
 ---
 
@@ -95,3 +95,17 @@ Users testing dead pixels are frequently deciding whether to return a monitor, b
 ## Ad Setup Priority
 
 Submit for AdSense after 2–3 weeks of live traffic. This site is an ideal candidate because it has diverse real pages and clear utility. RPM estimate: $2–$4 (consumer electronics adjacency, not as high as B2B tools).
+
+---
+
+## Amazon Affiliate Setup
+
+Amazon affiliate integration is complete for this project.
+
+- Store ID: `snapcalc-20`
+- Config: `lib/affiliate/config.ts` — contains `STORE_ID`, `buildAmazonSearchUrl()`, and `TOOL_AMAZON_SEARCH_TERMS` with 3 search terms per tool
+- Component: `components/affiliate/AmazonLinks.tsx` — renders a "Shop on Amazon" pill-link section styled to this site's brand
+- Tool pages: `AmazonLinks` is rendered by `ToolPageLayout` automatically for all tools with entries in `TOOL_AMAZON_SEARCH_TERMS`
+- Blog posts: `amazonSearchTerms` field added to `Post` interface; `AmazonLinks` rendered in `app/blog/[slug]/page.tsx` after post content
+
+Every new tool page and blog post must include 3–5 relevant Amazon search terms. For tool pages, add the slug and terms to `TOOL_AMAZON_SEARCH_TERMS` in `lib/affiliate/config.ts`. For blog posts, add `amazonSearchTerms: string[]` to the post object in `lib/posts.ts`.

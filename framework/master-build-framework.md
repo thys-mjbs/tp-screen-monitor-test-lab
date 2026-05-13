@@ -806,6 +806,86 @@ If AdSense approval fails:
 
 ---
 
+## 7.5 Amazon Affiliate Setup
+
+### Overview
+
+Every site in the portfolio should include Amazon affiliate search links as a supplementary revenue layer alongside AdSense. These are not replacement ads — they are contextual shopping links that surface relevant products to users who have just used a tool. A user who just ran a dead pixel test is potentially looking to buy a replacement monitor. A user who ran a gamma calibration check may be ready to buy a colorimeter. These links capture commercial intent at the exact moment it exists.
+
+### Rules
+
+- **One affiliate section per page** — one `<AmazonLinks>` component per tool page and blog post. Never more.
+- **3–5 search terms per page** — each term is a plausible Amazon search query for a product a user might buy after using the tool or reading the post. Terms must be specific, not generic (e.g. "144Hz gaming monitor" not "monitor").
+- **Placement on tool pages** — after the tool interface section and before the SEO body copy section.
+- **Placement on blog posts** — after the post content and before the related tools section.
+- **Never use raw product URLs** — always use `buildAmazonSearchUrl(term)` which appends the store tag and formats the link correctly. Product URLs break when products go out of stock; search URLs are evergreen.
+- **Disclosure** — the `<AmazonLinks>` component must display the text "As an Amazon Associate we earn from qualifying purchases." This is required by the Amazon Associates programme.
+- **`rel="noopener noreferrer sponsored"`** — required on every affiliate link.
+- **No pre-sized containers needed** — Amazon affiliate links are rendered as static HTML, not injected scripts, so they do not cause CLS.
+
+### Store ID
+
+Each site in the portfolio uses its own Amazon Associates store ID. The store ID is defined once in `lib/affiliate/config.ts` and never hardcoded anywhere else.
+
+### Implementation Pattern
+
+**`lib/affiliate/config.ts`:**
+```typescript
+export const STORE_ID = '[site-store-id]'
+
+export function buildAmazonSearchUrl(query: string): string {
+  const params = new URLSearchParams({ k: query, tag: STORE_ID })
+  return `https://www.amazon.com/s?${params.toString()}`
+}
+
+export const TOOL_AMAZON_SEARCH_TERMS: Record<string, string[]> = {
+  '[tool-slug]': ['[search term 1]', '[search term 2]', '[search term 3]'],
+  // ... one entry per tool
+}
+```
+
+**`components/affiliate/AmazonLinks.tsx`:**
+```tsx
+import { buildAmazonSearchUrl } from '@/lib/affiliate/config'
+
+interface AmazonLinksProps {
+  searchTerms: string[]
+}
+
+export function AmazonLinks({ searchTerms }: AmazonLinksProps) {
+  if (!searchTerms?.length) return null
+  return (
+    <section className="rounded-xl border border-border bg-surface p-5 space-y-3">
+      <p className="text-xs font-semibold uppercase tracking-wider text-fg-muted">Shop on Amazon</p>
+      <ul className="flex flex-wrap gap-2">
+        {searchTerms.map((term) => (
+          <li key={term}>
+            <a href={buildAmazonSearchUrl(term)} target="_blank" rel="noopener noreferrer sponsored"
+               className="inline-flex items-center gap-1.5 rounded-full border border-border bg-elevated px-3 py-1.5 text-xs font-medium text-fg-muted hover:border-accent hover:text-accent transition-colors">
+              {term}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p className="text-xs text-fg-muted opacity-60">As an Amazon Associate we earn from qualifying purchases.</p>
+    </section>
+  )
+}
+```
+
+**Tool page layout** — render `<AmazonLinks>` between the tool widget section and the SEO body copy section. Fetch terms from `TOOL_AMAZON_SEARCH_TERMS[tool.slug]`.
+
+**Blog post page** — add `amazonSearchTerms: string[]` to the `Post` interface. Render `<AmazonLinks searchTerms={post.amazonSearchTerms} />` after post content and before related tools.
+
+### Search Term Quality Standard
+
+Terms must reflect **plausible next purchase intent**, not the tool's keywords. Ask: "What would a user who just finished using this tool plausibly search for on Amazon within the next 24 hours?"
+
+- Good: "flicker-free monitor", "microfiber screen cleaning cloth", "Datacolor SpyderX colorimeter"
+- Bad: "dead pixel test", "monitor checker online", "screen test" (these are not purchasable products)
+
+---
+
 ## 8. Programmatic SEO
 
 ### Language Pages

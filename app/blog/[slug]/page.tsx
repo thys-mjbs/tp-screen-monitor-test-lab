@@ -5,6 +5,7 @@ import { posts, getPostBySlug, formatDate } from '@/lib/posts'
 import { getToolBySlug } from '@/lib/tools'
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { ToolCard } from '@/components/ToolCard'
+import { AmazonLinks } from '@/components/affiliate/AmazonLinks'
 import { Clock } from 'lucide-react'
 import { POST_CONTENT } from './content'
 
@@ -93,6 +94,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <Content />
           </div>
         </article>
+
+        {post.amazonSearchTerms?.length > 0 && (
+          <AmazonLinks searchTerms={post.amazonSearchTerms} />
+        )}
 
         {relatedTools.length > 0 && (
           <section className="space-y-4">

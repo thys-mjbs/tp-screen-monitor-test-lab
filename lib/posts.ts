@@ -5,6 +5,7 @@ export interface Post {
   publishedAt: string
   readingMinutes: number
   relatedTools: string[]
+  amazonSearchTerms: string[]
 }
 
 export const posts: Post[] = [
@@ -15,6 +16,7 @@ export const posts: Post[] = [
     publishedAt: '2025-05-01',
     readingMinutes: 6,
     relatedTools: ['dead-pixel-test', 'white-screen', 'black-screen', 'stuck-pixel-fixer'],
+    amazonSearchTerms: ['replacement monitor screen panel', 'monitor extended warranty plan', 'pixel defect laptop screen replacement'],
   },
   {
     slug: 'what-is-backlight-bleed',
@@ -23,6 +25,7 @@ export const posts: Post[] = [
     publishedAt: '2025-05-02',
     readingMinutes: 7,
     relatedTools: ['backlight-bleed-test', 'black-screen', 'ips-glow-test', 'contrast-black-level-test'],
+    amazonSearchTerms: ['OLED monitor no backlight bleed', 'VA panel monitor low bleed upgrade', 'monitor anti-glare privacy filter'],
   },
   {
     slug: 'refresh-rate-60hz-vs-144hz',
@@ -31,6 +34,7 @@ export const posts: Post[] = [
     publishedAt: '2025-05-03',
     readingMinutes: 8,
     relatedTools: ['refresh-rate-checker'],
+    amazonSearchTerms: ['144Hz gaming monitor affordable', '240Hz competitive gaming display', 'HDMI 2.1 cable for gaming'],
   },
   {
     slug: 'stuck-pixels-causes-and-fixes',
@@ -39,6 +43,7 @@ export const posts: Post[] = [
     publishedAt: '2025-05-04',
     readingMinutes: 6,
     relatedTools: ['stuck-pixel-fixer', 'dead-pixel-test', 'image-retention-test'],
+    amazonSearchTerms: ['LCD screen repair kit', 'laptop screen replacement panel', 'monitor pixel repair tool'],
   },
   {
     slug: 'monitor-panel-types-ips-va-oled',
@@ -47,6 +52,7 @@ export const posts: Post[] = [
     publishedAt: '2025-05-05',
     readingMinutes: 9,
     relatedTools: ['viewing-angle-test', 'contrast-black-level-test', 'backlight-bleed-test', 'ips-glow-test'],
+    amazonSearchTerms: ['IPS gaming monitor wide viewing angle', 'OLED monitor upgrade affordable', 'VA curved gaming monitor'],
   },
   {
     slug: 'understanding-monitor-resolution-dpi',
@@ -55,6 +61,7 @@ export const posts: Post[] = [
     publishedAt: '2025-05-06',
     readingMinutes: 7,
     relatedTools: ['resolution-checker'],
+    amazonSearchTerms: ['4K monitor 27 inch upgrade', 'high DPI display for design', 'USB-C monitor high resolution'],
   },
   {
     slug: 'gamma-calibration-guide',
@@ -63,6 +70,7 @@ export const posts: Post[] = [
     publishedAt: '2025-05-07',
     readingMinutes: 7,
     relatedTools: ['gamma-calibration-check', 'gradient-banding-test', 'white-saturation-test'],
+    amazonSearchTerms: ['Datacolor SpyderX colorimeter', 'X-Rite i1Display calibration', 'monitor calibration software'],
   },
   {
     slug: 'screen-uniformity-test-guide',
@@ -71,6 +79,7 @@ export const posts: Post[] = [
     publishedAt: '2025-05-08',
     readingMinutes: 6,
     relatedTools: ['screen-uniformity-test', 'backlight-bleed-test', 'gradient-banding-test'],
+    amazonSearchTerms: ['professional monitor uniform brightness', 'monitor anti-glare hood', 'wide gamut monitor for photo editing'],
   },
   {
     slug: 'how-to-clean-monitor-screen',
@@ -79,6 +88,7 @@ export const posts: Post[] = [
     publishedAt: '2025-05-09',
     readingMinutes: 5,
     relatedTools: ['screen-clean-mode', 'white-screen', 'black-screen'],
+    amazonSearchTerms: ['monitor screen cleaning kit', 'microfiber cleaning cloth for screens', 'LCD screen cleaner spray'],
   },
   {
     slug: 'monitor-aspect-ratios-explained',
@@ -87,6 +97,7 @@ export const posts: Post[] = [
     publishedAt: '2025-05-10',
     readingMinutes: 6,
     relatedTools: ['resolution-checker', 'screen-uniformity-test'],
+    amazonSearchTerms: ['ultrawide 21:9 monitor', 'super ultrawide 32:9 gaming monitor', 'widescreen monitor productivity'],
   },
   {
     slug: 'dead-pixels-brand-monitors',
@@ -95,6 +106,7 @@ export const posts: Post[] = [
     publishedAt: '2026-05-12',
     readingMinutes: 5,
     relatedTools: ['dead-pixel-test', 'stuck-pixel-fixer'],
+    amazonSearchTerms: ['monitor extended warranty plan', 'Dell monitor replacement screen', 'ASUS monitor dead pixel policy'],
   },
   {
     slug: 'dead-pixels-oled-tv-projectors',
@@ -103,6 +115,7 @@ export const posts: Post[] = [
     publishedAt: '2026-05-13',
     readingMinutes: 5,
     relatedTools: ['dead-pixel-test', 'stuck-pixel-fixer', 'backlight-bleed-test'],
+    amazonSearchTerms: ['OLED TV screen protector', 'projector replacement lamp bulb', 'TV extended warranty plan'],
   },
   {
     slug: 'backlight-bleed-gaming-laptops',
@@ -111,6 +124,7 @@ export const posts: Post[] = [
     publishedAt: '2026-05-14',
     readingMinutes: 5,
     relatedTools: ['backlight-bleed-test', 'black-screen', 'ips-glow-test'],
+    amazonSearchTerms: ['gaming laptop screen replacement', 'laptop anti-glare screen protector', 'laptop privacy filter'],
   },
   {
     slug: 'backlight-bleed-samsung-tv',
@@ -119,6 +133,7 @@ export const posts: Post[] = [
     publishedAt: '2026-05-15',
     readingMinutes: 5,
     relatedTools: ['backlight-bleed-test', 'black-screen', 'dead-pixel-test'],
+    amazonSearchTerms: ['Samsung TV extended warranty', 'QLED to OLED TV upgrade Samsung', 'TV anti-glare screen filter'],
   },
   {
     slug: 'backlight-bleed-lg-sony-philips-tcl-benq',
@@ -127,6 +142,7 @@ export const posts: Post[] = [
     publishedAt: '2026-05-16',
     readingMinutes: 5,
     relatedTools: ['backlight-bleed-test', 'black-screen', 'ips-glow-test'],
+    amazonSearchTerms: ['BenQ IPS monitor upgrade', 'LG OLED monitor', 'Sony OLED TV replacement'],
   },
   {
     slug: 'led-tv-oled-screen-bleeding',
@@ -135,6 +151,7 @@ export const posts: Post[] = [
     publishedAt: '2026-05-17',
     readingMinutes: 5,
     relatedTools: ['backlight-bleed-test', 'black-screen', 'image-retention-test'],
+    amazonSearchTerms: ['OLED TV upgrade affordable', 'LED TV backlight replacement kit', 'OLED anti burn-in screensaver'],
   },
   {
     slug: 'samsung-oled-qled-burn-in',
@@ -143,6 +160,7 @@ export const posts: Post[] = [
     publishedAt: '2026-05-18',
     readingMinutes: 5,
     relatedTools: ['image-retention-test', 'black-screen', 'dead-pixel-test'],
+    amazonSearchTerms: ['Samsung OLED TV warranty plan', 'OLED anti burn-in screensaver app', 'OLED burn-in prevention screen protector'],
   },
   {
     slug: 'screen-resolution-tv-monitor-sizes',
@@ -151,6 +169,7 @@ export const posts: Post[] = [
     publishedAt: '2026-05-19',
     readingMinutes: 6,
     relatedTools: ['resolution-checker', 'refresh-rate-checker'],
+    amazonSearchTerms: ['4K TV affordable upgrade', '1440p gaming monitor', 'resolution scaling software display'],
   },
   {
     slug: 'samsung-screen-resolution-guide',
@@ -159,6 +178,7 @@ export const posts: Post[] = [
     publishedAt: '2026-05-20',
     readingMinutes: 5,
     relatedTools: ['resolution-checker', 'refresh-rate-checker'],
+    amazonSearchTerms: ['Samsung 4K monitor USB-C', 'Samsung display settings guide book', 'Samsung Galaxy screen protector'],
   },
 ]
 
