@@ -40,7 +40,8 @@
       "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\contrast-black-level-test\\\\for-oled\")",
       "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\viewing-angle-test\\\\for-laptops\")",
       "Bash(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\\\\resolution-checker\\\\for-ultrawide\")",
-      "Bash(Write-Host \"All directories created\")"
+      "Bash(Write-Host \"All directories created\")",
+      "Bash(npm run *)"
     ]
   }
 }
