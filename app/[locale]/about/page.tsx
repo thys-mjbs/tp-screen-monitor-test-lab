@@ -2,13 +2,27 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Breadcrumb } from '@/components/Breadcrumb'
 
-export const metadata: Metadata = {
-  title: 'About Screen Test Lab',
-  description: 'Screen Test Lab is a free, browser-based collection of monitor testing tools. No sign-up, no download, no cost. Just open a tool and test your display.',
-  alternates: { canonical: '/about' },
+const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }]
 }
 
-const tools = [
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const canonical = locale === 'en' ? `${appUrl}/about` : `${appUrl}/${locale}/about`
+  return {
+    title: 'About Screen Test Lab',
+    description: 'Screen Test Lab is a free, browser-based collection of monitor testing tools. No sign-up, no download, no cost. Just open a tool and test your display.',
+    alternates: { canonical },
+  }
+}
+
+const toolLinks = [
   { label: 'Dead Pixel Test', href: '/dead-pixel-test' },
   { label: 'Backlight Bleed Test', href: '/backlight-bleed-test' },
   { label: 'Stuck Pixel Fixer', href: '/stuck-pixel-fixer' },
@@ -98,7 +112,7 @@ export default function AboutPage() {
         <div className="space-y-3">
           <h2 className="text-lg font-bold text-fg">All tools</h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5">
-            {tools.map((t) => (
+            {toolLinks.map((t) => (
               <li key={t.href}>
                 <Link href={t.href} className="text-accent hover:underline text-sm">
                   {t.label}

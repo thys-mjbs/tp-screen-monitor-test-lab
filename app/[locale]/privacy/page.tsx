@@ -1,10 +1,24 @@
 import type { Metadata } from 'next'
 import { Breadcrumb } from '@/components/Breadcrumb'
 
-export const metadata: Metadata = {
-  title: 'Privacy Policy',
-  description: 'Privacy Policy for Screen Test Lab. Learn how we handle data, analytics, and advertising on this free monitor testing site.',
-  alternates: { canonical: '/privacy' },
+const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }]
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const canonical = locale === 'en' ? `${appUrl}/privacy` : `${appUrl}/${locale}/privacy`
+  return {
+    title: 'Privacy Policy',
+    description: 'Privacy Policy for Screen Test Lab. Learn how we handle data, analytics, and advertising on this free monitor testing site.',
+    alternates: { canonical },
+  }
 }
 
 export default function PrivacyPage() {

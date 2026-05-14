@@ -46,7 +46,9 @@
       "PowerShell(New-Item *)",
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\" -Recurse | Select-Object FullName | Where-Object { $_.FullName -match \"blog\" })",
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\" -Recurse | ForEach-Object { $_.FullName } | Select-String \"blog\")",
-      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\" -Recurse | ForEach-Object { $_.FullName } | Select-String \"locale\" | Measure-Object -Line)"
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\MBenson\\\\Documents\\\\GitHub\\\\tp-screen-monitor-test-lab\\\\app\" -Recurse | ForEach-Object { $_.FullName } | Select-String \"locale\" | Measure-Object -Line)",
+      "Bash(Get-ChildItem -Recurse \"app\" -Filter \"page.tsx\")",
+      "Bash(Select-Object FullName)"
     ]
   }
 }

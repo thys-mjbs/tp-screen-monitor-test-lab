@@ -1,10 +1,24 @@
 import type { Metadata } from 'next'
 import { Breadcrumb } from '@/components/Breadcrumb'
 
-export const metadata: Metadata = {
-  title: 'Terms of Service',
-  description: 'Terms of Service for Screen Test Lab. Free to use, no guarantees on pixel repair outcomes. Governed by South African law.',
-  alternates: { canonical: '/terms' },
+const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }]
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const canonical = locale === 'en' ? `${appUrl}/terms` : `${appUrl}/${locale}/terms`
+  return {
+    title: 'Terms of Service',
+    description: 'Terms of Service for Screen Test Lab. Free to use, no guarantees on pixel repair outcomes. Governed by South African law.',
+    alternates: { canonical },
+  }
 }
 
 export default function TermsPage() {

@@ -1,21 +1,50 @@
-﻿import type { Metadata } from 'next'
-import { tools, categoryMeta, getToolsByCategory } from '@/lib/tools'
+import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
+import { tools, categoryMeta, getToolsByCategory, getLocalizedTool, getLocalizedCategoryMeta } from '@/lib/tools'
+import { toolTranslations, categoryTranslations } from '@/lib/i18n/tools-es'
 import { ToolCard } from '@/components/ToolCard'
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
 
-export const metadata: Metadata = {
-  title: 'Free Monitor & Screen Tests Online: Dead Pixels, Backlight Bleed & More',
-  description:
-    'Free browser-based tools to test your monitor for dead pixels, backlight bleed, refresh rate, colour accuracy, and more. No download or sign-up required.',
-  alternates: { canonical: appUrl },
-  openGraph: {
-    title: 'Free Monitor & Screen Tests Online',
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }]
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const canonical = locale === 'en' ? appUrl : `${appUrl}/${locale}`
+  if (locale === 'es') {
+    return {
+      title: 'Pruebas de monitor y pantalla gratis: píxeles muertos, sangrado y más',
+      description:
+        'Herramientas gratuitas basadas en el navegador para comprobar tu monitor en busca de píxeles muertos, sangrado de luz de fondo, frecuencia de actualización, precisión de color y más. Sin descarga ni registro.',
+      alternates: { canonical },
+      openGraph: {
+        title: 'Pruebas de monitor y pantalla gratis',
+        description:
+          'Comprueba tu pantalla en busca de píxeles muertos, sangrado de luz de fondo, frecuencia de actualización y precisión de color. 25 herramientas gratuitas.',
+        url: canonical,
+        type: 'website',
+      },
+    }
+  }
+  return {
+    title: 'Free Monitor & Screen Tests Online: Dead Pixels, Backlight Bleed & More',
     description:
-      'Test your display for dead pixels, backlight bleed, refresh rate, and colour accuracy. 25 free tools, no download needed.',
-    url: appUrl,
-    type: 'website',
-  },
+      'Free browser-based tools to test your monitor for dead pixels, backlight bleed, refresh rate, colour accuracy, and more. No download or sign-up required.',
+    alternates: { canonical },
+    openGraph: {
+      title: 'Free Monitor & Screen Tests Online',
+      description:
+        'Test your display for dead pixels, backlight bleed, refresh rate, and colour accuracy. 25 free tools, no download needed.',
+      url: canonical,
+      type: 'website',
+    },
+  }
 }
 
 const organizationSchema = {
@@ -39,13 +68,22 @@ const websiteSchema = {
   url: appUrl,
 }
 
-const categories: Array<{ key: 'visual-test' | 'screen-state' | 'checker' }> = [
-  { key: 'visual-test' },
-  { key: 'screen-state' },
-  { key: 'checker' },
+const categoryKeys: Array<'visual-test' | 'screen-state' | 'checker'> = [
+  'visual-test',
+  'screen-state',
+  'checker',
 ]
 
-export default function HomePage() {
+export default async function HomePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'home' })
+  const isEs = locale === 'es'
+  const localeCategoryMeta = isEs ? getLocalizedCategoryMeta(categoryTranslations) : categoryMeta
+
   return (
     <>
       <script
@@ -62,24 +100,25 @@ export default function HomePage() {
         {/* Hero */}
         <section className="space-y-4 max-w-2xl">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-fg tracking-tight leading-tight">
-            Free Monitor &amp; Screen Tests Online
+            {t('hero.heading')}
           </h1>
           <p className="text-lg text-fg-muted leading-relaxed">
-            Test your display for dead pixels, backlight bleed, refresh rate, colour accuracy, and more.
-            Works in any browser. No download, no sign-up.
+            {t('hero.description')}
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-fg-muted font-medium pt-1">
-            <span>{tools.length} free tools</span>
-            <span>No sign-up required</span>
-            <span>Browser-based</span>
+            <span>{tools.length} {t('trust.freeTools').toLowerCase()}</span>
+            <span>{t('hero.statNoSignup')}</span>
+            <span>{t('hero.statBrowserBased')}</span>
           </div>
         </section>
 
         {/* Tool grid by category */}
         <section id="tools" className="space-y-12">
-          {categories.map(({ key }) => {
-            const meta = categoryMeta[key]
-            const categoryTools = getToolsByCategory(key)
+          {categoryKeys.map((key) => {
+            const meta = localeCategoryMeta[key]
+            const categoryTools = getToolsByCategory(key).map((tool) =>
+              isEs ? (getLocalizedTool(tool.slug, toolTranslations) ?? tool) : tool
+            )
             return (
               <div key={key} className="space-y-4">
                 <div className="space-y-1">
@@ -101,15 +140,15 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
             <div className="space-y-1">
               <p className="text-2xl font-extrabold text-accent">{tools.length}</p>
-              <p className="text-sm text-fg-muted">Free tools</p>
+              <p className="text-sm text-fg-muted">{t('trust.freeTools')}</p>
             </div>
             <div className="space-y-1">
               <p className="text-2xl font-extrabold text-accent">100%</p>
-              <p className="text-sm text-fg-muted">Browser-based, no install</p>
+              <p className="text-sm text-fg-muted">{t('trust.browserBased')}</p>
             </div>
             <div className="space-y-1">
               <p className="text-2xl font-extrabold text-accent">0</p>
-              <p className="text-sm text-fg-muted">Sign-ups or accounts needed</p>
+              <p className="text-sm text-fg-muted">{t('trust.noSignup')}</p>
             </div>
           </div>
         </section>

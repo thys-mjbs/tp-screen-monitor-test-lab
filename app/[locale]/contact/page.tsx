@@ -1,10 +1,24 @@
 import type { Metadata } from 'next'
 import { Breadcrumb } from '@/components/Breadcrumb'
 
-export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Get in touch with the Screen Test Lab team for bug reports, suggestions, or general questions.',
-  alternates: { canonical: '/contact' },
+const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
+
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }]
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const canonical = locale === 'en' ? `${appUrl}/contact` : `${appUrl}/${locale}/contact`
+  return {
+    title: 'Contact',
+    description: 'Get in touch with the Screen Test Lab team for bug reports, suggestions, or general questions.',
+    alternates: { canonical },
+  }
 }
 
 export default function ContactPage() {
