@@ -4,7 +4,7 @@ import { Breadcrumb } from '@/components/Breadcrumb'
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'es' }]
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
 }
 
 export async function generateMetadata({
@@ -14,14 +14,164 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const canonical = locale === 'en' ? `${appUrl}/privacy` : `${appUrl}/${locale}/privacy`
+  const hreflang = { 'en': `${appUrl}/privacy`, 'es': `${appUrl}/es/privacy`, 'pt': `${appUrl}/pt/privacy`, 'x-default': `${appUrl}/privacy` }
+  if (locale === 'pt') {
+    return {
+      title: 'Politica de Privacidade',
+      description: 'Politica de Privacidade do Screen Test Lab. Saiba como tratamos dados, analiticas e publicidade neste site gratuito de testes de monitor.',
+      alternates: { canonical, languages: hreflang },
+    }
+  }
   return {
     title: 'Privacy Policy',
     description: 'Privacy Policy for Screen Test Lab. Learn how we handle data, analytics, and advertising on this free monitor testing site.',
-    alternates: { canonical, languages: { 'en': `${appUrl}/privacy`, 'es': `${appUrl}/es/privacy`, 'x-default': `${appUrl}/privacy` } },
+    alternates: { canonical, languages: hreflang },
   }
 }
 
-export default function PrivacyPage() {
+export default async function PrivacyPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
+
+  if (locale === 'pt') {
+    return (
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 space-y-10">
+        <Breadcrumb items={[{ label: 'Politica de Privacidade' }]} />
+        <section className="space-y-3">
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-fg tracking-tight leading-tight">
+            Politica de Privacidade
+          </h1>
+          <p className="text-fg-muted">Ultima atualizacao: maio de 2025</p>
+        </section>
+        <section className="space-y-8 text-fg-muted">
+          <div className="space-y-3">
+            <h2 className="text-lg font-bold text-fg">Visao geral</h2>
+            <p>
+              O Screen Test Lab (&quot;nos&quot;, &quot;este site&quot;) e uma ferramenta gratuita de teste de ecra
+              baseada no navegador, operada a partir da Africa do Sul. Esta politica explica que
+              dados sao recolhidos quando utiliza este site, como sao usados e os seus direitos.
+            </p>
+            <p>
+              Todas as ferramentas de teste de monitor neste site funcionam inteiramente no seu
+              navegador. Nenhum resultado de teste, dados de ecra ou informacao de pixels e alguma
+              vez transmitido para qualquer servidor. Nao temos acesso ao conteudo do seu ecra.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <h2 className="text-lg font-bold text-fg">Informacao que recolhemos</h2>
+            <p>
+              Nao exigimos que crie uma conta, inicie sessao ou submeta qualquer informacao pessoal
+              para usar este site. Os unicos dados recolhidos sao dados padrao de analiticas web
+              recolhidos automaticamente quando visita paginas neste site.
+            </p>
+            <h3 className="text-base font-semibold text-fg">Analiticas (Google Analytics 4)</h3>
+            <p>
+              Este site usa o Google Analytics 4 (GA4) para entender como os visitantes usam o
+              site. O GA4 recolhe informacao padrao de analiticas web incluindo a sua localizacao
+              geografica aproximada (nivel de pais e cidade), navegador e sistema operativo, paginas
+              visitadas, tempo gasto nas paginas e como chegou ao site. O GA4 usa cookies e
+              tecnologias semelhantes. Estes dados sao processados pelo Google e estao sujeitos
+              a Politica de Privacidade do Google.
+            </p>
+            <p>
+              Nao usamos o GA4 para identificar utilizadores individuais. Os dados de analiticas
+              sao usados de forma agregada para entender quais ferramentas sao mais uteis e como
+              o site pode ser melhorado.
+            </p>
+            <h3 className="text-base font-semibold text-fg">Publicidade (Google AdSense)</h3>
+            <p>
+              Este site exibe publicidade servida pelo Google AdSense. O Google pode usar cookies
+              e identificadores de dispositivo para servir anuncios com base nas suas visitas
+              anteriores a este site e a outros sites. Pode optar por nao receber publicidade
+              personalizada visitando as Definicoes de Anuncios do Google em{' '}
+              <a
+                href="https://adssettings.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline"
+              >
+                adssettings.google.com
+              </a>
+              . O uso de cookies de publicidade pelo Google e regido pela Politica de Privacidade
+              do Google.
+            </p>
+            <h3 className="text-base font-semibold text-fg">Alojamento (Vercel)</h3>
+            <p>
+              Este site e alojado na Vercel. A Vercel recolhe registos padrao do servidor incluindo
+              enderecos IP, caminhos de pedidos e marcas temporais com o objetivo de servir o site
+              e detetar abusos. Estes registos sao retidos de acordo com as politicas de retencao
+              de dados da Vercel. Nao temos acesso direto a enderecos IP individuais dos registos
+              da Vercel.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <h2 className="text-lg font-bold text-fg">Cookies</h2>
+            <p>
+              Este site nao define cookies de primeira parte para funcionalidade ou preferencias
+              do utilizador. Cookies de terceiros podem ser definidos pelo Google Analytics e
+              Google AdSense conforme descrito acima. Pode gerir ou desativar cookies nas
+              definicoes do seu navegador. Desativar cookies de terceiros nao afeta o
+              funcionamento de nenhuma ferramenta de teste de monitor neste site.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <h2 className="text-lg font-bold text-fg">Dados que nao recolhemos</h2>
+            <p>Nao recolhemos nem armazenamos:</p>
+            <ul className="list-disc list-inside space-y-1 ml-2">
+              <li>O seu nome, endereco de email ou qualquer informacao de contacto</li>
+              <li>O conteudo do seu ecra, resultados de testes ou medicoes do ecra</li>
+              <li>Informacao de pagamento (este site e inteiramente gratuito)</li>
+              <li>Credenciais de conta (nao existem contas neste site)</li>
+              <li>Quaisquer dados introduzidos ou gerados pelas ferramentas de teste</li>
+            </ul>
+          </div>
+          <div className="space-y-3">
+            <h2 className="text-lg font-bold text-fg">Servicos de terceiros</h2>
+            <p>
+              Este site usa os seguintes servicos de terceiros, cada um com a sua propria politica
+              de privacidade que rege os dados que recolhem:
+            </p>
+            <ul className="list-disc list-inside space-y-1 ml-2">
+              <li>Google Analytics 4 -- analiticas web</li>
+              <li>Google AdSense -- publicidade</li>
+              <li>Vercel -- alojamento e entrega do site</li>
+            </ul>
+          </div>
+          <div className="space-y-3">
+            <h2 className="text-lg font-bold text-fg">Criancas</h2>
+            <p>
+              Este site nao e dirigido a criancas com menos de 13 anos. Nao recolhemos
+              conscientemente informacao pessoal de criancas. Se acredita que uma crianca
+              forneceu informacao pessoal atraves deste site, contacte-nos para que possamos
+              tomar as medidas adequadas.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <h2 className="text-lg font-bold text-fg">Alteracoes a esta politica</h2>
+            <p>
+              Podemos atualizar esta politica de tempos em tempos. A data de &quot;ultima atualizacao&quot;
+              no topo desta pagina reflete a revisao mais recente. O uso continuado do site apos
+              qualquer atualizacao constitui a aceitacao da politica revista.
+            </p>
+          </div>
+          <div className="space-y-3">
+            <h2 className="text-lg font-bold text-fg">Contacto</h2>
+            <p>
+              Para questoes ou pedidos relacionados com privacidade, contacte-nos em{' '}
+              <a href="mailto:thys@mjbstrategic.com" className="text-accent hover:underline">
+                thys@mjbstrategic.com
+              </a>
+              .
+            </p>
+          </div>
+        </section>
+      </div>
+    )
+  }
+
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 space-y-10">
 
