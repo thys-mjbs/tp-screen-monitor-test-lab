@@ -519,10 +519,395 @@ function PanelTypesPostES() {
   )
 }
 
+// ─── 6. Resolución y DPI ─────────────────────────────────────────────────────
+
+function ResolutionPostES() {
+  return (
+    <>
+      <p>
+        La resolución, la densidad de píxeles y el escalado se confunden con frecuencia entre sí.
+        La misma resolución puede verse completamente diferente en dos monitores distintos, y una
+        resolución más baja puede verse más nítida que una más alta dependiendo del tamaño del panel.
+        Comprender cómo interactúan estos factores te ayuda a interpretar lo que informa el comprobador
+        de resolución.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Resolución de pantalla: píxeles CSS</h2>
+      <p>
+        Cuando miras la configuración de pantalla de tu sistema operativo o navegador, la resolución
+        que se muestra se expresa en píxeles lógicos o CSS. Este es el espacio de coordenadas que
+        usan tus aplicaciones. En una pantalla estándar, un píxel CSS corresponde a un píxel de
+        hardware físico en el panel. En una pantalla HiDPI o Retina, el sistema operativo escala
+        la interfaz para que un píxel CSS corresponda a dos o más píxeles físicos.
+      </p>
+      <p>
+        Este escalado existe para que los elementos de la interfaz permanezcan a un tamaño físico
+        cómodo en paneles de alta densidad. Sin él, un monitor 4K en un portátil de 15 pulgadas
+        mostraría texto e iconos a una fracción de su tamaño normal y sería inutilizable. El
+        comprobador de resolución muestra tanto la resolución en píxeles CSS como el recuento de
+        píxeles físicos derivado de la relación de píxeles del dispositivo.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Relación de píxeles del dispositivo (DPR)</h2>
+      <p>
+        La relación de píxeles del dispositivo es el multiplicador entre los píxeles CSS y los
+        píxeles físicos. Un DPR de 1 significa densidad estándar: un píxel CSS por píxel físico.
+        Un DPR de 2 significa que cada píxel CSS está respaldado por una cuadrícula de 2x2 píxeles
+        físicos, que es el estándar Retina en las pantallas de Apple. Un DPR de 1,5 o 1,25 es
+        común en los portátiles Windows donde el sistema operativo aplica escalado fraccionado.
+      </p>
+      <p>
+        El DPR afecta a cómo se muestran las imágenes y los gráficos web. Las imágenes servidas
+        sin una versión de alto DPR aparecen borrosas en las pantallas Retina. Las imágenes
+        correctamente responsivas y los gráficos vectoriales permanecen nítidos con cualquier DPR.
+        Los desarrolladores web usan el DPR para determinar qué resolución de imagen servir a
+        cada dispositivo.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Píxeles por pulgada y nitidez percibida</h2>
+      <p>
+        Los píxeles por pulgada (PPI) miden cuántos píxeles caben en una pulgada de la superficie
+        del panel. Un PPI más alto significa píxeles individuales más pequeños y, por tanto, más
+        detalle. Un panel de 1920x1080 a 24 pulgadas tiene aproximadamente 92 PPI. La misma
+        resolución a 27 pulgadas tiene aproximadamente 82 PPI. Un panel de 2560x1440 a 27 pulgadas
+        tiene aproximadamente 109 PPI.
+      </p>
+      <p>
+        Para monitores de escritorio vistos a la distancia típica de un brazo (60 a 80 cm),
+        aproximadamente 95 a 110 PPI es el punto en el que los píxeles individuales se vuelven
+        difíciles de distinguir en condiciones de visión normales. Por encima de 140 PPI, la densidad
+        adicional aporta poco beneficio visible a distancias de visión normales.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Resolución nativa y escalado</h2>
+      <p>
+        Cada panel tiene una resolución nativa, que es el recuento de píxeles físicos con el que
+        fue fabricado. Ejecutar una pantalla a su resolución nativa produce la imagen más nítida.
+        Ejecutar a una resolución más baja, o a una resolución escalada mediante la configuración
+        de DPI del sistema operativo, aplica interpolación que puede reducir la nitidez. Para la
+        mejor calidad de imagen, ejecuta siempre tu monitor a su resolución nativa y usa el escalado
+        del sistema operativo para el tamaño de la interfaz.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Nombres de resolución comunes y qué significan</h2>
+      <p>
+        Los nombres de resolución de pantalla se usan de forma inconsistente en los materiales de
+        marketing. Full HD (FHD) se refiere a 1920x1080 y es la resolución más común para monitores,
+        portátiles y televisores en todo el mundo. Quad HD (QHD), también etiquetado como 2K en
+        muchos listados de productos, se refiere a 2560x1440, que proporciona un detalle notablemente
+        más nítido a 27 pulgadas sin requerir la elevada carga de GPU del 4K. 4K UHD se refiere a
+        3840x2160. WUXGA se refiere a 1920x1200, una relación 16:10 que proporciona más espacio
+        vertical de pantalla que FHD y es común en portátiles de empresa y monitores profesionales.
+      </p>
+      <p>
+        La resolución del monitor gaming implica una compensación entre el detalle visual y la
+        frecuencia de fotogramas alcanzable. A 1080p, una GPU de gama media puede mantener 144 Hz
+        o más con mucha más facilidad que a 1440p o 4K. Muchos jugadores competitivos prefieren
+        1080p a alta frecuencia de actualización sobre paneles de mayor resolución a menor frecuencia
+        de fotogramas, ya que la claridad de movimiento importa más que la densidad de píxeles en
+        los juegos rápidos.
+      </p>
+    </>
+  )
+}
+
+// ─── 7. Gamma ─────────────────────────────────────────────────────────────────
+
+function GammaPostES() {
+  return (
+    <>
+      <p>
+        El gamma es una de las propiedades fundamentales de la calibración de pantalla y una de
+        las más frecuentemente malentendidas. Un gamma incorrecto hace que las imágenes parezcan
+        planas y lavadas, o excesivamente oscuras con detalles perdidos en las sombras. Probar el
+        gamma de tu monitor no requiere hardware de calibración costoso.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Qué es el gamma</h2>
+      <p>
+        El gamma describe la relación entre el valor numérico de un píxel en un archivo de imagen
+        y el brillo que produce la pantalla para ese píxel. Se expresa como un exponente en una
+        curva de potencia. Un gamma de 2,2 significa que un valor de píxel de 128 (a mitad de
+        camino entre 0 y 255) debería producir aproximadamente el 22% del brillo máximo de la
+        pantalla, no el 50%. Esta curva no lineal imita cómo la visión humana percibe las
+        diferencias de brillo.
+      </p>
+      <p>
+        El estándar de color sRGB, que rige la mayoría de los monitores de consumo y la mayoría
+        de las imágenes digitales, apunta a un gamma general de aproximadamente 2,2. Las pantallas
+        profesionales a veces se configuran a 2,4 para trabajo de cine y difusión. Una pantalla
+        con gamma 1,8 parecerá lavada y excesivamente brillante. Una pantalla con gamma 2,6
+        parecerá demasiado oscura con detalles perdidos en las sombras.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cómo probar el gamma sin hardware</h2>
+      <p>
+        La comprobación de calibración de gamma de este sitio usa una técnica llamada tramado de
+        tablero de ajedrez. Un patrón de tablero de ajedrez blanco y negro al 50%, visto desde
+        cierta distancia, aparece como un tono gris medio uniforme. El brillo de ese gris aparente
+        corresponde a lo que hace la pantalla al nivel del 50% del tablero. Colocando una muestra
+        de gris sólido de referencia junto al patrón tramado, puedes comparar si tu pantalla está
+        renderizando el tono medio correctamente para un objetivo de gamma dado.
+      </p>
+      <p>
+        La herramienta proporciona cuatro grises de referencia correspondientes a valores de gamma
+        de 1,8, 2,0, 2,2 y 2,4. La muestra de gris que más se acerque al brillo aparente del
+        patrón de tablero indica el ajuste de gamma aproximado de tu monitor.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Corrección del gamma</h2>
+      <p>
+        Si el gamma de tu monitor parece demasiado alto o demasiado bajo, el primer paso es
+        comprobar el menú de visualización en pantalla del propio monitor. Muchos monitores
+        incluyen una configuración de gamma directamente en sus controles de imagen, a menudo
+        preconfigurado en 1,8, 2,0, 2,2 o 2,4. Configúralo a 2,2 para trabajo sRGB estándar.
+        Si tu monitor no tiene control de gamma, la herramienta de calibración de pantalla de tu
+        sistema operativo (Calibrar color de pantalla en Windows, o Asistente de calibración de
+        pantalla en macOS) puede aplicar una corrección de gamma por software a través de la
+        tarjeta de vídeo.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Gamma y bandas en gradiente</h2>
+      <p>
+        Un gamma incorrecto puede agravar las bandas en gradiente, donde una transición tonal
+        suave en una imagen muestra pasos visibles en lugar de una gradación suave. La prueba
+        de bandas en gradiente de este sitio revela con qué eficacia maneja tu pantalla los
+        gradientes lineales suaves. Las bandas significativas en una pantalla correctamente
+        configurada de otro modo pueden indicar que el panel del monitor tiene profundidad
+        tonal limitada en ciertas regiones tonales.
+      </p>
+    </>
+  )
+}
+
+// ─── 8. Uniformidad de pantalla ───────────────────────────────────────────────
+
+function UniformityPostES() {
+  return (
+    <>
+      <p>
+        La uniformidad de pantalla describe con qué consistencia un monitor reproduce el mismo
+        color y nivel de brillo en toda la superficie del panel. Una uniformidad perfecta significa
+        que un campo gris sólido se ve idéntico desde la esquina superior izquierda hasta la
+        inferior derecha. En la práctica, todos los monitores tienen cierto grado de no uniformidad;
+        la pregunta es qué tan significativa es para tu caso de uso.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Qué causa los problemas de uniformidad</h2>
+      <p>
+        En los monitores LCD, la no uniformidad tiene dos fuentes principales. La primera es la
+        no uniformidad de la retroiluminación: los paneles con iluminación de borde usan LED
+        posicionados en los bordes del panel, y la luz se difunde por la superficie del panel.
+        Esto produce variaciones sutiles de brillo, típicamente más brillante en los bordes donde
+        están los LED. Los paneles con retroiluminación de matriz completa y atenuación local tienen
+        mejor uniformidad porque los LED están distribuidos por toda la superficie trasera.
+      </p>
+      <p>
+        La segunda fuente es el propio panel LCD. Las variaciones en la alineación del cristal
+        líquido, la consistencia del recubrimiento polarizador y las tolerancias de fabricación
+        del panel crean variaciones sutiles de color o brillo en la superficie del panel. Un campo
+        gris puede parecer ligeramente más frío (con tono azul) en una esquina y más cálido
+        (amarillo o naranja) en otra. Esto se llama desviación delta E y se mide en las revisiones
+        de pantallas profesionales usando equipos de colorimetría.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cómo probar la uniformidad de pantalla</h2>
+      <p>
+        La prueba de uniformidad de pantalla de este sitio muestra un panel gris sólido en pantalla
+        completa en tres tonos de gris: gris oscuro, gris medio y gris claro. Viendo estos paneles
+        en una habitación con poca luz, escanea la pantalla metódicamente. Busca áreas donde el
+        brillo parezca mayor o menor que el área circundante, o donde el tono se desplace del gris
+        neutro hacia el azul, el amarillo o el verde.
+      </p>
+      <p>
+        La herramienta divide la pantalla en una cuadrícula de referencia de 3x3 para ayudarte a
+        describir qué zona de la pantalla muestra variación. Esto es útil al documentar una
+        reclamación de garantía. Ten en cuenta que los problemas de uniformidad son más fáciles de
+        ver en el gris medio que en el gris oscuro o claro, porque el ojo es más sensible a las
+        diferencias de luminancia en los tonos medios.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cuánta no uniformidad es aceptable</h2>
+      <p>
+        Para uso general de oficina y gaming, una variación leve de brillo en el panel que solo
+        sea visible en campos de prueba de gris sólido es poco probable que afecte a tu experiencia
+        durante el uso normal. Para fotografía, edición de vídeo o cualquier trabajo crítico con
+        color, incluso una variación de uniformidad moderada es significativa porque significa que
+        un color que parece correcto en un área del panel parecerá diferente en otra.
+      </p>
+      <p>
+        Los monitores profesionales de ciertos fabricantes incluyen datos de calibración de
+        uniformidad de panel individual, compensando las variaciones medidas. Para trabajo crítico
+        con color, esta característica vale la pena priorizarla sobre una mayor resolución o
+        frecuencia de actualización.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Uniformidad y tamaño de pantalla</h2>
+      <p>
+        Los problemas de uniformidad escalan con el tamaño de la pantalla. Un monitor de 27 pulgadas
+        o más tiene un camino de luz más largo desde el LED hasta el centro del panel, dando más
+        oportunidad para la variación. Los paneles ultraanchos son especialmente difíciles de
+        fabricar con una uniformidad consistente. Si estás comprando un monitor grande para trabajo
+        crítico con color, los resultados de pruebas de uniformidad en revisiones profesionales son
+        una especificación importante a investigar antes de comprar.
+      </p>
+    </>
+  )
+}
+
+// ─── 9. Limpieza de pantalla ──────────────────────────────────────────────────
+
+function CleaningPostES() {
+  return (
+    <>
+      <p>
+        La mayoría de las personas limpian mal la pantalla de su monitor, y el daño a menudo no
+        es visible de inmediato. Los recubrimientos de los paneles de pantalla modernos son lo
+        suficientemente duraderos para una limpieza regular, pero se dañan fácilmente con los
+        materiales o la técnica incorrectos. Hacerlo bien no cuesta nada extra y preserva la
+        calidad de imagen de tu monitor durante toda su vida útil.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">El único material que necesitas</h2>
+      <p>
+        Un paño de microfibra limpio y seco es todo lo que se necesita para la limpieza rutinaria
+        del monitor. Los paños de microfibra usan fibras más finas que el cabello humano, lo que
+        significa que levantan el polvo y los aceites de la superficie sin rayar ni manchar. Los
+        mismos paños que se usan para las gafas son apropiados para los monitores. No uses toallas
+        de papel, pañuelos, camisetas viejas de algodón ni ningún tejido áspero. Estos materiales
+        contienen fibras abrasivas que rayarán permanentemente los recubrimientos antirreflectantes
+        y antibrillo con el tiempo.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Líquidos y disolventes que debes evitar</h2>
+      <p>
+        Nunca rocíes ningún líquido directamente sobre la pantalla de un monitor. El líquido que
+        entre por el borde del marco puede penetrar en el conjunto del panel y causar daños internos
+        permanentes. Si necesitas un líquido, aplica una cantidad muy pequeña de agua destilada al
+        paño, no a la pantalla, y asegúrate de que el paño esté solo ligeramente húmedo antes de
+        limpiar.
+      </p>
+      <p>
+        Evita todo lo siguiente en cualquier panel de monitor: limpiacristales, spray multiusos
+        doméstico, alcohol, amoníaco, acetona, lejía o cualquier producto comercializado para
+        limpiar ventanas o superficies duras. Estos disolventes eliminan los recubrimientos del
+        panel que proporcionan propiedades antibrillo y antirreflectantes, dejando la pantalla
+        permanentemente turbia o con daños visibles.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Uso del modo de limpieza de pantalla</h2>
+      <p>
+        La herramienta de modo de limpieza de pantalla de este sitio rellena tu pantalla con un
+        panel blanco o negro sólido y bloquea la pantalla durante 15 segundos, evitando la entrada
+        accidental de tu paño de limpieza en dispositivos con pantalla táctil. El blanco es el
+        color de limpieza más útil porque hace que el polvo, las manchas y las huellas dactilares
+        sean claramente visibles para que puedas identificar cada área que necesita atención.
+        Después de limpiar, ver el panel en blanco confirma que has eliminado todas las marcas
+        visibles.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Consideraciones según el tipo de panel</h2>
+      <p>
+        Los paneles LCD e IPS tienen un recubrimiento de vidrio o plástico duro que es relativamente
+        tolerante a la limpieza suave. Limpia con pasadas rectas horizontales o verticales con
+        presión ligera. Los paneles OLED son físicamente más finos y frágiles que los paneles LCD.
+        Usa menos presión en OLED y asegúrate de que el paño esté completamente libre de partículas
+        que puedan rayar la superficie. Las pantallas de portátil y los monitores portátiles con
+        recubrimientos brillantes se limpian más fácilmente con una sola pasada en seco. Los
+        recubrimientos mate antibrillo tienen una superficie texturizada que puede atrapar manchas;
+        aplica una presión ligeramente más firme con un paño seco trabajando en una dirección.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Con qué frecuencia limpiar</h2>
+      <p>
+        Quita el polvo de la pantalla ligeramente con un paño de microfibra seco cuando se produzca
+        acumulación visible, típicamente cada una o dos semanas en un entorno de oficina normal.
+        Limpia las huellas dactilares y las manchas según sea necesario. Una limpieza ligera regular
+        es mejor que una limpieza pesada poco frecuente, ya que evita que el aceite de las manchas
+        se adhiera más firmemente a la superficie con el tiempo.
+      </p>
+    </>
+  )
+}
+
+// ─── 10. Relaciones de aspecto ────────────────────────────────────────────────
+
+function AspectRatiosPostES() {
+  return (
+    <>
+      <p>
+        La relación de aspecto del monitor es la relación proporcional entre el ancho y el alto de
+        la superficie de la pantalla. Afecta a cuánto contenido cabe horizontalmente y verticalmente,
+        qué tan inmersiva es la experiencia en juegos y vídeo, y cómo se organiza tu flujo de trabajo
+        de productividad. Elegir la relación de aspecto correcta para tu caso de uso principal es
+        tan importante como elegir la resolución correcta.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">16:9: la relación panorámica estándar</h2>
+      <p>
+        La relación de aspecto 16:9 es el estándar global actual para monitores, televisores y
+        contenido de vídeo. Fue adoptada como estándar para la difusión HDTV y ha permanecido
+        dominante para todas las pantallas de consumo y comerciales desde entonces. Prácticamente
+        todo el contenido de vídeo, los juegos y los servicios de streaming se producen para 16:9.
+        Las resoluciones 16:9 comunes incluyen 1920x1080 (Full HD), 2560x1440 (Quad HD), 3840x2160
+        (4K UHD) y 5120x2880 (5K).
+      </p>
+      <p>
+        Para gaming, consumo de contenido y productividad general, 16:9 es la elección más práctica
+        debido a la compatibilidad universal con el software.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">16:10: la panorámica más alta</h2>
+      <p>
+        La relación 16:10 proporciona más espacio vertical de pantalla que 16:9 para el mismo ancho.
+        Esto la hace popular para portátiles de empresa y monitores de productividad. Las resoluciones
+        comunes incluyen 1920x1200 y 2560x1600. Las pantallas MacBook Pro y MacBook Air usan
+        relaciones 16:10. Para leer documentos, escribir y programar, el espacio vertical adicional
+        reduce la necesidad de desplazarse y cabe más contenido en pantalla simultáneamente.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">21:9: ultra panorámica</h2>
+      <p>
+        La relación de aspecto 21:9 es el estándar para los monitores ultraanchos. Las resoluciones
+        comunes son 2560x1080 y 3440x1440. Las pantallas ultraanchas proporcionan espacio horizontal
+        que permite que dos ventanas de aplicación estén una al lado de la otra sin superposición,
+        lo que se adapta tanto a la multitarea profesional como al gaming cinematográfico donde el
+        campo de visión más amplio es una ventaja significativa. Muchas películas se ruedan en
+        relaciones de aspecto cercanas a 21:9, por lo que las pantallas ultraanchas eliminan las
+        barras negras visibles en las pantallas 16:9.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">32:9: super ultra panorámica</h2>
+      <p>
+        La relación 32:9, con resoluciones como 5120x1440 y 3840x1080, reemplaza efectivamente
+        dos monitores 16:9 en un único panel sin espacio entre marcos. Este formato se adapta a
+        los profesionales que necesitan monitorizar múltiples fuentes o aplicaciones simultáneamente.
+        La extensión horizontal es visualmente inmersiva en los juegos que la admiten, aunque la
+        curvatura común en los paneles 32:9 también ayuda a la usabilidad en estos anchos extremos.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Comprobación de tu relación de aspecto</h2>
+      <p>
+        El comprobador de resolución de este sitio calcula y muestra tu relación de aspecto
+        automáticamente a partir de las dimensiones de pantalla reportadas, junto con el nombre
+        común de tu relación donde corresponda. Si la relación mostrada no coincide con la
+        especificada de tu monitor, es posible que estés ejecutando a una resolución no nativa,
+        o que la relación de aspecto en tu monitor se haya configurado incorrectamente a través
+        de una opción de escalado del sistema operativo.
+      </p>
+    </>
+  )
+}
+
 export const POST_CONTENT_ES: Record<string, FC> = {
   'how-to-test-monitor-dead-pixels': DeadPixelPostES,
   'what-is-backlight-bleed': BacklightBleedPostES,
   'refresh-rate-60hz-vs-144hz': RefreshRatePostES,
   'stuck-pixels-causes-and-fixes': StuckPixelsPostES,
   'monitor-panel-types-ips-va-oled': PanelTypesPostES,
+  'understanding-monitor-resolution-dpi': ResolutionPostES,
+  'gamma-calibration-guide': GammaPostES,
+  'screen-uniformity-test-guide': UniformityPostES,
+  'how-to-clean-monitor-screen': CleaningPostES,
+  'monitor-aspect-ratios-explained': AspectRatiosPostES,
 }
