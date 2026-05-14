@@ -88,6 +88,81 @@
         "proCompetitive": "Pro competitivo",
         "nonStandard": "Taxa não padrão"
       }
+    },
+    "resolution": {
+      "reading": "Lendo propriedades do ecrã...",
+      "recheck": "Verificar novamente",
+      "note": "Os valores são atualizados automaticamente ao redimensionar ou focar a janela. Use Verificar novamente após mover entre monitores.",
+      "labels": {
+        "screenResolution": "Resolução do Ecrã",
+        "aspectRatio": "Proporção",
+        "devicePixelRatio": "Proporção de Pixels do Dispositivo",
+        "physicalPixels": "Pixels Físicos",
+        "browserViewport": "Viewport do Navegador",
+        "colourDepth": "Profundidade de Cores"
+      },
+      "notes": {
+        "cssPixels": "Pixels CSS",
+        "hardwarePixels": "Contagem de pixels de hardware",
+        "windowSize": "Tamanho atual da janela",
+        "hidpi": "Ecrã HiDPI / Retina",
+        "standardDensity": "Densidade padrão",
+        "hdrCapable": "10-bit / Compatível com HDR",
+        "standard8bit": "8-bit padrão"
+      },
+      "ratioNames": {
+        "16:9": "Widescreen",
+        "16:10": "Widescreen 16:10",
+        "4:3": "Clássico 4:3",
+        "5:4": "Clássico 5:4",
+        "21:9": "Ultrawide",
+        "32:9": "Super ultrawide",
+        "1:1": "Quadrado",
+        "3:2": "3:2 (Surface / fotografia)"
+      }
+    },
+    "inputLag": {
+      "idle": {
+        "heading": "Clique para Iniciar",
+        "description": "O ecrã ficará verde após um atraso aleatório. Clique o mais rápido possível no momento em que mudar."
+      },
+      "waiting": {
+        "heading": "Aguarde...",
+        "note": "Não clique ainda, aguarde o verde"
+      },
+      "go": "CLIQUE!",
+      "tooEarly": {
+        "heading": "Muito Cedo",
+        "note": "Aguarde o ecrã ficar verde e clique para tentar novamente"
+      },
+      "result": {
+        "clickAgain": "Clique para tentar novamente"
+      },
+      "results": "Resultados:",
+      "average": "Média:",
+      "labels": {
+        "excellent": "Excelente",
+        "good": "Bom",
+        "average": "Médio",
+        "slow": "Lento",
+        "verySlow": "Muito lento"
+      }
+    },
+    "stuckPixel": {
+      "warning": {
+        "title": "Aviso de imagens piscantes.",
+        "body": "Esta ferramenta exibe cores em ciclo rápido a alta frequência. Não a use se tiver epilepsia fotossensível, for sensível a flashes ou luzes piscantes, ou tiver sido aconselhado a evitar esse tipo de conteúdo. Se sentir qualquer desconforto, pare imediatamente pressionando Esc ou o botão Parar."
+      },
+      "pressStart": "Pressione Iniciar para começar a piscar",
+      "running": "Em execução:",
+      "speed": "Velocidade:",
+      "note": "Execute por 20 a 30 minutos para melhores resultados. Os resultados não são garantidos. Esta ferramenta não pode corrigir pixels mortos.",
+      "speeds": {
+        "slow": "Lento",
+        "normal": "Normal",
+        "fast": "Rápido",
+        "rapid": "Acelerado"
+      }
     }
   }
 }
