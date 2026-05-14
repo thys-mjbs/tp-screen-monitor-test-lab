@@ -1,11 +1,14 @@
 import type { Tool } from '@/lib/tools'
 import { getRelatedTools } from '@/lib/tools'
 import { toolSchemas } from '@/lib/metadata'
-import { getTranslations } from 'next-intl/server'
+import { getTranslations, getLocale } from 'next-intl/server'
 import { Breadcrumb } from './Breadcrumb'
 import { ToolCard } from './ToolCard'
 import { AmazonLinks } from './affiliate/AmazonLinks'
+import { ShareBar } from './ShareBar'
 import { TOOL_AMAZON_SEARCH_TERMS } from '@/lib/affiliate/config'
+
+const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
 
 export interface FAQ {
   q: string
@@ -21,8 +24,10 @@ interface ToolPageLayoutProps {
 
 export async function ToolPageLayout({ tool, children, faqs, bodyContent }: ToolPageLayoutProps) {
   const t = await getTranslations('common')
+  const locale = await getLocale()
   const related = getRelatedTools(tool.slug)
   const { webApp, breadcrumb: breadcrumbSchema } = toolSchemas(tool)
+  const toolUrl = locale === 'es' ? `${appUrl}/es/${tool.slug}` : `${appUrl}/${tool.slug}`
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -51,6 +56,7 @@ export async function ToolPageLayout({ tool, children, faqs, bodyContent }: Tool
           </h1>
           <p className="text-fg-muted">{tool.shortDescription}</p>
           <div className="pt-1">{children}</div>
+          <ShareBar title={`${tool.name} — Screen Test Lab`} url={toolUrl} />
         </section>
 
         {/* Amazon affiliate links */}
