@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 
 type Phase = 'idle' | 'waiting' | 'go' | 'result' | 'tooearly'
 
@@ -12,20 +13,21 @@ function randDelay() {
   return Math.floor(Math.random() * (DELAY_MAX - DELAY_MIN + 1)) + DELAY_MIN
 }
 
-function getLabel(ms: number): string {
-  if (ms < 150) return 'Excellent'
-  if (ms < 200) return 'Good'
-  if (ms < 250) return 'Average'
-  if (ms < 350) return 'Slow'
-  return 'Very slow'
-}
-
 export function InputLagTest() {
+  const t = useTranslations('tools.inputLag')
   const [phase, setPhase] = useState<Phase>('idle')
   const [lastMs, setLastMs] = useState<number | null>(null)
   const [history, setHistory] = useState<number[]>([])
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const goAtRef = useRef<number>(0)
+
+  const getLabel = (ms: number): string => {
+    if (ms < 150) return t('labels.excellent')
+    if (ms < 200) return t('labels.good')
+    if (ms < 250) return t('labels.average')
+    if (ms < 350) return t('labels.slow')
+    return t('labels.verySlow')
+  }
 
   const beginWait = () => {
     setPhase('waiting')
@@ -76,28 +78,26 @@ export function InputLagTest() {
         <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-6 text-center">
           {phase === 'idle' && (
             <>
-              <p className="text-3xl font-extrabold text-fg">Click to Start</p>
-              <p className="text-sm text-fg-muted max-w-xs">
-                The screen will turn green after a random delay. Click as fast as you can the moment it changes.
-              </p>
+              <p className="text-3xl font-extrabold text-fg">{t('idle.heading')}</p>
+              <p className="text-sm text-fg-muted max-w-xs">{t('idle.description')}</p>
             </>
           )}
 
           {phase === 'waiting' && (
             <>
-              <p className="text-3xl font-extrabold text-fg">Wait...</p>
-              <p className="text-sm text-fg-muted">Do not click yet, wait for green</p>
+              <p className="text-3xl font-extrabold text-fg">{t('waiting.heading')}</p>
+              <p className="text-sm text-fg-muted">{t('waiting.note')}</p>
             </>
           )}
 
           {phase === 'go' && (
-            <p className="text-6xl font-extrabold text-white tracking-tight">CLICK!</p>
+            <p className="text-6xl font-extrabold text-white tracking-tight">{t('go')}</p>
           )}
 
           {phase === 'tooearly' && (
             <>
-              <p className="text-3xl font-extrabold text-white">Too Early</p>
-              <p className="text-white/80 text-sm">Wait for the screen to turn green, then click to try again</p>
+              <p className="text-3xl font-extrabold text-white">{t('tooEarly.heading')}</p>
+              <p className="text-white/80 text-sm">{t('tooEarly.note')}</p>
             </>
           )}
 
@@ -107,7 +107,7 @@ export function InputLagTest() {
                 {lastMs}<span className="text-3xl font-semibold text-fg-muted ml-1.5">ms</span>
               </p>
               <p className="text-accent font-semibold text-sm">{getLabel(lastMs)}</p>
-              <p className="text-xs text-fg-muted">Click to try again</p>
+              <p className="text-xs text-fg-muted">{t('result.clickAgain')}</p>
             </>
           )}
         </div>
@@ -116,12 +116,12 @@ export function InputLagTest() {
       {history.length > 0 && (
         <div className="flex flex-wrap items-center gap-x-6 gap-y-1 pt-1 text-sm text-fg-muted">
           <span>
-            Results:{' '}
+            {t('results')}{' '}
             <span className="text-fg font-medium">{history.map(ms => `${ms}ms`).join(', ')}</span>
           </span>
           {avg !== null && (
             <span>
-              Average: <span className="text-accent font-bold">{avg}ms</span>
+              {t('average')} <span className="text-accent font-bold">{avg}ms</span>
             </span>
           )}
         </div>

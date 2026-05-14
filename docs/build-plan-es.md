@@ -34,11 +34,11 @@
 - [x] 4.5 Update generateStaticParams in every page file to include es
 
 ## Phase 5 — Update tool pages and component UI strings
-- [ ] 5.1 Update components/tools/FullscreenPanel.tsx — use useTranslations
-- [ ] 5.2 Update components/tools/RefreshRateChecker.tsx — use useTranslations
-- [ ] 5.3 Update components/tools/ResolutionChecker.tsx — use useTranslations
-- [ ] 5.4 Update components/tools/InputLagTest.tsx — use useTranslations
-- [ ] 5.5 Update components/tools/StuckPixelFixer.tsx — use useTranslations
+- [x] 5.1 Update components/tools/FullscreenPanel.tsx — use useTranslations
+- [x] 5.2 Update components/tools/RefreshRateChecker.tsx — use useTranslations
+- [x] 5.3 Update components/tools/ResolutionChecker.tsx — use useTranslations
+- [x] 5.4 Update components/tools/InputLagTest.tsx — use useTranslations
+- [x] 5.5 Update components/tools/StuckPixelFixer.tsx — use useTranslations
 - [ ] 5.6 Update components/tools/GammaCalibrationCheck.tsx — use useTranslations
 - [ ] 5.7 Update components/tools/PwmFlickerTest.tsx + HdrTest.tsx — use useTranslations
 - [ ] 5.8 Update shared components: ToolPageLayout, AmazonLinks, Header, Footer, Breadcrumb

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { Maximize2 } from 'lucide-react'
 
 export interface ColorEntry {
@@ -20,6 +21,7 @@ function isColorDark(hex: string): boolean {
 }
 
 export function FullscreenPanel({ colors }: FullscreenPanelProps) {
+  const t = useTranslations('tools.fullscreenPanel')
   const [index, setIndex] = useState(0)
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [showHint, setShowHint] = useState(true)
@@ -29,6 +31,10 @@ export function FullscreenPanel({ colors }: FullscreenPanelProps) {
   const dark = isColorDark(current.hex)
   const textColor = dark ? '#ffffff' : '#000000'
   const overlayBg = dark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'
+
+  const colorLabel = (label: string): string => {
+    try { return t(`colors.${label}` as Parameters<typeof t>[0]) } catch { return label }
+  }
 
   const next = useCallback(() => setIndex(i => (i + 1) % colors.length), [colors.length])
   const prev = useCallback(() => setIndex(i => (i - 1 + colors.length) % colors.length), [colors.length])
@@ -82,11 +88,11 @@ export function FullscreenPanel({ colors }: FullscreenPanelProps) {
         style={{ backgroundColor: current.hex, minHeight: '280px' }}
         onClick={next}
         role="button"
-        aria-label={`Current colour: ${current.label}. Click to advance.`}
+        aria-label={t('ariaCurrentColour', { colour: colorLabel(current.label) })}
       >
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 pointer-events-none">
-          <p className="text-sm font-semibold" style={{ color: textColor, opacity: 0.55 }}>{current.label}</p>
-          <p className="text-xs" style={{ color: textColor, opacity: 0.35 }}>Click to cycle colours</p>
+          <p className="text-sm font-semibold" style={{ color: textColor, opacity: 0.55 }}>{colorLabel(current.label)}</p>
+          <p className="text-xs" style={{ color: textColor, opacity: 0.35 }}>{t('cycleLabel')}</p>
         </div>
 
         {/* Colour dot picker */}
@@ -113,7 +119,7 @@ export function FullscreenPanel({ colors }: FullscreenPanelProps) {
           aria-label="Enter fullscreen"
         >
           <Maximize2 size={13} />
-          Full screen
+          {t('fullscreen')}
         </button>
       </div>
 
@@ -124,16 +130,14 @@ export function FullscreenPanel({ colors }: FullscreenPanelProps) {
           style={{ backgroundColor: current.hex }}
           onClick={() => { next(); resetHintTimer() }}
           role="button"
-          aria-label="Click to advance colour"
+          aria-label={t('ariaAdvance')}
         >
           <div
             className="absolute inset-x-0 bottom-0 pb-8 flex flex-col items-center gap-2 transition-opacity duration-500 pointer-events-none"
             style={{ color: textColor, opacity: showHint ? 1 : 0 }}
           >
-            <p className="text-sm font-semibold" style={{ opacity: 0.7 }}>{current.label}</p>
-            <p className="text-xs" style={{ opacity: 0.5 }}>
-              Click or Space to advance · Arrow keys to navigate · Esc to exit
-            </p>
+            <p className="text-sm font-semibold" style={{ opacity: 0.7 }}>{colorLabel(current.label)}</p>
+            <p className="text-xs" style={{ opacity: 0.5 }}>{t('hint')}</p>
             <div className="flex gap-2 mt-1">
               {colors.map((c, i) => (
                 <span

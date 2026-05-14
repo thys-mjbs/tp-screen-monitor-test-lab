@@ -1,15 +1,18 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { Play, Square, RotateCcw, Maximize2, TriangleAlert } from 'lucide-react'
 
 const FLASH_COLORS = ['#FF0000', '#00FF00', '#0000FF', '#FFFFFF', '#000000', '#FFFF00', '#00FFFF', '#FF00FF']
 
-const SPEEDS = [
-  { label: 'Slow', ms: 200 },
-  { label: 'Normal', ms: 100 },
-  { label: 'Fast', ms: 50 },
-  { label: 'Rapid', ms: 25 },
+type SpeedKey = 'slow' | 'normal' | 'fast' | 'rapid'
+
+const SPEEDS: { key: SpeedKey; ms: number }[] = [
+  { key: 'slow', ms: 200 },
+  { key: 'normal', ms: 100 },
+  { key: 'fast', ms: 50 },
+  { key: 'rapid', ms: 25 },
 ]
 
 function formatTime(s: number) {
@@ -17,6 +20,7 @@ function formatTime(s: number) {
 }
 
 export function StuckPixelFixer() {
+  const t = useTranslations('tools.stuckPixel')
   const [running, setRunning] = useState(false)
   const [colorIndex, setColorIndex] = useState(0)
   const [speedIndex, setSpeedIndex] = useState(1)
@@ -67,7 +71,7 @@ export function StuckPixelFixer() {
       <div className="flex gap-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-amber-900">
         <TriangleAlert size={16} className="mt-0.5 shrink-0 text-amber-600" />
         <p className="text-xs leading-relaxed">
-          <span className="font-semibold">Flashing imagery warning.</span> This tool displays rapidly cycling colours at high frequency. Do not use it if you have photosensitive epilepsy, are sensitive to flashing or flickering light, or have been advised to avoid such content. If you experience any discomfort, stop immediately by pressing Esc or the Stop button.
+          <span className="font-semibold">{t('warning.title')}</span> {t('warning.body')}
         </p>
       </div>
 
@@ -78,7 +82,7 @@ export function StuckPixelFixer() {
       >
         {!running && (
           <div className="absolute inset-0 flex items-center justify-center">
-            <p className="text-white font-medium text-sm opacity-70">Press Start to begin flashing</p>
+            <p className="text-white font-medium text-sm opacity-70">{t('pressStart')}</p>
           </div>
         )}
         {running && (
@@ -110,14 +114,14 @@ export function StuckPixelFixer() {
         </button>
         {running && (
           <span className="text-sm text-fg-muted font-mono ml-1">
-            Running: {formatTime(elapsed)}
+            {t('running')} {formatTime(elapsed)}
           </span>
         )}
       </div>
 
       {/* Speed selector */}
       <div className="flex items-center gap-2">
-        <span className="text-xs text-fg-muted font-medium">Speed:</span>
+        <span className="text-xs text-fg-muted font-medium">{t('speed')}</span>
         <div className="flex gap-1.5">
           {SPEEDS.map((speed, i) => (
             <button
@@ -129,15 +133,13 @@ export function StuckPixelFixer() {
                   : 'bg-elevated border border-border text-fg-muted hover:text-fg'
               }`}
             >
-              {speed.label}
+              {t(`speeds.${speed.key}` as Parameters<typeof t>[0])}
             </button>
           ))}
         </div>
       </div>
 
-      <p className="text-xs text-fg-muted leading-relaxed">
-        Run for 20 to 30 minutes for best results. Results are not guaranteed. This tool cannot fix dead pixels.
-      </p>
+      <p className="text-xs text-fg-muted leading-relaxed">{t('note')}</p>
 
       {/* Fullscreen overlay */}
       {isFullscreen && running && (

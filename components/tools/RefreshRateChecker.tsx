@@ -1,31 +1,35 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { RefreshCw } from 'lucide-react'
 
-const RATE_LABELS: Record<number, string> = {
-  24: 'Cinema',
-  30: 'Standard video',
-  48: 'High frame rate video',
-  60: 'Standard desktop',
-  75: 'Standard+',
-  100: 'High refresh',
-  120: 'High refresh',
-  144: 'Gaming',
-  165: 'Gaming',
-  180: 'Gaming',
-  240: 'Competitive gaming',
-  360: 'Pro competitive',
+type RateKey = 'cinema' | 'standardVideo' | 'highFrameRate' | 'standardDesktop' | 'standardPlus' | 'highRefresh' | 'gaming' | 'competitiveGaming' | 'proCompetitive'
+
+const RATE_KEYS: Record<number, RateKey> = {
+  24: 'cinema',
+  30: 'standardVideo',
+  48: 'highFrameRate',
+  60: 'standardDesktop',
+  75: 'standardPlus',
+  100: 'highRefresh',
+  120: 'highRefresh',
+  144: 'gaming',
+  165: 'gaming',
+  180: 'gaming',
+  240: 'competitiveGaming',
+  360: 'proCompetitive',
 }
 
-function getRateLabel(hz: number): string {
-  const snap = Object.keys(RATE_LABELS)
+function getRateKey(hz: number): RateKey | 'nonStandard' {
+  const snap = Object.keys(RATE_KEYS)
     .map(Number)
     .reduce((prev, curr) => Math.abs(curr - hz) < Math.abs(prev - hz) ? curr : prev)
-  return Math.abs(snap - hz) <= 2 ? RATE_LABELS[snap] : 'Non-standard rate'
+  return Math.abs(snap - hz) <= 2 ? RATE_KEYS[snap] : 'nonStandard'
 }
 
 export function RefreshRateChecker() {
+  const t = useTranslations('tools.refreshRate')
   const [hz, setHz] = useState<number | null>(null)
   const [measuring, setMeasuring] = useState(false)
   const rafRef = useRef<number | null>(null)
@@ -59,7 +63,8 @@ export function RefreshRateChecker() {
     return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current) }
   }, [measure])
 
-  const label = hz !== null ? getRateLabel(hz) : null
+  const rateKey = hz !== null ? getRateKey(hz) : null
+  const rateLabel = rateKey ? t(`labels.${rateKey}` as Parameters<typeof t>[0]) : null
 
   return (
     <>
@@ -68,14 +73,14 @@ export function RefreshRateChecker() {
           <>
             <div className="flex items-center gap-2 text-fg-muted">
               <RefreshCw size={16} className="animate-spin" />
-              <span className="text-sm font-medium">Measuring refresh rate...</span>
+              <span className="text-sm font-medium">{t('measuring')}</span>
             </div>
-            <p className="text-xs text-fg-muted">Sampling 60 frames</p>
+            <p className="text-xs text-fg-muted">{t('sampling')}</p>
           </>
         ) : hz !== null ? (
           <>
             <p className="text-7xl font-extrabold text-fg tracking-tight">{hz}<span className="text-3xl font-semibold text-fg-muted ml-1">Hz</span></p>
-            {label && <p className="text-sm font-medium text-accent">{label}</p>}
+            {rateLabel && <p className="text-sm font-medium text-accent">{rateLabel}</p>}
           </>
         ) : null}
       </div>
@@ -86,9 +91,9 @@ export function RefreshRateChecker() {
           disabled={measuring}
           className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-elevated border border-border text-fg text-sm font-medium hover:bg-brand-100 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         >
-          <RefreshCw size={14} /> Measure Again
+          <RefreshCw size={14} /> {t('measureAgain')}
         </button>
-        <span className="text-xs text-fg-muted">Result reflects the refresh rate your browser is currently using, not the hardware maximum.</span>
+        <span className="text-xs text-fg-muted">{t('note')}</span>
       </div>
     </>
   )
