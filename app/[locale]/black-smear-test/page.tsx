@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { BlackSmearTest } from '@/components/tools/BlackSmearTest'
 
-const tool = getToolBySlug('black-smear-test')!
-
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('black-smear-test', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -89,7 +90,9 @@ const bodyContent = (
   </>
 )
 
-export default function BlackSmearTestPage() {
+export default async function BlackSmearTestPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('black-smear-test', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <BlackSmearTest />

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { ViewingAngleTest } from '@/components/tools/ViewingAngleTest'
 
-const tool = getToolBySlug('viewing-angle-test')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('viewing-angle-test', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -79,7 +81,9 @@ const bodyContent = (
   </>
 )
 
-export default function ViewingAngleTestPage() {
+export default async function ViewingAngleTestPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('viewing-angle-test', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <ViewingAngleTest />

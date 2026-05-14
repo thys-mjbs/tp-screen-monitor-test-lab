@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { WhiteSaturationTest } from '@/components/tools/WhiteSaturationTest'
 
-const tool = getToolBySlug('white-saturation-test')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('white-saturation-test', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -77,7 +79,9 @@ const bodyContent = (
   </>
 )
 
-export default function WhiteSaturationTestPage() {
+export default async function WhiteSaturationTestPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('white-saturation-test', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <WhiteSaturationTest />

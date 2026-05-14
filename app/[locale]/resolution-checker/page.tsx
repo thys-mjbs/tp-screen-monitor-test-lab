@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { ResolutionChecker } from '@/components/tools/ResolutionChecker'
 
-const tool = getToolBySlug('resolution-checker')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('resolution-checker', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -76,7 +78,9 @@ const bodyContent = (
   </>
 )
 
-export default function ResolutionCheckerPage() {
+export default async function ResolutionCheckerPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('resolution-checker', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <ResolutionChecker />

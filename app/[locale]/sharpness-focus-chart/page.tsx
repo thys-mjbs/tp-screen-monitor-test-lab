@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { SharpnessFocusChart } from '@/components/tools/SharpnessFocusChart'
 
-const tool = getToolBySlug('sharpness-focus-chart')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('sharpness-focus-chart', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -77,7 +79,9 @@ const bodyContent = (
   </>
 )
 
-export default function SharpnessFocusChartPage() {
+export default async function SharpnessFocusChartPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('sharpness-focus-chart', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <SharpnessFocusChart />

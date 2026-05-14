@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { OverdriveTest } from '@/components/tools/OverdriveTest'
 
-const tool = getToolBySlug('overdrive-test')!
-
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('overdrive-test', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -92,7 +93,9 @@ const bodyContent = (
   </>
 )
 
-export default function OverdriveTestPage() {
+export default async function OverdriveTestPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('overdrive-test', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <OverdriveTest />

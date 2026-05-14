@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { ScreenPanel } from '@/components/tools/ScreenPanel'
 
-const tool = getToolBySlug('pink-screen')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('pink-screen', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -78,7 +80,9 @@ const bodyContent = (
   </>
 )
 
-export default function PinkScreenPage() {
+export default async function PinkScreenPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('pink-screen', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <ScreenPanel color={{ hex: '#FF69B4', label: 'Pink' }} />

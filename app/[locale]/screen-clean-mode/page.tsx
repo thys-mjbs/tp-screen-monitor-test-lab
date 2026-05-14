@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { ScreenCleanMode } from '@/components/tools/ScreenCleanMode'
 
-const tool = getToolBySlug('screen-clean-mode')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('screen-clean-mode', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -75,7 +77,9 @@ const bodyContent = (
   </>
 )
 
-export default function ScreenCleanModePage() {
+export default async function ScreenCleanModePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('screen-clean-mode', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <ScreenCleanMode />

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { ContrastBlackLevelTest } from '@/components/tools/ContrastBlackLevelTest'
 
-const tool = getToolBySlug('contrast-black-level-test')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('contrast-black-level-test', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -80,7 +82,9 @@ const bodyContent = (
   </>
 )
 
-export default function ContrastBlackLevelTestPage() {
+export default async function ContrastBlackLevelTestPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('contrast-black-level-test', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <ContrastBlackLevelTest />

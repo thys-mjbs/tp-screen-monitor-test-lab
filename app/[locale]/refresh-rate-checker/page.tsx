@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { RefreshRateChecker } from '@/components/tools/RefreshRateChecker'
 
-const tool = getToolBySlug('refresh-rate-checker')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('refresh-rate-checker', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -78,7 +80,9 @@ const bodyContent = (
   </>
 )
 
-export default function RefreshRateCheckerPage() {
+export default async function RefreshRateCheckerPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('refresh-rate-checker', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <RefreshRateChecker />

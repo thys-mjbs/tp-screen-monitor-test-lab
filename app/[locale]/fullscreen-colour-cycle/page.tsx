@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { FullscreenPanel } from '@/components/tools/FullscreenPanel'
 
-const tool = getToolBySlug('fullscreen-colour-cycle')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('fullscreen-colour-cycle', locale))
+}
 
 const CYCLE_COLORS = [
   { hex: '#FF0000', label: 'Red' },
@@ -92,7 +94,9 @@ const bodyContent = (
   </>
 )
 
-export default function FullscreenColourCyclePage() {
+export default async function FullscreenColourCyclePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('fullscreen-colour-cycle', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <FullscreenPanel colors={CYCLE_COLORS} />

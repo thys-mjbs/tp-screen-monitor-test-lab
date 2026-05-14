@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { StuckPixelFixer } from '@/components/tools/StuckPixelFixer'
 
-const tool = getToolBySlug('stuck-pixel-fixer')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('stuck-pixel-fixer', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -80,7 +82,9 @@ const bodyContent = (
   </>
 )
 
-export default function StuckPixelFixerPage() {
+export default async function StuckPixelFixerPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('stuck-pixel-fixer', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <StuckPixelFixer />

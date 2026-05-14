@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { MotionBlurTest } from '@/components/tools/MotionBlurTest'
 
-const tool = getToolBySlug('motion-blur-test')!
-
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('motion-blur-test', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -87,7 +88,9 @@ const bodyContent = (
   </>
 )
 
-export default function MotionBlurTestPage() {
+export default async function MotionBlurTestPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('motion-blur-test', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <MotionBlurTest />

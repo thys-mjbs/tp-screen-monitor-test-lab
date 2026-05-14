@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { ScreenUniformityTest } from '@/components/tools/ScreenUniformityTest'
 
-const tool = getToolBySlug('screen-uniformity-test')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('screen-uniformity-test', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -77,7 +79,9 @@ const bodyContent = (
   </>
 )
 
-export default function ScreenUniformityTestPage() {
+export default async function ScreenUniformityTestPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('screen-uniformity-test', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <ScreenUniformityTest />

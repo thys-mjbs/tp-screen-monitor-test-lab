@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { ScreenPanel } from '@/components/tools/ScreenPanel'
 
-const tool = getToolBySlug('yellow-screen')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('yellow-screen', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -79,7 +81,9 @@ const bodyContent = (
   </>
 )
 
-export default function YellowScreenPage() {
+export default async function YellowScreenPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('yellow-screen', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <ScreenPanel color={{ hex: '#FFFF00', label: 'Yellow' }} />

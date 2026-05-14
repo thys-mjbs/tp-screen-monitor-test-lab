@@ -1,12 +1,14 @@
 import type { Metadata } from 'next'
 import { Moon } from 'lucide-react'
-import { getToolBySlug } from '@/lib/tools'
 import { toolMetadata } from '@/lib/metadata'
+import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { ScreenPanel } from '@/components/tools/ScreenPanel'
 
-const tool = getToolBySlug('backlight-bleed-test')!
-export const metadata: Metadata = toolMetadata(tool)
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  return toolMetadata(getToolByLocale('backlight-bleed-test', locale))
+}
 
 const faqs: FAQ[] = [
   {
@@ -81,7 +83,9 @@ const bodyContent = (
   </>
 )
 
-export default function BacklightBleedTestPage() {
+export default async function BacklightBleedTestPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const tool = getToolByLocale('backlight-bleed-test', locale)
   return (
     <ToolPageLayout tool={tool} faqs={faqs} bodyContent={bodyContent}>
       <>
