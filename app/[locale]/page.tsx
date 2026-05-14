@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { tools, categoryMeta, getToolsByCategory, getLocalizedTool, getLocalizedCategoryMeta } from '@/lib/tools'
-import { toolTranslations, categoryTranslations } from '@/lib/i18n/tools-es'
+import { toolTranslations as toolTranslationsEs, categoryTranslations as categoryTranslationsEs } from '@/lib/i18n/tools-es'
+import { toolTranslations as toolTranslationsPt, categoryTranslations as categoryTranslationsPt } from '@/lib/i18n/tools-pt'
 import { ToolCard } from '@/components/ToolCard'
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'es' }]
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
 }
 
 export async function generateMetadata({
@@ -17,7 +18,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const canonical = locale === 'en' ? appUrl : `${appUrl}/${locale}`
-  const hreflang = { 'en': appUrl, 'es': `${appUrl}/es`, 'x-default': appUrl }
+  const hreflang = { 'en': appUrl, 'es': `${appUrl}/es`, 'pt': `${appUrl}/pt`, 'x-default': appUrl }
   if (locale === 'es') {
     return {
       title: 'Pruebas de monitor y pantalla gratis: píxeles muertos, sangrado y más',
@@ -28,6 +29,21 @@ export async function generateMetadata({
         title: 'Pruebas de monitor y pantalla gratis',
         description:
           'Comprueba tu pantalla en busca de píxeles muertos, sangrado de luz de fondo, frecuencia de actualización y precisión de color. 25 herramientas gratuitas.',
+        url: canonical,
+        type: 'website',
+      },
+    }
+  }
+  if (locale === 'pt') {
+    return {
+      title: 'Testes de Monitor e Tela Online Gratuitos: Pixels Mortos, Vazamento de Luz e Mais',
+      description:
+        'Ferramentas gratuitas baseadas no navegador para testar o seu monitor para pixels mortos, vazamento de luz de fundo, taxa de atualização, precisão de cores e mais. Sem download ou registo.',
+      alternates: { canonical, languages: hreflang },
+      openGraph: {
+        title: 'Testes de Monitor e Tela Online Gratuitos',
+        description:
+          'Teste a sua tela para pixels mortos, vazamento de luz de fundo, taxa de atualização e precisão de cores. 30 ferramentas gratuitas.',
         url: canonical,
         type: 'website',
       },
@@ -82,8 +98,10 @@ export default async function HomePage({
 }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'home' })
-  const isEs = locale === 'es'
-  const localeCategoryMeta = isEs ? getLocalizedCategoryMeta(categoryTranslations) : categoryMeta
+  const localeCategoryMeta =
+    locale === 'es' ? getLocalizedCategoryMeta(categoryTranslationsEs) :
+    locale === 'pt' ? getLocalizedCategoryMeta(categoryTranslationsPt) :
+    categoryMeta
 
   return (
     <>
@@ -118,7 +136,9 @@ export default async function HomePage({
           {categoryKeys.map((key) => {
             const meta = localeCategoryMeta[key]
             const categoryTools = getToolsByCategory(key).map((tool) =>
-              isEs ? (getLocalizedTool(tool.slug, toolTranslations) ?? tool) : tool
+              locale === 'es' ? (getLocalizedTool(tool.slug, toolTranslationsEs) ?? tool) :
+              locale === 'pt' ? (getLocalizedTool(tool.slug, toolTranslationsPt) ?? tool) :
+              tool
             )
             return (
               <div key={key} className="space-y-4">
