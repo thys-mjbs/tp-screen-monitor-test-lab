@@ -24,7 +24,7 @@
 - [x] 3.4 Create app/[locale]/blog/[slug]/content.pt.tsx — blog posts 1–5
 - [x] 3.5 Blog content posts 6–10
 - [x] 3.6 Blog content posts 11–14
-- [ ] 3.7 Blog content posts 15–19
+- [x] 3.7 Blog content posts 15–19
 
 ## Phase 4 — Wire up page routes
 - [ ] 4.1 Update app/[locale]/page.tsx (home) — locale tool data + translations

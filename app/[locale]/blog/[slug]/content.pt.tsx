@@ -1186,6 +1186,400 @@ function BacklightBleedSamsungTvPostPT() {
   )
 }
 
+// ─── 15. Vazamento de Luz: LG, Sony, Philips, TCL, BenQ ─────────────────────
+
+function BacklightBleedBrandsPostPT() {
+  return (
+    <>
+      <p>
+        O vazamento de luz afeta monitores e TVs LCD de todos os fabricantes, mas a gravidade
+        e a resposta de garantia variam significativamente por marca e nível de produto. Este
+        guia cobre o que esperar dos ecrãs LG, Sony, Philips, TCL e BenQ, e como apresentar
+        um caso de garantia bem-sucedido se o vazamento for suficientemente grave para afetar
+        o uso diário.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Vazamento de luz LG</h2>
+      <p>
+        A LG produz uma vasta gama de monitores e TVs LCD, e as características de vazamento
+        de luz variam ao longo da gama de produtos. Os monitores LG UltraWide e UltraGear
+        gaming foram reportados com vazamento nos cantos e ao longo da borda inferior. A garantia
+        da LG para monitores e TVs avalia os defeitos de ecrã em relação às tolerâncias de
+        fabrico aceitáveis. Para TVs OLED da LG, o vazamento de luz não se aplica uma vez que
+        o OLED produz preto verdadeiro por pixel. Qualquer ponto brilhante persistente numa TV
+        OLED LG é um defeito de pixel, não vazamento de luz.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangramento de retroiluminação Sony</h2>
+      <p>
+        As TVs LCD Sony Bravia e os monitores Sony estão sujeitos ao vazamento de luz como
+        qualquer outro painel LCD de borda ou iluminação direta. A gama premium Sony Bravia XR
+        usa dimming local de matriz completa para reduzir a visibilidade do vazamento, mas o
+        vazamento ainda pode ocorrer nas fronteiras das zonas de dimming. A garantia da Sony
+        cobre defeitos de painel fora da tolerância aceitável. Para TVs Sony, as reclamações
+        de garantia tipicamente requerem uma visita de técnico de serviço. Documente a gravidade
+        do vazamento com fotografias e vídeo antes de contactar o suporte da Sony.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangramento de retroiluminação Philips</h2>
+      <p>
+        Os monitores Philips, particularmente a gama gaming Momentum, atraíram relatos de
+        vazamento de luz nos cantos dos seus painéis IPS. A Philips aplica uma política de
+        defeitos de pixel e qualidade de ecrã alinhada com as normas ISO. Para monitores Philips
+        vendidos na Europa, as reclamações de garantia são tratadas através do portal de suporte
+        da Philips com evidência fotográfica. Note que a funcionalidade Ambiglow da Philips, que
+        projeta luz decorativa da parte traseira do monitor para a parede, é por vezes confundida
+        com vazamento de luz, mas é uma funcionalidade de design intencional.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Vazamento de luz TCL</h2>
+      <p>
+        As TVs TCL são fabricadas a um preço competitivo, o que pode resultar em maior variação
+        de uniformidade de retroiluminação em comparação com marcas premium. A TCL usa retroiluminação
+        de borda e iluminação direta nas suas gamas de TVs. O vazamento em TVs TCL é mais
+        frequentemente reportado em modelos maiores e de menor preço. Para TVs TCL novas com
+        vazamento significativo, uma devolução ao retalhista dentro da janela de devolução é
+        geralmente mais rápida do que o processo de garantia do fabricante.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Vazamento de luz no BenQ EX2780Q</h2>
+      <p>
+        O BenQ EX2780Q é um monitor gaming IPS QHD de 27 polegadas que gerou um volume notável
+        de pesquisas sobre vazamento de luz. Os relatos variam consideravelmente entre unidades,
+        sugerindo variação de fabrico entre lotes em vez de um problema de design sistémico. A
+        garantia da BenQ inclui uma política de pixel e qualidade de ecrã. Se o seu BenQ EX2780Q
+        mostrar vazamento de borda significativo visível durante o gameplay, contacte o suporte
+        da BenQ com os resultados do Teste de Vazamento de Luz documentados numa sala escurecida.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Testar qualquer um destes ecrãs para vazamento de luz</h2>
+      <p>
+        Use o Teste de Vazamento de Luz deste site para exibir um painel preto em tela cheia.
+        Escureça completamente a sala, aguarde que os olhos se ajustem e visualize o ecrã a
+        partir da sua distância normal de trabalho ou visualização. Fotografe o ecrã de frente
+        para documentar a gravidade. O vazamento visível a partir da sua distância normal de
+        visualização numa sala moderadamente iluminada é um caso de garantia razoável. O
+        vazamento apenas visível numa sala completamente escura a curta distância está tipicamente
+        dentro da tolerância normal de fabrico para ecrãs LCD.
+      </p>
+    </>
+  )
+}
+
+// ─── 16. Vazamento de Ecrã em TVs LED e OLED ─────────────────────────────────
+
+function LedTvOledScreenBleedingPostPT() {
+  return (
+    <>
+      <p>
+        Quando as pessoas pesquisam por &ldquo;sangramento de ecrã de TV&rdquo; ou &ldquo;vazamento de luz LED&rdquo;,
+        estão quase sempre a descrever vazamento de luz de fundo numa televisão LCD. O sangramento
+        de ecrã AMOLED refere-se a algo completamente diferente. Compreender qual fenómeno se
+        aplica ao seu ecrã determina a ação correta.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Vazamento de luz LED em TVs explicado</h2>
+      <p>
+        As TVs LED usam um conjunto de retroiluminação LED atrás de um painel LCD. A retroiluminação
+        é uma fonte de luz contínua, e a camada LCD funciona como uma porta que abre e fecha por
+        pixel para controlar o brilho da imagem. Onde o chassis da retroiluminação encontra as
+        bordas do painel, a luz escapa através de folgas físicas e produz manchas brilhantes
+        visíveis em cenas escuras. Este é o vazamento de luz: luz que contorna o bloqueio
+        pretendido e aparece como áreas luminosas nos cantos ou bordas do ecrã ao exibir
+        conteúdo escuro.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangramento de ecrã em TVs: borda iluminada vs iluminação direta</h2>
+      <p>
+        A gravidade do vazamento de luz depende em parte da configuração da retroiluminação.
+        As TVs de borda iluminada posicionam tiras LED ao longo das bordas do painel, o que
+        significa que toda a luz viaja pelo painel a partir das bordas, aumentando a probabilidade
+        de vazamento de borda. As TVs com iluminação direta e retroiluminação de matriz completa
+        distribuem os LEDs por toda a superfície traseira do painel, o que geralmente produz
+        melhor uniformidade e menos vazamento de borda. As TVs Mini-LED levam isto ainda mais
+        longe com centenas de LEDs menores que permitem um dimming local mais preciso e
+        significativamente menos vazamento.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangramento de ecrã AMOLED: o que realmente é</h2>
+      <p>
+        Os ecrãs AMOLED, usados em telemóveis e tablets Samsung Galaxy, não têm retroiluminação
+        e, portanto, não podem desenvolver vazamento de luz. Quando as pessoas descrevem sangramento
+        de ecrã AMOLED, referem-se tipicamente a uma de duas coisas: dano físico onde um ecrã
+        partido causou propagação escura semelhante a tinta (isto é fuga de cristal líquido de
+        um painel LCD danificado, não AMOLED), ou envelhecimento desigual dos pixels OLED que
+        faz com que algumas áreas pareçam mais escuras do que outras após uso prolongado. Nenhum
+        dos dois é vazamento de luz.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Como testar a sua TV para vazamento de luz</h2>
+      <p>
+        Use o Teste de Vazamento de Luz deste site a partir de um dispositivo ligado à sua TV
+        via HDMI. Exiba o painel preto em tela cheia numa sala completamente escurecida e dê
+        aos olhos dois minutos para se ajustarem. Áreas brilhantes nas bordas ou cantos visíveis
+        a partir da sua distância normal de uso são vazamento de luz. Manchas que se deslocam
+        quando muda a posição de visualização são mais provavelmente reflexos ou brilho IPS.
+        Uma área brilhante consistente na mesma posição independentemente do ângulo de visão
+        é vazamento de luz genuíno.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Vazamento de luz em TV: quando agir</h2>
+      <p>
+        O vazamento de luz ligeiro visível apenas num ambiente de teste completamente escuro e
+        não durante a visualização normal está dentro da tolerância normal de fabrico para a
+        maioria das TVs LED. O vazamento que é notável durante cenas de filme escuras ou gaming
+        em iluminação normal da sala vale a pena documentar e reportar ao fabricante ou retalhista.
+        Aja dentro da janela de devolução quando possível, pois é geralmente mais rápido do que
+        uma reclamação de serviço de garantia.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">TVs OLED e sangramento de ecrã</h2>
+      <p>
+        As TVs OLED verdadeiras não podem desenvolver vazamento de luz porque não há retroiluminação.
+        Cada pixel numa TV OLED gera e apaga independentemente a sua própria luz. Se vir um brilho
+        persistente numa TV OLED durante conteúdo escuro, é muito provavelmente um pixel quente
+        (um emissor brilhante preso) ou uma fonte de luz ambiental a refletir na superfície do
+        painel. Use o Teste de Pixels Mortos para confirmar se um ponto brilhante persistente é
+        um defeito de pixel e documente-o com fotografias para uma reclamação de garantia.
+      </p>
+    </>
+  )
+}
+
+// ─── 17. Queima de Ecrã em TVs OLED e QLED da Samsung ───────────────────────
+
+function SamsungBurnInPostPT() {
+  return (
+    <>
+      <p>
+        A queima de ecrã em TVs Samsung é um dos tópicos de ecrã mais pesquisados, impulsionado
+        em grande parte pela confusão entre duas tecnologias de painel muito diferentes: OLED e
+        QLED. Quais as TVs Samsung que estão realmente em risco, o que causa a queima e o que
+        pode fazer a respeito são questões com respostas claras quando se compreende a distinção.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">TVs Samsung QLED e risco de queima</h2>
+      <p>
+        As TVs Samsung QLED são televisores LCD com uma camada de melhoria de cor de ponto
+        quântico. Usam retroiluminação LED e não contêm materiais orgânicos emissores de luz.
+        Como os pixels LCD não geram a sua própria luz e não se degradam com a exibição sustentada
+        de conteúdo, as TVs Samsung QLED não têm risco significativo de queima em uso normal.
+        A retenção de imagem permanente numa TV Samsung QLED é extremamente rara e indicaria
+        um defeito de fabrico em vez de envelhecimento normal do painel. A confusão sobre
+        queima de QLED surge tipicamente de a confundir com queima de OLED.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">TVs Samsung QD-OLED e risco genuíno de queima</h2>
+      <p>
+        A gama de TVs OLED da Samsung, vendida sob a marca QD-OLED a partir da série S90C,
+        usa painéis orgânicos emissores de luz e tem um risco genuíno de queima. Os pixels
+        QD-OLED degradam-se mais rapidamente quando ativados com alto brilho por períodos
+        prolongados. Elementos estáticos no ecrã como logotipos de canal, tickers de notícias,
+        sobreposições de resultados desportivos e barras de navegação exibidos durante muitas
+        horas podem causar envelhecimento desigual dos pixels, deixando um fantasma permanente
+        e ténue desses elementos no painel. Esta é a queima verdadeira, distinta da retenção
+        de imagem temporária.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Queima de ecrã vs retenção de imagem em TVs Samsung</h2>
+      <p>
+        A retenção de imagem é uma imagem fantasma temporária que desvanece após o ecrã mostrar
+        conteúdo variado ou ser desligado por um período. Pode ocorrer em TVs Samsung QLED e
+        OLED após conteúdo estático prolongado e não é permanente. A queima verdadeira é
+        degradação permanente de pixels que não desvanece. Use o Teste de Retenção de Imagem
+        deste site para exibir um padrão de condicionamento e depois mude para um painel cinza
+        sólido. Um fantasma que desvanece dentro de 30 minutos é retenção de imagem. Um fantasma
+        que persiste após uma hora é provavelmente queima permanente.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">O que causa queima nos ecrãs Samsung</h2>
+      <p>
+        Nas TVs Samsung QD-OLED, os padrões de uso de maior risco são assistir a um canal de
+        notícias com ticker e logotipo persistentes durante mais de quatro a seis horas por dia,
+        jogar com um heads-up display fixo a alto brilho em sessões diárias prolongadas, e exibir
+        um desktop estático ou protetor de ecrã a brilho máximo por longos períodos. As transmissões
+        desportivas com sobreposições de resultados persistentes e marca do canal também são um
+        fator de risco documentado após milhares de horas acumuladas de visualização.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Pixels mortos vs queima em TVs Samsung QLED</h2>
+      <p>
+        As pesquisas por &ldquo;pixel morto samsung qled&rdquo; referem-se frequentemente a um problema
+        separado da queima. Os pixels mortos ou presos numa TV Samsung QLED são falhas de
+        hardware de pixel, não queima. Um pixel preso aparece como um ponto brilhante ou escuro
+        fixo numa localização. Use o Teste de Pixels Mortos deste site para confirmar se o que
+        vê é um defeito de pixel (um único ponto fixo que não corresponde ao conteúdo circundante)
+        ou queima (um padrão ténue correspondente a conteúdo estático exibido anteriormente
+        distribuído por uma área do ecrã).
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Prevenir e reduzir a queima em TVs Samsung</h2>
+      <p>
+        Para TVs Samsung QD-OLED, mantenha a definição de brilho de pico abaixo do máximo para
+        visualização diária. Um brilho mais baixo abranda significativamente a degradação do
+        material orgânico. Ative quaisquer funcionalidades de deslocamento de pixel, protetor de
+        ecrã ou redução de luminância de logotipo nas definições da TV. Varie o conteúdo
+        regularmente e evite deixar imagens estáticas no ecrã quando a TV está sem vigilância.
+        As TVs Samsung QD-OLED incluem uma funcionalidade de cuidado do painel ou atualização
+        de pixel que deve ser executada periodicamente conforme descrito no manual do utilizador.
+      </p>
+    </>
+  )
+}
+
+// ─── 18. Resolução de Ecrã: Tamanhos para TVs e Monitores ───────────────────
+
+function ScreenResolutionSizesPostPT() {
+  return (
+    <>
+      <p>
+        Os nomes de resolução de ecrã são usados de forma inconsistente nas listagens de produtos,
+        e a relação entre resolução, tamanho do ecrã e nitidez real raramente é explicada
+        claramente. Este guia cobre os tamanhos de resolução comuns de TVs e monitores, o
+        significado por trás dos nomes e formatos específicos que geram perguntas frequentes.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Nomes de resolução comuns de TVs e monitores explicados</h2>
+      <p>
+        Full HD (1920x1080) continua a ser a resolução mais amplamente utilizada globalmente em
+        TVs, monitores e portáteis. Quad HD (2560x1440) é o padrão para monitores de 27 polegadas
+        e é frequentemente rotulado incorretamente como 2K nas listagens de produtos; o verdadeiro
+        2K é um padrão de cinema de 2048x1080. 4K UHD (3840x2160) é o padrão premium para TVs
+        grandes e monitores de alta gama. Use o Verificador de Resolução deste site para confirmar
+        a resolução exata a que o seu ecrã está a funcionar.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Monitores 1600x1200: um formato 4:3 legado</h2>
+      <p>
+        A resolução 1600x1200 é um formato de proporção 4:3 da era pré-widescreen da computação
+        de desktop, usada em monitores CRT de alta gama e LCD iniciais. Apesar de ter sido
+        substituída por formatos widescreen na maioria dos contextos de consumo, os monitores
+        1600x1200 continuam a atrair pesquisas porque algumas aplicações profissionais e
+        industriais requerem ecrãs 4:3, e porque certos monitores CRT nesta resolução ainda
+        são usados para fins técnicos específicos e computação retro.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Resolução de ecrã de Chromebook</h2>
+      <p>
+        A resolução de ecrã dos Chromebooks varia significativamente por modelo e nível de preço.
+        Os Chromebooks de gama baixa usam comumente painéis 1366x768. Os modelos de gama média
+        usam tipicamente 1920x1080. Os Chromebooks premium da Google, ASUS e HP usam ecrãs de
+        2560x1600 ou resolução superior. O ChromeOS aplica uma proporção de pixels do dispositivo
+        que escala a interface, por isso a resolução CSS reportada pelo navegador pode diferir da
+        resolução física do painel. O Verificador de Resolução deste site exibe ambos os valores.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Tamanho e resolução médios de ecrã de computador</h2>
+      <p>
+        O monitor de desktop médio vendido globalmente é de aproximadamente 24 a 27 polegadas,
+        mais comumente a 1920x1080. Os ecrãs de portáteis concentram-se entre 13 e 15 polegadas,
+        sendo 1920x1080 a resolução mais comum no mercado médio. Para TVs usadas como ecrãs
+        secundários de computador, 40 a 55 polegadas a 4K UHD é uma combinação comum. Com a
+        expansão do trabalho remoto e híbrido, os monitores de 27 e 32 polegadas a 2560x1440
+        tornaram-se significativamente mais comuns nas configurações de escritório em casa.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Resolução de ecrã personalizada: como criar uma</h2>
+      <p>
+        O Windows permite resoluções de ecrã personalizadas através do Painel de Controlo Nvidia
+        (em Ecrã, depois Alterar Resolução, depois Personalizar) ou do Software AMD Radeon (em
+        Ecrã). As resoluções personalizadas são usadas para configurações de ecrã incomuns, certas
+        aplicações profissionais ou dispositivos legados não detetados automaticamente na sua
+        resolução nativa correta. A GPU deve suportar a largura de banda alvo para a resolução e
+        taxa de atualização escolhidas, e o ecrã deve aceitar o sinal.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Resolução máxima e taxa de atualização VGA</h2>
+      <p>
+        O conector analógico VGA suporta um máximo teórico de 2048x1536 a 85Hz, embora os limites
+        práticos dependam da qualidade do cabo e da eletrónica do monitor. A 1920x1080, o VGA pode
+        fornecer um sinal utilizável em ligações curtas de cabo, mas a qualidade de imagem é
+        visivelmente mais suave do que as ligações digitais. A maioria dos monitores modernos
+        removeu completamente as entradas VGA. Para qualquer ecrã ligado via VGA com imagem
+        suave ou instável, mudar para HDMI ou DisplayPort na mesma resolução produz um resultado
+        mais nítido.
+      </p>
+    </>
+  )
+}
+
+// ─── 19. Guia de Resolução de Ecrã Samsung ───────────────────────────────────
+
+function SamsungResolutionGuidePostPT() {
+  return (
+    <>
+      <p>
+        A Samsung produz monitores, TVs e dispositivos móveis numa ampla gama de resoluções e
+        configurações de ecrã. Este guia cobre como encontrar, verificar e ajustar a resolução
+        em monitores e TVs Samsung, e o que fazer quando a resolução exibida não corresponde à
+        especificação nativa do painel.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Opções de resolução de ecrã de monitores Samsung</h2>
+      <p>
+        Os monitores Samsung vão desde 1920x1080 FHD nos modelos de entrada até 3840x2160 4K
+        nos ecrãs profissionais e gaming. A gama gaming Odyssey inclui modelos ultrawide a
+        2560x1080 e 3440x1440, além do super ultrawide de 49 polegadas a 5120x1440. Os monitores
+        Samsung ViewFinity para uso profissional atingem 5120x2880 e 7680x4320. Para confirmar
+        que o seu monitor Samsung está a funcionar na sua resolução nativa, use o Verificador
+        de Resolução deste site.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Definir a resolução correta no Windows para monitores Samsung</h2>
+      <p>
+        Se o seu monitor Samsung não estiver a exibir na sua resolução nativa, clique com o
+        botão direito no ambiente de trabalho do Windows e selecione Definições de Ecrã. No menu
+        suspenso Resolução, selecione a resolução mais alta listada, que é tipicamente a resolução
+        nativa do painel. Se a resolução nativa não estiver listada, verifique o cabo. HDMI 2.0
+        ou DisplayPort 1.2 é necessário para monitores Samsung 4K a 60Hz. Para monitores ultrawide
+        Samsung Odyssey, o DisplayPort 1.4 é recomendado para taxas de atualização acima de 120Hz.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Definições de resolução de ecrã de TVs Samsung</h2>
+      <p>
+        As TVs Samsung detetam automaticamente e exibem na resolução mais alta suportada pela
+        fonte ligada. Se a sua TV Samsung ligada a um PC mostrar uma resolução inferior ao esperado,
+        a porta HDMI pode estar definida para um modo de entrada limitado. Nas definições da TV
+        Samsung, navegue para Ligação, depois Gestor de Dispositivos Externos (ou Gestor de
+        Dispositivos HDMI nalguns modelos), e ative a Cor UHD HDMI para a porta relevante. Isto
+        desbloqueia a largura de banda completa da porta para 4K a 60Hz ou superior.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Ajuste do tamanho do ecrã de TVs Samsung</h2>
+      <p>
+        As TVs Samsung ocasionalmente exibem um tamanho de imagem incorreto, com barras pretas
+        em volta da imagem ou conteúdo esticado. Isto é controlado pela definição Tamanho de
+        Imagem em Definições, depois Imagem, depois Definições de Tamanho de Imagem. Defina o
+        Tamanho de Imagem para 16:9 para conteúdo widescreen padrão ou Automático para deteção
+        automática. Se a imagem estiver demasiado grande e as bordas estiverem cortadas, a opção
+        Ajustar Ecrã ou 1:1 corrige o overscan. Para entrada de PC, defina o Tamanho de Imagem
+        para Ajustar Ecrã para garantir que o ambiente de trabalho completo é exibido sem corte.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Resolução de ecrã de telemóveis e tablets Samsung Galaxy</h2>
+      <p>
+        Os telemóveis Samsung Galaxy usam painéis AMOLED com resoluções desde 2400x1080 FHD+ nos
+        modelos de gama média até 3088x1440 QHD+ nos dispositivos de topo de gama. Muitos
+        telemóveis Samsung Galaxy assumem por predefinição FHD+ para poupar bateria, mesmo que
+        o painel suporte QHD+. Para ativar a resolução completa, abra Definições, depois Ecrã,
+        depois Resolução do Ecrã, e selecione a opção mais alta disponível. Note que uma resolução
+        mais alta aumenta o consumo de bateria.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Verificar a resolução do ecrã Samsung com o Verificador de Resolução</h2>
+      <p>
+        O Verificador de Resolução deste site lê a resolução em pixels CSS e a proporção de pixels
+        do dispositivo reportada pelo seu navegador, refletindo a resolução de funcionamento efetiva
+        incluindo qualquer escalonamento do sistema operativo aplicado. Nos monitores Samsung,
+        compare o valor reportado com a especificação nativa na documentação do monitor. Nas TVs
+        Samsung ligadas a um PC, o verificador confirma se o sinal 4K completo está a chegar ao
+        ecrã. Nos dispositivos Samsung Galaxy, confirma se o telemóvel está a funcionar na sua
+        resolução nativa completa do painel ou na predefinição de poupança de bateria.
+      </p>
+    </>
+  )
+}
+
 export const POST_CONTENT_PT: Record<string, FC> = {
   'how-to-test-monitor-dead-pixels': DeadPixelPostPT,
   'what-is-backlight-bleed': BacklightBleedPostPT,
@@ -1201,4 +1595,9 @@ export const POST_CONTENT_PT: Record<string, FC> = {
   'dead-pixels-oled-tv-projectors': DeadPixelsOledTvProjectorsPostPT,
   'backlight-bleed-gaming-laptops': BacklightBleedGamingLaptopsPostPT,
   'backlight-bleed-samsung-tv': BacklightBleedSamsungTvPostPT,
+  'backlight-bleed-lg-sony-philips-tcl-benq': BacklightBleedBrandsPostPT,
+  'led-tv-oled-screen-bleeding': LedTvOledScreenBleedingPostPT,
+  'samsung-oled-qled-burn-in': SamsungBurnInPostPT,
+  'screen-resolution-tv-monitor-sizes': ScreenResolutionSizesPostPT,
+  'samsung-screen-resolution-guide': SamsungResolutionGuidePostPT,
 }
