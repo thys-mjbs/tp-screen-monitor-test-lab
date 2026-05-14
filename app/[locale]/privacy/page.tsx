@@ -17,7 +17,7 @@ export async function generateMetadata({
   return {
     title: 'Privacy Policy',
     description: 'Privacy Policy for Screen Test Lab. Learn how we handle data, analytics, and advertising on this free monitor testing site.',
-    alternates: { canonical },
+    alternates: { canonical, languages: { 'en': `${appUrl}/privacy`, 'es': `${appUrl}/es/privacy`, 'x-default': `${appUrl}/privacy` } },
   }
 }
 

@@ -6,7 +6,7 @@ import { FullscreenPanel, type ColorEntry } from '@/components/tools/FullscreenP
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('dead-pixel-test', locale))
+  return toolMetadata(getToolByLocale('dead-pixel-test', locale), locale)
 }
 
 const COLORS: ColorEntry[] = [

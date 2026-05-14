@@ -19,17 +19,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const canonical = locale === 'en' ? `${appUrl}/blog` : `${appUrl}/${locale}/blog`
+  const hreflang = { 'en': `${appUrl}/blog`, 'es': `${appUrl}/es/blog`, 'x-default': `${appUrl}/blog` }
   if (locale === 'es') {
     return {
       title: 'Blog de pruebas de monitor',
       description: 'Guías y explicaciones sobre pruebas de monitor, calibración de pantalla, defectos de píxeles, tipos de panel, frecuencia de actualización, resolución y mantenimiento de pantalla.',
-      alternates: { canonical },
+      alternates: { canonical, languages: hreflang },
     }
   }
   return {
     title: 'Monitor Testing Blog',
     description: 'Guides and explainers on monitor testing, display calibration, pixel defects, panel types, refresh rate, resolution, and screen maintenance.',
-    alternates: { canonical },
+    alternates: { canonical, languages: hreflang },
   }
 }
 

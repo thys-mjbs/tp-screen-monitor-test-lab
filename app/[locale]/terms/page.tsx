@@ -17,7 +17,7 @@ export async function generateMetadata({
   return {
     title: 'Terms of Service',
     description: 'Terms of Service for Screen Test Lab. Free to use, no guarantees on pixel repair outcomes. Governed by South African law.',
-    alternates: { canonical },
+    alternates: { canonical, languages: { 'en': `${appUrl}/terms`, 'es': `${appUrl}/es/terms`, 'x-default': `${appUrl}/terms` } },
   }
 }
 

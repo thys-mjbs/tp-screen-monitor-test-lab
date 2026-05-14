@@ -6,7 +6,7 @@ import { ResolutionChecker } from '@/components/tools/ResolutionChecker'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('resolution-checker', locale))
+  return toolMetadata(getToolByLocale('resolution-checker', locale), locale)
 }
 
 const faqs: FAQ[] = [

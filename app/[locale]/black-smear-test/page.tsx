@@ -6,7 +6,7 @@ import { BlackSmearTest } from '@/components/tools/BlackSmearTest'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('black-smear-test', locale))
+  return toolMetadata(getToolByLocale('black-smear-test', locale), locale)
 }
 
 const faqs: FAQ[] = [

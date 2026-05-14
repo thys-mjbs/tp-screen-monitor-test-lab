@@ -6,7 +6,7 @@ import { GradientBandingTest } from '@/components/tools/GradientBandingTest'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('gradient-banding-test', locale))
+  return toolMetadata(getToolByLocale('gradient-banding-test', locale), locale)
 }
 
 const faqs: FAQ[] = [

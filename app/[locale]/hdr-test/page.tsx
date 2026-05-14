@@ -6,7 +6,7 @@ import { HdrTest } from '@/components/tools/HdrTest'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('hdr-test', locale))
+  return toolMetadata(getToolByLocale('hdr-test', locale), locale)
 }
 
 const faqs: FAQ[] = [

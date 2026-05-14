@@ -6,7 +6,7 @@ import { PwmFlickerTest } from '@/components/tools/PwmFlickerTest'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('pwm-flicker-test', locale))
+  return toolMetadata(getToolByLocale('pwm-flicker-test', locale), locale)
 }
 
 const faqs: FAQ[] = [

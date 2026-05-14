@@ -17,12 +17,13 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const canonical = locale === 'en' ? appUrl : `${appUrl}/${locale}`
+  const hreflang = { 'en': appUrl, 'es': `${appUrl}/es`, 'x-default': appUrl }
   if (locale === 'es') {
     return {
       title: 'Pruebas de monitor y pantalla gratis: píxeles muertos, sangrado y más',
       description:
         'Herramientas gratuitas basadas en el navegador para comprobar tu monitor en busca de píxeles muertos, sangrado de luz de fondo, frecuencia de actualización, precisión de color y más. Sin descarga ni registro.',
-      alternates: { canonical },
+      alternates: { canonical, languages: hreflang },
       openGraph: {
         title: 'Pruebas de monitor y pantalla gratis',
         description:
@@ -36,7 +37,7 @@ export async function generateMetadata({
     title: 'Free Monitor & Screen Tests Online: Dead Pixels, Backlight Bleed & More',
     description:
       'Free browser-based tools to test your monitor for dead pixels, backlight bleed, refresh rate, colour accuracy, and more. No download or sign-up required.',
-    alternates: { canonical },
+    alternates: { canonical, languages: hreflang },
     openGraph: {
       title: 'Free Monitor & Screen Tests Online',
       description:

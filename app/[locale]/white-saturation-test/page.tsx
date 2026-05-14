@@ -6,7 +6,7 @@ import { WhiteSaturationTest } from '@/components/tools/WhiteSaturationTest'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('white-saturation-test', locale))
+  return toolMetadata(getToolByLocale('white-saturation-test', locale), locale)
 }
 
 const faqs: FAQ[] = [

@@ -18,7 +18,7 @@ export async function generateMetadata({
   return {
     title: 'About Screen Test Lab',
     description: 'Screen Test Lab is a free, browser-based collection of monitor testing tools. No sign-up, no download, no cost. Just open a tool and test your display.',
-    alternates: { canonical },
+    alternates: { canonical, languages: { 'en': `${appUrl}/about`, 'es': `${appUrl}/es/about`, 'x-default': `${appUrl}/about` } },
   }
 }
 

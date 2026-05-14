@@ -6,7 +6,7 @@ import { RefreshRateChecker } from '@/components/tools/RefreshRateChecker'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('refresh-rate-checker', locale))
+  return toolMetadata(getToolByLocale('refresh-rate-checker', locale), locale)
 }
 
 const faqs: FAQ[] = [

@@ -6,7 +6,7 @@ import { ScreenPanel } from '@/components/tools/ScreenPanel'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('blue-screen', locale))
+  return toolMetadata(getToolByLocale('blue-screen', locale), locale)
 }
 
 const faqs: FAQ[] = [

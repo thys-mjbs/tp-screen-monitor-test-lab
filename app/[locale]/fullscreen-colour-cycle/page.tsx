@@ -6,7 +6,7 @@ import { FullscreenPanel } from '@/components/tools/FullscreenPanel'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('fullscreen-colour-cycle', locale))
+  return toolMetadata(getToolByLocale('fullscreen-colour-cycle', locale), locale)
 }
 
 const CYCLE_COLORS = [

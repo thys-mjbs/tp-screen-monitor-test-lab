@@ -6,7 +6,7 @@ import { MotionBlurTest } from '@/components/tools/MotionBlurTest'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('motion-blur-test', locale))
+  return toolMetadata(getToolByLocale('motion-blur-test', locale), locale)
 }
 
 const faqs: FAQ[] = [

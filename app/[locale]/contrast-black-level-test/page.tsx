@@ -6,7 +6,7 @@ import { ContrastBlackLevelTest } from '@/components/tools/ContrastBlackLevelTes
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('contrast-black-level-test', locale))
+  return toolMetadata(getToolByLocale('contrast-black-level-test', locale), locale)
 }
 
 const faqs: FAQ[] = [

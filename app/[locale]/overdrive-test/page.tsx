@@ -6,7 +6,7 @@ import { OverdriveTest } from '@/components/tools/OverdriveTest'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('overdrive-test', locale))
+  return toolMetadata(getToolByLocale('overdrive-test', locale), locale)
 }
 
 const faqs: FAQ[] = [

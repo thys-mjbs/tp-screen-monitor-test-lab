@@ -6,7 +6,7 @@ import { MoirePatternTest } from '@/components/tools/MoirePatternTest'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('moire-pattern-test', locale))
+  return toolMetadata(getToolByLocale('moire-pattern-test', locale), locale)
 }
 
 const faqs: FAQ[] = [

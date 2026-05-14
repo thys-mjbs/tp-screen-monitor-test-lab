@@ -6,7 +6,7 @@ import { ViewingAngleTest } from '@/components/tools/ViewingAngleTest'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('viewing-angle-test', locale))
+  return toolMetadata(getToolByLocale('viewing-angle-test', locale), locale)
 }
 
 const faqs: FAQ[] = [

@@ -6,7 +6,7 @@ import { ColourTemperatureTest } from '@/components/tools/ColourTemperatureTest'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('colour-temperature-test', locale))
+  return toolMetadata(getToolByLocale('colour-temperature-test', locale), locale)
 }
 
 const faqs: FAQ[] = [

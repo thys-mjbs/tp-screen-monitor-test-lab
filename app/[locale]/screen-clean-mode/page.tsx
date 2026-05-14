@@ -6,7 +6,7 @@ import { ScreenCleanMode } from '@/components/tools/ScreenCleanMode'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('screen-clean-mode', locale))
+  return toolMetadata(getToolByLocale('screen-clean-mode', locale), locale)
 }
 
 const faqs: FAQ[] = [

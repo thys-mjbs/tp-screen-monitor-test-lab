@@ -6,7 +6,7 @@ import { GammaCalibrationCheck } from '@/components/tools/GammaCalibrationCheck'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('gamma-calibration-check', locale))
+  return toolMetadata(getToolByLocale('gamma-calibration-check', locale), locale)
 }
 
 const faqs: FAQ[] = [

@@ -6,7 +6,7 @@ import { SharpnessFocusChart } from '@/components/tools/SharpnessFocusChart'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('sharpness-focus-chart', locale))
+  return toolMetadata(getToolByLocale('sharpness-focus-chart', locale), locale)
 }
 
 const faqs: FAQ[] = [

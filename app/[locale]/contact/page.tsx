@@ -17,7 +17,7 @@ export async function generateMetadata({
   return {
     title: 'Contact',
     description: 'Get in touch with the Screen Test Lab team for bug reports, suggestions, or general questions.',
-    alternates: { canonical },
+    alternates: { canonical, languages: { 'en': `${appUrl}/contact`, 'es': `${appUrl}/es/contact`, 'x-default': `${appUrl}/contact` } },
   }
 }
 

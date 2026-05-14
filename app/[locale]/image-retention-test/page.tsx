@@ -6,7 +6,7 @@ import { ImageRetentionTest } from '@/components/tools/ImageRetentionTest'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  return toolMetadata(getToolByLocale('image-retention-test', locale))
+  return toolMetadata(getToolByLocale('image-retention-test', locale), locale)
 }
 
 const faqs: FAQ[] = [
