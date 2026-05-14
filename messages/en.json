@@ -180,7 +180,7 @@
       "steadyRef": "Steady Reference",
       "toggleEvery": "Toggle every:",
       "offPhase": "Off-phase:",
-      "note": "Flicker rate is relative to your monitor's frame rate. Real monitor PWM runs at 200–1000 Hz and is invisible to the eye — use the camera method to detect it.",
+      "note": "Flicker rate is relative to your monitor's frame rate. Real monitor PWM runs at 200-1000 Hz and is invisible to the eye - use the camera method to detect it.",
       "rates": {
         "f1": "1 frame",
         "f2": "2 frames",

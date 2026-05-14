@@ -56,7 +56,7 @@ export async function ToolPageLayout({ tool, children, faqs, bodyContent }: Tool
           </h1>
           <p className="text-fg-muted">{tool.shortDescription}</p>
           <div className="pt-1">{children}</div>
-          <ShareBar title={`${tool.name} — Screen Test Lab`} url={toolUrl} />
+          <ShareBar title={`${tool.name} - Screen Test Lab`} url={toolUrl} />
         </section>
 
         {/* Amazon affiliate links */}
