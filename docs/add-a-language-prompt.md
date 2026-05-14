@@ -2152,10 +2152,10 @@ Test the following before marking the language addition complete:
 ## Config — fill in here, nowhere else
 
 ```
-LANG_CODE    = es
-LANGUAGE     = Spanish
-NATIVE_NAME  = Español
-LANG_UPPER   = ES
+LANG_CODE    = pt
+LANGUAGE     = Portuguese
+NATIVE_NAME  = Português
+LANG_UPPER   = PT
 ```
 
 Replace every `[LANG_CODE]`, `[LANGUAGE]`, `[NATIVE_NAME]`, and `[LANG_UPPER]` throughout this guide with the values above before starting Phase 1.
