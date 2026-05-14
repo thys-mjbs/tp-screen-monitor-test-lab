@@ -41,5 +41,53 @@
       "browserBased": "Baseado no navegador, sem instalação",
       "noSignup": "Sem necessidade de conta ou registo"
     }
+  },
+  "blog": {
+    "index": {
+      "title": "Blog de Testes de Monitor",
+      "subtitle": "Guias sobre qualidade de imagem, calibração, defeitos de pixels e como aproveitar ao máximo os seus testes de monitor."
+    },
+    "post": {
+      "relatedTools": "Ferramentas Relacionadas",
+      "backToArticles": "Voltar para todos os artigos",
+      "minRead": "min de leitura"
+    }
+  },
+  "tools": {
+    "fullscreenPanel": {
+      "cycleLabel": "Clique para alternar cores",
+      "fullscreen": "Tela cheia",
+      "hint": "Clique ou Espaço para avançar · Teclas de seta para navegar · Esc para sair",
+      "ariaCurrentColour": "Cor atual: {colour}. Clique para avançar.",
+      "ariaAdvance": "Clique para avançar a cor",
+      "colors": {
+        "White": "Branco",
+        "Black": "Preto",
+        "Red": "Vermelho",
+        "Green": "Verde",
+        "Blue": "Azul",
+        "Cyan": "Ciano",
+        "Magenta": "Magenta",
+        "Grey": "Cinza"
+      }
+    },
+    "refreshRate": {
+      "measuring": "Medindo a taxa de atualização...",
+      "sampling": "Amostrando 60 quadros",
+      "measureAgain": "Medir Novamente",
+      "note": "O resultado reflete a taxa de atualização que o seu navegador está usando atualmente, não o máximo do hardware.",
+      "labels": {
+        "cinema": "Cinema",
+        "standardVideo": "Vídeo padrão",
+        "highFrameRate": "Vídeo de alta taxa de quadros",
+        "standardDesktop": "Desktop padrão",
+        "standardPlus": "Padrão+",
+        "highRefresh": "Alta atualização",
+        "gaming": "Gaming",
+        "competitiveGaming": "Gaming competitivo",
+        "proCompetitive": "Pro competitivo",
+        "nonStandard": "Taxa não padrão"
+      }
+    }
   }
 }
