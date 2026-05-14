@@ -3,13 +3,14 @@ import Link from 'next/link'
 import { getTranslations } from 'next-intl/server'
 import { Breadcrumb } from '@/components/Breadcrumb'
 import { posts, formatDate } from '@/lib/posts'
-import { postTranslations } from '@/lib/i18n/posts-es'
+import { postTranslations as postTranslationsEs } from '@/lib/i18n/posts-es'
+import { postTranslations as postTranslationsPt } from '@/lib/i18n/posts-pt'
 import { Clock, ArrowRight } from 'lucide-react'
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
 
 export function generateStaticParams() {
-  return [{ locale: 'en' }, { locale: 'es' }]
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
 }
 
 export async function generateMetadata({
@@ -19,11 +20,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params
   const canonical = locale === 'en' ? `${appUrl}/blog` : `${appUrl}/${locale}/blog`
-  const hreflang = { 'en': `${appUrl}/blog`, 'es': `${appUrl}/es/blog`, 'x-default': `${appUrl}/blog` }
+  const hreflang = { 'en': `${appUrl}/blog`, 'es': `${appUrl}/es/blog`, 'pt': `${appUrl}/pt/blog`, 'x-default': `${appUrl}/blog` }
   if (locale === 'es') {
     return {
       title: 'Blog de pruebas de monitor',
       description: 'Guías y explicaciones sobre pruebas de monitor, calibración de pantalla, defectos de píxeles, tipos de panel, frecuencia de actualización, resolución y mantenimiento de pantalla.',
+      alternates: { canonical, languages: hreflang },
+    }
+  }
+  if (locale === 'pt') {
+    return {
+      title: 'Blog de Testes de Monitor',
+      description: 'Guias e explicações sobre testes de monitor, calibração de ecrã, defeitos de pixels, tipos de painel, taxa de atualização, resolução e manutenção de tela.',
       alternates: { canonical, languages: hreflang },
     }
   }
@@ -41,7 +49,10 @@ export default async function BlogIndexPage({
 }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'blog' })
-  const isEs = locale === 'es'
+  const postTranslations =
+    locale === 'es' ? postTranslationsEs :
+    locale === 'pt' ? postTranslationsPt :
+    null
 
   return (
     <div className="max-w-3xl mx-auto px-4 sm:px-6 py-8 space-y-10">
@@ -59,8 +70,8 @@ export default async function BlogIndexPage({
 
       <section className="space-y-4">
         {posts.map((post) => {
-          const title = isEs ? (postTranslations[post.slug]?.title ?? post.title) : post.title
-          const description = isEs ? (postTranslations[post.slug]?.description ?? post.description) : post.description
+          const title = postTranslations ? (postTranslations[post.slug]?.title ?? post.title) : post.title
+          const description = postTranslations ? (postTranslations[post.slug]?.description ?? post.description) : post.description
           return (
             <Link
               key={post.slug}
