@@ -863,6 +863,329 @@ function AspectRatiosPostPT() {
   )
 }
 
+// ─── 11. Pixels Mortos: Marcas de Monitores ──────────────────────────────────
+
+function DeadPixelsBrandPostPT() {
+  return (
+    <>
+      <p>
+        Os fabricantes de monitores tratam as reclamações de garantia por pixels mortos de
+        forma muito diferente. Alguns exigem múltiplos pixels defeituosos antes de oferecerem
+        uma substituição; outros garantem zero defeitos visíveis em produtos premium. Se
+        encontrou um pixel morto no seu monitor ou TV AOC, Dell, ASUS, Sony ou LG, conhecer
+        a política específica do seu dispositivo determina qual deve ser o próximo passo.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Monitores AOC e política de pixels mortos</h2>
+      <p>
+        A AOC aplica um limite de pixels brilhantes e escuros que varia conforme a linha de
+        produto. Os monitores AOC de gama baixa e média seguem tipicamente um padrão de defeitos
+        de pixel de classe 2, que permite um pequeno número de pixels defeituosos antes de uma
+        reclamação de garantia ser aceite. Os monitores gaming da linha AOC AGON podem ter
+        políticas mais rigorosas. Ao reportar um pixel morto num monitor AOC, use a ferramenta
+        Teste de Pixels Mortos para confirmar o tipo de defeito, fotografe-o contra fundos
+        brancos e pretos, e contacte o suporte da AOC dentro do período de garantia.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Política de pixels mortos da Dell</h2>
+      <p>
+        A Dell opera uma das políticas de defeitos de pixel mais transparentes da indústria.
+        A <strong className="text-fg">Garantia de Painel Premium</strong> da Dell cobre os
+        monitores UltraSharp e garante a substituição por um único pixel brilhante visível,
+        sem requisito de contagem mínima. Os monitores Dell padrão aplicam o limite ISO
+        13406-2 classe II. Se tiver um Dell UltraSharp e encontrar um pixel morto, a garantia
+        de painel premium significa que um único defeito qualifica para substituição
+        independentemente da sua localização no painel.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Monitores ASUS e pixels mortos</h2>
+      <p>
+        A ASUS aplica políticas diferentes nas suas linhas de produto. Os monitores ASUS ProArt
+        destinados a criadores de conteúdo têm uma garantia de zero pixels brilhantes, o que
+        significa que um único pixel preso brilhante justifica a substituição. Os monitores
+        ASUS padrão e os monitores gaming ROG aplicam um limite de defeitos convencional. Um
+        pixel morto num monitor ASUS da gama padrão tipicamente requer múltiplos defeitos ou
+        um único defeito localizado centralmente antes de a maioria das decisões de substituição
+        de garantia serem tomadas.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Monitores LG e TVs OLED</h2>
+      <p>
+        As TVs OLED da LG têm uma política de pixels geralmente mais generosa do que as políticas
+        padrão de monitores LCD, refletindo o preço mais elevado dos painéis OLED. Um único pixel
+        morto claramente visível numa TV OLED LG nova é tipicamente motivo para uma visita de
+        serviço. Os monitores gaming OLED LG UltraGear têm uma garantia de zero pixels brilhantes.
+        Para monitores LG IPS fora da gama OLED, aplica-se uma contagem mínima de defeitos antes
+        de ser oferecida a substituição de garantia. Contacte o suporte da LG com o número do
+        modelo e a data de compra o mais cedo possível após encontrar um defeito.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Reclamações de pixels mortos em TVs Sony</h2>
+      <p>
+        As TVs Sony Bravia, incluindo modelos OLED, são cobertas pela garantia padrão da Sony.
+        A Sony avalia as reclamações de defeitos de pixel caso a caso. Um único pixel morto numa
+        TV OLED Sony vale a pena reportar, particularmente numa unidade recém-comprada. O suporte
+        da Sony tipicamente requer uma visita de técnico de serviço para reclamações de garantia
+        de TV, por isso documente o defeito claramente com fotografias antes de contactar o suporte.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Como testar e documentar um pixel morto para qualquer marca</h2>
+      <p>
+        Use o Teste de Pixels Mortos deste site para ciclar entre preto, branco e cada cor
+        primária. Um pixel morto aparece como um ponto escuro fixo em fundos brancos e claros.
+        Um pixel preso ou quente aparece como um ponto brilhante fixo visível contra o preto.
+        Anote a posição aproximada do defeito no ecrã, confirme que não é poeira sob um
+        protetor de ecrã e fotografe-o de frente numa sala com pouca luz. Contacte o suporte
+        do fabricante com as fotos e comprovativo de compra o mais cedo possível após encontrar
+        o defeito, pois a maioria das políticas de defeitos de pixel tem uma janela de comunicação.
+      </p>
+    </>
+  )
+}
+
+// ─── 12. Pixels Mortos: TVs OLED e Projetores ────────────────────────────────
+
+function DeadPixelsOledTvProjectorsPostPT() {
+  return (
+    <>
+      <p>
+        Os pixels mortos em TVs OLED e projetores comportam-se de forma diferente dos defeitos
+        nos monitores LCD padrão, e o processo de testá-los e tratá-los requer uma abordagem
+        diferente. Ambos os tipos de dispositivo são suficientemente caros para que um defeito
+        de pixel visível justifique atenção imediata enquanto ainda dentro da janela de devolução
+        ou garantia.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Pixels mortos em TVs OLED</h2>
+      <p>
+        As TVs OLED usam emissão de luz por pixel em vez de retroiluminação. Um pixel morto
+        numa TV OLED é aquele cujo emissor orgânico falhou e já não produz luz. Aparece como
+        um ponto escuro permanentemente visível em conteúdo brilhante ou colorido, mas invisível
+        contra um fundo preto puro. O defeito mais comum é um pixel quente: um emissor preso
+        que produz um ponto brilhante fixo. Como o OLED renderiza o preto como zero luz
+        verdadeiro, um único pixel quente destaca-se nitidamente contra conteúdo escuro de uma
+        forma que seria mascarada pelo brilho da retroiluminação numa TV LCD.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Testar uma TV OLED para pixels mortos</h2>
+      <p>
+        Ligue um portátil ou PC à sua TV OLED via HDMI e abra o Teste de Pixels Mortos num
+        navegador em tela cheia. Cicle por cada cor: preto para revelar pixels quentes ou presos,
+        branco e cinza para revelar pixels mortos escuros, e os painéis de cores primárias para
+        detetar defeitos de subpixels. Teste numa sala com pouca luz a partir da sua distância
+        normal de visualização. Em TVs OLED grandes de 55 polegadas ou mais, um único pixel
+        defeituoso é muito pequeno em relação à área do ecrã; pode ser necessária uma inspeção
+        próxima a menos de 60 cm para confirmar um defeito suspeito detetado à distância normal.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Pixels mortos em projetores: DLP vs LCD</h2>
+      <p>
+        Os projetores desenvolvem defeitos ao nível do pixel que dependem da sua tecnologia
+        interna. Os projetores DLP usam um chip de Dispositivo de Microespelhos Digitais (DMD)
+        onde cada microespelho corresponde a um pixel. Um espelho preso na posição ligada produz
+        um ponto brilhante persistente na imagem projetada; um espelho preso na posição desligada
+        produz um ponto escuro. Os projetores de três LCD usam três painéis de imagem separados,
+        um por canal de cor. Um pixel com falha no painel vermelho produz um ponto vermelho
+        persistente; um pixel com falha no painel azul produz um ponto azul persistente.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Como testar um projetor para pixels mortos</h2>
+      <p>
+        Use o Teste de Pixels Mortos a partir do dispositivo ligado ao projetor e projete numa
+        superfície plana e limpa numa sala completamente escurecida. Exiba cada cor sólida em
+        tela cheia e examine a imagem projetada sistematicamente. Se encontrar um ponto suspeito,
+        desloque ligeiramente o projetor para confirmar que o ponto se move com a imagem
+        projetada (um defeito do projetor) em vez de permanecer na mesma posição na parede
+        (uma marca na superfície de projeção).
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cobertura de garantia para TVs OLED e projetores</h2>
+      <p>
+        A maioria dos fabricantes de TVs OLED incluindo LG, Sony e Panasonic avalia as
+        reclamações de pixels mortos individualmente. Um único pixel morto visível numa TV
+        OLED nova vale geralmente a pena reportar ao suporte do fabricante. Para projetores,
+        a cobertura de garantia varia amplamente por marca e nível de preço. Muitos fabricantes
+        de projetores definem uma contagem de defeitos aceitável acima da qual é oferecida a
+        substituição de garantia. Um defeito de microespelho DLP claramente visível ou pixel
+        de painel de imagem LCD com falha num projetor novo deve ser reportado com documentação
+        fotográfica enquanto ainda dentro da janela de devolução.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Os defeitos de pixel do projetor podem ser reparados?</h2>
+      <p>
+        Um microespelho DLP preso é uma falha de hardware que não pode ser resolvida por métodos
+        de software. Da mesma forma, um pixel com falha num painel de imagem de projetor LCD
+        requer a substituição física do painel. A abordagem de ciclo rápido de cores usada pelo
+        Corretor de Pixels Presos não tem efeito nos defeitos de microespelho DLP. Em projetores
+        de consumo, o custo de substituição do chip DMD ou de um painel de imagem LCD tipicamente
+        excede o valor residual da unidade, tornando o serviço de garantia ou substituição a
+        única opção prática para um defeito visível.
+      </p>
+    </>
+  )
+}
+
+// ─── 13. Vazamento de Luz: Portáteis Gaming ──────────────────────────────────
+
+function BacklightBleedGamingLaptopsPostPT() {
+  return (
+    <>
+      <p>
+        Os portáteis gaming estão entre as fontes mais comuns de reclamações sobre vazamento
+        de luz porque os seus painéis finos e molduras estreitas criam condições onde a luz
+        vaza pelas bordas. Os portáteis gaming HP Omen, Acer Nitro, MSI, Alienware e Lenovo
+        atraem um volume significativo de pesquisas sobre este problema. Aqui está o que esperar
+        de cada marca e como avaliar se o vazamento que vê está dentro da tolerância normal.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Vazamento de luz no HP Omen</h2>
+      <p>
+        Os portáteis HP Omen usam painéis IPS em vários tamanhos de ecrã, e o vazamento de
+        luz ao longo da borda inferior e cantos é um problema frequentemente reportado nas
+        séries Omen 15 e Omen 16. A política de garantia da HP para defeitos de ecrã em
+        portáteis requer que o defeito represente uma falha de hardware em vez de uma
+        característica do painel dentro da tolerância. O vazamento visível durante o gaming
+        em cenas escuras numa sala normalmente iluminada é um caso de garantia mais forte
+        do que o vazamento apenas visível num teste em completa escuridão. Contacte o Suporte
+        HP com vídeo ou fotografias antes do prazo de garantia expirar.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Vazamento de luz no Acer Nitro 5</h2>
+      <p>
+        O Acer Nitro 5 é um portátil gaming de gama baixa e o vazamento de luz ao longo da
+        moldura inferior é frequentemente reportado em várias gerações do modelo. Neste nível
+        de preço, a política de tolerância de ecrã da Acer tipicamente permite um nível
+        moderado de vazamento de borda antes de uma reclamação de garantia ser aceite. Use o
+        Teste de Vazamento de Luz deste site para documentar a gravidade a partir da sua
+        distância normal de uso. O vazamento claramente perturbador durante o gaming numa sala
+        normalmente iluminada vale a pena comunicar ao suporte da Acer dentro do período
+        de garantia.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Portáteis gaming MSI e sangramento de ecrã</h2>
+      <p>
+        Os portáteis gaming MSI, incluindo as séries Raider, Stealth e Katana, usam painéis
+        IPS ou de nível IPS de vários fornecedores, o que significa que as características
+        de vazamento variam entre lotes de produção. Os relatos de sangramento de ecrã MSI
+        tendem a concentrar-se nos cantos inferior esquerdo e inferior direito. Se o vazamento
+        apareceu desde o início, documente-o cedo. O suporte regional da MSI trata as
+        reclamações de garantia por defeitos de ecrã e geralmente requer uma visita ao centro
+        de serviço para avaliações de ecrã de portátil.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Vazamento de luz em portáteis Alienware</h2>
+      <p>
+        Os portáteis gaming Alienware são vendidos sob a marca Dell e têm o enquadramento geral
+        de garantia da Dell. Ao contrário da gama de monitores de desktop Dell UltraSharp, os
+        portáteis Alienware não incluem uma Garantia de Painel Premium. Os relatos de vazamento
+        de luz em portáteis Alienware são mais comuns nas séries m15 e m17. A equipa de suporte
+        da Dell avalia os defeitos de ecrã de portáteis caso a caso. Se o vazamento afeta a
+        sua experiência em conteúdo em ambiente escuro, documente-o com fotografias claras e
+        contacte o suporte da Dell.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Portáteis gaming Lenovo e vazamento de luz</h2>
+      <p>
+        Os portáteis Lenovo Legion e modelos IdeaPad Gaming reportam vazamento de luz
+        principalmente ao longo das bordas inferior e laterais. A garantia da Lenovo cobre
+        defeitos de painel, mas aplica limites padrão de qualidade de ecrã. O processo de
+        suporte da Lenovo para problemas de ecrã de portátil tipicamente começa com um
+        diagnóstico online e pode resultar numa reparação por correio ou visita de técnico
+        no local dependendo do nível de garantia adquirido com o portátil.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Como testar o seu portátil gaming para vazamento de luz</h2>
+      <p>
+        Abra o Teste de Vazamento de Luz deste site e exiba o painel preto sólido em tela
+        cheia numa sala completamente escurecida. Aguarde um minuto para os olhos se ajustarem.
+        Veja o ecrã a partir da sua posição normal de gaming. Manchas brilhantes nos cantos
+        ou bordas são vazamento de luz. Um brilho que muda de intensidade ao alterar o ângulo
+        de visualização é mais provavelmente brilho IPS, uma característica normal da tecnologia
+        IPS em vez de um defeito. Fotografe o ecrã de frente na sala escura para usar como
+        evidência ao contactar o suporte do fabricante.
+      </p>
+    </>
+  )
+}
+
+// ─── 14. Vazamento de Luz: TVs Samsung ───────────────────────────────────────
+
+function BacklightBleedSamsungTvPostPT() {
+  return (
+    <>
+      <p>
+        O vazamento de luz é uma das reclamações mais comuns sobre TVs LED e QLED da Samsung,
+        particularmente em tamanhos de ecrã maiores onde a retroiluminação deve iluminar uma
+        área de superfície maior. Compreender o que é um defeito genuíno versus comportamento
+        normal do painel ajuda a decidir se vale a pena prosseguir com uma reclamação de garantia.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Por que as TVs LED Samsung podem mostrar vazamento de luz</h2>
+      <p>
+        A maioria das TVs Samsung usa retroiluminação LED de borda ou iluminação direta em vez
+        de OLED. Num design de borda iluminada, tiras LED ao longo das bordas do painel projetam
+        luz pela superfície do painel. A luz que escapa pelas bordas em vez de passar uniformemente
+        pela camada LCD produz áreas brilhantes visíveis em cenas escuras. As TVs Samsung QLED
+        usam a mesma tecnologia LCD subjacente com uma camada de melhoria de cor de ponto quântico,
+        pelo que podem exibir as mesmas características de vazamento de luz que as TVs LED padrão.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Vazamento de luz em TVs Samsung curvas</h2>
+      <p>
+        As TVs Samsung curvas, incluindo modelos do intervalo 2015 a 2019, estão particularmente
+        associadas ao vazamento de luz devido à forma como a curvatura do painel interage com
+        a retroiluminação de borda. A curva altera o ângulo em que a luz LED entra nas bordas
+        do painel, o que pode aumentar a visibilidade do vazamento em certas posições de
+        visualização. Numa TV Samsung curva, o vazamento é frequentemente reportado como mais
+        grave nas bordas esquerda e direita do que nos modelos de painel plano equivalentes.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Como testar a sua TV Samsung para vazamento de luz</h2>
+      <p>
+        Use o Teste de Vazamento de Luz deste site a partir de um dispositivo ligado à sua TV
+        Samsung via HDMI. Exiba o painel preto sólido em tela cheia numa sala completamente
+        escurecida. Visualize a partir da sua distância normal de uso e procure manchas brilhantes
+        nas bordas ou cantos. Dê aos seus olhos um a dois minutos para se ajustarem à escuridão
+        antes de avaliar. Desative qualquer definição de brilho dinâmico ou compensação de luz
+        ambiente no menu de imagem da TV durante o teste, pois estas podem mascarar o vazamento
+        reduzindo automaticamente o brilho geral.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Opções de correção do vazamento de luz em TVs Samsung</h2>
+      <p>
+        Não existe solução de software fiável para o vazamento de luz numa TV Samsung. Reduzir
+        a definição de retroiluminação no menu de imagem reduz a intensidade tanto do conteúdo
+        como do vazamento, tornando-o menos visível ao custo do brilho geral da imagem. Alguns
+        utilizadores relatam uma ligeira melhoria após uso prolongado à medida que o painel e
+        o chassis se estabilizam à temperatura de funcionamento. Os remédios físicos como aplicar
+        pressão na moldura acarretam um alto risco de partir o painel e anular a garantia.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Quando contactar o suporte da Samsung</h2>
+      <p>
+        Se o vazamento de luz for visível durante a visualização normal numa sala razoavelmente
+        iluminada, particularmente durante cenas escuras de filmes ou gaming em consola, justifica
+        uma reclamação de garantia. Documente-o com vídeo ou fotografias tiradas numa sala
+        escurecida a partir da sua distância normal de visualização. A linha de suporte da Samsung
+        pode providenciar uma visita de técnico para TVs de ecrã grande. Para TVs compradas num
+        retalhista, a política de devolução do retalhista pode ser a via mais rápida se ainda
+        estiver dentro da janela de devolução.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">TVs OLED e QD-OLED da Samsung</h2>
+      <p>
+        A gama de TVs QD-OLED da Samsung (modelos S90C e posteriores) não exibe vazamento de
+        luz porque os painéis OLED não têm retroiluminação. Cada pixel numa TV OLED gera e
+        apaga independentemente a sua própria luz. Se vir um brilho persistente numa TV Samsung
+        QD-OLED durante conteúdo escuro, é muito provavelmente um pixel quente (um emissor
+        brilhante preso) em vez de vazamento de luz. Use a ferramenta Teste de Pixels Mortos
+        para confirmar o tipo de defeito e documente-o com fotografias para uma reclamação
+        de garantia.
+      </p>
+    </>
+  )
+}
+
 export const POST_CONTENT_PT: Record<string, FC> = {
   'how-to-test-monitor-dead-pixels': DeadPixelPostPT,
   'what-is-backlight-bleed': BacklightBleedPostPT,
@@ -874,4 +1197,8 @@ export const POST_CONTENT_PT: Record<string, FC> = {
   'screen-uniformity-test-guide': UniformityPostPT,
   'how-to-clean-monitor-screen': CleaningPostPT,
   'monitor-aspect-ratios-explained': AspectRatiosPostPT,
+  'dead-pixels-brand-monitors': DeadPixelsBrandPostPT,
+  'dead-pixels-oled-tv-projectors': DeadPixelsOledTvProjectorsPostPT,
+  'backlight-bleed-gaming-laptops': BacklightBleedGamingLaptopsPostPT,
+  'backlight-bleed-samsung-tv': BacklightBleedSamsungTvPostPT,
 }
