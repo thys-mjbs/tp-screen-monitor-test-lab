@@ -1,0 +1,45 @@
+{
+  "nav": {
+    "tools": "Ferramentas",
+    "blog": "Blog",
+    "about": "Sobre"
+  },
+  "footer": {
+    "popularTools": "Ferramentas Populares",
+    "site": "Site",
+    "tagline": "Teste o seu monitor para pixels mortos, vazamento de luz de fundo e problemas de imagem. Gratuito, sem instalação.",
+    "copyright": "Gratuito, sem necessidade de conta."
+  },
+  "breadcrumb": {
+    "home": "Início"
+  },
+  "common": {
+    "start": "Iniciar",
+    "stop": "Parar",
+    "reset": "Reiniciar",
+    "fullscreen": "Tela cheia",
+    "frequentlyAskedQuestions": "Perguntas Frequentes",
+    "relatedTools": "Ferramentas Relacionadas"
+  },
+  "footerLinks": {
+    "allTools": "Todas as Ferramentas",
+    "blog": "Blog",
+    "about": "Sobre",
+    "contact": "Contacto",
+    "privacy": "Política de Privacidade",
+    "terms": "Termos de Serviço"
+  },
+  "home": {
+    "hero": {
+      "heading": "Testes de Monitor e Tela Online Gratuitos",
+      "description": "Teste a sua tela para pixels mortos, vazamento de luz, taxa de atualização, precisão de cores e muito mais. Funciona em qualquer navegador. Sem download, sem cadastro.",
+      "statNoSignup": "Sem registo necessário",
+      "statBrowserBased": "Baseado no navegador"
+    },
+    "trust": {
+      "freeTools": "Ferramentas gratuitas",
+      "browserBased": "Baseado no navegador, sem instalação",
+      "noSignup": "Sem necessidade de conta ou registo"
+    }
+  }
+}

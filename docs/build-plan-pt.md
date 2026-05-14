@@ -11,8 +11,8 @@
 - [x] 1.7 Update app/layout.tsx to use getLocale() for lang attribute
 
 ## Phase 2 — Create the translation file
-- [ ] 2.1 Create messages/en.json (English baseline — all keys)
-- [ ] 2.2 Create messages/pt.json part 1: nav, footer, breadcrumb, common, home page
+- [x] 2.1 Create messages/en.json (English baseline — all keys)
+- [x] 2.2 Create messages/pt.json part 1: nav, footer, breadcrumb, common, home page
 - [ ] 2.3 Add to messages/pt.json: blog strings + FullscreenPanel + RefreshRateChecker
 - [ ] 2.4 Add to messages/pt.json: ResolutionChecker + InputLagTest + StuckPixelFixer
 - [ ] 2.5 Add to messages/pt.json: GammaCalibrationCheck + PwmFlickerTest + HdrTest + Affiliate; close file
