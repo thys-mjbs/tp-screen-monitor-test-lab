@@ -899,6 +899,760 @@ function AspectRatiosPostES() {
   )
 }
 
+// ─── 11. Píxeles muertos: marcas de monitor ───────────────────────────────────
+
+function DeadPixelsBrandPostES() {
+  return (
+    <>
+      <p>
+        Los fabricantes de monitores gestionan las reclamaciones de garantía por píxeles muertos de
+        forma muy diferente. Algunos requieren varios píxeles defectuosos antes de ofrecer un
+        reemplazo; otros garantizan cero defectos visibles en productos premium. Si has encontrado
+        un píxel muerto en tu monitor o televisor AOC, Dell, ASUS, Sony o LG, conocer la política
+        específica para tu dispositivo determina cuál debería ser tu siguiente paso.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Monitores AOC y política de píxeles muertos</h2>
+      <p>
+        AOC aplica un umbral de píxeles brillantes y oscuros que varía según la línea de productos.
+        Los monitores AOC de gama baja y media siguen típicamente un estándar de defectos de píxeles
+        de clase 2, que permite un pequeño número de píxeles defectuosos antes de que se acepte una
+        reclamación de garantía. Los monitores gaming de la gama AOC AGON pueden tener políticas más
+        estrictas. Al notificar un píxel muerto en un monitor AOC, usa la herramienta de prueba de
+        píxeles muertos para confirmar el tipo de defecto, fotografíalo sobre fondos blancos y negros,
+        y contacta con el soporte de AOC dentro del período de garantía.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Política de píxeles muertos de monitores Dell</h2>
+      <p>
+        Dell opera una de las políticas de defectos de píxeles más transparentes del sector.
+        La <strong className="text-fg">Garantía de panel premium</strong> de Dell cubre los monitores
+        UltraSharp y garantiza un reemplazo por un único defecto de píxel brillante visible, sin
+        requisito de recuento mínimo. Los monitores Dell estándar aplican el umbral de clase II de
+        ISO 13406-2. Si tienes un Dell UltraSharp y encuentras un píxel muerto, la garantía de panel
+        premium significa que un único defecto califica para reemplazo independientemente de su
+        ubicación en el panel.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Monitores ASUS y píxeles muertos</h2>
+      <p>
+        ASUS aplica diferentes políticas en sus líneas de productos. Los monitores ASUS ProArt,
+        orientados a usuarios de creación de contenido, llevan una garantía de cero píxeles
+        brillantes, lo que significa que un único píxel atascado brillante justifica un reemplazo.
+        Los monitores ASUS estándar y los monitores gaming ROG aplican un umbral de defectos
+        convencional. Un píxel muerto en un monitor ASUS de la gama estándar típicamente requiere
+        varios defectos o un único defecto ubicado centralmente antes de que se tome la mayoría de
+        las decisiones de reemplazo en garantía.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Monitores LG y televisores OLED</h2>
+      <p>
+        Los televisores OLED de LG tienen una política de píxeles que es generalmente más generosa
+        que las políticas estándar de monitores LCD, lo que refleja el precio más alto de los paneles
+        OLED. Un único píxel muerto claramente visible en un televisor OLED de LG nuevo es
+        típicamente motivo de una visita de servicio. Los monitores gaming OLED LG UltraGear llevan
+        una garantía de cero píxeles brillantes. Para los monitores IPS de LG fuera de la gama OLED,
+        se aplica un recuento mínimo de defectos antes de que se ofrezca un reemplazo en garantía.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Reclamaciones por píxeles muertos en televisores Sony</h2>
+      <p>
+        Los televisores Sony Bravia, incluidos los modelos OLED, están cubiertos por la garantía
+        estándar de Sony. Sony evalúa las reclamaciones por defectos de píxeles caso por caso. Un
+        único píxel muerto en un televisor OLED de Sony merece ser notificado, especialmente en una
+        unidad comprada recientemente. El soporte de Sony típicamente requiere una visita de técnico
+        de servicio para las reclamaciones de garantía de televisores, por lo que documenta el
+        defecto claramente con fotografías antes de contactar con el soporte.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cómo probar y documentar un píxel muerto para cualquier marca</h2>
+      <p>
+        Usa la prueba de píxeles muertos de este sitio para ciclar entre negro, blanco y cada color
+        primario. Un píxel muerto aparece como un punto oscuro fijo sobre fondos blancos y claros.
+        Un píxel atascado o caliente aparece como un punto brillante fijo visible contra el negro.
+        Anota la posición aproximada del defecto en la pantalla, confirma que no es polvo bajo un
+        protector de pantalla y fotografíalo frontalmente en una habitación con poca luz. Contacta
+        con el soporte del fabricante con las fotos y prueba de compra lo antes posible tras encontrar
+        el defecto, ya que la mayoría de las políticas de defectos de píxeles tienen una ventana de
+        notificación.
+      </p>
+    </>
+  )
+}
+
+// ─── 12. Píxeles muertos: televisores OLED y proyectores ─────────────────────
+
+function DeadPixelsOledTvProjectorsPostES() {
+  return (
+    <>
+      <p>
+        Los píxeles muertos en los televisores OLED y los proyectores se comportan de forma diferente
+        a los defectos en los monitores LCD estándar, y el proceso para detectarlos y abordarlos
+        requiere un enfoque diferente. Ambos tipos de dispositivo son lo suficientemente caros como
+        para que un defecto de píxel visible merezca atención inmediata mientras aún se esté dentro
+        del plazo de devolución o garantía.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Píxeles muertos en televisores OLED</h2>
+      <p>
+        Los televisores OLED usan emisión de luz por píxel en lugar de una retroiluminación. Un píxel
+        muerto en un televisor OLED es aquel cuyo emisor orgánico ha fallado y ya no produce luz. Esto
+        aparece como un punto permanentemente oscuro visible en contenido brillante o de color, pero
+        invisible contra un fondo negro puro. El defecto más común es un píxel caliente: un emisor
+        atascado que produce un punto brillante fijo. Debido a que el OLED renderiza el negro como
+        cero luz verdadera, un único píxel caliente destaca claramente contra el contenido oscuro de
+        una forma que quedaría enmascarada por el brillo de la retroiluminación en un televisor LCD.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Prueba de un televisor OLED para píxeles muertos</h2>
+      <p>
+        Conecta un portátil o PC a tu televisor OLED mediante HDMI y abre la prueba de píxeles muertos
+        en un navegador a pantalla completa. Cicla por cada color: negro para revelar píxeles calientes
+        o atascados, blanco y gris para revelar píxeles muertos oscuros, y los paneles de colores
+        primarios para detectar defectos de subpíxeles. Realiza la prueba en una habitación con poca
+        luz desde tu distancia de visión habitual sentado. En televisores OLED grandes de 55 pulgadas
+        o más, un único píxel defectuoso es muy pequeño en relación con el área de la pantalla; puede
+        ser necesaria una inspección cercana a menos de 60 cm para confirmar un defecto sospechado a
+        distancia normal.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Píxeles muertos en proyectores: DLP frente a LCD</h2>
+      <p>
+        Los proyectores desarrollan defectos a nivel de píxel que dependen de su tecnología interna.
+        Los proyectores DLP usan un chip de dispositivo de microespejos digitales (DMD) donde cada
+        microespejo corresponde a un píxel. Un espejo atascado en posición encendida produce un punto
+        permanentemente brillante en la imagen proyectada; un espejo atascado apagado produce un
+        punto oscuro. Los proyectores de tres LCD usan tres paneles de imagen separados, uno por canal
+        de color. Un píxel fallido en el panel rojo produce un punto rojo persistente; un píxel
+        fallido en el panel azul produce un punto azul persistente.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cómo probar un proyector para píxeles muertos</h2>
+      <p>
+        Usa la prueba de píxeles muertos desde el dispositivo conectado a tu proyector y proyecta
+        sobre una superficie plana limpia en una habitación completamente oscurecida. Muestra cada
+        color sólido en pantalla completa y escanea la imagen proyectada sistemáticamente. Si
+        encuentras un punto sospechoso, desplaza el proyector ligeramente para confirmar que el
+        punto se mueve con la imagen proyectada (un defecto del proyector) en lugar de permanecer
+        en la misma posición en la pared (una marca en la superficie de proyección).
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cobertura de garantía para televisores OLED y proyectores</h2>
+      <p>
+        La mayoría de los fabricantes de televisores OLED, incluidos LG, Sony y Panasonic, evalúan
+        las reclamaciones por píxeles muertos individualmente. Un único píxel muerto visible en un
+        televisor OLED nuevo generalmente merece ser notificado al soporte del fabricante. Para los
+        proyectores, la cobertura de garantía varía ampliamente según la marca y el nivel de precio.
+        Muchos fabricantes de proyectores definen un recuento de defectos aceptable por encima del
+        cual se ofrece un reemplazo en garantía. Un defecto de microespejo DLP brillante claramente
+        visible o un píxel de panel de imagen LCD fallido en un proyector nuevo debe notificarse con
+        documentación fotográfica mientras aún se esté dentro del plazo de devolución.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">¿Se pueden reparar los defectos de píxeles de proyectores?</h2>
+      <p>
+        Un microespejo DLP atascado es un fallo de hardware que no puede resolverse por métodos de
+        software. Del mismo modo, un píxel fallido en un panel de imagen de proyector LCD requiere
+        el reemplazo físico del panel. El enfoque de ciclo rápido de colores usado por el reparador
+        de píxeles atascados no tiene ningún efecto en los defectos de microespejos DLP. En
+        proyectores de gama de consumo, el costo de reemplazar el chip DMD o un panel de imagen LCD
+        típicamente supera el valor residual del equipo, lo que hace que el servicio o reemplazo en
+        garantía sea la única opción práctica para un defecto visible.
+      </p>
+    </>
+  )
+}
+
+// ─── 13. Sangrado de luz: portátiles gaming ───────────────────────────────────
+
+function BacklightBleedGamingLaptopsPostES() {
+  return (
+    <>
+      <p>
+        Los portátiles gaming se encuentran entre las fuentes más comunes de quejas por sangrado de
+        luz de fondo porque sus paneles delgados y marcos ajustados crean condiciones donde la luz
+        se filtra por los bordes. Los portátiles gaming HP Omen, Acer Nitro, MSI, Alienware y Lenovo
+        atraen un volumen de búsqueda significativo sobre este problema. Esto es lo que puedes esperar
+        de cada marca y cómo evaluar si el sangrado que ves está dentro de la tolerancia normal.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de luz de fondo en HP Omen</h2>
+      <p>
+        Los portátiles HP Omen usan paneles IPS en varios tamaños de pantalla, y el sangrado de luz
+        de fondo a lo largo del borde inferior y las esquinas es un problema frecuentemente notificado
+        en las series Omen 15 y Omen 16. La política de garantía de HP para defectos de pantalla en
+        portátiles requiere que el defecto represente un fallo de hardware en lugar de una
+        característica del panel dentro de la tolerancia. El sangrado visible durante el gaming normal
+        en escenas oscuras en una habitación normalmente iluminada es un caso de garantía más sólido
+        que el sangrado solo visible en una prueba en total oscuridad. Contacta con el soporte de HP
+        con vídeo o fotografías antes de que expire el período de garantía.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de luz de fondo en Acer Nitro 5</h2>
+      <p>
+        El Acer Nitro 5 es un portátil gaming de presupuesto y el sangrado de luz de fondo a lo largo
+        del bisel inferior se notifica comúnmente en múltiples generaciones del modelo. En este nivel
+        de precio, la política de tolerancia de pantalla de Acer típicamente permite un nivel moderado
+        de sangrado de borde antes de que se acepte una reclamación de garantía. Usa la prueba de
+        sangrado de luz de fondo de este sitio para documentar la gravedad desde tu distancia habitual
+        sentado. El sangrado que es claramente distractivo durante el gameplay en una habitación
+        normalmente iluminada merece plantearse al soporte de Acer dentro del período de garantía.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Portátiles gaming MSI y sangrado de pantalla</h2>
+      <p>
+        Los portátiles gaming MSI, incluidas las series Raider, Stealth y Katana, usan paneles IPS o
+        de nivel IPS de varios proveedores, lo que significa que las características del sangrado
+        varían entre lotes de producción. Los informes de sangrado de pantalla MSI tienden a
+        concentrarse en las esquinas inferior-izquierda e inferior-derecha. Si el sangrado apareció
+        desde nuevo, documéntalo temprano. El soporte regional de MSI gestiona las reclamaciones de
+        garantía por defectos de pantalla y generalmente requiere una visita al centro de servicio
+        para las evaluaciones de pantalla de portátil.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de luz de fondo en Alienware</h2>
+      <p>
+        Los portátiles gaming Alienware se venden bajo la marca Dell y llevan el marco de garantía
+        general de Dell. A diferencia de la gama de monitores de escritorio Dell UltraSharp,
+        los portátiles Alienware no incluyen una Garantía de panel premium. Los informes de sangrado
+        de luz de fondo en portátiles Alienware son más comunes en las series m15 y m17. El equipo
+        de soporte de Dell evalúa los defectos de pantalla de los portátiles caso por caso. Si el
+        sangrado afecta a tu experiencia con contenido en entornos oscuros, documéntalo con fotografías
+        claras y contacta con el soporte de Dell.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Portátiles gaming Lenovo y sangrado de luz de fondo</h2>
+      <p>
+        Los portátiles Lenovo Legion y los modelos IdeaPad Gaming notifican sangrado de luz de fondo
+        principalmente a lo largo de los bordes inferior y lateral. La garantía de Lenovo cubre los
+        defectos del panel pero aplica umbrales estándar de calidad de pantalla. El proceso de soporte
+        de Lenovo para problemas de pantalla de portátil generalmente comienza con un diagnóstico en
+        línea y puede resultar en una reparación por correo o una visita de técnico en el domicilio
+        según el nivel de garantía adquirido con el portátil.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cómo probar tu portátil gaming para sangrado de luz de fondo</h2>
+      <p>
+        Abre la prueba de sangrado de luz de fondo de este sitio y muestra el panel negro sólido en
+        pantalla completa en una habitación completamente oscurecida. Deja un minuto para que tus
+        ojos se adapten. Mira la pantalla desde tu posición habitual de gaming. Las manchas brillantes
+        en las esquinas o los bordes son sangrado de luz de fondo. Un brillo que cambia de intensidad
+        al cambiar tu ángulo de visión es más probablemente brillo IPS, que es una característica
+        normal de la tecnología IPS más que un defecto. Fotografía la pantalla frontalmente en la
+        habitación oscura para usarlo como evidencia al contactar con el soporte del fabricante.
+      </p>
+    </>
+  )
+}
+
+// ─── 14. Sangrado de luz: televisores Samsung ─────────────────────────────────
+
+function BacklightBleedSamsungTvPostES() {
+  return (
+    <>
+      <p>
+        El sangrado de luz de fondo es una de las quejas más comunes sobre los televisores LED y
+        QLED de Samsung, especialmente en pantallas de mayor tamaño donde la retroiluminación debe
+        iluminar una mayor superficie. Comprender qué es un defecto genuino frente al comportamiento
+        normal del panel te ayuda a decidir si vale la pena presentar una reclamación de garantía.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Por qué los televisores LED Samsung pueden mostrar sangrado de luz de fondo</h2>
+      <p>
+        La mayoría de los televisores Samsung usan retroiluminación LED de borde o directa en lugar
+        de OLED. En un diseño de borde, las tiras de LED a lo largo de los bordes del panel proyectan
+        luz por la superficie del panel. La luz que se escapa por los bordes en lugar de pasar
+        uniformemente por la capa LCD produce áreas brillantes visibles en escenas oscuras. Los
+        televisores QLED de Samsung usan la misma tecnología LCD subyacente con una capa de mejora
+        de color de punto cuántico, por lo que pueden exhibir las mismas características de sangrado
+        de luz de fondo que los televisores LED estándar.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de luz en televisores Samsung curvos</h2>
+      <p>
+        Los televisores Samsung curvos, incluidos los modelos del rango de 2015 a 2019, están
+        particularmente asociados con el sangrado de luz de fondo debido a la forma en que la
+        curvatura del panel interactúa con la retroiluminación de borde. La curva cambia el ángulo
+        en el que la luz LED entra en los bordes del panel, lo que puede aumentar la visibilidad
+        del sangrado en ciertas posiciones de visión. En un televisor Samsung curvo, el sangrado
+        se notifica a menudo como más grave en los bordes izquierdo y derecho que en modelos de
+        panel plano equivalentes.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cómo probar tu televisor Samsung para sangrado de luz de fondo</h2>
+      <p>
+        Usa la prueba de sangrado de luz de fondo de este sitio desde un dispositivo conectado a
+        tu televisor Samsung mediante HDMI. Muestra el panel negro sólido en pantalla completa en
+        una habitación completamente oscurecida. Mira desde tu distancia habitual de asiento y busca
+        manchas brillantes en los bordes o las esquinas. Da a tus ojos uno o dos minutos para
+        adaptarse a la oscuridad antes de evaluar. Desactiva cualquier configuración de brillo
+        dinámico o compensación de luz ambiental en el menú de imagen del televisor durante la
+        prueba, ya que estos pueden enmascarar el sangrado reduciendo automáticamente el brillo
+        general.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Opciones para reparar el sangrado de luz de fondo en televisores Samsung</h2>
+      <p>
+        No existe una solución de software fiable para el sangrado de luz de fondo en un televisor
+        Samsung. Reducir la configuración de retroiluminación en el menú de imagen reduce la
+        intensidad tanto del contenido como del sangrado, haciéndolo menos visible a costa del
+        brillo general de la imagen. Algunos usuarios informan de una ligera mejora tras un uso
+        prolongado a medida que el panel y el chasis se asientan a la temperatura de funcionamiento.
+        Los remedios físicos como aplicar presión en el marco conllevan un alto riesgo de romper
+        el panel y anular la garantía.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cuándo contactar con el soporte de Samsung</h2>
+      <p>
+        Si el sangrado de luz de fondo es visible durante la visualización normal en una habitación
+        razonablemente iluminada, especialmente durante escenas oscuras de películas o gaming en
+        consola, merece una reclamación de garantía. Documéntalo con vídeo o fotografías tomadas en
+        una habitación oscurecida desde tu distancia de visión normal. La línea de soporte de Samsung
+        puede organizar una visita de técnico para televisores de pantalla grande. Para televisores
+        comprados en un distribuidor, la política de devolución del distribuidor puede ser la vía más
+        rápida si aún estás dentro del plazo de devolución.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Televisores OLED y QD-OLED de Samsung</h2>
+      <p>
+        La gama de televisores QD-OLED de Samsung (S90C y modelos posteriores) no presenta sangrado
+        de luz de fondo porque los paneles OLED no tienen retroiluminación. Cada píxel produce su
+        propia luz y se apaga por completo al mostrar negro. Si tienes un televisor QD-OLED de
+        Samsung y ves un punto brillante persistente contra contenido oscuro, es un píxel atascado
+        o caliente en lugar de sangrado de luz de fondo. Usa la herramienta de prueba de píxeles
+        muertos para confirmar el tipo de defecto y documéntalo para una reclamación de garantía.
+      </p>
+    </>
+  )
+}
+
+// ─── 15. Sangrado de luz de fondo: LG, Sony, Philips, TCL, BenQ ──────────────
+
+function BacklightBleedBrandsPostES() {
+  return (
+    <>
+      <p>
+        El sangrado de luz de fondo afecta a los monitores y televisores LCD de todos los
+        fabricantes, pero la gravedad y la respuesta de garantía varían significativamente
+        según la marca y el gama del producto. Esta guía cubre qué esperar de las pantallas
+        LG, Sony, Philips, TCL y BenQ, y cómo presentar una reclamación de garantía exitosa
+        si el sangrado es lo suficientemente grave como para afectar el uso diario.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de luz de fondo en monitores LG</h2>
+      <p>
+        LG fabrica una amplia gama de monitores y televisores LCD, y las características de
+        sangrado de luz de fondo varían según el producto. Los monitores UltraWide y UltraGear
+        de LG han registrado sangrado en las esquinas y a lo largo del borde inferior. La
+        garantía de LG para monitores y televisores evalúa los defectos de pantalla según las
+        tolerancias de fabricación aceptables. En los televisores OLED de LG, el sangrado de
+        luz de fondo no aplica porque los paneles OLED generan negro verdadero por píxel.
+        Cualquier punto brillante persistente en un televisor OLED de LG es un defecto de
+        píxel, no sangrado de luz de fondo.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de luz de fondo en productos Sony</h2>
+      <p>
+        Los televisores Sony Bravia LCD y los monitores Sony están sujetos al sangrado de luz
+        de fondo como cualquier otro panel LCD de iluminación lateral o directa. La gama
+        premium Bravia XR de Sony utiliza atenuación local de matriz completa para reducir la
+        visibilidad del sangrado, pero este puede seguir produciéndose en los límites de las
+        zonas de atenuación. La garantía de Sony cubre defectos de panel fuera de la tolerancia
+        aceptable. Para los televisores Sony, las reclamaciones de garantía suelen requerir la
+        visita de un técnico. Documenta la gravedad del sangrado con fotografías y vídeo antes
+        de contactar con el soporte de Sony.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de luz de fondo en monitores Philips</h2>
+      <p>
+        Los monitores Philips, en particular la gama gaming Momentum, han recibido informes
+        de sangrado en las esquinas de sus paneles IPS. Philips aplica una política de calidad
+        de pantalla y defectos de píxeles alineada con las normas ISO. Para los monitores
+        Philips vendidos en Europa, las reclamaciones de garantía se gestionan a través del
+        portal de soporte de Philips con evidencia fotográfica. Ten en cuenta que la función
+        Ambiglow de Philips, que proyecta luz decorativa desde la parte trasera del monitor
+        hacia la pared, a veces se confunde con el sangrado de luz de fondo, pero es una
+        característica de diseño intencional.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de luz de fondo en televisores TCL</h2>
+      <p>
+        Los televisores TCL se fabrican con un precio competitivo, lo que puede resultar en
+        una mayor variación de uniformidad de retroiluminación en comparación con las marcas
+        premium. TCL utiliza retroiluminación lateral y directa en sus gamas de televisores.
+        El sangrado en los televisores TCL es más frecuente en los modelos más grandes y de
+        menor precio. Para los televisores TCL nuevos que muestren sangrado significativo, una
+        devolución al minorista dentro del plazo de devolución suele ser más rápida que el
+        proceso de garantía del fabricante.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de luz de fondo en el BenQ EX2780Q</h2>
+      <p>
+        El BenQ EX2780Q es un monitor gaming IPS QHD de 27 pulgadas que ha generado un
+        volumen de búsquedas notable en torno al sangrado de luz de fondo. Los informes varían
+        considerablemente entre unidades, lo que sugiere variación de fabricación entre lotes
+        más que un problema de diseño sistémico. La garantía de BenQ incluye una política de
+        calidad de pantalla y píxeles. Si tu BenQ EX2780Q muestra un sangrado de borde
+        significativo que sea visible durante el juego, contacta con el soporte de BenQ con
+        los resultados de la prueba de sangrado de luz de fondo documentados en una habitación
+        oscurecida.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cómo probar el sangrado de luz de fondo en cualquiera de estas pantallas</h2>
+      <p>
+        Utiliza la prueba de sangrado de luz de fondo de este sitio para mostrar un panel negro
+        en pantalla completa. Oscurece la habitación por completo, espera a que tus ojos se
+        adapten y mira la pantalla desde tu distancia de trabajo o visualización habitual.
+        Fotografía la pantalla de frente para documentar la gravedad. El sangrado visible desde
+        tu distancia de visión normal en una habitación moderadamente iluminada es un caso
+        razonable para garantía. El sangrado visible solo en una habitación completamente a
+        oscuras y de cerca suele estar dentro de la tolerancia de fabricación normal para
+        pantallas LCD.
+      </p>
+    </>
+  )
+}
+
+// ─── 16. Sangrado en televisores LED y pantallas OLED ────────────────────────
+
+function LedTvOledScreenBleedingPostES() {
+  return (
+    <>
+      <p>
+        Cuando la gente busca "sangrado de pantalla en televisores" o "sangrado de luz LED en
+        televisores", casi siempre describe el sangrado de luz de fondo en un televisor LCD.
+        El sangrado de pantalla AMOLED se refiere a algo completamente diferente. Entender qué
+        fenómeno afecta a tu pantalla determina la acción correcta a tomar.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de luz LED en televisores explicado</h2>
+      <p>
+        Los televisores LED utilizan una matriz de retroiluminación LED detrás de un panel LCD.
+        La retroiluminación es una fuente de luz continua, y la capa LCD actúa como una
+        compuerta que se abre y cierra por píxel para controlar el brillo de la imagen. Donde
+        el chasis de retroiluminación se encuentra con los bordes del panel, la luz escapa a
+        través de huecos físicos y produce parches brillantes visibles en escenas oscuras. Esto
+        es el sangrado de luz de fondo: luz que sortea el bloqueo previsto y aparece como zonas
+        iluminadas en las esquinas o bordes de la pantalla al mostrar contenido oscuro.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de pantalla en televisores: iluminación lateral frente a directa</h2>
+      <p>
+        La gravedad del sangrado de luz de fondo depende en parte de la configuración de la
+        retroiluminación. Los televisores de iluminación lateral posicionan tiras LED a lo largo
+        de los bordes del panel, lo que significa que toda la luz recorre el panel desde los
+        bordes, aumentando la probabilidad de sangrado en los bordes. Los televisores de
+        iluminación directa y de retroiluminación de matriz completa distribuyen los LED por
+        toda la superficie del panel trasero, lo que generalmente produce una mejor uniformidad
+        y menos sangrado en los bordes. Los televisores Mini-LED llevan esto más lejos con
+        cientos de LED más pequeños que permiten una atenuación local más precisa y
+        significativamente menos sangrado alrededor de objetos brillantes sobre fondos oscuros.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de pantalla AMOLED: qué es realmente</h2>
+      <p>
+        Las pantallas AMOLED, utilizadas en teléfonos y tabletas Samsung Galaxy, no tienen
+        retroiluminación y, por tanto, no pueden desarrollar sangrado de luz de fondo. Cuando
+        la gente describe el sangrado de pantalla AMOLED, generalmente se refiere a una de dos
+        cosas: daño físico en el que una pantalla rota ha causado una extensión oscura similar
+        a tinta (esto es filtración de cristal líquido de un panel LCD dañado, no AMOLED), o
+        envejecimiento desigual de los píxeles OLED que hace que algunas zonas parezcan más
+        oscuras que otras tras un uso prolongado. Ninguna de las dos es sangrado de luz de fondo.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cómo probar tu televisor para detectar sangrado de luz de fondo</h2>
+      <p>
+        Utiliza la prueba de sangrado de luz de fondo de este sitio desde un dispositivo
+        conectado a tu televisor mediante HDMI. Muestra el panel negro en pantalla completa en
+        una habitación completamente oscurecida y deja que tus ojos se adapten durante dos
+        minutos. Las zonas brillantes en los bordes o esquinas visibles desde tu distancia de
+        asiento habitual son sangrado de luz de fondo. Los parches que se desplazan al cambiar
+        el ángulo de visión son más probablemente reflejos o brillo IPS. Una zona brillante
+        consistente en la misma posición independientemente del ángulo de visión es sangrado
+        de luz de fondo genuino.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Sangrado de luz en televisores: cuándo actuar</h2>
+      <p>
+        El sangrado de luz de fondo leve, visible solo en un entorno de prueba completamente
+        oscuro y no durante la visualización normal, está dentro de la tolerancia de fabricación
+        normal para la mayoría de los televisores LED. El sangrado que se nota durante escenas
+        oscuras de películas o gaming con la iluminación normal de la habitación merece ser
+        documentado y comunicado al fabricante o minorista. Actúa dentro del plazo de
+        devolución cuando sea posible, ya que generalmente es más rápido que una reclamación
+        de servicio en garantía.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Televisores OLED y sangrado de pantalla</h2>
+      <p>
+        Los televisores OLED verdaderos no pueden desarrollar sangrado de luz de fondo porque
+        no tienen retroiluminación. Cada píxel de un televisor OLED genera y extingue
+        independientemente su propia luz. Si ves un resplandor persistente en un televisor OLED
+        durante contenido oscuro, lo más probable es que sea un píxel caliente (un emisor
+        brillante atascado) o una fuente de luz ambiental reflejándose en la superficie del
+        panel. Utiliza la prueba de píxeles muertos para confirmar si un punto brillante
+        persistente es un defecto de píxel, y documéntalo con fotografías para una reclamación
+        de garantía.
+      </p>
+    </>
+  )
+}
+
+// ─── 17. Quemado de pantalla en televisores OLED y QLED de Samsung ───────────
+
+function SamsungBurnInPostES() {
+  return (
+    <>
+      <p>
+        El quemado de pantalla en televisores Samsung es uno de los temas de pantalla más
+        buscados, impulsado en gran medida por la confusión entre dos tecnologías de panel muy
+        diferentes: OLED y QLED. Qué televisores Samsung están realmente en riesgo, qué causa
+        el quemado y qué puedes hacer al respecto son preguntas con respuestas claras una vez
+        que entiendes la distinción.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Televisores Samsung QLED y riesgo de quemado</h2>
+      <p>
+        Los televisores Samsung QLED son televisores LCD con una capa de mejora de color de
+        punto cuántico. Utilizan retroiluminación LED y no contienen materiales
+        electroluminiscentes orgánicos. Dado que los píxeles LCD no generan su propia luz y
+        no se degradan por la visualización sostenida de contenido, los televisores Samsung QLED
+        no tienen un riesgo significativo de quemado en condiciones de uso normal. La retención
+        de imagen permanente en un televisor Samsung QLED es extremadamente rara e indicaría
+        un defecto de fabricación más que un envejecimiento normal del panel. La confusión sobre
+        el quemado QLED suele surgir por equipararlo con el quemado OLED.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Televisores Samsung QD-OLED y riesgo real de quemado</h2>
+      <p>
+        La gama de televisores OLED de Samsung, vendida bajo la marca QD-OLED a partir de la
+        serie S90C, utiliza paneles electroluminiscentes orgánicos y tiene un riesgo real de
+        quemado. Los píxeles QD-OLED se degradan más rápido cuando se conducen a alto brillo
+        durante períodos prolongados. Los elementos estáticos en pantalla como los logotipos
+        de canales, los tickers de noticias, los marcadores de deportes y las barras de
+        navegación mostrados durante muchas horas pueden causar un envejecimiento desigual de
+        los píxeles, dejando un fantasma permanente tenue de esos elementos en el panel. Esto
+        es quemado verdadero, distinto de la retención temporal de imagen.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Quemado frente a retención de imagen en televisores Samsung</h2>
+      <p>
+        La retención de imagen es una imagen fantasma temporal que se desvanece después de que
+        la pantalla muestra contenido variado o se apaga durante un período. Puede ocurrir tanto
+        en televisores Samsung QLED como OLED tras contenido estático prolongado y no es
+        permanente. El quemado verdadero es una degradación permanente de píxeles que no se
+        desvanece. Utiliza la prueba de retención de imagen de este sitio para mostrar un patrón
+        de acondicionamiento y luego cambia a un panel gris sólido. Un fantasma que se desvanece
+        en 30 minutos es retención de imagen. Un fantasma que persiste después de una hora es
+        probablemente quemado permanente.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Qué causa el quemado en pantallas Samsung</h2>
+      <p>
+        En los televisores Samsung QD-OLED, los patrones de uso de mayor riesgo son: ver un
+        canal de noticias con un ticker y logotipo persistentes durante más de cuatro a seis
+        horas al día, jugar con un HUD fijo a alto brillo durante sesiones diarias prolongadas,
+        y mostrar un escritorio estático o salvapantallas a brillo máximo durante largos
+        períodos. Las retransmisiones deportivas con marcadores persistentes y branding del
+        canal también son un factor de riesgo documentado después de miles de horas acumuladas
+        de visualización.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Píxeles muertos en Samsung QLED frente a quemado</h2>
+      <p>
+        Las búsquedas de "píxel muerto Samsung QLED" suelen referirse a un problema distinto
+        del quemado. Los píxeles muertos o atascados en un televisor Samsung QLED son fallos
+        de hardware de píxeles, no quemado. Un píxel atascado aparece como un punto fijo
+        brillante u oscuro en una ubicación. Utiliza la prueba de píxeles muertos de este sitio
+        para confirmar si lo que ves es un defecto de píxel (un único punto fijo que no coincide
+        con el contenido circundante) o quemado (un patrón tenue que coincide con contenido
+        estático mostrado anteriormente, extendido por un área de la pantalla).
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cómo prevenir y reducir el quemado en televisores Samsung</h2>
+      <p>
+        Para los televisores Samsung QD-OLED, mantén la configuración de brillo máximo por
+        debajo del máximo para la visualización diaria. Un brillo más bajo ralentiza
+        significativamente la degradación del material orgánico. Activa las funciones de
+        desplazamiento de píxeles, salvapantallas o reducción de luminancia de logotipos en la
+        configuración del televisor. Varía el contenido con regularidad y evita dejar imágenes
+        estáticas en pantalla cuando el televisor esté desatendido. Los televisores Samsung
+        QD-OLED incluyen una función de cuidado del panel o actualización de píxeles que debe
+        ejecutarse periódicamente según se describe en el manual del usuario.
+      </p>
+    </>
+  )
+}
+
+// ─── 18. Resolución de pantalla: tamaños para televisores y monitores ─────────
+
+function ScreenResolutionSizesPostES() {
+  return (
+    <>
+      <p>
+        Los nombres de resolución de pantalla se usan de forma inconsistente en los listados
+        de productos, y la relación entre resolución, tamaño de pantalla y nitidez real rara
+        vez se explica con claridad. Esta guía cubre los tamaños de resolución comunes para
+        televisores y monitores, el significado de los nombres y los formatos específicos que
+        generan preguntas frecuentes.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Nombres de resolución comunes para televisores y monitores</h2>
+      <p>
+        Full HD (1920x1080) sigue siendo la resolución más utilizada a nivel mundial en
+        televisores, monitores y portátiles. Quad HD (2560x1440) es el estándar para monitores
+        de 27 pulgadas y a menudo se etiqueta incorrectamente como 2K en los listados de
+        productos; el verdadero 2K es un estándar de cine de 2048x1080. 4K UHD (3840x2160)
+        es el estándar premium para televisores grandes y monitores de alta gama. Los tamaños
+        de resolución de pantalla de televisores se describen típicamente por su recuento de
+        píxeles vertical: 720p, 1080p y 4K. Utiliza el comprobador de resolución de este sitio
+        para confirmar la resolución exacta a la que funciona tu pantalla.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Monitores 1600x1200: un formato 4:3 heredado</h2>
+      <p>
+        La resolución 1600x1200 es un formato de relación de aspecto 4:3 de la era anterior a
+        las pantallas panorámicas de la informática de escritorio, utilizado en monitores CRT de
+        alta gama y en los primeros monitores LCD. A pesar de haber sido reemplazada por
+        formatos panorámicos en la mayoría de los contextos de consumo, los monitores 1600x1200
+        siguen generando búsquedas porque algunas aplicaciones profesionales e industriales
+        requieren pantallas 4:3, y porque ciertos monitores CRT con esta resolución todavía se
+        usan para fines técnicos específicos y de informática retro. Los paneles LCD 1600x1200
+        nuevos siguen disponibles en proveedores especializados para uso médico e industrial.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Resolución de pantalla en Chromebooks</h2>
+      <p>
+        La resolución de pantalla de los Chromebooks varía significativamente según el modelo
+        y el segmento de precio. Los Chromebooks económicos suelen usar paneles de 1366x768.
+        Los modelos de gama media suelen utilizar 1920x1080. Los Chromebooks premium de Google,
+        ASUS y HP usan pantallas de 2560x1600 o mayor resolución. ChromeOS aplica una relación
+        de píxeles del dispositivo que escala la interfaz, por lo que la resolución CSS
+        informada por el navegador puede diferir de la resolución física del panel. El
+        comprobador de resolución de este sitio muestra ambos valores, ayudándote a confirmar
+        si tu Chromebook usa su resolución nativa completa.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Tamaño y resolución promedio de pantalla de ordenador</h2>
+      <p>
+        El monitor de escritorio promedio vendido a nivel mundial es de aproximadamente 24 a
+        27 pulgadas, más comúnmente a 1920x1080. Las pantallas de portátiles se concentran en
+        torno a 13 a 15 pulgadas, con 1920x1080 como la resolución más común en el mercado
+        medio. Para los televisores utilizados como pantallas secundarias de ordenador, 40 a
+        55 pulgadas a 4K UHD es una combinación habitual. A medida que el trabajo remoto e
+        híbrido se ha expandido, los monitores de 27 y 32 pulgadas a 2560x1440 se han vuelto
+        significativamente más comunes en configuraciones de oficina en casa.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Resolución de pantalla personalizada: cómo crearla</h2>
+      <p>
+        Windows permite resoluciones de pantalla personalizadas a través del Panel de Control
+        de Nvidia (en Pantalla, luego Cambiar resolución, luego Personalizar) o el software
+        AMD Radeon (en Pantalla). Las resoluciones personalizadas se usan para configuraciones
+        de pantalla inusuales, ciertas aplicaciones profesionales o dispositivos heredados que
+        no se detectan automáticamente con su resolución nativa correcta. La GPU debe soportar
+        el ancho de banda objetivo para la resolución y frecuencia de actualización elegidas,
+        y la pantalla debe aceptar la señal. Las resoluciones personalizadas no compatibles
+        producen ninguna imagen o una salida distorsionada.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Resolución máxima y frecuencia de actualización VGA</h2>
+      <p>
+        El conector analógico VGA admite un máximo teórico de 2048x1536 a 85 Hz, aunque los
+        límites prácticos dependen de la calidad del cable y la electrónica del monitor. A
+        1920x1080, VGA puede proporcionar una señal utilizable en tiradas de cable cortas,
+        pero la calidad de imagen es notablemente más suave que las conexiones digitales debido
+        a la conversión analógico-digital en ambos extremos. La mayoría de los monitores modernos
+        han eliminado las entradas VGA por completo. Para cualquier pantalla conectada mediante
+        VGA que muestre una imagen borrosa o inestable, cambiar a HDMI o DisplayPort a la misma
+        resolución produce un resultado más nítido.
+      </p>
+    </>
+  )
+}
+
+// ─── 19. Guía de resolución de pantalla Samsung ───────────────────────────────
+
+function SamsungResolutionGuidePostES() {
+  return (
+    <>
+      <p>
+        Samsung fabrica monitores, televisores y dispositivos móviles con una amplia gama de
+        resoluciones y configuraciones de pantalla. Esta guía explica cómo encontrar, comprobar
+        y ajustar la resolución en monitores y televisores Samsung, y qué hacer cuando la
+        resolución mostrada no coincide con la especificación nativa del panel.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Opciones de resolución en monitores Samsung</h2>
+      <p>
+        Los monitores Samsung van desde 1920x1080 FHD en los modelos de entrada hasta
+        3840x2160 4K en las pantallas profesionales y gaming. La gama Odyssey incluye modelos
+        ultrawide a 2560x1080 y 3440x1440, además del super-ultrawide de 49 pulgadas a
+        5120x1440. Los monitores Samsung ViewFinity para uso profesional alcanzan 5120x2880 y
+        7680x4320. Para confirmar que tu monitor Samsung funciona a su resolución nativa, usa
+        el comprobador de resolución de este sitio, que lee la resolución de funcionamiento
+        tal como la informa tu navegador.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cómo configurar la resolución correcta en Windows para monitores Samsung</h2>
+      <p>
+        Si tu monitor Samsung no muestra su resolución nativa, haz clic derecho en el escritorio
+        de Windows y selecciona Configuración de pantalla. En el menú desplegable Resolución,
+        selecciona la resolución más alta de la lista, que suele ser la resolución nativa de
+        tu panel. Si la resolución nativa no aparece en la lista, comprueba el cable. Se requiere
+        HDMI 2.0 o DisplayPort 1.2 para monitores Samsung 4K a 60 Hz. Para los monitores
+        Samsung Odyssey ultrawide, se recomienda DisplayPort 1.4 para frecuencias de
+        actualización superiores a 120 Hz.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Configuración de resolución en televisores Samsung</h2>
+      <p>
+        Los televisores Samsung detectan y muestran automáticamente a la resolución más alta
+        compatible con la fuente conectada. Si tu televisor Samsung conectado a un PC muestra
+        una resolución inferior a la esperada, el puerto HDMI puede estar configurado en un
+        modo de entrada limitado. En la configuración del televisor Samsung, navega a Conexión,
+        luego Administrador de dispositivos externos (o Administrador de dispositivos HDMI en
+        algunos modelos), y activa el color UHD HDMI para el puerto correspondiente. Esto
+        desbloquea el ancho de banda completo del puerto para 4K a 60 Hz o superior.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Ajuste del tamaño de pantalla en televisores Samsung</h2>
+      <p>
+        Los televisores Samsung ocasionalmente muestran un tamaño de imagen incorrecto, con
+        barras negras alrededor de la imagen o contenido estirado. Esto se controla mediante
+        la configuración Tamaño de imagen en Ajustes, luego Imagen, luego Configuración de
+        tamaño de imagen. Establece el Tamaño de imagen en 16:9 para el contenido panorámico
+        estándar o en Automático para la detección automática. Si la imagen es demasiado grande
+        y se cortan los bordes, la opción Ajustar a pantalla o 1:1 corrige el exceso de
+        exploración. Para la entrada de PC, establece el Tamaño de imagen en Ajustar a pantalla
+        para garantizar que se muestre el escritorio completo sin recortes.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Resolución de pantalla en teléfonos y tabletas Samsung Galaxy</h2>
+      <p>
+        Los teléfonos Samsung Galaxy usan paneles AMOLED con resoluciones desde 2400x1080 FHD+
+        en los modelos de gama media hasta 3088x1440 QHD+ en los dispositivos de gama alta.
+        Muchos teléfonos Samsung Galaxy utilizan FHD+ por defecto para conservar la batería,
+        incluso si el panel admite QHD+. Para activar la resolución completa, abre Ajustes,
+        luego Pantalla, luego Resolución de pantalla, y selecciona la opción más alta disponible.
+        Ten en cuenta que una resolución más alta aumenta el consumo de batería.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Cómo comprobar la resolución de pantalla Samsung con el comprobador de resolución</h2>
+      <p>
+        El comprobador de resolución de este sitio lee la resolución en píxeles CSS y la
+        relación de píxeles del dispositivo informada por tu navegador, reflejando la resolución
+        de funcionamiento efectiva incluyendo cualquier escalado del sistema operativo aplicado.
+        En los monitores Samsung, compara el valor informado con la especificación nativa en la
+        documentación de tu monitor. En los televisores Samsung conectados a un PC, el
+        comprobador confirma si la señal 4K completa llega a la pantalla. En los dispositivos
+        Samsung Galaxy, confirma si el teléfono funciona a su resolución nativa completa del
+        panel o a la configuración predeterminada de ahorro de batería.
+      </p>
+    </>
+  )
+}
+
 export const POST_CONTENT_ES: Record<string, FC> = {
   'how-to-test-monitor-dead-pixels': DeadPixelPostES,
   'what-is-backlight-bleed': BacklightBleedPostES,
@@ -910,4 +1664,13 @@ export const POST_CONTENT_ES: Record<string, FC> = {
   'screen-uniformity-test-guide': UniformityPostES,
   'how-to-clean-monitor-screen': CleaningPostES,
   'monitor-aspect-ratios-explained': AspectRatiosPostES,
+  'dead-pixels-brand-monitors': DeadPixelsBrandPostES,
+  'dead-pixels-oled-tv-projectors': DeadPixelsOledTvProjectorsPostES,
+  'backlight-bleed-gaming-laptops': BacklightBleedGamingLaptopsPostES,
+  'backlight-bleed-samsung-tv': BacklightBleedSamsungTvPostES,
+  'backlight-bleed-lg-sony-philips-tcl-benq': BacklightBleedBrandsPostES,
+  'led-tv-oled-screen-bleeding': LedTvOledScreenBleedingPostES,
+  'samsung-oled-qled-burn-in': SamsungBurnInPostES,
+  'screen-resolution-tv-monitor-sizes': ScreenResolutionSizesPostES,
+  'samsung-screen-resolution-guide': SamsungResolutionGuidePostES,
 }
