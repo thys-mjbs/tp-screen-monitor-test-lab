@@ -53,5 +53,5 @@
 - [x] 6.1 Update app/sitemap.ts — add es-prefixed URL set
 - [x] 6.2 Add hreflang alternates to all generateMetadata exports (all 60+ pages)
 - [x] 6.3 Update lib/metadata.ts — locale-aware toolMetadata and toolSchemas
-- [ ] 6.4 Run npx tsc --noEmit; fix all type errors
+- [x] 6.4 Run npx tsc --noEmit; fix all type errors
 - [ ] 6.5 Manual verification checklist
