@@ -1319,8 +1319,8 @@ function LedTvOledScreenBleedingPostES() {
   return (
     <>
       <p>
-        Cuando la gente busca "sangrado de pantalla en televisores" o "sangrado de luz LED en
-        televisores", casi siempre describe el sangrado de luz de fondo en un televisor LCD.
+        Cuando la gente busca &ldquo;sangrado de pantalla en televisores&rdquo; o &ldquo;sangrado de luz LED en
+        televisores&rdquo;, casi siempre describe el sangrado de luz de fondo en un televisor LCD.
         El sangrado de pantalla AMOLED se refiere a algo completamente diferente. Entender qué
         fenómeno afecta a tu pantalla determina la acción correcta a tomar.
       </p>
@@ -1460,7 +1460,7 @@ function SamsungBurnInPostES() {
 
       <h2 className="text-lg font-bold text-fg">Píxeles muertos en Samsung QLED frente a quemado</h2>
       <p>
-        Las búsquedas de "píxel muerto Samsung QLED" suelen referirse a un problema distinto
+        Las búsquedas de &ldquo;píxel muerto Samsung QLED&rdquo; suelen referirse a un problema distinto
         del quemado. Los píxeles muertos o atascados en un televisor Samsung QLED son fallos
         de hardware de píxeles, no quemado. Un píxel atascado aparece como un punto fijo
         brillante u oscuro en una ubicación. Utiliza la prueba de píxeles muertos de este sitio
