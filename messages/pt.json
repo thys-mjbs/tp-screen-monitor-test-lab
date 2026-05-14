@@ -163,6 +163,65 @@
         "fast": "Rápido",
         "rapid": "Acelerado"
       }
+    },
+    "gamma": {
+      "checkerboard": "Tabuleiro de referência",
+      "target": "Alvo",
+      "standardTarget": "Alvo padrão",
+      "viewFullscreen": "Ver em Tela Cheia",
+      "hint": "Afaste-se do ecrã. O quadrado que melhor combina com o tabuleiro indica o gama do seu monitor.",
+      "fsHint": "Afaste-se e encontre qual lado combina · Clique ou Espaço para alternar referência · Esc para sair",
+      "labels": {
+        "gamma18": "Gama 1.8",
+        "gamma20": "Gama 2.0",
+        "gamma22": "Gama 2.2",
+        "gamma24": "Gama 2.4"
+      }
+    },
+    "pwm": {
+      "warning": {
+        "title": "Aviso de imagens piscantes.",
+        "body": "Esta ferramenta exibe cores em ciclo rápido a alta frequência. Não a use se tiver epilepsia fotossensível, for sensível a flashes ou luzes piscantes, ou tiver sido aconselhado a evitar esse tipo de conteúdo. Se sentir qualquer desconforto, pare imediatamente pressionando Esc ou o botão Parar."
+      },
+      "pressStart": "Pressione Iniciar para começar a piscar",
+      "flickering": "Piscando",
+      "steadyRef": "Referência Estável",
+      "toggleEvery": "Alternar a cada:",
+      "offPhase": "Fase desligada:",
+      "note": "A taxa de piscar é relativa à taxa de quadros do seu monitor. O PWM real do monitor funciona entre 200 e 1000 Hz e é invisível ao olho — use o método da câmara para detetá-lo.",
+      "rates": {
+        "f1": "1 quadro",
+        "f2": "2 quadros",
+        "f4": "4 quadros",
+        "f8": "8 quadros"
+      },
+      "dim": {
+        "fullOff": "Totalmente desligado",
+        "dim25": "25% escuro",
+        "dim50": "50% escuro"
+      }
+    },
+    "hdr": {
+      "detecting": "Detetando capacidades do ecrã...",
+      "fullRamp": "Escala completa de brilho (preto para branco)",
+      "shadowSteps": "Passos de sombra: detalhe próximo do preto",
+      "highlightSteps": "Passos de destaque: detalhe próximo do branco",
+      "note": "Cada passo nas escalas de sombra e destaque deve ser individualmente visível. Passos fundidos indicam pretos esmagados ou brancos recortados. A luminância HDR verdadeira acima do branco SDR não pode ser renderizada numa página de navegador padrão.",
+      "caps": {
+        "hdrLabel": "HDR (Alto Alcance Dinâmico)",
+        "hdrSupported": "O seu navegador e ecrã reportam capacidade HDR.",
+        "hdrUnsupported": "O seu navegador ou ecrã não reporta suporte HDR. Um ecrã SDR ou um navegador sem passagem HDR mostrará isso.",
+        "p3Label": "Gama de Cores Ampla: Display P3",
+        "p3Supported": "O seu ecrã pode renderizar cores além da gama sRGB. P3 cobre cerca de 25% mais cores do que sRGB.",
+        "p3Unsupported": "O seu ecrã está a reportar gama sRGB padrão. A maioria dos monitores não HDR é apenas sRGB.",
+        "rec2020Label": "Gama de Cores Ampla: Rec. 2020",
+        "rec2020Supported": "O seu ecrã reporta gama de cores Rec. 2020, o padrão HDR de transmissão. Isto é raro em monitores de consumo.",
+        "rec2020Unsupported": "Rec. 2020 não detetado. Isso é esperado em quase todos os monitores de consumo, incluindo a maioria dos ecrãs HDR."
+      }
     }
+  },
+  "affiliate": {
+    "shopOnAmazon": "Comprar na Amazon",
+    "disclosure": "Como Associado Amazon, ganhamos com compras qualificadas."
   }
 }

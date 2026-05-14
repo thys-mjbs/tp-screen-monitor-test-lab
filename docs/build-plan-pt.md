@@ -15,7 +15,7 @@
 - [x] 2.2 Create messages/pt.json part 1: nav, footer, breadcrumb, common, home page
 - [x] 2.3 Add to messages/pt.json: blog strings + FullscreenPanel + RefreshRateChecker
 - [x] 2.4 Add to messages/pt.json: ResolutionChecker + InputLagTest + StuckPixelFixer
-- [ ] 2.5 Add to messages/pt.json: GammaCalibrationCheck + PwmFlickerTest + HdrTest + Affiliate; close file
+- [x] 2.5 Add to messages/pt.json: GammaCalibrationCheck + PwmFlickerTest + HdrTest + Affiliate; close file
 
 ## Phase 3 — Translate content data
 - [ ] 3.1 Create lib/i18n/tools-pt.ts (30 tools: name, shortDescription, metaTitle, metaDesc + 3 categoryMeta entries)
