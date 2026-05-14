@@ -21,7 +21,7 @@
 - [x] 3.1 Create lib/i18n/tools-es.ts (30 tools: name, shortDescription, metaTitle, metaDesc + 3 categoryMeta entries)
 - [x] 3.2 Create lib/i18n/posts-es.ts (19 post titles + descriptions)
 - [x] 3.3 Update lib/tools.ts and lib/posts.ts for locale-awareness
-- [ ] 3.4 Create app/[locale]/blog/[slug]/content.es.tsx — blog posts 1–5
+- [x] 3.4 Create app/[locale]/blog/[slug]/content.es.tsx — blog posts 1–5
 - [ ] 3.5 Blog content posts 6–10
 - [ ] 3.6 Blog content posts 11–14
 - [ ] 3.7 Blog content posts 15–19
