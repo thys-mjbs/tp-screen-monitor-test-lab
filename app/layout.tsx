@@ -8,6 +8,7 @@ import { Footer } from '@/components/Footer'
 import { Analytics } from '@vercel/analytics/next'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GoogleAnalytics } from '@/components/GoogleAnalytics'
+import { getLocale } from 'next-intl/server'
 
 const sora = Sora({
   variable: '--font-sora',
@@ -41,13 +42,14 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image', images: ['/og-image.png'] },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const locale = await getLocale()
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <body className={`${sora.variable} ${geistMono.variable} font-sans antialiased bg-bg text-fg`}>
         <Providers>
           <Header />
