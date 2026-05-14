@@ -1,15 +1,17 @@
+import { getTranslations } from 'next-intl/server'
 import { buildAmazonSearchUrl } from '@/lib/affiliate/config'
 
 interface AmazonLinksProps {
   searchTerms: string[]
 }
 
-export function AmazonLinks({ searchTerms }: AmazonLinksProps) {
+export async function AmazonLinks({ searchTerms }: AmazonLinksProps) {
   if (!searchTerms?.length) return null
+  const t = await getTranslations('affiliate')
 
   return (
     <section className="rounded-xl border border-border bg-surface p-5 space-y-3">
-      <p className="text-xs font-semibold uppercase tracking-wider text-fg-muted">Shop on Amazon</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-fg-muted">{t('shopOnAmazon')}</p>
       <ul className="flex flex-wrap gap-2">
         {searchTerms.map((term) => (
           <li key={term}>
@@ -25,7 +27,7 @@ export function AmazonLinks({ searchTerms }: AmazonLinksProps) {
         ))}
       </ul>
       <p className="text-xs text-fg-muted opacity-60">
-        As an Amazon Associate we earn from qualifying purchases.
+        {t('disclosure')}
       </p>
     </section>
   )

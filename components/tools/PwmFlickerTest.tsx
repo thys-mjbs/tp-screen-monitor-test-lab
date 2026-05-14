@@ -1,25 +1,22 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { Play, Square, TriangleAlert } from 'lucide-react'
 
 type FlickerRate = 'f1' | 'f2' | 'f4' | 'f8'
 
 const RATE_FRAMES: Record<FlickerRate, number> = { f1: 1, f2: 2, f4: 4, f8: 8 }
-const RATE_LABELS: Record<FlickerRate, string> = {
-  f1: '1 frame',
-  f2: '2 frames',
-  f4: '4 frames',
-  f8: '8 frames',
-}
 
-const DIM_OPTIONS: { value: number; label: string }[] = [
-  { value: 0,   label: 'Full off' },
-  { value: 64,  label: '25% dim' },
-  { value: 128, label: '50% dim' },
+type DimKey = 'fullOff' | 'dim25' | 'dim50'
+const DIM_OPTIONS: { value: number; key: DimKey }[] = [
+  { value: 0,   key: 'fullOff' },
+  { value: 64,  key: 'dim25' },
+  { value: 128, key: 'dim50' },
 ]
 
 export function PwmFlickerTest() {
+  const t = useTranslations('tools.pwm')
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [rate, setRate] = useState<FlickerRate>('f2')
   const [dimBrightness, setDimBrightness] = useState(0)
@@ -84,7 +81,7 @@ export function PwmFlickerTest() {
       <div className="flex gap-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-amber-900">
         <TriangleAlert size={16} className="mt-0.5 shrink-0 text-amber-600" />
         <p className="text-xs leading-relaxed">
-          <span className="font-semibold">Flashing imagery warning.</span> This tool displays rapidly cycling colours at high frequency. Do not use it if you have photosensitive epilepsy, are sensitive to flashing or flickering light, or have been advised to avoid such content. If you experience any discomfort, stop immediately by pressing Esc or the Stop button.
+          <span className="font-semibold">{t('warning.title')}</span> {t('warning.body')}
         </p>
       </div>
 
@@ -92,14 +89,14 @@ export function PwmFlickerTest() {
         <canvas ref={canvasRef} className="w-full h-full block" />
         {!running && (
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <p className="text-sm font-medium text-black/40">Press Start to begin flickering</p>
+            <p className="text-sm font-medium text-black/40">{t('pressStart')}</p>
           </div>
         )}
         <div className="absolute bottom-3 left-0 w-1/2 flex justify-center pointer-events-none">
-          <span className="text-xs bg-black/50 text-white px-2 py-0.5 rounded">Flickering</span>
+          <span className="text-xs bg-black/50 text-white px-2 py-0.5 rounded">{t('flickering')}</span>
         </div>
         <div className="absolute bottom-3 right-0 w-1/2 flex justify-center pointer-events-none">
-          <span className="text-xs bg-black/50 text-white px-2 py-0.5 rounded">Steady Reference</span>
+          <span className="text-xs bg-black/50 text-white px-2 py-0.5 rounded">{t('steadyRef')}</span>
         </div>
       </div>
 
@@ -112,8 +109,8 @@ export function PwmFlickerTest() {
         </button>
 
         <div className="flex items-center gap-1.5">
-          <span className="text-xs font-medium text-fg-muted">Toggle every:</span>
-          {(Object.keys(RATE_LABELS) as FlickerRate[]).map(r => (
+          <span className="text-xs font-medium text-fg-muted">{t('toggleEvery')}</span>
+          {(Object.keys(RATE_FRAMES) as FlickerRate[]).map(r => (
             <button
               key={r}
               onClick={() => setRate(r)}
@@ -123,14 +120,14 @@ export function PwmFlickerTest() {
                   : 'bg-elevated border-border text-fg hover:bg-brand-100'
               }`}
             >
-              {RATE_LABELS[r]}
+              {t(`rates.${r}`)}
             </button>
           ))}
         </div>
 
         <div className="flex items-center gap-1.5">
-          <span className="text-xs font-medium text-fg-muted">Off-phase:</span>
-          {DIM_OPTIONS.map(({ value, label }) => (
+          <span className="text-xs font-medium text-fg-muted">{t('offPhase')}</span>
+          {DIM_OPTIONS.map(({ value, key }) => (
             <button
               key={value}
               onClick={() => setDimBrightness(value)}
@@ -140,15 +137,13 @@ export function PwmFlickerTest() {
                   : 'bg-elevated border-border text-fg hover:bg-brand-100'
               }`}
             >
-              {label}
+              {t(`dim.${key}`)}
             </button>
           ))}
         </div>
       </div>
 
-      <p className="text-xs text-fg-muted">
-        Flicker rate is relative to your monitor&apos;s frame rate. Real monitor PWM runs at 200&ndash;1000 Hz and is invisible to the eye &mdash; use the camera method to detect it.
-      </p>
+      <p className="text-xs text-fg-muted">{t('note')}</p>
     </>
   )
 }

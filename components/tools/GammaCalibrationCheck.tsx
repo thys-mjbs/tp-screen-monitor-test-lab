@@ -1,15 +1,16 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import { Maximize2 } from 'lucide-react'
 
 // Solid grey values that match a 50% B/W checkerboard at each gamma level
 // Derived from: grey_value = 255 * 0.5^(1/gamma)
 const GAMMA_REFS = [
-  { gamma: 1.8, hex: '#ADADAD', label: 'Gamma 1.8' },
-  { gamma: 2.0, hex: '#B4B4B4', label: 'Gamma 2.0' },
-  { gamma: 2.2, hex: '#BABABA', label: 'Gamma 2.2', target: true },
-  { gamma: 2.4, hex: '#BFBFBF', label: 'Gamma 2.4' },
+  { gamma: 1.8, hex: '#ADADAD', labelKey: 'gamma18' as const },
+  { gamma: 2.0, hex: '#B4B4B4', labelKey: 'gamma20' as const },
+  { gamma: 2.2, hex: '#BABABA', labelKey: 'gamma22' as const, target: true },
+  { gamma: 2.4, hex: '#BFBFBF', labelKey: 'gamma24' as const },
 ]
 
 // 1px B/W checkerboard via CSS background
@@ -26,6 +27,7 @@ const checkerStyle: React.CSSProperties = {
 }
 
 export function GammaCalibrationCheck() {
+  const t = useTranslations('tools.gamma')
   const [activeRef, setActiveRef] = useState(2) // default to 2.2
   const [isFullscreen, setIsFullscreen] = useState(false)
   const [showHint, setShowHint] = useState(true)
@@ -87,7 +89,7 @@ export function GammaCalibrationCheck() {
         <div className="flex items-stretch" style={{ height: '80px' }}>
           <div className="flex-1 flex items-center justify-center" style={checkerStyle}>
             <span className="text-xs font-medium px-2 py-0.5 rounded" style={{ backgroundColor: 'rgba(0,0,0,0.35)', color: 'rgba(255,255,255,0.9)' }}>
-              Reference checkerboard
+              {t('checkerboard')}
             </span>
           </div>
         </div>
@@ -102,11 +104,11 @@ export function GammaCalibrationCheck() {
               style={{ backgroundColor: ref.hex }}
             >
               <span className="text-xs font-semibold" style={{ color: '#333' }}>
-                {ref.label}
+                {t(`labels.${ref.labelKey}`)}
               </span>
               {ref.target && (
                 <span className="text-xs px-1 rounded" style={{ backgroundColor: 'rgba(0,0,0,0.12)', color: '#333' }}>
-                  Target
+                  {t('target')}
                 </span>
               )}
             </button>
@@ -119,9 +121,9 @@ export function GammaCalibrationCheck() {
           onClick={enterFullscreen}
           className="flex items-center gap-2 px-4 py-2.5 rounded-lg bg-elevated border border-border text-fg text-sm font-medium hover:bg-brand-100 transition-colors"
         >
-          <Maximize2 size={14} /> View Fullscreen
+          <Maximize2 size={14} /> {t('viewFullscreen')}
         </button>
-        <span className="text-xs text-fg-muted">Step back from your screen. The swatch that best matches the checkerboard indicates your display gamma.</span>
+        <span className="text-xs text-fg-muted">{t('hint')}</span>
       </div>
 
       {/* Fullscreen: split left=checkerboard, right=selected grey */}
@@ -143,9 +145,9 @@ export function GammaCalibrationCheck() {
               style={{ backgroundColor: 'rgba(0,0,0,0.45)' }}
             >
               <p className="text-sm font-semibold text-white/85">
-                {GAMMA_REFS[activeRef].label}{GAMMA_REFS[activeRef].target ? ' (Standard target)' : ''}
+                {t(`labels.${GAMMA_REFS[activeRef].labelKey}`)}{GAMMA_REFS[activeRef].target ? ` (${t('standardTarget')})` : ''}
               </p>
-              <p className="text-xs text-white/55">Step back and find which side matches · Click or Space to cycle reference · Esc to exit</p>
+              <p className="text-xs text-white/55">{t('fsHint')}</p>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import type { Tool } from '@/lib/tools'
 import { getRelatedTools } from '@/lib/tools'
 import { toolSchemas } from '@/lib/metadata'
+import { getTranslations } from 'next-intl/server'
 import { Breadcrumb } from './Breadcrumb'
 import { ToolCard } from './ToolCard'
 import { AmazonLinks } from './affiliate/AmazonLinks'
@@ -18,7 +19,8 @@ interface ToolPageLayoutProps {
   bodyContent: React.ReactNode
 }
 
-export function ToolPageLayout({ tool, children, faqs, bodyContent }: ToolPageLayoutProps) {
+export async function ToolPageLayout({ tool, children, faqs, bodyContent }: ToolPageLayoutProps) {
+  const t = await getTranslations('common')
   const related = getRelatedTools(tool.slug)
   const { webApp, breadcrumb: breadcrumbSchema } = toolSchemas(tool)
 
@@ -63,7 +65,7 @@ export function ToolPageLayout({ tool, children, faqs, bodyContent }: ToolPageLa
 
         {/* FAQs */}
         <section className="space-y-4">
-          <h2 className="text-xl font-bold text-fg">Frequently Asked Questions</h2>
+          <h2 className="text-xl font-bold text-fg">{t('frequentlyAskedQuestions')}</h2>
           <div className="space-y-3">
             {faqs.map(({ q, a }, i) => (
               <details key={i} className="group rounded-xl border border-border bg-surface overflow-hidden">
@@ -80,10 +82,10 @@ export function ToolPageLayout({ tool, children, faqs, bodyContent }: ToolPageLa
         {/* Related tools */}
         {related.length > 0 && (
           <section className="space-y-4">
-            <h2 className="text-xl font-bold text-fg">Related Tools</h2>
+            <h2 className="text-xl font-bold text-fg">{t('relatedTools')}</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              {related.map((t) => (
-                <ToolCard key={t.slug} tool={t} />
+              {related.map((tool) => (
+                <ToolCard key={tool.slug} tool={tool} />
               ))}
             </div>
           </section>

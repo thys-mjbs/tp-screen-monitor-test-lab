@@ -1,24 +1,28 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 
 const toolLinks = [
-  { label: 'Dead Pixel Test', href: '/dead-pixel-test' },
-  { label: 'Backlight Bleed Test', href: '/backlight-bleed-test' },
-  { label: 'Refresh Rate Checker', href: '/refresh-rate-checker' },
-  { label: 'White Screen', href: '/white-screen' },
-  { label: 'Black Screen', href: '/black-screen' },
+  { labelKey: 'Dead Pixel Test', href: '/dead-pixel-test' },
+  { labelKey: 'Backlight Bleed Test', href: '/backlight-bleed-test' },
+  { labelKey: 'Refresh Rate Checker', href: '/refresh-rate-checker' },
+  { labelKey: 'White Screen', href: '/white-screen' },
+  { labelKey: 'Black Screen', href: '/black-screen' },
 ]
 
-const siteLinks = [
-  { label: 'All Tools', href: '/#tools' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/contact' },
-  { label: 'Privacy Policy', href: '/privacy' },
-  { label: 'Terms of Service', href: '/terms' },
-]
+export async function Footer() {
+  const t = await getTranslations('footer')
+  const tLinks = await getTranslations('footerLinks')
 
-export function Footer() {
+  const siteLinks = [
+    { label: tLinks('allTools'), href: '/#tools' },
+    { label: tLinks('blog'), href: '/blog' },
+    { label: tLinks('about'), href: '/about' },
+    { label: tLinks('contact'), href: '/contact' },
+    { label: tLinks('privacy'), href: '/privacy' },
+    { label: tLinks('terms'), href: '/terms' },
+  ]
+
   return (
     <footer className="bg-brand-950 text-brand-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
@@ -40,18 +44,18 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-brand-300 leading-relaxed max-w-xs">
-              Test your monitor for dead pixels, backlight bleed, and display problems. Free, no install.
+              {t('tagline')}
             </p>
           </div>
 
           {/* Popular tools */}
           <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-widest text-brand-400">Popular Tools</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-400">{t('popularTools')}</p>
             <ul className="space-y-2">
               {toolLinks.map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-brand-200 hover:text-accent transition-colors">
-                    {link.label}
+                    {link.labelKey}
                   </Link>
                 </li>
               ))}
@@ -60,7 +64,7 @@ export function Footer() {
 
           {/* Site links */}
           <div className="space-y-3">
-            <p className="text-xs font-semibold uppercase tracking-widest text-brand-400">Site</p>
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-400">{t('site')}</p>
             <ul className="space-y-2">
               {siteLinks.map((link) => (
                 <li key={link.href}>
@@ -75,7 +79,7 @@ export function Footer() {
         </div>
 
         <p className="pt-8 text-xs text-brand-400 text-center">
-          &copy; {new Date().getFullYear()} Screen Test Lab. Free to use, no sign-up required.
+          &copy; {new Date().getFullYear()} Screen Test Lab. {t('copyright')}
         </p>
 
       </div>

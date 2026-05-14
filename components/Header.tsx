@@ -1,14 +1,18 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import { ThemeToggle } from './ThemeToggle'
+import { LocaleSwitcher } from './LocaleSwitcher'
 
-const navLinks = [
-  { label: 'Tools', href: '/#tools' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'About', href: '/about' },
-]
+export async function Header() {
+  const t = await getTranslations('nav')
 
-export function Header() {
+  const navLinks = [
+    { label: t('tools'), href: '/#tools' },
+    { label: t('blog'), href: '/blog' },
+    { label: t('about'), href: '/about' },
+  ]
+
   return (
     <header className="sticky top-0 z-50 w-full bg-surface border-b border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
@@ -27,8 +31,8 @@ export function Header() {
           </span>
         </Link>
 
-        {/* Nav + Toggle */}
-        <div className="flex items-center gap-1 sm:gap-2">
+        {/* Nav + Locale + Toggle */}
+        <div className="flex items-center gap-2 sm:gap-3">
           <nav className="hidden sm:flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
@@ -40,6 +44,7 @@ export function Header() {
               </Link>
             ))}
           </nav>
+          <LocaleSwitcher />
           <ThemeToggle />
         </div>
 
