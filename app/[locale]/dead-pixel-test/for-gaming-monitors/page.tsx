@@ -10,6 +10,10 @@ const title = 'Dead Pixel Test for Gaming Monitors: Check Your Display Before Ga
 const description = 'Test your gaming monitor for dead pixels, stuck pixels, and display defects using solid-colour fullscreen panels. Works with 144Hz, 240Hz, and OLED gaming monitors. Free online tool.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

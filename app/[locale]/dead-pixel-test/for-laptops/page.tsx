@@ -10,6 +10,10 @@ const title = 'Dead Pixel Test for Laptops: Free Laptop Screen Check Online'
 const description = 'Check your laptop screen for dead pixels, stuck pixels, and subpixel faults using solid-colour fullscreen panels. Free browser tool, works on any laptop.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

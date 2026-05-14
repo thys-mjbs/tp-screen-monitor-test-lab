@@ -10,6 +10,10 @@ const title = 'Monitor Gamma Calibration for Photography: Check Your Display Gam
 const description = 'Check and calibrate your monitor gamma for photo editing and photography work. A correctly calibrated gamma ensures photos print and display accurately. Free online gamma test.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

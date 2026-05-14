@@ -10,6 +10,10 @@ const title = 'OLED Burn-In Test: Check for Image Retention Online'
 const description = 'Test your OLED display for burn-in and image retention using high-contrast patterns followed by a grey reveal panel. Free browser tool, no download required.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

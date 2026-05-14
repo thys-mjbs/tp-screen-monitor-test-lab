@@ -10,6 +10,10 @@ const title = 'Laptop Screen Burn-In Test: Check for Image Retention on Your Lap
 const description = 'Test your laptop display for image retention and screen burn-in. Works on IPS, TN, OLED, and AMOLED laptop panels. Free online tool, no download required.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

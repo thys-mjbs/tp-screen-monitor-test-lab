@@ -4,6 +4,10 @@ import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { RefreshRateChecker } from '@/components/tools/RefreshRateChecker'
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   return toolMetadata(getToolByLocale('refresh-rate-checker', locale), locale)

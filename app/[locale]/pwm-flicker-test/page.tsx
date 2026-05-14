@@ -4,6 +4,10 @@ import { getToolByLocale } from '@/lib/i18n/helpers'
 import { ToolPageLayout, type FAQ } from '@/components/ToolPageLayout'
 import { PwmFlickerTest } from '@/components/tools/PwmFlickerTest'
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   return toolMetadata(getToolByLocale('pwm-flicker-test', locale), locale)

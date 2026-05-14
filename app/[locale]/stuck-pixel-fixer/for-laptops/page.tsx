@@ -10,6 +10,10 @@ const title = 'Stuck Pixel Fixer for Laptop Screens: Fix a Stuck Pixel on Your L
 const description = 'Try to fix a stuck or hot pixel on your laptop screen using rapidly cycling colours. Works on IPS, TN, and OLED laptop panels. Free online tool, no download required.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

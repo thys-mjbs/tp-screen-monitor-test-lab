@@ -10,6 +10,10 @@ const title = 'Dead Pixel Test for VR Headsets: Check Your Quest, Vive, or PSVR'
 const description = 'Test your VR headset for dead pixels and display defects. Works with Meta Quest, HTC Vive, PlayStation VR, and other headsets. Free online tool, no download required.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

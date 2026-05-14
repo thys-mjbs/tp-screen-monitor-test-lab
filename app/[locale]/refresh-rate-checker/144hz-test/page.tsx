@@ -10,6 +10,10 @@ const title = '144Hz Monitor Test: Confirm Your Refresh Rate Online'
 const description = 'Check that your 144Hz monitor is actually running at 144Hz. A wrong cable, display setting, or resolution can silently cap you at 60Hz. Free instant browser test.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

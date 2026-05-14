@@ -10,6 +10,10 @@ const title = 'Dead Pixel Test for 4K Monitors: Free 4K Screen Check Online'
 const description = 'Check your 4K monitor for dead pixels and subpixel faults using solid-colour fullscreen panels. Works at native 4K resolution in any browser. Free online tool.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

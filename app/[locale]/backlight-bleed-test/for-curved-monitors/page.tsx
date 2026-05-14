@@ -10,6 +10,10 @@ const title = 'Backlight Bleed Test for Curved Monitors: Check for Light Leakage
 const description = 'Test your curved monitor for backlight bleed and light leakage using a fullscreen black panel. Works with all curved LCD and VA panel monitors. Free online tool.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

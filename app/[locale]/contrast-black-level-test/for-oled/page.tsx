@@ -10,6 +10,10 @@ const title = 'OLED Black Level Test: Check Contrast and Shadow Detail on Your O
 const description = 'Test your OLED monitor or TV for black level accuracy, shadow detail visibility, and contrast performance. OLED produces true black, so check if yours is correctly calibrated. Free online tool.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

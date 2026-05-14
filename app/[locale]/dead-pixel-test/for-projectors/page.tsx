@@ -10,6 +10,10 @@ const title = 'Dead Pixel Test for Projectors: Check Your Projector Image'
 const description = 'Test your DLP, LCD, or laser projector for dead pixels, dark spots, and image defects using solid-colour fullscreen panels. Free online tool, works in any browser.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

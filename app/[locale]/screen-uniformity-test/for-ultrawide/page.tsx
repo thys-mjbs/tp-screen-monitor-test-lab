@@ -10,6 +10,10 @@ const title = 'Ultrawide Monitor Uniformity Test: Check for Brightness and Colou
 const description = 'Test your ultrawide monitor for brightness uniformity, colour uniformity, and backlight consistency across its wide panel. Free online tool, works in any browser.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

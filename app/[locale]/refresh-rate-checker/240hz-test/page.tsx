@@ -10,6 +10,10 @@ const title = '240Hz Monitor Test: Confirm Your 240Hz Refresh Rate Online'
 const description = 'Check that your 240Hz monitor is actually running at 240Hz. A wrong cable, driver issue, or Windows setting can silently cap you at a lower rate. Free instant browser test.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

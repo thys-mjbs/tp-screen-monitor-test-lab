@@ -10,6 +10,10 @@ const title = 'Stuck Pixel Fixer for OLED Screens'
 const description = 'Try to fix a stuck or hot pixel on your OLED display using rapidly cycling colours. Understand how OLED pixel defects differ from LCD and when to seek a replacement.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

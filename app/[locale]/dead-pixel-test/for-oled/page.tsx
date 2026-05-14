@@ -10,6 +10,10 @@ const title = 'Dead Pixel Test for OLED Screens: Free Online OLED Check'
 const description = 'Test your OLED display for hot pixels, dead pixels, and uneven aging using solid-colour fullscreen panels. Free browser tool, no download required.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

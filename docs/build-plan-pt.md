@@ -31,7 +31,7 @@
 - [x] 4.2 Update app/[locale]/blog/page.tsx — translations + locale formatDate
 - [x] 4.3 Update app/[locale]/blog/[slug]/page.tsx — locale content + translations
 - [x] 4.4 Update static pages: about, contact, privacy, terms
-- [ ] 4.5 Update generateStaticParams in every page file to include pt
+- [x] 4.5 Update generateStaticParams in every page file to include pt
 
 ## Phase 5 — Update tool pages and component UI strings
 - [ ] 5.1 Update components/tools/FullscreenPanel.tsx — use useTranslations

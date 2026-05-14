@@ -10,6 +10,10 @@ const title = 'Laptop Screen Viewing Angle Test: Check Your Panel Colour and Bri
 const description = 'Test your laptop screen viewing angles and assess how colour, brightness, and contrast change when viewing from the side or above. Free online tool, works on all laptop panels.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

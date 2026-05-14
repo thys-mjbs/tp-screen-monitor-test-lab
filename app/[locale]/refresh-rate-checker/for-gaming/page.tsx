@@ -10,6 +10,10 @@ const title = 'Refresh Rate Test for Gaming Monitors: Check Your Hz'
 const description = 'Confirm your gaming monitor is actually running at 144Hz, 240Hz, or its rated speed. Common setup mistakes prevent high refresh rate from activating. Free browser test.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

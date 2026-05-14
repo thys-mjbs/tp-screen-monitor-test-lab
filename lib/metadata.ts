@@ -6,14 +6,15 @@ const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-tes
 export function toolMetadata(tool: Tool, locale?: string): Metadata {
   const enUrl = `${appUrl}/${tool.slug}`
   const esUrl = `${appUrl}/es/${tool.slug}`
-  const canonical = locale === 'es' ? esUrl : enUrl
+  const ptUrl = `${appUrl}/pt/${tool.slug}`
+  const canonical = locale === 'es' ? esUrl : locale === 'pt' ? ptUrl : enUrl
   const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(tool.metaTitle)}&desc=${encodeURIComponent(tool.metaDesc)}`
   return {
     title: tool.metaTitle,
     description: tool.metaDesc,
     alternates: {
       canonical,
-      languages: { 'en': enUrl, 'es': esUrl, 'x-default': enUrl },
+      languages: { 'en': enUrl, 'es': esUrl, 'pt': ptUrl, 'x-default': enUrl },
     },
     openGraph: {
       title: tool.metaTitle,
@@ -27,8 +28,7 @@ export function toolMetadata(tool: Tool, locale?: string): Metadata {
 }
 
 export function toolSchemas(tool: Tool, locale?: string) {
-  const isEs = locale === 'es'
-  const toolUrl = isEs ? `${appUrl}/es/${tool.slug}` : `${appUrl}/${tool.slug}`
+  const toolUrl = locale === 'es' ? `${appUrl}/es/${tool.slug}` : locale === 'pt' ? `${appUrl}/pt/${tool.slug}` : `${appUrl}/${tool.slug}`
   const webApp = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
@@ -44,7 +44,7 @@ export function toolSchemas(tool: Tool, locale?: string) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: isEs ? `${appUrl}/es` : appUrl },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: locale === 'es' ? `${appUrl}/es` : locale === 'pt' ? `${appUrl}/pt` : appUrl },
       { '@type': 'ListItem', position: 2, name: tool.name, item: toolUrl },
     ],
   }

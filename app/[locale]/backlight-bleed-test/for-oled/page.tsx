@@ -10,6 +10,10 @@ const title = 'Backlight Bleed on OLED Screens: What to Check Instead'
 const description = 'OLED displays have no backlight and cannot exhibit backlight bleed. Learn what causes dark-panel glow on OLED, and which tests reveal real OLED display issues.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,

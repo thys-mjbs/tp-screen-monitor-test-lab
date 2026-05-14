@@ -10,6 +10,10 @@ const title = 'Ultrawide Resolution Checker: Verify Your Ultrawide Monitor Resol
 const description = 'Check that your ultrawide monitor is running at its correct native resolution. Confirm whether you have 2560x1080, 3440x1440, 3840x1600, or 5120x1440. Free instant browser tool.'
 const ogImage = `${appUrl}/api/og?title=${encodeURIComponent(title)}&desc=${encodeURIComponent(description)}`
 
+export function generateStaticParams() {
+  return [{ locale: 'en' }, { locale: 'es' }, { locale: 'pt' }]
+}
+
 export const metadata: Metadata = {
   title,
   description,
