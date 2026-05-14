@@ -1,1 +1,227 @@
-{}
+{
+  "nav": {
+    "tools": "Herramientas",
+    "blog": "Blog",
+    "about": "Acerca de"
+  },
+  "footer": {
+    "popularTools": "Herramientas populares",
+    "site": "Sitio",
+    "tagline": "Prueba tu monitor en busca de píxeles muertos, sangrado de luz de fondo y problemas de pantalla. Gratis, sin instalación.",
+    "copyright": "Uso gratuito, sin registro."
+  },
+  "breadcrumb": {
+    "home": "Inicio"
+  },
+  "common": {
+    "start": "Iniciar",
+    "stop": "Detener",
+    "reset": "Reiniciar",
+    "fullscreen": "Pantalla completa",
+    "frequentlyAskedQuestions": "Preguntas frecuentes",
+    "relatedTools": "Herramientas relacionadas"
+  },
+  "footerLinks": {
+    "allTools": "Todas las herramientas",
+    "blog": "Blog",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio"
+  },
+  "home": {
+    "hero": {
+      "heading": "Pruebas gratuitas de monitor y pantalla en línea",
+      "description": "Comprueba tu pantalla en busca de píxeles muertos, sangrado de luz de fondo, frecuencia de actualización, precisión de color y más. Funciona en cualquier navegador. Sin descargas, sin registro.",
+      "statNoSignup": "Sin registro",
+      "statBrowserBased": "Basado en el navegador"
+    },
+    "trust": {
+      "freeTools": "Herramientas gratuitas",
+      "browserBased": "En el navegador, sin instalación",
+      "noSignup": "Sin registros ni cuentas"
+    }
+  },
+  "blog": {
+    "index": {
+      "title": "Blog de pruebas de monitor",
+      "subtitle": "Guías sobre calidad de pantalla, calibración, defectos de píxeles y cómo sacar el máximo partido a tus pruebas de monitor."
+    },
+    "post": {
+      "relatedTools": "Herramientas relacionadas",
+      "backToArticles": "Volver a todos los artículos",
+      "minRead": "min de lectura"
+    }
+  },
+  "tools": {
+    "fullscreenPanel": {
+      "cycleLabel": "Clic para cambiar de color",
+      "fullscreen": "Pantalla completa",
+      "hint": "Clic o Espacio para avanzar · Flechas para navegar · Esc para salir",
+      "ariaCurrentColour": "Color actual: {colour}. Clic para avanzar.",
+      "ariaAdvance": "Clic para cambiar de color",
+      "colors": {
+        "White": "Blanco",
+        "Black": "Negro",
+        "Red": "Rojo",
+        "Green": "Verde",
+        "Blue": "Azul",
+        "Cyan": "Cian",
+        "Magenta": "Magenta",
+        "Grey": "Gris"
+      }
+    },
+    "refreshRate": {
+      "measuring": "Midiendo frecuencia de actualización...",
+      "sampling": "Tomando muestra de 60 fotogramas",
+      "measureAgain": "Medir de nuevo",
+      "note": "El resultado refleja la frecuencia de actualización que usa tu navegador en este momento, no el máximo del hardware.",
+      "labels": {
+        "cinema": "Cine",
+        "standardVideo": "Vídeo estándar",
+        "highFrameRate": "Vídeo de alta frecuencia",
+        "standardDesktop": "Escritorio estándar",
+        "standardPlus": "Estándar+",
+        "highRefresh": "Alta frecuencia",
+        "gaming": "Gaming",
+        "competitiveGaming": "Gaming competitivo",
+        "proCompetitive": "Pro competitivo",
+        "nonStandard": "Frecuencia no estándar"
+      }
+    },
+    "resolution": {
+      "reading": "Leyendo propiedades de la pantalla...",
+      "recheck": "Volver a comprobar",
+      "note": "Los valores se actualizan automáticamente al cambiar el tamaño de la ventana. Usa «Volver a comprobar» al cambiar de monitor.",
+      "labels": {
+        "screenResolution": "Resolución de pantalla",
+        "aspectRatio": "Relación de aspecto",
+        "devicePixelRatio": "Relación de píxeles del dispositivo",
+        "physicalPixels": "Píxeles físicos",
+        "browserViewport": "Ventana del navegador",
+        "colourDepth": "Profundidad de color"
+      },
+      "notes": {
+        "cssPixels": "Píxeles CSS",
+        "hardwarePixels": "Recuento de píxeles de hardware",
+        "windowSize": "Tamaño actual de la ventana",
+        "hidpi": "Pantalla HiDPI / Retina",
+        "standardDensity": "Densidad estándar",
+        "hdrCapable": "10 bits / compatible con HDR",
+        "standard8bit": "Estándar de 8 bits"
+      },
+      "ratioNames": {
+        "16:9": "Panorámica",
+        "16:10": "Panorámica 16:10",
+        "4:3": "Clásica 4:3",
+        "5:4": "Clásica 5:4",
+        "21:9": "Ultra panorámica",
+        "32:9": "Super ultra panorámica",
+        "1:1": "Cuadrada",
+        "3:2": "3:2 (Surface / fotografía)"
+      }
+    },
+    "inputLag": {
+      "idle": {
+        "heading": "Clic para comenzar",
+        "description": "La pantalla se volverá verde tras un retardo aleatorio. Haz clic lo más rápido posible en el momento en que cambie."
+      },
+      "waiting": {
+        "heading": "Espera...",
+        "note": "No hagas clic todavía, espera a que aparezca el verde"
+      },
+      "go": "¡AHORA!",
+      "tooEarly": {
+        "heading": "Demasiado pronto",
+        "note": "Espera a que la pantalla se ponga verde y luego haz clic para intentarlo de nuevo"
+      },
+      "result": {
+        "clickAgain": "Clic para intentarlo de nuevo"
+      },
+      "results": "Resultados:",
+      "average": "Promedio:",
+      "labels": {
+        "excellent": "Excelente",
+        "good": "Bueno",
+        "average": "Normal",
+        "slow": "Lento",
+        "verySlow": "Muy lento"
+      }
+    },
+    "stuckPixel": {
+      "warning": {
+        "title": "Advertencia: imágenes parpadeantes.",
+        "body": "Esta herramienta muestra colores que cambian rápidamente a alta frecuencia. No la uses si tienes epilepsia fotosensible, sensibilidad a las luces parpadeantes o si te han recomendado evitar este tipo de contenido. Si sientes alguna molestia, detén la herramienta de inmediato pulsando Esc o el botón Detener."
+      },
+      "pressStart": "Pulsa Iniciar para comenzar el parpadeo",
+      "running": "En ejecución:",
+      "speed": "Velocidad:",
+      "note": "Ejecuta durante 20 a 30 minutos para obtener mejores resultados. Los resultados no están garantizados. Esta herramienta no puede reparar píxeles muertos.",
+      "speeds": {
+        "slow": "Lento",
+        "normal": "Normal",
+        "fast": "Rápido",
+        "rapid": "Muy rápido"
+      }
+    },
+    "gamma": {
+      "checkerboard": "Tablero de ajedrez de referencia",
+      "target": "Objetivo",
+      "standardTarget": "Objetivo estándar",
+      "viewFullscreen": "Ver en pantalla completa",
+      "hint": "Aléjate de la pantalla. La muestra que mejor encaje con el tablero indica el gamma de tu monitor.",
+      "fsHint": "Aléjate y busca qué lado encaja · Clic o Espacio para cambiar referencia · Esc para salir",
+      "labels": {
+        "gamma18": "Gamma 1,8",
+        "gamma20": "Gamma 2,0",
+        "gamma22": "Gamma 2,2",
+        "gamma24": "Gamma 2,4"
+      }
+    },
+    "pwm": {
+      "warning": {
+        "title": "Advertencia: imágenes parpadeantes.",
+        "body": "Esta herramienta muestra colores que cambian rápidamente a alta frecuencia. No la uses si tienes epilepsia fotosensible, sensibilidad a las luces parpadeantes o si te han recomendado evitar este tipo de contenido. Si sientes alguna molestia, detén la herramienta de inmediato pulsando Esc o el botón Detener."
+      },
+      "pressStart": "Pulsa Iniciar para comenzar el parpadeo",
+      "flickering": "Parpadeando",
+      "steadyRef": "Referencia estable",
+      "toggleEvery": "Alternar cada:",
+      "offPhase": "Fase apagada:",
+      "note": "La frecuencia de parpadeo es relativa a la frecuencia de actualización de tu monitor. El PWM real de los monitores funciona entre 200 y 1000 Hz y es invisible al ojo: usa el método de la cámara para detectarlo.",
+      "rates": {
+        "f1": "1 fotograma",
+        "f2": "2 fotogramas",
+        "f4": "4 fotogramas",
+        "f8": "8 fotogramas"
+      },
+      "dim": {
+        "fullOff": "Completamente apagado",
+        "dim25": "25% de atenuación",
+        "dim50": "50% de atenuación"
+      }
+    },
+    "hdr": {
+      "detecting": "Detectando capacidades de la pantalla...",
+      "fullRamp": "Rampa de brillo completa (de negro a blanco)",
+      "shadowSteps": "Pasos de sombra: detalle en negros",
+      "highlightSteps": "Pasos de luz: detalle en blancos",
+      "note": "Cada paso en las rampas de sombra y luz debe ser visible individualmente. Los pasos fusionados indican negros aplastados o blancos recortados. La luminancia HDR real por encima del blanco SDR no puede reproducirse en una página de navegador estándar.",
+      "caps": {
+        "hdrLabel": "HDR (Alto rango dinámico)",
+        "hdrSupported": "Tu navegador y pantalla informan compatibilidad con HDR.",
+        "hdrUnsupported": "Tu navegador o pantalla no informa compatibilidad con HDR. Una pantalla SDR o un navegador sin soporte HDR mostrará esto.",
+        "p3Label": "Gama de color amplia: Display P3",
+        "p3Supported": "Tu pantalla puede reproducir colores más allá de la gama sRGB. P3 cubre aproximadamente un 25% más de color que sRGB.",
+        "p3Unsupported": "Tu pantalla informa gama de color sRGB estándar. La mayoría de los monitores sin HDR son solo sRGB.",
+        "rec2020Label": "Gama de color amplia: Rec. 2020",
+        "rec2020Supported": "Tu pantalla informa gama de color Rec. 2020, el estándar HDR de difusión. Es poco común en monitores de consumo.",
+        "rec2020Unsupported": "Rec. 2020 no detectado. Esto es lo esperado en casi todos los monitores de consumo, incluidos la mayoría de los monitores HDR."
+      }
+    }
+  },
+  "affiliate": {
+    "shopOnAmazon": "Comprar en Amazon",
+    "disclosure": "Como afiliado de Amazon, obtenemos ingresos por las compras que califican."
+  }
+}

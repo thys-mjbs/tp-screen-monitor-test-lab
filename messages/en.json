@@ -1,1 +1,227 @@
-{}
+{
+  "nav": {
+    "tools": "Tools",
+    "blog": "Blog",
+    "about": "About"
+  },
+  "footer": {
+    "popularTools": "Popular Tools",
+    "site": "Site",
+    "tagline": "Test your monitor for dead pixels, backlight bleed, and display problems. Free, no install.",
+    "copyright": "Free to use, no sign-up required."
+  },
+  "breadcrumb": {
+    "home": "Home"
+  },
+  "common": {
+    "start": "Start",
+    "stop": "Stop",
+    "reset": "Reset",
+    "fullscreen": "Fullscreen",
+    "frequentlyAskedQuestions": "Frequently Asked Questions",
+    "relatedTools": "Related Tools"
+  },
+  "home": {
+    "hero": {
+      "heading": "Free Monitor & Screen Tests Online",
+      "description": "Test your display for dead pixels, backlight bleed, refresh rate, colour accuracy, and more. Works in any browser. No download, no sign-up.",
+      "statNoSignup": "No sign-up required",
+      "statBrowserBased": "Browser-based"
+    },
+    "trust": {
+      "freeTools": "Free tools",
+      "browserBased": "Browser-based, no install",
+      "noSignup": "Sign-ups or accounts needed"
+    }
+  },
+  "blog": {
+    "index": {
+      "title": "Monitor Testing Blog",
+      "subtitle": "Guides on display quality, calibration, pixel defects, and getting the most from your monitor tests."
+    },
+    "post": {
+      "relatedTools": "Related Tools",
+      "backToArticles": "Back to all articles",
+      "minRead": "min read"
+    }
+  },
+  "tools": {
+    "fullscreenPanel": {
+      "cycleLabel": "Click to cycle colours",
+      "fullscreen": "Full screen",
+      "hint": "Click or Space to advance · Arrow keys to navigate · Esc to exit",
+      "ariaCurrentColour": "Current colour: {colour}. Click to advance.",
+      "ariaAdvance": "Click to advance colour",
+      "colors": {
+        "White": "White",
+        "Black": "Black",
+        "Red": "Red",
+        "Green": "Green",
+        "Blue": "Blue",
+        "Cyan": "Cyan",
+        "Magenta": "Magenta",
+        "Grey": "Grey"
+      }
+    },
+    "refreshRate": {
+      "measuring": "Measuring refresh rate...",
+      "sampling": "Sampling 60 frames",
+      "measureAgain": "Measure Again",
+      "note": "Result reflects the refresh rate your browser is currently using, not the hardware maximum.",
+      "labels": {
+        "cinema": "Cinema",
+        "standardVideo": "Standard video",
+        "highFrameRate": "High frame rate video",
+        "standardDesktop": "Standard desktop",
+        "standardPlus": "Standard+",
+        "highRefresh": "High refresh",
+        "gaming": "Gaming",
+        "competitiveGaming": "Competitive gaming",
+        "proCompetitive": "Pro competitive",
+        "nonStandard": "Non-standard rate"
+      }
+    },
+    "resolution": {
+      "reading": "Reading display properties...",
+      "recheck": "Re-check",
+      "note": "Values auto-update on window resize and focus. Use Re-check after moving between monitors.",
+      "labels": {
+        "screenResolution": "Screen Resolution",
+        "aspectRatio": "Aspect Ratio",
+        "devicePixelRatio": "Device Pixel Ratio",
+        "physicalPixels": "Physical Pixels",
+        "browserViewport": "Browser Viewport",
+        "colourDepth": "Colour Depth"
+      },
+      "notes": {
+        "cssPixels": "CSS pixels",
+        "hardwarePixels": "Hardware pixel count",
+        "windowSize": "Current window size",
+        "hidpi": "HiDPI / Retina display",
+        "standardDensity": "Standard density",
+        "hdrCapable": "10-bit / HDR capable",
+        "standard8bit": "Standard 8-bit"
+      },
+      "ratioNames": {
+        "16:9": "Widescreen",
+        "16:10": "Widescreen 16:10",
+        "4:3": "Classic 4:3",
+        "5:4": "Classic 5:4",
+        "21:9": "Ultrawide",
+        "32:9": "Super ultrawide",
+        "1:1": "Square",
+        "3:2": "3:2 (Surface / photography)"
+      }
+    },
+    "inputLag": {
+      "idle": {
+        "heading": "Click to Start",
+        "description": "The screen will turn green after a random delay. Click as fast as you can the moment it changes."
+      },
+      "waiting": {
+        "heading": "Wait...",
+        "note": "Do not click yet, wait for green"
+      },
+      "go": "CLICK!",
+      "tooEarly": {
+        "heading": "Too Early",
+        "note": "Wait for the screen to turn green, then click to try again"
+      },
+      "result": {
+        "clickAgain": "Click to try again"
+      },
+      "results": "Results:",
+      "average": "Average:",
+      "labels": {
+        "excellent": "Excellent",
+        "good": "Good",
+        "average": "Average",
+        "slow": "Slow",
+        "verySlow": "Very slow"
+      }
+    },
+    "stuckPixel": {
+      "warning": {
+        "title": "Flashing imagery warning.",
+        "body": "This tool displays rapidly cycling colours at high frequency. Do not use it if you have photosensitive epilepsy, are sensitive to flashing or flickering light, or have been advised to avoid such content. If you experience any discomfort, stop immediately by pressing Esc or the Stop button."
+      },
+      "pressStart": "Press Start to begin flashing",
+      "running": "Running:",
+      "speed": "Speed:",
+      "note": "Run for 20 to 30 minutes for best results. Results are not guaranteed. This tool cannot fix dead pixels.",
+      "speeds": {
+        "slow": "Slow",
+        "normal": "Normal",
+        "fast": "Fast",
+        "rapid": "Rapid"
+      }
+    },
+    "gamma": {
+      "checkerboard": "Reference checkerboard",
+      "target": "Target",
+      "standardTarget": "Standard target",
+      "viewFullscreen": "View Fullscreen",
+      "hint": "Step back from your screen. The swatch that best matches the checkerboard indicates your display gamma.",
+      "fsHint": "Step back and find which side matches · Click or Space to cycle reference · Esc to exit",
+      "labels": {
+        "gamma18": "Gamma 1.8",
+        "gamma20": "Gamma 2.0",
+        "gamma22": "Gamma 2.2",
+        "gamma24": "Gamma 2.4"
+      }
+    },
+    "pwm": {
+      "warning": {
+        "title": "Flashing imagery warning.",
+        "body": "This tool displays rapidly cycling colours at high frequency. Do not use it if you have photosensitive epilepsy, are sensitive to flashing or flickering light, or have been advised to avoid such content. If you experience any discomfort, stop immediately by pressing Esc or the Stop button."
+      },
+      "pressStart": "Press Start to begin flickering",
+      "flickering": "Flickering",
+      "steadyRef": "Steady Reference",
+      "toggleEvery": "Toggle every:",
+      "offPhase": "Off-phase:",
+      "note": "Flicker rate is relative to your monitor's frame rate. Real monitor PWM runs at 200–1000 Hz and is invisible to the eye — use the camera method to detect it.",
+      "rates": {
+        "f1": "1 frame",
+        "f2": "2 frames",
+        "f4": "4 frames",
+        "f8": "8 frames"
+      },
+      "dim": {
+        "fullOff": "Full off",
+        "dim25": "25% dim",
+        "dim50": "50% dim"
+      }
+    },
+    "hdr": {
+      "detecting": "Detecting display capabilities...",
+      "fullRamp": "Full brightness ramp (black to white)",
+      "shadowSteps": "Shadow steps: near-black detail",
+      "highlightSteps": "Highlight steps: near-white detail",
+      "note": "Each step in the shadow and highlight ramps should be individually visible. Merged steps indicate crushed blacks or clipped highlights. True HDR luminance above SDR white cannot be rendered in a standard browser page.",
+      "caps": {
+        "hdrLabel": "HDR (High Dynamic Range)",
+        "hdrSupported": "Your browser and display report HDR capability.",
+        "hdrUnsupported": "Your browser or display does not report HDR support. An SDR display or a browser without HDR passthrough will show this.",
+        "p3Label": "Wide Colour Gamut: Display P3",
+        "p3Supported": "Your display can render colours beyond the sRGB gamut. P3 covers about 25% more colour than sRGB.",
+        "p3Unsupported": "Your display is reporting standard sRGB gamut. Most non-HDR monitors are sRGB only.",
+        "rec2020Label": "Wide Colour Gamut: Rec. 2020",
+        "rec2020Supported": "Your display reports Rec. 2020 colour gamut, the broadcast HDR standard. This is rare on consumer monitors.",
+        "rec2020Unsupported": "Rec. 2020 not detected. This is expected on nearly all consumer monitors including most HDR displays."
+      }
+    }
+  },
+  "affiliate": {
+    "shopOnAmazon": "Shop on Amazon",
+    "disclosure": "As an Amazon Associate we earn from qualifying purchases."
+  },
+  "footerLinks": {
+    "allTools": "All Tools",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}
