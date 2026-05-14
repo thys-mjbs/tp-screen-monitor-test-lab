@@ -365,3 +365,20 @@ export function getRelatedTools(slug: string): Tool[] {
 export function getToolsByCategory(category: ToolCategory): Tool[] {
   return tools.filter((t) => t.category === category)
 }
+
+export function getLocalizedTool(slug: string, translations: Record<string, Partial<Tool>>): Tool | undefined {
+  const tool = getToolBySlug(slug)
+  if (!tool) return undefined
+  const overrides = translations[slug] ?? {}
+  return { ...tool, ...overrides }
+}
+
+export function getLocalizedCategoryMeta(
+  translations: Record<string, { label: string; description: string }>
+): typeof categoryMeta {
+  return {
+    'screen-state': translations['screen-state'] ?? categoryMeta['screen-state'],
+    'visual-test': translations['visual-test'] ?? categoryMeta['visual-test'],
+    'checker': translations['checker'] ?? categoryMeta['checker'],
+  }
+}

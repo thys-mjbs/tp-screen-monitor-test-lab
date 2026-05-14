@@ -186,8 +186,9 @@ export function getPostBySlug(slug: string): Post | undefined {
   return posts.find((p) => p.slug === slug)
 }
 
-export function formatDate(iso: string): string {
-  return new Date(iso).toLocaleDateString('en-GB', {
+export function formatDate(iso: string, locale: string = 'en'): string {
+  const dateLocale = locale === 'en' ? 'en-GB' : locale
+  return new Date(iso).toLocaleDateString(dateLocale, {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
