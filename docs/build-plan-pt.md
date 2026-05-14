@@ -43,7 +43,7 @@
 - [x] 5.7 Update components/tools/PwmFlickerTest.tsx + HdrTest.tsx — use useTranslations
 - [x] 5.8 Update shared components: ToolPageLayout, AmazonLinks, Header, Footer, Breadcrumb
 - [x] 5.9 Screen-state tool pages (9): white-screen, black-screen, red-screen, green-screen, blue-screen, grey-screen, yellow-screen, pink-screen, fullscreen-colour-cycle
-- [ ] 5.10 Visual-test pages group 1 (6): dead-pixel-test, stuck-pixel-fixer, backlight-bleed-test, ips-glow-test, contrast-black-level-test, white-saturation-test
+- [x] 5.10 Visual-test pages group 1 (6): dead-pixel-test, stuck-pixel-fixer, backlight-bleed-test, ips-glow-test, contrast-black-level-test, white-saturation-test
 - [ ] 5.11 Visual-test pages group 2 (7): gamma-calibration-check, gradient-banding-test, screen-uniformity-test, viewing-angle-test, image-retention-test, moire-pattern-test, sharpness-focus-chart
 - [ ] 5.12 Visual-test pages group 3 (6): motion-blur-test, pwm-flicker-test, colour-temperature-test, black-smear-test, overdrive-test, hdr-test
 - [ ] 5.13 Checker pages (4): refresh-rate-checker, resolution-checker, input-lag-test, screen-clean-mode
