@@ -41,8 +41,10 @@ export function ShareBar({ title, url }: ShareBarProps) {
   }
 
   function trackShare(method: string) {
-    if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-      ;(window as any).gtag('event', 'tool_shared', { share_method: method, page_url: url })
+    if (typeof window === 'undefined') return
+    const w = window as Window & { gtag?: (...args: unknown[]) => void }
+    if (typeof w.gtag === 'function') {
+      w.gtag('event', 'tool_shared', { share_method: method, page_url: url })
     }
   }
 
