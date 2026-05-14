@@ -7,7 +7,7 @@ import { Breadcrumb } from '@/components/Breadcrumb'
 import { ToolCard } from '@/components/ToolCard'
 import { AmazonLinks } from '@/components/affiliate/AmazonLinks'
 import { Clock } from 'lucide-react'
-import { POST_CONTENT } from './content'
+import { POST_CONTENT } from './content.en'
 
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://tp-screen-monitor-test-lab.vercel.app'
 

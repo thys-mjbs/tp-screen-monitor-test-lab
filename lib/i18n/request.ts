@@ -6,8 +6,11 @@ export default getRequestConfig(async ({ requestLocale }) => {
   if (!locale || !(routing.locales as readonly string[]).includes(locale)) {
     locale = routing.defaultLocale
   }
-  return {
-    locale,
-    messages: (await import(`../../messages/${locale}.json`)).default,
-  }
+
+  // Static per-locale imports — Turbopack cannot resolve fully dynamic paths
+  const messages = locale === 'es'
+    ? (await import('../../messages/es.json')).default
+    : (await import('../../messages/en.json')).default
+
+  return { locale, messages }
 })
