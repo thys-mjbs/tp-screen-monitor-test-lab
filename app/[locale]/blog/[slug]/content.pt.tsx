@@ -513,10 +513,365 @@ function PanelTypesPostPT() {
   )
 }
 
+// ─── 6. Resolução e DPI ──────────────────────────────────────────────────────
+
+function ResolutionPostPT() {
+  return (
+    <>
+      <p>
+        Resolução, densidade de pixels e escalonamento são frequentemente confundidos entre si.
+        A mesma resolução pode parecer completamente diferente em dois monitores distintos, e
+        uma resolução mais baixa pode parecer mais nítida do que uma mais alta dependendo do
+        tamanho do painel. Compreender como estes fatores interagem ajuda a interpretar o que
+        o Verificador de Resolução reporta.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Resolução de ecrã: pixels CSS</h2>
+      <p>
+        Quando vê as definições de resolução do sistema operativo ou do navegador, a resolução
+        mostrada é expressa em pixels lógicos ou CSS. Este é o espaço de coordenadas que as
+        aplicações utilizam. Num ecrã padrão, um pixel CSS corresponde a um pixel de hardware
+        físico no painel. Num ecrã HiDPI ou Retina, o sistema operativo escala a interface
+        para que um pixel CSS corresponda a dois ou mais pixels físicos.
+      </p>
+      <p>
+        Este escalonamento existe para que os elementos da interface permaneçam a um tamanho
+        físico confortável em painéis de alta densidade. Sem ele, um monitor 4K num portátil
+        de 15 polegadas exibiria texto e ícones a uma fração do seu tamanho normal e seria
+        inutilizável. O Verificador de Resolução mostra tanto a resolução em pixels CSS como
+        a contagem de pixels físicos derivada da proporção de pixels do dispositivo.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Proporção de pixels do dispositivo (DPR)</h2>
+      <p>
+        A proporção de pixels do dispositivo é o multiplicador entre pixels CSS e pixels físicos.
+        Um DPR de 1 significa densidade padrão: um pixel CSS por pixel físico. Um DPR de 2
+        significa que cada pixel CSS é suportado por uma grelha de 2x2 pixels físicos, que é o
+        padrão Retina nos ecrãs Apple. Um DPR de 1,5 ou 1,25 é comum em portáteis Windows onde
+        o sistema operativo aplica escalonamento fracionário.
+      </p>
+      <p>
+        O DPR afeta como as imagens e gráficos web são exibidos. Imagens fornecidas sem uma
+        versão de alto DPR aparecem desfocadas em ecrãs Retina. Imagens responsivas e gráficos
+        vetoriais permanecem nítidos em qualquer DPR.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Pixels por polegada e nitidez percebida</h2>
+      <p>
+        Pixels por polegada (PPI) mede quantos pixels cabem numa polegada da superfície do
+        painel. Um PPI mais alto significa pixels individuais menores e, portanto, mais detalhe.
+        Um painel 1920x1080 a 24 polegadas tem aproximadamente 92 PPI. A mesma resolução a 27
+        polegadas tem aproximadamente 82 PPI. Um painel 2560x1440 a 27 polegadas tem
+        aproximadamente 109 PPI.
+      </p>
+      <p>
+        Para monitores de desktop vistos ao comprimento normal do braço (60 a 80 cm), cerca de
+        95 a 110 PPI é o ponto a partir do qual os pixels individuais se tornam difíceis de
+        distinguir em condições normais. Acima de 140 PPI, densidade adicional oferece pouco
+        benefício visível a distâncias normais de visualização.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Resolução nativa e escalonamento</h2>
+      <p>
+        Cada painel tem uma resolução nativa, que é a contagem de pixels físicos com que foi
+        fabricado. Executar um ecrã na sua resolução nativa produz a imagem mais nítida. Para
+        a melhor qualidade de imagem, execute sempre o monitor na sua resolução nativa e use
+        o escalonamento do sistema operativo para o tamanho da interface.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Nomes comuns de resolução e o que significam</h2>
+      <p>
+        Os nomes de resolução de ecrã são usados de forma inconsistente nos materiais de
+        marketing. Full HD (FHD) refere-se a 1920x1080. Quad HD (QHD), também designado 2K
+        em muitas listagens, refere-se a 2560x1440. 4K UHD refere-se a 3840x2160. WUXGA
+        refere-se a 1920x1200, uma proporção 16:10 que oferece mais espaço vertical do que
+        o FHD. O Verificador de Resolução e Proporção deste site identifica automaticamente
+        a sua resolução e proporção.
+      </p>
+    </>
+  )
+}
+
+// ─── 7. Gama ─────────────────────────────────────────────────────────────────
+
+function GammaPostPT() {
+  return (
+    <>
+      <p>
+        O gama é uma das propriedades fundamentais da calibração de ecrã e uma das mais
+        frequentemente mal compreendidas. Um gama incorreto faz com que as imagens pareçam
+        planas e desbotadas, ou excessivamente escuras com detalhe nas sombras esmagado.
+        Testar o gama do monitor não requer hardware de calibração dispendioso.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">O que é o gama</h2>
+      <p>
+        O gama descreve a relação entre o valor numérico de um pixel num ficheiro de imagem
+        e o brilho que o ecrã produz para esse pixel. É expresso como um expoente numa curva
+        de potência. Um gama de 2,2 significa que um valor de pixel de 128 (a meio entre 0
+        e 255) deve produzir aproximadamente 22% do brilho máximo do ecrã, não 50%. Esta
+        curva não linear imita como a visão humana percebe as diferenças de brilho.
+      </p>
+      <p>
+        O padrão de cores sRGB, que rege a maioria dos monitores de consumo e imagens digitais,
+        tem como alvo um gama geral de aproximadamente 2,2. Um ecrã a gama 1,8 parecerá
+        desbotado e excessivamente brilhante. Um ecrã a gama 2,6 parecerá demasiado escuro
+        com detalhe perdido nas sombras.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Como testar o gama sem hardware</h2>
+      <p>
+        A Verificação de Calibração de Gama deste site usa uma técnica chamada dithering em
+        tabuleiro de xadrez. Um padrão de tabuleiro 50% preto-branco, quando visto de uma
+        ligeira distância, parece um tom cinza médio uniforme. O brilho desse cinza aparente
+        corresponde ao que o ecrã está a fazer ao nível de 50% do tabuleiro. Ao colocar uma
+        amostra cinza sólida de referência ao lado do padrão dithered, pode comparar se o
+        ecrã está a renderizar o tom médio corretamente para um alvo de gama.
+      </p>
+      <p>
+        A ferramenta fornece quatro cinzas de referência correspondentes a valores de gama de
+        1,8, 2,0, 2,2 e 2,4. A amostra cinza que mais se aproxima do brilho aparente do
+        tabuleiro indica a definição de gama aproximada do monitor.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Corrigir o gama</h2>
+      <p>
+        Se o gama do monitor parecer demasiado alto ou baixo, o primeiro passo é verificar o
+        menu de configuração no próprio monitor. Muitos monitores incluem uma definição de gama
+        diretamente nos controlos de imagem, normalmente predefinida em 1,8, 2,0, 2,2 ou 2,4.
+        Defina para 2,2 para trabalho sRGB padrão. Se o monitor não tiver um controlo de gama,
+        a ferramenta de calibração de ecrã do sistema operativo pode aplicar uma correção de
+        gama por software através da placa de vídeo.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Gama e faixas em gradiente</h2>
+      <p>
+        Um gama incorreto pode agravar as faixas em gradiente, onde uma transição tonal suave
+        numa imagem mostra passos visíveis em vez de uma gradação suave. O Teste de Faixas em
+        Gradiente deste site revela como o ecrã lida com gradientes lineares suaves. Faixas
+        significativas num ecrã configurado corretamente podem indicar que o painel tem
+        profundidade tonal limitada em certas regiões tonais.
+      </p>
+    </>
+  )
+}
+
+// ─── 8. Uniformidade de Tela ─────────────────────────────────────────────────
+
+function UniformityPostPT() {
+  return (
+    <>
+      <p>
+        A uniformidade do ecrã descreve com que consistência um monitor reproduz a mesma cor
+        e nível de brilho em toda a superfície do painel. Uniformidade perfeita significa que
+        um campo cinza sólido parece idêntico do canto superior esquerdo ao inferior direito.
+        Na prática, todos os monitores têm algum grau de não uniformidade; a questão é quão
+        significativa é para o seu caso de uso.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">O que causa problemas de uniformidade</h2>
+      <p>
+        Nos monitores LCD, a não uniformidade tem duas fontes principais. A primeira é a não
+        uniformidade da retroiluminação: os painéis com retroiluminação lateral usam LEDs
+        posicionados nas bordas do painel, e a luz difunde-se pela superfície do painel. Isto
+        produz variações subtis de brilho, tipicamente mais brilhante nas bordas onde os LEDs
+        estão localizados.
+      </p>
+      <p>
+        A segunda fonte é o próprio painel LCD. Variações no alinhamento dos cristais líquidos,
+        consistência do revestimento polarizador e tolerâncias de fabrico do painel criam
+        variações subtis de cor ou brilho. Um campo cinza pode parecer ligeiramente mais frio
+        (azulado) num canto e mais quente (amarelado) noutro.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Como testar a uniformidade do ecrã</h2>
+      <p>
+        O Teste de Uniformidade de Tela deste site exibe um painel cinza sólido em tela cheia
+        em três tons: cinza escuro, cinza médio e cinza claro. A visualizar estes painéis numa
+        sala com pouca luz, examine o ecrã metodicamente. Procure áreas onde o brilho pareça
+        mais alto ou mais baixo do que a área circundante, ou onde o tom muda de cinza neutro
+        para azul, amarelo ou verde.
+      </p>
+      <p>
+        A ferramenta divide o ecrã numa grelha de referência 3x3 para o ajudar a descrever
+        qual zona do ecrã mostra variação. Lembre-se de que os problemas de uniformidade são
+        mais fáceis de ver no cinza médio do que no escuro ou claro, porque o olho é mais
+        sensível a diferenças de luminância nos meios-tons.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Quanto de não uniformidade é aceitável</h2>
+      <p>
+        Para uso geral de escritório e gaming, uma variação ligeira de brilho no painel que
+        só é visível em campos cinza de teste é improvável que afete a sua experiência durante
+        o uso normal. Para fotografia, edição de vídeo ou qualquer trabalho crítico de cor,
+        mesmo uma variação moderada de uniformidade é significativa.
+      </p>
+      <p>
+        Monitores profissionais de certos fabricantes incluem dados de calibração de
+        uniformidade do painel individual, compensando as variações medidas. Para trabalho
+        crítico de cor, esta funcionalidade vale a pena priorizar sobre maior resolução ou
+        taxa de atualização.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Uniformidade e tamanho do ecrã</h2>
+      <p>
+        Os problemas de uniformidade escalam com o tamanho do ecrã. Um monitor de 27 polegadas
+        ou maior tem um caminho de luz mais longo do LED ao centro do painel, dando mais
+        oportunidade para variação. Os painéis ultrawide são particularmente difíceis de
+        fabricar com uniformidade consistente. Se estiver a comprar um monitor grande para
+        trabalho crítico de cor, os resultados de testes de uniformidade em análises
+        profissionais são uma especificação importante a pesquisar antes de comprar.
+      </p>
+    </>
+  )
+}
+
+// ─── 9. Como Limpar o Ecrã ───────────────────────────────────────────────────
+
+function CleaningPostPT() {
+  return (
+    <>
+      <p>
+        A maioria das pessoas limpa o ecrã do monitor de forma errada, e os danos
+        frequentemente não são visíveis de imediato. Os revestimentos nos painéis modernos
+        são duráveis o suficiente para limpeza regular, mas são facilmente danificados pelos
+        materiais ou técnica errados. Fazer isto corretamente não custa nada extra e preserva
+        a qualidade de imagem do monitor durante toda a sua vida útil.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">O único material de que precisa</h2>
+      <p>
+        Um pano de microfibra limpo e seco é tudo o que é necessário para a limpeza rotineira
+        do monitor. Os panos de microfibra usam fibras mais finas do que um cabelo humano, o
+        que significa que removem o pó e os óleos da superfície sem riscar ou borrar. Os
+        mesmos panos usados para óculos são adequados para monitores. Não use toalhas de papel,
+        lenços de papel, camisolas de algodão antigas ou qualquer tecido áspero. Estes materiais
+        contêm fibras abrasivas que vão riscar permanentemente os revestimentos antirreflexo e
+        antirreflexo ao longo do tempo.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Líquidos e solventes a evitar</h2>
+      <p>
+        Nunca pulverize qualquer líquido diretamente num ecrã de monitor. O líquido que entra
+        pela borda da moldura pode penetrar no conjunto do painel e causar danos internos
+        permanentes. Se precisar de um líquido, aplique uma quantidade muito pequena de água
+        destilada no pano, não no ecrã, e certifique-se de que o pano está apenas ligeiramente
+        húmido antes de limpar.
+      </p>
+      <p>
+        Evite todos os seguintes em qualquer painel de monitor: limpador de vidros, spray
+        multiusos doméstico, álcool, amónia, acetona, lixívia ou qualquer produto comercializado
+        para limpeza de janelas ou superfícies duras. Estes solventes removem os revestimentos
+        do painel que proporcionam propriedades antirreflexo, deixando o ecrã permanentemente
+        nebuloso ou com danos visíveis.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Usar o modo de limpeza de tela</h2>
+      <p>
+        A ferramenta Modo de Limpeza de Tela deste site preenche o ecrã com um painel branco
+        ou preto sólido e bloqueia o ecrã durante 15 segundos, evitando entrada acidental do
+        pano de limpeza em dispositivos com ecrã tátil. O branco é a cor de limpeza mais útil
+        porque torna o pó, manchas e impressões digitais claramente visíveis para identificar
+        cada área que precisa de atenção.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Considerações sobre o tipo de painel</h2>
+      <p>
+        Os painéis LCD e IPS têm um revestimento de vidro ou plástico duro que é relativamente
+        tolerante à limpeza suave. Limpe em traços horizontais ou verticais retos com pressão
+        leve. Os painéis OLED são fisicamente mais finos e frágeis do que os painéis LCD. Use
+        menos pressão no OLED e certifique-se de que o pano está completamente livre de qualquer
+        partícula que possa riscar a superfície. Os ecrãs de portáteis e monitores portáteis
+        com revestimentos brilhantes limpam-se mais facilmente com uma única limpeza seca.
+        Os revestimentos antirreflexo mate têm uma superfície texturada que pode reter manchas;
+        aplique uma pressão ligeiramente mais firme com um pano seco.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Com que frequência limpar</h2>
+      <p>
+        Limpe o pó do ecrã levemente com um pano de microfibra seco sempre que houver
+        acumulação visível, tipicamente a cada uma ou duas semanas num ambiente normal de
+        escritório. Limpe impressões digitais e manchas conforme necessário. A limpeza leve
+        regular é melhor do que a limpeza pesada pouco frequente, pois evita que o óleo das
+        manchas adira mais firmemente à superfície ao longo do tempo.
+      </p>
+    </>
+  )
+}
+
+// ─── 10. Proporções de Monitor ───────────────────────────────────────────────
+
+function AspectRatiosPostPT() {
+  return (
+    <>
+      <p>
+        A proporção do monitor é a relação proporcional entre a largura e a altura da superfície
+        do ecrã. Afeta a quantidade de conteúdo que cabe horizontal e verticalmente, a
+        imersividade da experiência em jogos e vídeo, e como o fluxo de trabalho de
+        produtividade é organizado. Escolher a proporção certa para o seu caso de uso principal
+        é tão importante como escolher a resolução certa.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">16:9: a proporção widescreen padrão</h2>
+      <p>
+        A proporção 16:9 é o padrão global atual para monitores, televisões e conteúdo de vídeo.
+        Foi adotada como padrão para transmissão HDTV e manteve-se dominante em todos os ecrãs
+        de consumo e comerciais desde então. Praticamente todo o conteúdo de vídeo, jogos e
+        serviços de streaming são produzidos para 16:9. As resoluções 16:9 mais comuns incluem
+        1920x1080 (Full HD), 2560x1440 (Quad HD), 3840x2160 (4K UHD) e 5120x2880 (5K).
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">16:10: o widescreen mais alto</h2>
+      <p>
+        A proporção 16:10 oferece mais espaço vertical de ecrã do que 16:9 para a mesma largura.
+        Isto torna-a popular em portáteis de negócios e monitores de produtividade. As resoluções
+        comuns incluem 1920x1200 e 2560x1600. Os ecrãs MacBook Pro e MacBook Air usam proporções
+        16:10. Para leitura de documentos, escrita e programação, o espaço vertical extra reduz
+        a necessidade de scroll e encaixa mais conteúdo no ecrã simultaneamente.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">21:9: ultrawide</h2>
+      <p>
+        A proporção 21:9 é o padrão para monitores ultrawide. As resoluções comuns são 2560x1080
+        e 3440x1440. Os ecrãs ultrawide proporcionam espaço horizontal que permite duas janelas
+        de aplicações lado a lado sem sobreposição, o que se adapta tanto à multitarefa
+        profissional como ao gaming cinematográfico onde o campo de visão mais amplo é uma
+        vantagem significativa. Muitos filmes são rodados em proporções próximas de 21:9, pelo
+        que os ecrãs ultrawide eliminam as barras pretas visíveis nos ecrãs 16:9.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">32:9: super ultrawide</h2>
+      <p>
+        A proporção 32:9, com resoluções como 5120x1440 e 3840x1080, substitui efetivamente
+        dois monitores 16:9 num único painel sem lacuna de moldura entre eles. Este formato
+        adapta-se a profissionais que precisam de monitorizar múltiplos feeds ou aplicações
+        simultaneamente. A expansão horizontal é visualmente imersiva em jogos que o suportam,
+        embora a curvatura comum nos painéis 32:9 também ajude a usabilidade nestas larguras
+        extremas.
+      </p>
+
+      <h2 className="text-lg font-bold text-fg">Verificar a sua proporção</h2>
+      <p>
+        O Verificador de Resolução deste site calcula e exibe a sua proporção automaticamente
+        a partir das dimensões do ecrã reportadas, juntamente com o nome comum da sua proporção
+        quando aplicável. Se a proporção exibida não corresponder à proporção especificada do
+        monitor, pode estar a funcionar a uma resolução não nativa, ou a proporção no monitor
+        pode ter sido definida incorretamente através de uma opção de escalonamento do sistema
+        operativo.
+      </p>
+    </>
+  )
+}
+
 export const POST_CONTENT_PT: Record<string, FC> = {
   'how-to-test-monitor-dead-pixels': DeadPixelPostPT,
   'what-is-backlight-bleed': BacklightBleedPostPT,
   'refresh-rate-60hz-vs-144hz': RefreshRatePostPT,
   'stuck-pixels-causes-and-fixes': StuckPixelsPostPT,
   'monitor-panel-types-ips-va-oled': PanelTypesPostPT,
+  'understanding-monitor-resolution-dpi': ResolutionPostPT,
+  'gamma-calibration-guide': GammaPostPT,
+  'screen-uniformity-test-guide': UniformityPostPT,
+  'how-to-clean-monitor-screen': CleaningPostPT,
+  'monitor-aspect-ratios-explained': AspectRatiosPostPT,
 }
